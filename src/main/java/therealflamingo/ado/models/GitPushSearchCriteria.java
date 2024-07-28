@@ -13,18 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
 
+import java.util.Objects;
+import java.util.UUID;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -52,10 +50,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get fromDate
+   *
    * @return fromDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getFromDate() {
     return fromDate;
@@ -70,10 +69,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Whether to include the _links field on the shallow references
+   *
    * @return includeLinks
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include the _links field on the shallow references")
   public Boolean isIncludeLinks() {
     return includeLinks;
@@ -88,10 +88,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get includeRefUpdates
+   *
    * @return includeRefUpdates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIncludeRefUpdates() {
     return includeRefUpdates;
@@ -106,10 +107,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get pusherId
+   *
    * @return pusherId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UUID getPusherId() {
     return pusherId;
@@ -124,10 +126,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get refName
+   *
    * @return refName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRefName() {
     return refName;
@@ -142,10 +145,11 @@ public class GitPushSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get toDate
+   *
    * @return toDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getToDate() {
     return toDate;
@@ -166,11 +170,11 @@ public class GitPushSearchCriteria {
     }
     GitPushSearchCriteria gitPushSearchCriteria = (GitPushSearchCriteria) o;
     return Objects.equals(this.fromDate, gitPushSearchCriteria.fromDate) &&
-        Objects.equals(this.includeLinks, gitPushSearchCriteria.includeLinks) &&
-        Objects.equals(this.includeRefUpdates, gitPushSearchCriteria.includeRefUpdates) &&
-        Objects.equals(this.pusherId, gitPushSearchCriteria.pusherId) &&
-        Objects.equals(this.refName, gitPushSearchCriteria.refName) &&
-        Objects.equals(this.toDate, gitPushSearchCriteria.toDate);
+            Objects.equals(this.includeLinks, gitPushSearchCriteria.includeLinks) &&
+            Objects.equals(this.includeRefUpdates, gitPushSearchCriteria.includeRefUpdates) &&
+            Objects.equals(this.pusherId, gitPushSearchCriteria.pusherId) &&
+            Objects.equals(this.refName, gitPushSearchCriteria.refName) &&
+            Objects.equals(this.toDate, gitPushSearchCriteria.toDate);
   }
 
   @Override
@@ -183,7 +187,7 @@ public class GitPushSearchCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPushSearchCriteria {\n");
-    
+
     sb.append("    fromDate: ").append(toIndentedString(fromDate)).append("\n");
     sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
     sb.append("    includeRefUpdates: ").append(toIndentedString(includeRefUpdates)).append("\n");

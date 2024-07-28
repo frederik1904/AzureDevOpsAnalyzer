@@ -13,21 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitConflict;
-import therealflamingo.ado.models.GitMergeOriginRef;
-import therealflamingo.ado.models.GitResolutionPickOneAction;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Data object for EditDelete conflict
@@ -79,10 +70,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -97,10 +89,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictId
+   *
    * @return conflictId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getConflictId() {
     return conflictId;
@@ -115,10 +108,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictPath
+   *
    * @return conflictPath
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConflictPath() {
     return conflictPath;
@@ -133,10 +127,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeBaseCommit
+   *
    * @return mergeBaseCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeBaseCommit() {
     return mergeBaseCommit;
@@ -151,10 +146,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeOrigin
+   *
    * @return mergeOrigin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitMergeOriginRef getMergeOrigin() {
     return mergeOrigin;
@@ -169,10 +165,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeSourceCommit
+   *
    * @return mergeSourceCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeSourceCommit() {
     return mergeSourceCommit;
@@ -187,10 +184,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeTargetCommit
+   *
    * @return mergeTargetCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeTargetCommit() {
     return mergeTargetCommit;
@@ -205,10 +203,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedBy
+   *
    * @return resolvedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getResolvedBy() {
     return resolvedBy;
@@ -223,10 +222,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedDate
+   *
    * @return resolvedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getResolvedDate() {
     return resolvedDate;
@@ -241,10 +241,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -259,10 +260,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get baseBlob
+   *
    * @return baseBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getBaseBlob() {
     return baseBlob;
@@ -277,10 +279,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolution
+   *
    * @return resolution
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitResolutionPickOneAction getResolution() {
     return resolution;
@@ -295,10 +298,11 @@ public class GitConflictDeleteEdit extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get targetBlob
+   *
    * @return targetBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getTargetBlob() {
     return targetBlob;
@@ -319,19 +323,19 @@ public class GitConflictDeleteEdit extends GitConflict {
     }
     GitConflictDeleteEdit gitConflictDeleteEdit = (GitConflictDeleteEdit) o;
     return Objects.equals(this.links, gitConflictDeleteEdit.links) &&
-        Objects.equals(this.conflictId, gitConflictDeleteEdit.conflictId) &&
-        Objects.equals(this.conflictPath, gitConflictDeleteEdit.conflictPath) &&
-        Objects.equals(this.mergeBaseCommit, gitConflictDeleteEdit.mergeBaseCommit) &&
-        Objects.equals(this.mergeOrigin, gitConflictDeleteEdit.mergeOrigin) &&
-        Objects.equals(this.mergeSourceCommit, gitConflictDeleteEdit.mergeSourceCommit) &&
-        Objects.equals(this.mergeTargetCommit, gitConflictDeleteEdit.mergeTargetCommit) &&
-        Objects.equals(this.resolvedBy, gitConflictDeleteEdit.resolvedBy) &&
-        Objects.equals(this.resolvedDate, gitConflictDeleteEdit.resolvedDate) &&
-        Objects.equals(this.url, gitConflictDeleteEdit.url) &&
-        Objects.equals(this.baseBlob, gitConflictDeleteEdit.baseBlob) &&
-        Objects.equals(this.resolution, gitConflictDeleteEdit.resolution) &&
-        Objects.equals(this.targetBlob, gitConflictDeleteEdit.targetBlob) &&
-        super.equals(o);
+            Objects.equals(this.conflictId, gitConflictDeleteEdit.conflictId) &&
+            Objects.equals(this.conflictPath, gitConflictDeleteEdit.conflictPath) &&
+            Objects.equals(this.mergeBaseCommit, gitConflictDeleteEdit.mergeBaseCommit) &&
+            Objects.equals(this.mergeOrigin, gitConflictDeleteEdit.mergeOrigin) &&
+            Objects.equals(this.mergeSourceCommit, gitConflictDeleteEdit.mergeSourceCommit) &&
+            Objects.equals(this.mergeTargetCommit, gitConflictDeleteEdit.mergeTargetCommit) &&
+            Objects.equals(this.resolvedBy, gitConflictDeleteEdit.resolvedBy) &&
+            Objects.equals(this.resolvedDate, gitConflictDeleteEdit.resolvedDate) &&
+            Objects.equals(this.url, gitConflictDeleteEdit.url) &&
+            Objects.equals(this.baseBlob, gitConflictDeleteEdit.baseBlob) &&
+            Objects.equals(this.resolution, gitConflictDeleteEdit.resolution) &&
+            Objects.equals(this.targetBlob, gitConflictDeleteEdit.targetBlob) &&
+            super.equals(o);
   }
 
   @Override

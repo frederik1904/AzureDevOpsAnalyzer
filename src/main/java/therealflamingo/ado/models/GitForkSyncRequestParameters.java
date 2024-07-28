@@ -13,17 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GlobalGitRepositoryKey;
-import therealflamingo.ado.models.SourceToTargetRef;
+import java.util.Objects;
 
 /**
  * Parameters for creating a fork request
@@ -42,10 +38,11 @@ public class GitForkSyncRequestParameters {
     return this;
   }
 
-   /**
+  /**
    * Fully-qualified identifier for the source repository.
+   *
    * @return source
-  **/
+   **/
   @ApiModelProperty(value = "Fully-qualified identifier for the source repository.")
   public GlobalGitRepositoryKey getSource() {
     return source;
@@ -68,10 +65,11 @@ public class GitForkSyncRequestParameters {
     return this;
   }
 
-   /**
+  /**
    * If supplied, the set of ref mappings to use when performing a \&quot;sync\&quot; or create. If missing, all refs will be synchronized.
+   *
    * @return sourceToTargetRefs
-  **/
+   **/
   @ApiModelProperty(value = "If supplied, the set of ref mappings to use when performing a \"sync\" or create. If missing, all refs will be synchronized.")
   public List<SourceToTargetRef> getSourceToTargetRefs() {
     return sourceToTargetRefs;
@@ -92,7 +90,7 @@ public class GitForkSyncRequestParameters {
     }
     GitForkSyncRequestParameters gitForkSyncRequestParameters = (GitForkSyncRequestParameters) o;
     return Objects.equals(this.source, gitForkSyncRequestParameters.source) &&
-        Objects.equals(this.sourceToTargetRefs, gitForkSyncRequestParameters.sourceToTargetRefs);
+            Objects.equals(this.sourceToTargetRefs, gitForkSyncRequestParameters.sourceToTargetRefs);
   }
 
   @Override
@@ -105,7 +103,7 @@ public class GitForkSyncRequestParameters {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitForkSyncRequestParameters {\n");
-    
+
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    sourceToTargetRefs: ").append(toIndentedString(sourceToTargetRefs)).append("\n");
     sb.append("}");

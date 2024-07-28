@@ -13,18 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.PolicyTypeRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.VersionedPolicyConfigurationRef;
+
+import java.util.Objects;
 
 /**
  * The full policy configuration with settings.
@@ -73,10 +67,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration revision ID.
+   *
    * @return revision
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration revision ID.")
   public Integer getRevision() {
     return revision;
@@ -91,10 +86,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration ID.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration ID.")
   public Integer getId() {
     return id;
@@ -109,10 +105,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration type.
+   *
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration type.")
   public PolicyTypeRef getType() {
     return type;
@@ -127,10 +124,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The URL where the policy configuration can be retrieved.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The URL where the policy configuration can be retrieved.")
   public String getUrl() {
     return url;
@@ -145,10 +143,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The links to other objects related to this object.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "The links to other objects related to this object.")
   public ReferenceLinks getLinks() {
     return links;
@@ -163,10 +162,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * A reference to the identity that created the policy.
+   *
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "A reference to the identity that created the policy.")
   public IdentityRef getCreatedBy() {
     return createdBy;
@@ -181,10 +181,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The date and time when the policy was created.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "The date and time when the policy was created.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -199,10 +200,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates whether the policy is blocking.
+   *
    * @return isBlocking
-  **/
+   **/
   @ApiModelProperty(value = "Indicates whether the policy is blocking.")
   public Boolean isIsBlocking() {
     return isBlocking;
@@ -217,10 +219,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates whether the policy has been (soft) deleted.
+   *
    * @return isDeleted
-  **/
+   **/
   @ApiModelProperty(value = "Indicates whether the policy has been (soft) deleted.")
   public Boolean isIsDeleted() {
     return isDeleted;
@@ -235,10 +238,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates whether the policy is enabled.
+   *
    * @return isEnabled
-  **/
+   **/
   @ApiModelProperty(value = "Indicates whether the policy is enabled.")
   public Boolean isIsEnabled() {
     return isEnabled;
@@ -253,10 +257,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * If set, this policy requires \&quot;Manage Enterprise Policies\&quot; permission to create, edit, or delete.
+   *
    * @return isEnterpriseManaged
-  **/
+   **/
   @ApiModelProperty(value = "If set, this policy requires \"Manage Enterprise Policies\" permission to create, edit, or delete.")
   public Boolean isIsEnterpriseManaged() {
     return isEnterpriseManaged;
@@ -271,10 +276,11 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration settings.
+   *
    * @return settings
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration settings.")
   public String getSettings() {
     return settings;
@@ -295,18 +301,18 @@ public class PolicyConfiguration extends VersionedPolicyConfigurationRef {
     }
     PolicyConfiguration policyConfiguration = (PolicyConfiguration) o;
     return Objects.equals(this.revision, policyConfiguration.revision) &&
-        Objects.equals(this.id, policyConfiguration.id) &&
-        Objects.equals(this.type, policyConfiguration.type) &&
-        Objects.equals(this.url, policyConfiguration.url) &&
-        Objects.equals(this.links, policyConfiguration.links) &&
-        Objects.equals(this.createdBy, policyConfiguration.createdBy) &&
-        Objects.equals(this.createdDate, policyConfiguration.createdDate) &&
-        Objects.equals(this.isBlocking, policyConfiguration.isBlocking) &&
-        Objects.equals(this.isDeleted, policyConfiguration.isDeleted) &&
-        Objects.equals(this.isEnabled, policyConfiguration.isEnabled) &&
-        Objects.equals(this.isEnterpriseManaged, policyConfiguration.isEnterpriseManaged) &&
-        Objects.equals(this.settings, policyConfiguration.settings) &&
-        super.equals(o);
+            Objects.equals(this.id, policyConfiguration.id) &&
+            Objects.equals(this.type, policyConfiguration.type) &&
+            Objects.equals(this.url, policyConfiguration.url) &&
+            Objects.equals(this.links, policyConfiguration.links) &&
+            Objects.equals(this.createdBy, policyConfiguration.createdBy) &&
+            Objects.equals(this.createdDate, policyConfiguration.createdDate) &&
+            Objects.equals(this.isBlocking, policyConfiguration.isBlocking) &&
+            Objects.equals(this.isDeleted, policyConfiguration.isDeleted) &&
+            Objects.equals(this.isEnabled, policyConfiguration.isEnabled) &&
+            Objects.equals(this.isEnterpriseManaged, policyConfiguration.isEnterpriseManaged) &&
+            Objects.equals(this.settings, policyConfiguration.settings) &&
+            super.equals(o);
   }
 
   @Override

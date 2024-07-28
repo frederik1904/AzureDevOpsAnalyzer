@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Request body for Get batched changesets.
@@ -29,120 +27,123 @@ import java.util.List;
 @ApiModel(description = "Request body for Get batched changesets.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class TfvcChangesetsRequestData {
-  @JsonProperty("changesetIds")
-  private List<Integer> changesetIds = null;
+    @JsonProperty("changesetIds")
+    private List<Integer> changesetIds = null;
 
-  @JsonProperty("commentLength")
-  private Integer commentLength = null;
+    @JsonProperty("commentLength")
+    private Integer commentLength = null;
 
-  @JsonProperty("includeLinks")
-  private Boolean includeLinks = null;
+    @JsonProperty("includeLinks")
+    private Boolean includeLinks = null;
 
-  public TfvcChangesetsRequestData changesetIds(List<Integer> changesetIds) {
-    this.changesetIds = changesetIds;
-    return this;
-  }
-
-  public TfvcChangesetsRequestData addChangesetIdsItem(Integer changesetIdsItem) {
-    if (this.changesetIds == null) {
-      this.changesetIds = new ArrayList<Integer>();
+    public TfvcChangesetsRequestData changesetIds(List<Integer> changesetIds) {
+        this.changesetIds = changesetIds;
+        return this;
     }
-    this.changesetIds.add(changesetIdsItem);
-    return this;
-  }
 
-   /**
-   * List of changeset Ids.
-   * @return changesetIds
-  **/
-  @ApiModelProperty(value = "List of changeset Ids.")
-  public List<Integer> getChangesetIds() {
-    return changesetIds;
-  }
-
-  public void setChangesetIds(List<Integer> changesetIds) {
-    this.changesetIds = changesetIds;
-  }
-
-  public TfvcChangesetsRequestData commentLength(Integer commentLength) {
-    this.commentLength = commentLength;
-    return this;
-  }
-
-   /**
-   * Max length of the comment.
-   * @return commentLength
-  **/
-  @ApiModelProperty(value = "Max length of the comment.")
-  public Integer getCommentLength() {
-    return commentLength;
-  }
-
-  public void setCommentLength(Integer commentLength) {
-    this.commentLength = commentLength;
-  }
-
-  public TfvcChangesetsRequestData includeLinks(Boolean includeLinks) {
-    this.includeLinks = includeLinks;
-    return this;
-  }
-
-   /**
-   * Whether to include the _links field on the shallow references
-   * @return includeLinks
-  **/
-  @ApiModelProperty(value = "Whether to include the _links field on the shallow references")
-  public Boolean isIncludeLinks() {
-    return includeLinks;
-  }
-
-  public void setIncludeLinks(Boolean includeLinks) {
-    this.includeLinks = includeLinks;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public TfvcChangesetsRequestData addChangesetIdsItem(Integer changesetIdsItem) {
+        if (this.changesetIds == null) {
+            this.changesetIds = new ArrayList<Integer>();
+        }
+        this.changesetIds.add(changesetIdsItem);
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * List of changeset Ids.
+     *
+     * @return changesetIds
+     **/
+    @ApiModelProperty(value = "List of changeset Ids.")
+    public List<Integer> getChangesetIds() {
+        return changesetIds;
     }
-    TfvcChangesetsRequestData tfvcChangesetsRequestData = (TfvcChangesetsRequestData) o;
-    return Objects.equals(this.changesetIds, tfvcChangesetsRequestData.changesetIds) &&
-        Objects.equals(this.commentLength, tfvcChangesetsRequestData.commentLength) &&
-        Objects.equals(this.includeLinks, tfvcChangesetsRequestData.includeLinks);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(changesetIds, commentLength, includeLinks);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TfvcChangesetsRequestData {\n");
-    
-    sb.append("    changesetIds: ").append(toIndentedString(changesetIds)).append("\n");
-    sb.append("    commentLength: ").append(toIndentedString(commentLength)).append("\n");
-    sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setChangesetIds(List<Integer> changesetIds) {
+        this.changesetIds = changesetIds;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public TfvcChangesetsRequestData commentLength(Integer commentLength) {
+        this.commentLength = commentLength;
+        return this;
+    }
+
+    /**
+     * Max length of the comment.
+     *
+     * @return commentLength
+     **/
+    @ApiModelProperty(value = "Max length of the comment.")
+    public Integer getCommentLength() {
+        return commentLength;
+    }
+
+    public void setCommentLength(Integer commentLength) {
+        this.commentLength = commentLength;
+    }
+
+    public TfvcChangesetsRequestData includeLinks(Boolean includeLinks) {
+        this.includeLinks = includeLinks;
+        return this;
+    }
+
+    /**
+     * Whether to include the _links field on the shallow references
+     *
+     * @return includeLinks
+     **/
+    @ApiModelProperty(value = "Whether to include the _links field on the shallow references")
+    public Boolean isIncludeLinks() {
+        return includeLinks;
+    }
+
+    public void setIncludeLinks(Boolean includeLinks) {
+        this.includeLinks = includeLinks;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TfvcChangesetsRequestData tfvcChangesetsRequestData = (TfvcChangesetsRequestData) o;
+        return Objects.equals(this.changesetIds, tfvcChangesetsRequestData.changesetIds) &&
+                Objects.equals(this.commentLength, tfvcChangesetsRequestData.commentLength) &&
+                Objects.equals(this.includeLinks, tfvcChangesetsRequestData.includeLinks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(changesetIds, commentLength, includeLinks);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TfvcChangesetsRequestData {\n");
+
+        sb.append("    changesetIds: ").append(toIndentedString(changesetIds)).append("\n");
+        sb.append("    commentLength: ").append(toIndentedString(commentLength)).append("\n");
+        sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

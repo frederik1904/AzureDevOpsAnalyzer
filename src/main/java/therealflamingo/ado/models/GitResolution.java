@@ -13,81 +13,79 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.IdentityRef;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitResolution {
-  @JsonProperty("author")
-  private IdentityRef author = null;
+    @JsonProperty("author")
+    private IdentityRef author = null;
 
-  public GitResolution author(IdentityRef author) {
-    this.author = author;
-    return this;
-  }
-
-   /**
-   * User who created the resolution.
-   * @return author
-  **/
-  @ApiModelProperty(value = "User who created the resolution.")
-  public IdentityRef getAuthor() {
-    return author;
-  }
-
-  public void setAuthor(IdentityRef author) {
-    this.author = author;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitResolution author(IdentityRef author) {
+        this.author = author;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * User who created the resolution.
+     *
+     * @return author
+     **/
+    @ApiModelProperty(value = "User who created the resolution.")
+    public IdentityRef getAuthor() {
+        return author;
     }
-    GitResolution gitResolution = (GitResolution) o;
-    return Objects.equals(this.author, gitResolution.author);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(author);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitResolution {\n");
-    
-    sb.append("    author: ").append(toIndentedString(author)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setAuthor(IdentityRef author) {
+        this.author = author;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitResolution gitResolution = (GitResolution) o;
+        return Objects.equals(this.author, gitResolution.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitResolution {\n");
+
+        sb.append("    author: ").append(toIndentedString(author)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

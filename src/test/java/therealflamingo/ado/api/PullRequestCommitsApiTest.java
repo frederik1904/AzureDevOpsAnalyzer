@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitCommitRef;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitCommitRef;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestCommitsApi
@@ -31,14 +27,11 @@ public class PullRequestCommitsApiTest {
 
     private final PullRequestCommitsApi api = new PullRequestCommitsApi();
 
-    
+
     /**
-     * 
-     *
      * Get the commits for the specified pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestCommitsGetPullRequestCommitsTest() throws Exception {
@@ -53,14 +46,11 @@ public class PullRequestCommitsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get the commits for the specified iteration of a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestCommitsGetPullRequestIterationCommitsTest() throws Exception {
@@ -76,5 +66,5 @@ public class PullRequestCommitsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

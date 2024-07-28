@@ -13,17 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitVersionDescriptor;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -33,84 +32,8 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
 
   @JsonProperty("targetVersion")
   private String targetVersion = null;
-
-  /**
-   * Version options - Specify additional modifiers to version (e.g Previous)
-   */
-  public enum TargetVersionOptionsEnum {
-    NONE("none"),
-    
-    PREVIOUSCHANGE("previousChange"),
-    
-    FIRSTPARENT("firstParent");
-
-    private String value;
-
-    TargetVersionOptionsEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static TargetVersionOptionsEnum fromValue(String value) {
-      for (TargetVersionOptionsEnum b : TargetVersionOptionsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("targetVersionOptions")
   private TargetVersionOptionsEnum targetVersionOptions = null;
-
-  /**
-   * Version type (branch, tag, or commit). Determines how Id is interpreted
-   */
-  public enum TargetVersionTypeEnum {
-    BRANCH("branch"),
-    
-    TAG("tag"),
-    
-    COMMIT("commit");
-
-    private String value;
-
-    TargetVersionTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static TargetVersionTypeEnum fromValue(String value) {
-      for (TargetVersionTypeEnum b : TargetVersionTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("targetVersionType")
   private TargetVersionTypeEnum targetVersionType = null;
 
@@ -119,10 +42,11 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version string identifier (name of tag/branch, SHA1 of commit)
+   *
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
   public String getVersion() {
     return version;
@@ -137,10 +61,11 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version string identifier (name of tag/branch, SHA1 of commit)
+   *
    * @return targetVersion
-  **/
+   **/
   @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
   public String getTargetVersion() {
     return targetVersion;
@@ -155,10 +80,11 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version options - Specify additional modifiers to version (e.g Previous)
+   *
    * @return targetVersionOptions
-  **/
+   **/
   @ApiModelProperty(value = "Version options - Specify additional modifiers to version (e.g Previous)")
   public TargetVersionOptionsEnum getTargetVersionOptions() {
     return targetVersionOptions;
@@ -173,10 +99,11 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version type (branch, tag, or commit). Determines how Id is interpreted
+   *
    * @return targetVersionType
-  **/
+   **/
   @ApiModelProperty(value = "Version type (branch, tag, or commit). Determines how Id is interpreted")
   public TargetVersionTypeEnum getTargetVersionType() {
     return targetVersionType;
@@ -185,7 +112,6 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
   public void setTargetVersionType(TargetVersionTypeEnum targetVersionType) {
     this.targetVersionType = targetVersionType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,17 +123,16 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
     }
     GitTargetVersionDescriptor gitTargetVersionDescriptor = (GitTargetVersionDescriptor) o;
     return Objects.equals(this.version, gitTargetVersionDescriptor.version) &&
-        Objects.equals(this.targetVersion, gitTargetVersionDescriptor.targetVersion) &&
-        Objects.equals(this.targetVersionOptions, gitTargetVersionDescriptor.targetVersionOptions) &&
-        Objects.equals(this.targetVersionType, gitTargetVersionDescriptor.targetVersionType) &&
-        super.equals(o);
+            Objects.equals(this.targetVersion, gitTargetVersionDescriptor.targetVersion) &&
+            Objects.equals(this.targetVersionOptions, gitTargetVersionDescriptor.targetVersionOptions) &&
+            Objects.equals(this.targetVersionType, gitTargetVersionDescriptor.targetVersionType) &&
+            super.equals(o);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(version, targetVersion, targetVersionOptions, targetVersionType, super.hashCode());
   }
-
 
   @Override
   public String toString() {
@@ -231,6 +156,81 @@ public class GitTargetVersionDescriptor extends GitVersionDescriptor {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+
+  /**
+   * Version options - Specify additional modifiers to version (e.g Previous)
+   */
+  public enum TargetVersionOptionsEnum {
+    NONE("none"),
+
+    PREVIOUSCHANGE("previousChange"),
+
+    FIRSTPARENT("firstParent");
+
+    private String value;
+
+    TargetVersionOptionsEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static TargetVersionOptionsEnum fromValue(String value) {
+      for (TargetVersionOptionsEnum b : TargetVersionOptionsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  /**
+   * Version type (branch, tag, or commit). Determines how Id is interpreted
+   */
+  public enum TargetVersionTypeEnum {
+    BRANCH("branch"),
+
+    TAG("tag"),
+
+    COMMIT("commit");
+
+    private String value;
+
+    TargetVersionTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static TargetVersionTypeEnum fromValue(String value) {
+      for (TargetVersionTypeEnum b : TargetVersionTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

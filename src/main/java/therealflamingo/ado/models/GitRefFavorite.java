@@ -13,257 +13,259 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
-import therealflamingo.ado.models.ReferenceLinks;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRefFavorite {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("id")
-  private Integer id = null;
+    @JsonProperty("id")
+    private Integer id = null;
 
-  @JsonProperty("identityId")
-  private UUID identityId = null;
+    @JsonProperty("identityId")
+    private UUID identityId = null;
 
-  @JsonProperty("name")
-  private String name = null;
+    @JsonProperty("name")
+    private String name = null;
 
-  @JsonProperty("repositoryId")
-  private UUID repositoryId = null;
+    @JsonProperty("repositoryId")
+    private UUID repositoryId = null;
+    @JsonProperty("type")
+    private TypeEnum type = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  /**
-   * Gets or Sets type
-   */
-  public enum TypeEnum {
-    INVALID("invalid"),
-    
-    FOLDER("folder"),
-    
-    REF("ref");
-
-    private String value;
-
-    TypeEnum(String value) {
-      this.value = value;
+    public GitRefFavorite links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
+    }
+
+    public GitRefFavorite id(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public GitRefFavorite identityId(UUID identityId) {
+        this.identityId = identityId;
+        return this;
+    }
+
+    /**
+     * Get identityId
+     *
+     * @return identityId
+     **/
+    @ApiModelProperty(value = "")
+    public UUID getIdentityId() {
+        return identityId;
+    }
+
+    public void setIdentityId(UUID identityId) {
+        this.identityId = identityId;
+    }
+
+    public GitRefFavorite name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public GitRefFavorite repositoryId(UUID repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+
+    /**
+     * Get repositoryId
+     *
+     * @return repositoryId
+     **/
+    @ApiModelProperty(value = "")
+    public UUID getRepositoryId() {
+        return repositoryId;
+    }
+
+    public void setRepositoryId(UUID repositoryId) {
+        this.repositoryId = repositoryId;
+    }
+
+    public GitRefFavorite type(TypeEnum type) {
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     **/
+    @ApiModelProperty(value = "")
+    public TypeEnum getType() {
+        return type;
+    }
+
+    public void setType(TypeEnum type) {
+        this.type = type;
+    }
+
+    public GitRefFavorite url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRefFavorite gitRefFavorite = (GitRefFavorite) o;
+        return Objects.equals(this.links, gitRefFavorite.links) &&
+                Objects.equals(this.id, gitRefFavorite.id) &&
+                Objects.equals(this.identityId, gitRefFavorite.identityId) &&
+                Objects.equals(this.name, gitRefFavorite.name) &&
+                Objects.equals(this.repositoryId, gitRefFavorite.repositoryId) &&
+                Objects.equals(this.type, gitRefFavorite.type) &&
+                Objects.equals(this.url, gitRefFavorite.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, id, identityId, name, repositoryId, type, url);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRefFavorite {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    identityId: ").append(toIndentedString(identityId)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static TypeEnum fromValue(String value) {
-      for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("type")
-  private TypeEnum type = null;
+    /**
+     * Gets or Sets type
+     */
+    public enum TypeEnum {
+        INVALID("invalid"),
 
-  @JsonProperty("url")
-  private String url = null;
+        FOLDER("folder"),
 
-  public GitRefFavorite links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
+        REF("ref");
 
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
+        private String value;
 
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
+        TypeEnum(String value) {
+            this.value = value;
+        }
 
-  public GitRefFavorite id(Integer id) {
-    this.id = id;
-    return this;
-  }
+        @JsonCreator
+        public static TypeEnum fromValue(String value) {
+            for (TypeEnum b : TypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getId() {
-    return id;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public GitRefFavorite identityId(UUID identityId) {
-    this.identityId = identityId;
-    return this;
-  }
-
-   /**
-   * Get identityId
-   * @return identityId
-  **/
-  @ApiModelProperty(value = "")
-  public UUID getIdentityId() {
-    return identityId;
-  }
-
-  public void setIdentityId(UUID identityId) {
-    this.identityId = identityId;
-  }
-
-  public GitRefFavorite name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public GitRefFavorite repositoryId(UUID repositoryId) {
-    this.repositoryId = repositoryId;
-    return this;
-  }
-
-   /**
-   * Get repositoryId
-   * @return repositoryId
-  **/
-  @ApiModelProperty(value = "")
-  public UUID getRepositoryId() {
-    return repositoryId;
-  }
-
-  public void setRepositoryId(UUID repositoryId) {
-    this.repositoryId = repositoryId;
-  }
-
-  public GitRefFavorite type(TypeEnum type) {
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @ApiModelProperty(value = "")
-  public TypeEnum getType() {
-    return type;
-  }
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-  public GitRefFavorite url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitRefFavorite gitRefFavorite = (GitRefFavorite) o;
-    return Objects.equals(this.links, gitRefFavorite.links) &&
-        Objects.equals(this.id, gitRefFavorite.id) &&
-        Objects.equals(this.identityId, gitRefFavorite.identityId) &&
-        Objects.equals(this.name, gitRefFavorite.name) &&
-        Objects.equals(this.repositoryId, gitRefFavorite.repositoryId) &&
-        Objects.equals(this.type, gitRefFavorite.type) &&
-        Objects.equals(this.url, gitRefFavorite.url);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, id, identityId, name, repositoryId, type, url);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRefFavorite {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    identityId: ").append(toIndentedString(identityId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

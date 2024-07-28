@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Parameter for creating a git import request when source is tfvc version control
@@ -27,112 +25,115 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Parameter for creating a git import request when source is tfvc version control")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitImportTfvcSource {
-  @JsonProperty("importHistory")
-  private Boolean importHistory = null;
+    @JsonProperty("importHistory")
+    private Boolean importHistory = null;
 
-  @JsonProperty("importHistoryDurationInDays")
-  private Integer importHistoryDurationInDays = null;
+    @JsonProperty("importHistoryDurationInDays")
+    private Integer importHistoryDurationInDays = null;
 
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
 
-  public GitImportTfvcSource importHistory(Boolean importHistory) {
-    this.importHistory = importHistory;
-    return this;
-  }
-
-   /**
-   * Set true to import History, false otherwise
-   * @return importHistory
-  **/
-  @ApiModelProperty(value = "Set true to import History, false otherwise")
-  public Boolean isImportHistory() {
-    return importHistory;
-  }
-
-  public void setImportHistory(Boolean importHistory) {
-    this.importHistory = importHistory;
-  }
-
-  public GitImportTfvcSource importHistoryDurationInDays(Integer importHistoryDurationInDays) {
-    this.importHistoryDurationInDays = importHistoryDurationInDays;
-    return this;
-  }
-
-   /**
-   * Get history for last n days (max allowed value is 180 days)
-   * @return importHistoryDurationInDays
-  **/
-  @ApiModelProperty(value = "Get history for last n days (max allowed value is 180 days)")
-  public Integer getImportHistoryDurationInDays() {
-    return importHistoryDurationInDays;
-  }
-
-  public void setImportHistoryDurationInDays(Integer importHistoryDurationInDays) {
-    this.importHistoryDurationInDays = importHistoryDurationInDays;
-  }
-
-  public GitImportTfvcSource path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Path which we want to import (this can be copied from Path Control in Explorer)
-   * @return path
-  **/
-  @ApiModelProperty(value = "Path which we want to import (this can be copied from Path Control in Explorer)")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitImportTfvcSource importHistory(Boolean importHistory) {
+        this.importHistory = importHistory;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Set true to import History, false otherwise
+     *
+     * @return importHistory
+     **/
+    @ApiModelProperty(value = "Set true to import History, false otherwise")
+    public Boolean isImportHistory() {
+        return importHistory;
     }
-    GitImportTfvcSource gitImportTfvcSource = (GitImportTfvcSource) o;
-    return Objects.equals(this.importHistory, gitImportTfvcSource.importHistory) &&
-        Objects.equals(this.importHistoryDurationInDays, gitImportTfvcSource.importHistoryDurationInDays) &&
-        Objects.equals(this.path, gitImportTfvcSource.path);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(importHistory, importHistoryDurationInDays, path);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitImportTfvcSource {\n");
-    
-    sb.append("    importHistory: ").append(toIndentedString(importHistory)).append("\n");
-    sb.append("    importHistoryDurationInDays: ").append(toIndentedString(importHistoryDurationInDays)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setImportHistory(Boolean importHistory) {
+        this.importHistory = importHistory;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitImportTfvcSource importHistoryDurationInDays(Integer importHistoryDurationInDays) {
+        this.importHistoryDurationInDays = importHistoryDurationInDays;
+        return this;
+    }
+
+    /**
+     * Get history for last n days (max allowed value is 180 days)
+     *
+     * @return importHistoryDurationInDays
+     **/
+    @ApiModelProperty(value = "Get history for last n days (max allowed value is 180 days)")
+    public Integer getImportHistoryDurationInDays() {
+        return importHistoryDurationInDays;
+    }
+
+    public void setImportHistoryDurationInDays(Integer importHistoryDurationInDays) {
+        this.importHistoryDurationInDays = importHistoryDurationInDays;
+    }
+
+    public GitImportTfvcSource path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Path which we want to import (this can be copied from Path Control in Explorer)
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "Path which we want to import (this can be copied from Path Control in Explorer)")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitImportTfvcSource gitImportTfvcSource = (GitImportTfvcSource) o;
+        return Objects.equals(this.importHistory, gitImportTfvcSource.importHistory) &&
+                Objects.equals(this.importHistoryDurationInDays, gitImportTfvcSource.importHistoryDurationInDays) &&
+                Objects.equals(this.path, gitImportTfvcSource.path);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(importHistory, importHistoryDurationInDays, path);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitImportTfvcSource {\n");
+
+        sb.append("    importHistory: ").append(toIndentedString(importHistory)).append("\n");
+        sb.append("    importHistoryDurationInDays: ").append(toIndentedString(importHistoryDurationInDays)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

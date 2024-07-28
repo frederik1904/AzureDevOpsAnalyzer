@@ -13,147 +13,146 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitLastChangeItem;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitLastChangeTreeItems {
-  @JsonProperty("commits")
-  private List<GitCommitRef> commits = null;
+    @JsonProperty("commits")
+    private List<GitCommitRef> commits = null;
 
-  @JsonProperty("items")
-  private List<GitLastChangeItem> items = null;
+    @JsonProperty("items")
+    private List<GitLastChangeItem> items = null;
 
-  @JsonProperty("lastExploredTime")
-  private OffsetDateTime lastExploredTime = null;
+    @JsonProperty("lastExploredTime")
+    private OffsetDateTime lastExploredTime = null;
 
-  public GitLastChangeTreeItems commits(List<GitCommitRef> commits) {
-    this.commits = commits;
-    return this;
-  }
-
-  public GitLastChangeTreeItems addCommitsItem(GitCommitRef commitsItem) {
-    if (this.commits == null) {
-      this.commits = new ArrayList<GitCommitRef>();
+    public GitLastChangeTreeItems commits(List<GitCommitRef> commits) {
+        this.commits = commits;
+        return this;
     }
-    this.commits.add(commitsItem);
-    return this;
-  }
 
-   /**
-   * The list of commits referenced by Items, if they were requested.
-   * @return commits
-  **/
-  @ApiModelProperty(value = "The list of commits referenced by Items, if they were requested.")
-  public List<GitCommitRef> getCommits() {
-    return commits;
-  }
-
-  public void setCommits(List<GitCommitRef> commits) {
-    this.commits = commits;
-  }
-
-  public GitLastChangeTreeItems items(List<GitLastChangeItem> items) {
-    this.items = items;
-    return this;
-  }
-
-  public GitLastChangeTreeItems addItemsItem(GitLastChangeItem itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<GitLastChangeItem>();
+    public GitLastChangeTreeItems addCommitsItem(GitCommitRef commitsItem) {
+        if (this.commits == null) {
+            this.commits = new ArrayList<GitCommitRef>();
+        }
+        this.commits.add(commitsItem);
+        return this;
     }
-    this.items.add(itemsItem);
-    return this;
-  }
 
-   /**
-   * The last change of items.
-   * @return items
-  **/
-  @ApiModelProperty(value = "The last change of items.")
-  public List<GitLastChangeItem> getItems() {
-    return items;
-  }
-
-  public void setItems(List<GitLastChangeItem> items) {
-    this.items = items;
-  }
-
-  public GitLastChangeTreeItems lastExploredTime(OffsetDateTime lastExploredTime) {
-    this.lastExploredTime = lastExploredTime;
-    return this;
-  }
-
-   /**
-   * The last explored time, in case the result is not comprehensive. Null otherwise.
-   * @return lastExploredTime
-  **/
-  @ApiModelProperty(value = "The last explored time, in case the result is not comprehensive. Null otherwise.")
-  public OffsetDateTime getLastExploredTime() {
-    return lastExploredTime;
-  }
-
-  public void setLastExploredTime(OffsetDateTime lastExploredTime) {
-    this.lastExploredTime = lastExploredTime;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * The list of commits referenced by Items, if they were requested.
+     *
+     * @return commits
+     **/
+    @ApiModelProperty(value = "The list of commits referenced by Items, if they were requested.")
+    public List<GitCommitRef> getCommits() {
+        return commits;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setCommits(List<GitCommitRef> commits) {
+        this.commits = commits;
     }
-    GitLastChangeTreeItems gitLastChangeTreeItems = (GitLastChangeTreeItems) o;
-    return Objects.equals(this.commits, gitLastChangeTreeItems.commits) &&
-        Objects.equals(this.items, gitLastChangeTreeItems.items) &&
-        Objects.equals(this.lastExploredTime, gitLastChangeTreeItems.lastExploredTime);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(commits, items, lastExploredTime);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitLastChangeTreeItems {\n");
-    
-    sb.append("    commits: ").append(toIndentedString(commits)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
-    sb.append("    lastExploredTime: ").append(toIndentedString(lastExploredTime)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitLastChangeTreeItems items(List<GitLastChangeItem> items) {
+        this.items = items;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitLastChangeTreeItems addItemsItem(GitLastChangeItem itemsItem) {
+        if (this.items == null) {
+            this.items = new ArrayList<GitLastChangeItem>();
+        }
+        this.items.add(itemsItem);
+        return this;
+    }
+
+    /**
+     * The last change of items.
+     *
+     * @return items
+     **/
+    @ApiModelProperty(value = "The last change of items.")
+    public List<GitLastChangeItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<GitLastChangeItem> items) {
+        this.items = items;
+    }
+
+    public GitLastChangeTreeItems lastExploredTime(OffsetDateTime lastExploredTime) {
+        this.lastExploredTime = lastExploredTime;
+        return this;
+    }
+
+    /**
+     * The last explored time, in case the result is not comprehensive. Null otherwise.
+     *
+     * @return lastExploredTime
+     **/
+    @ApiModelProperty(value = "The last explored time, in case the result is not comprehensive. Null otherwise.")
+    public OffsetDateTime getLastExploredTime() {
+        return lastExploredTime;
+    }
+
+    public void setLastExploredTime(OffsetDateTime lastExploredTime) {
+        this.lastExploredTime = lastExploredTime;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitLastChangeTreeItems gitLastChangeTreeItems = (GitLastChangeTreeItems) o;
+        return Objects.equals(this.commits, gitLastChangeTreeItems.commits) &&
+                Objects.equals(this.items, gitLastChangeTreeItems.items) &&
+                Objects.equals(this.lastExploredTime, gitLastChangeTreeItems.lastExploredTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commits, items, lastExploredTime);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitLastChangeTreeItems {\n");
+
+        sb.append("    commits: ").append(toIndentedString(commits)).append("\n");
+        sb.append("    items: ").append(toIndentedString(items)).append("\n");
+        sb.append("    lastExploredTime: ").append(toIndentedString(lastExploredTime)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

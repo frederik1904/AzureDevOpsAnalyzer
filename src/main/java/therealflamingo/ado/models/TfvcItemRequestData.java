@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.TfvcItemDescriptor;
+import java.util.Objects;
 
 /**
  * Request body used by Get Items Batch
@@ -44,10 +41,11 @@ public class TfvcItemRequestData {
     return this;
   }
 
-   /**
+  /**
    * If true, include metadata about the file type
+   *
    * @return includeContentMetadata
-  **/
+   **/
   @ApiModelProperty(value = "If true, include metadata about the file type")
   public Boolean isIncludeContentMetadata() {
     return includeContentMetadata;
@@ -62,10 +60,11 @@ public class TfvcItemRequestData {
     return this;
   }
 
-   /**
+  /**
    * Whether to include the _links field on the shallow references
+   *
    * @return includeLinks
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include the _links field on the shallow references")
   public Boolean isIncludeLinks() {
     return includeLinks;
@@ -88,10 +87,11 @@ public class TfvcItemRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get itemDescriptors
+   *
    * @return itemDescriptors
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<TfvcItemDescriptor> getItemDescriptors() {
     return itemDescriptors;
@@ -112,8 +112,8 @@ public class TfvcItemRequestData {
     }
     TfvcItemRequestData tfvcItemRequestData = (TfvcItemRequestData) o;
     return Objects.equals(this.includeContentMetadata, tfvcItemRequestData.includeContentMetadata) &&
-        Objects.equals(this.includeLinks, tfvcItemRequestData.includeLinks) &&
-        Objects.equals(this.itemDescriptors, tfvcItemRequestData.itemDescriptors);
+            Objects.equals(this.includeLinks, tfvcItemRequestData.includeLinks) &&
+            Objects.equals(this.itemDescriptors, tfvcItemRequestData.itemDescriptors);
   }
 
   @Override
@@ -126,7 +126,7 @@ public class TfvcItemRequestData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcItemRequestData {\n");
-    
+
     sb.append("    includeContentMetadata: ").append(toIndentedString(includeContentMetadata)).append("\n");
     sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
     sb.append("    itemDescriptors: ").append(toIndentedString(itemDescriptors)).append("\n");

@@ -13,25 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.Comment;
-import therealflamingo.ado.models.CommentThread;
-import therealflamingo.ado.models.CommentThreadContext;
-import therealflamingo.ado.models.GitPullRequestCommentThreadContext;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.PropertiesCollection;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.*;
 
 /**
  * Represents a comment thread of a pull request. A thread contains meta data about the file it was left on (if any) along with one or more comments (an initial comment and the subsequent replies).
@@ -74,10 +61,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Links to other related objects.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to other related objects.")
   public ReferenceLinks getLinks() {
     return links;
@@ -100,10 +88,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * A list of the comments.
+   *
    * @return comments
-  **/
+   **/
   @ApiModelProperty(value = "A list of the comments.")
   public List<Comment> getComments() {
     return comments;
@@ -118,10 +107,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The comment thread id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The comment thread id.")
   public Integer getId() {
     return id;
@@ -144,10 +134,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Set of identities related to this thread
+   *
    * @return identities
-  **/
+   **/
   @ApiModelProperty(value = "Set of identities related to this thread")
   public Map<String, IdentityRef> getIdentities() {
     return identities;
@@ -162,10 +153,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Specify if the thread is deleted which happens when all comments are deleted.
+   *
    * @return isDeleted
-  **/
+   **/
   @ApiModelProperty(value = "Specify if the thread is deleted which happens when all comments are deleted.")
   public Boolean isIsDeleted() {
     return isDeleted;
@@ -180,10 +172,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The time this thread was last updated.
+   *
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "The time this thread was last updated.")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
@@ -198,10 +191,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Optional properties associated with the thread as a collection of key-value pairs.
+   *
    * @return properties
-  **/
+   **/
   @ApiModelProperty(value = "Optional properties associated with the thread as a collection of key-value pairs.")
   public PropertiesCollection getProperties() {
     return properties;
@@ -216,10 +210,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The time this thread was published.
+   *
    * @return publishedDate
-  **/
+   **/
   @ApiModelProperty(value = "The time this thread was published.")
   public OffsetDateTime getPublishedDate() {
     return publishedDate;
@@ -234,10 +229,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Specify thread context such as position in left/right file.
+   *
    * @return threadContext
-  **/
+   **/
   @ApiModelProperty(value = "Specify thread context such as position in left/right file.")
   public CommentThreadContext getThreadContext() {
     return threadContext;
@@ -252,10 +248,11 @@ public class GitPullRequestCommentThread extends CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Extended context information unique to pull requests
+   *
    * @return pullRequestThreadContext
-  **/
+   **/
   @ApiModelProperty(value = "Extended context information unique to pull requests")
   public GitPullRequestCommentThreadContext getPullRequestThreadContext() {
     return pullRequestThreadContext;
@@ -276,16 +273,16 @@ public class GitPullRequestCommentThread extends CommentThread {
     }
     GitPullRequestCommentThread gitPullRequestCommentThread = (GitPullRequestCommentThread) o;
     return Objects.equals(this.links, gitPullRequestCommentThread.links) &&
-        Objects.equals(this.comments, gitPullRequestCommentThread.comments) &&
-        Objects.equals(this.id, gitPullRequestCommentThread.id) &&
-        Objects.equals(this.identities, gitPullRequestCommentThread.identities) &&
-        Objects.equals(this.isDeleted, gitPullRequestCommentThread.isDeleted) &&
-        Objects.equals(this.lastUpdatedDate, gitPullRequestCommentThread.lastUpdatedDate) &&
-        Objects.equals(this.properties, gitPullRequestCommentThread.properties) &&
-        Objects.equals(this.publishedDate, gitPullRequestCommentThread.publishedDate) &&
-        Objects.equals(this.threadContext, gitPullRequestCommentThread.threadContext) &&
-        Objects.equals(this.pullRequestThreadContext, gitPullRequestCommentThread.pullRequestThreadContext) &&
-        super.equals(o);
+            Objects.equals(this.comments, gitPullRequestCommentThread.comments) &&
+            Objects.equals(this.id, gitPullRequestCommentThread.id) &&
+            Objects.equals(this.identities, gitPullRequestCommentThread.identities) &&
+            Objects.equals(this.isDeleted, gitPullRequestCommentThread.isDeleted) &&
+            Objects.equals(this.lastUpdatedDate, gitPullRequestCommentThread.lastUpdatedDate) &&
+            Objects.equals(this.properties, gitPullRequestCommentThread.properties) &&
+            Objects.equals(this.publishedDate, gitPullRequestCommentThread.publishedDate) &&
+            Objects.equals(this.threadContext, gitPullRequestCommentThread.threadContext) &&
+            Objects.equals(this.pullRequestThreadContext, gitPullRequestCommentThread.pullRequestThreadContext) &&
+            super.equals(o);
   }
 
   @Override

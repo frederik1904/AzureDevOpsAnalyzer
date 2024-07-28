@@ -13,19 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.TeamProjectReference;
+
+import java.util.Objects;
+import java.util.UUID;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -59,10 +56,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Project abbreviation.
+   *
    * @return abbreviation
-  **/
+   **/
   @ApiModelProperty(value = "Project abbreviation.")
   public String getAbbreviation() {
     return abbreviation;
@@ -77,10 +75,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Url to default team identity image.
+   *
    * @return defaultTeamImageUrl
-  **/
+   **/
   @ApiModelProperty(value = "Url to default team identity image.")
   public String getDefaultTeamImageUrl() {
     return defaultTeamImageUrl;
@@ -95,10 +94,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * The project&#39;s description (if any).
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "The project's description (if any).")
   public String getDescription() {
     return description;
@@ -113,10 +113,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Project identifier.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Project identifier.")
   public UUID getId() {
     return id;
@@ -131,10 +132,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Project last update time.
+   *
    * @return lastUpdateTime
-  **/
+   **/
   @ApiModelProperty(value = "Project last update time.")
   public OffsetDateTime getLastUpdateTime() {
     return lastUpdateTime;
@@ -149,10 +151,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Project name.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Project name.")
   public String getName() {
     return name;
@@ -167,10 +170,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Project revision.
+   *
    * @return revision
-  **/
+   **/
   @ApiModelProperty(value = "Project revision.")
   public Long getRevision() {
     return revision;
@@ -185,10 +189,11 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     return this;
   }
 
-   /**
+  /**
    * Url to the full version of the object.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Url to the full version of the object.")
   public String getUrl() {
     return url;
@@ -209,14 +214,14 @@ public class GitForkTeamProjectReference extends TeamProjectReference {
     }
     GitForkTeamProjectReference gitForkTeamProjectReference = (GitForkTeamProjectReference) o;
     return Objects.equals(this.abbreviation, gitForkTeamProjectReference.abbreviation) &&
-        Objects.equals(this.defaultTeamImageUrl, gitForkTeamProjectReference.defaultTeamImageUrl) &&
-        Objects.equals(this.description, gitForkTeamProjectReference.description) &&
-        Objects.equals(this.id, gitForkTeamProjectReference.id) &&
-        Objects.equals(this.lastUpdateTime, gitForkTeamProjectReference.lastUpdateTime) &&
-        Objects.equals(this.name, gitForkTeamProjectReference.name) &&
-        Objects.equals(this.revision, gitForkTeamProjectReference.revision) &&
-        Objects.equals(this.url, gitForkTeamProjectReference.url) &&
-        super.equals(o);
+            Objects.equals(this.defaultTeamImageUrl, gitForkTeamProjectReference.defaultTeamImageUrl) &&
+            Objects.equals(this.description, gitForkTeamProjectReference.description) &&
+            Objects.equals(this.id, gitForkTeamProjectReference.id) &&
+            Objects.equals(this.lastUpdateTime, gitForkTeamProjectReference.lastUpdateTime) &&
+            Objects.equals(this.name, gitForkTeamProjectReference.name) &&
+            Objects.equals(this.revision, gitForkTeamProjectReference.revision) &&
+            Objects.equals(this.url, gitForkTeamProjectReference.url) &&
+            super.equals(o);
   }
 
   @Override

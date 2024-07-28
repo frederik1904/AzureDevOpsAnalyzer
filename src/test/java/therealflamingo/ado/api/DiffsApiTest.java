@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitCommitDiffs;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.GitCommitDiffs;
 
 /**
  * API tests for DiffsApi
@@ -31,14 +25,11 @@ public class DiffsApiTest {
 
     private final DiffsApi api = new DiffsApi();
 
-    
+
     /**
-     * 
-     *
      * Find the closest common commit (the merge base) between base and target commits, and get the diff between either the base and target commits or common and target commits.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void diffsGetTest() throws Exception {
@@ -59,5 +50,5 @@ public class DiffsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

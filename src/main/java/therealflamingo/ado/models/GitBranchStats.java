@@ -13,14 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitCommitRef;
+
+import java.util.Objects;
 
 /**
  * Ahead and behind counts for a particular ref.
@@ -28,158 +25,163 @@ import therealflamingo.ado.models.GitCommitRef;
 @ApiModel(description = "Ahead and behind counts for a particular ref.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitBranchStats {
-  @JsonProperty("aheadCount")
-  private Integer aheadCount = null;
+    @JsonProperty("aheadCount")
+    private Integer aheadCount = null;
 
-  @JsonProperty("behindCount")
-  private Integer behindCount = null;
+    @JsonProperty("behindCount")
+    private Integer behindCount = null;
 
-  @JsonProperty("commit")
-  private GitCommitRef commit = null;
+    @JsonProperty("commit")
+    private GitCommitRef commit = null;
 
-  @JsonProperty("isBaseVersion")
-  private Boolean isBaseVersion = null;
+    @JsonProperty("isBaseVersion")
+    private Boolean isBaseVersion = null;
 
-  @JsonProperty("name")
-  private String name = null;
+    @JsonProperty("name")
+    private String name = null;
 
-  public GitBranchStats aheadCount(Integer aheadCount) {
-    this.aheadCount = aheadCount;
-    return this;
-  }
-
-   /**
-   * Number of commits ahead.
-   * @return aheadCount
-  **/
-  @ApiModelProperty(value = "Number of commits ahead.")
-  public Integer getAheadCount() {
-    return aheadCount;
-  }
-
-  public void setAheadCount(Integer aheadCount) {
-    this.aheadCount = aheadCount;
-  }
-
-  public GitBranchStats behindCount(Integer behindCount) {
-    this.behindCount = behindCount;
-    return this;
-  }
-
-   /**
-   * Number of commits behind.
-   * @return behindCount
-  **/
-  @ApiModelProperty(value = "Number of commits behind.")
-  public Integer getBehindCount() {
-    return behindCount;
-  }
-
-  public void setBehindCount(Integer behindCount) {
-    this.behindCount = behindCount;
-  }
-
-  public GitBranchStats commit(GitCommitRef commit) {
-    this.commit = commit;
-    return this;
-  }
-
-   /**
-   * Current commit.
-   * @return commit
-  **/
-  @ApiModelProperty(value = "Current commit.")
-  public GitCommitRef getCommit() {
-    return commit;
-  }
-
-  public void setCommit(GitCommitRef commit) {
-    this.commit = commit;
-  }
-
-  public GitBranchStats isBaseVersion(Boolean isBaseVersion) {
-    this.isBaseVersion = isBaseVersion;
-    return this;
-  }
-
-   /**
-   * True if this is the result for the base version.
-   * @return isBaseVersion
-  **/
-  @ApiModelProperty(value = "True if this is the result for the base version.")
-  public Boolean isIsBaseVersion() {
-    return isBaseVersion;
-  }
-
-  public void setIsBaseVersion(Boolean isBaseVersion) {
-    this.isBaseVersion = isBaseVersion;
-  }
-
-  public GitBranchStats name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name of the ref.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Name of the ref.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitBranchStats aheadCount(Integer aheadCount) {
+        this.aheadCount = aheadCount;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Number of commits ahead.
+     *
+     * @return aheadCount
+     **/
+    @ApiModelProperty(value = "Number of commits ahead.")
+    public Integer getAheadCount() {
+        return aheadCount;
     }
-    GitBranchStats gitBranchStats = (GitBranchStats) o;
-    return Objects.equals(this.aheadCount, gitBranchStats.aheadCount) &&
-        Objects.equals(this.behindCount, gitBranchStats.behindCount) &&
-        Objects.equals(this.commit, gitBranchStats.commit) &&
-        Objects.equals(this.isBaseVersion, gitBranchStats.isBaseVersion) &&
-        Objects.equals(this.name, gitBranchStats.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(aheadCount, behindCount, commit, isBaseVersion, name);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitBranchStats {\n");
-    
-    sb.append("    aheadCount: ").append(toIndentedString(aheadCount)).append("\n");
-    sb.append("    behindCount: ").append(toIndentedString(behindCount)).append("\n");
-    sb.append("    commit: ").append(toIndentedString(commit)).append("\n");
-    sb.append("    isBaseVersion: ").append(toIndentedString(isBaseVersion)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setAheadCount(Integer aheadCount) {
+        this.aheadCount = aheadCount;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitBranchStats behindCount(Integer behindCount) {
+        this.behindCount = behindCount;
+        return this;
+    }
+
+    /**
+     * Number of commits behind.
+     *
+     * @return behindCount
+     **/
+    @ApiModelProperty(value = "Number of commits behind.")
+    public Integer getBehindCount() {
+        return behindCount;
+    }
+
+    public void setBehindCount(Integer behindCount) {
+        this.behindCount = behindCount;
+    }
+
+    public GitBranchStats commit(GitCommitRef commit) {
+        this.commit = commit;
+        return this;
+    }
+
+    /**
+     * Current commit.
+     *
+     * @return commit
+     **/
+    @ApiModelProperty(value = "Current commit.")
+    public GitCommitRef getCommit() {
+        return commit;
+    }
+
+    public void setCommit(GitCommitRef commit) {
+        this.commit = commit;
+    }
+
+    public GitBranchStats isBaseVersion(Boolean isBaseVersion) {
+        this.isBaseVersion = isBaseVersion;
+        return this;
+    }
+
+    /**
+     * True if this is the result for the base version.
+     *
+     * @return isBaseVersion
+     **/
+    @ApiModelProperty(value = "True if this is the result for the base version.")
+    public Boolean isIsBaseVersion() {
+        return isBaseVersion;
+    }
+
+    public void setIsBaseVersion(Boolean isBaseVersion) {
+        this.isBaseVersion = isBaseVersion;
+    }
+
+    public GitBranchStats name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Name of the ref.
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "Name of the ref.")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitBranchStats gitBranchStats = (GitBranchStats) o;
+        return Objects.equals(this.aheadCount, gitBranchStats.aheadCount) &&
+                Objects.equals(this.behindCount, gitBranchStats.behindCount) &&
+                Objects.equals(this.commit, gitBranchStats.commit) &&
+                Objects.equals(this.isBaseVersion, gitBranchStats.isBaseVersion) &&
+                Objects.equals(this.name, gitBranchStats.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aheadCount, behindCount, commit, isBaseVersion, name);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitBranchStats {\n");
+
+        sb.append("    aheadCount: ").append(toIndentedString(aheadCount)).append("\n");
+        sb.append("    behindCount: ").append(toIndentedString(behindCount)).append("\n");
+        sb.append("    commit: ").append(toIndentedString(commit)).append("\n");
+        sb.append("    isBaseVersion: ").append(toIndentedString(isBaseVersion)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitPullRequestStatus;
 import therealflamingo.ado.models.JsonPatchDocument;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestIterationStatusesApi
@@ -32,14 +28,11 @@ public class PullRequestIterationStatusesApiTest {
 
     private final PullRequestIterationStatusesApi api = new PullRequestIterationStatusesApi();
 
-    
+
     /**
-     * 
-     *
      * Create a pull request status on the iteration. This operation will have the same result as Create status on pull request with specified iteration ID in the request body.  The only required field for the status is &#x60;Context.Name&#x60; that uniquely identifies the status. Note that &#x60;iterationId&#x60; in the request body is optional since &#x60;iterationId&#x60; can be specified in the URL. A conflict between &#x60;iterationId&#x60; in the URL and &#x60;iterationId&#x60; in the request body will result in status code 400.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationStatusesCreateTest() throws Exception {
@@ -54,14 +47,11 @@ public class PullRequestIterationStatusesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Delete pull request iteration status.  You can remove multiple statuses in one call by using Update operation.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationStatusesDeleteTest() throws Exception {
@@ -76,14 +66,11 @@ public class PullRequestIterationStatusesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get the specific pull request iteration status by ID. The status ID is unique within the pull request across all iterations.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationStatusesGetTest() throws Exception {
@@ -98,14 +85,11 @@ public class PullRequestIterationStatusesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get all the statuses associated with a pull request iteration.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationStatusesListTest() throws Exception {
@@ -119,14 +103,11 @@ public class PullRequestIterationStatusesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Update pull request iteration statuses collection. The only supported operation type is &#x60;remove&#x60;.  This operation allows to delete multiple statuses in one call. The path of the &#x60;remove&#x60; operation should refer to the ID of the pull request status. For example &#x60;path&#x3D;\&quot;/1\&quot;&#x60; refers to the pull request status with ID 1.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationStatusesUpdateTest() throws Exception {
@@ -141,5 +122,5 @@ public class PullRequestIterationStatusesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

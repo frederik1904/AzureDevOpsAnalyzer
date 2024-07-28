@@ -1,14 +1,12 @@
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.invoker.ApiException;
 import therealflamingo.ado.invoker.ApiClient;
+import therealflamingo.ado.invoker.ApiException;
 import therealflamingo.ado.invoker.Configuration;
 import therealflamingo.ado.invoker.Pair;
-
-import javax.ws.rs.core.GenericType;
-
 import therealflamingo.ado.models.GitCommitRef;
 
+import javax.ws.rs.core.GenericType;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,52 +33,52 @@ public class PullRequestCommitsApi {
   }
 
   /**
-   * 
    * Get the commits for the specified pull request.
-   * @param organization The name of the Azure DevOps organization. (required)
-   * @param repositoryId ID or name of the repository. (required)
-   * @param pullRequestId ID of the pull request. (required)
-   * @param project Project ID or project name (required)
-   * @param apiVersion Version of the API to use.  This should be set to &#39;7.2-preview.1&#39; to use this version of the api. (required)
-   * @param top Maximum number of commits to return. (optional)
+   *
+   * @param organization      The name of the Azure DevOps organization. (required)
+   * @param repositoryId      ID or name of the repository. (required)
+   * @param pullRequestId     ID of the pull request. (required)
+   * @param project           Project ID or project name (required)
+   * @param apiVersion        Version of the API to use.  This should be set to &#39;7.2-preview.1&#39; to use this version of the api. (required)
+   * @param top               Maximum number of commits to return. (optional)
    * @param continuationToken The continuation token used for pagination. (optional)
    * @return List<GitCommitRef>
    * @throws ApiException if fails to make API call
    */
   public List<GitCommitRef> pullRequestCommitsGetPullRequestCommits(String organization, String repositoryId, Integer pullRequestId, String project, String apiVersion, Integer top, String continuationToken) throws ApiException {
     Object localVarPostBody = null;
-    
+
     // verify the required parameter 'organization' is set
     if (organization == null) {
       throw new ApiException(400, "Missing the required parameter 'organization' when calling pullRequestCommitsGetPullRequestCommits");
     }
-    
+
     // verify the required parameter 'repositoryId' is set
     if (repositoryId == null) {
       throw new ApiException(400, "Missing the required parameter 'repositoryId' when calling pullRequestCommitsGetPullRequestCommits");
     }
-    
+
     // verify the required parameter 'pullRequestId' is set
     if (pullRequestId == null) {
       throw new ApiException(400, "Missing the required parameter 'pullRequestId' when calling pullRequestCommitsGetPullRequestCommits");
     }
-    
+
     // verify the required parameter 'project' is set
     if (project == null) {
       throw new ApiException(400, "Missing the required parameter 'project' when calling pullRequestCommitsGetPullRequestCommits");
     }
-    
+
     // verify the required parameter 'apiVersion' is set
     if (apiVersion == null) {
       throw new ApiException(400, "Missing the required parameter 'apiVersion' when calling pullRequestCommitsGetPullRequestCommits");
     }
-    
+
     // create path and map variables
-    String localVarPath = "/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullRequests/{pullRequestId}/commits".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "organization" + "\\}", apiClient.escapeString(organization.toString()))
-      .replaceAll("\\{" + "repositoryId" + "\\}", apiClient.escapeString(repositoryId.toString()))
-      .replaceAll("\\{" + "pullRequestId" + "\\}", apiClient.escapeString(pullRequestId.toString()))
-      .replaceAll("\\{" + "project" + "\\}", apiClient.escapeString(project.toString()));
+    String localVarPath = "/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullRequests/{pullRequestId}/commits".replaceAll("\\{format\\}", "json")
+            .replaceAll("\\{" + "organization" + "\\}", apiClient.escapeString(organization.toString()))
+            .replaceAll("\\{" + "repositoryId" + "\\}", apiClient.escapeString(repositoryId.toString()))
+            .replaceAll("\\{" + "pullRequestId" + "\\}", apiClient.escapeString(pullRequestId.toString()))
+            .replaceAll("\\{" + "project" + "\\}", apiClient.escapeString(project.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -91,77 +89,78 @@ public class PullRequestCommitsApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "continuationToken", continuationToken));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "api-version", apiVersion));
 
-    
-    
+
     final String[] localVarAccepts = {
-      "application/json"
+            "application/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "oauth2", "accessToken" };
+    String[] localVarAuthNames = new String[]{"oauth2", "accessToken"};
 
-    GenericType<List<GitCommitRef>> localVarReturnType = new GenericType<List<GitCommitRef>>() {};
+    GenericType<List<GitCommitRef>> localVarReturnType = new GenericType<List<GitCommitRef>>() {
+    };
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+  }
+
   /**
-   * 
    * Get the commits for the specified iteration of a pull request.
-   * @param organization The name of the Azure DevOps organization. (required)
-   * @param repositoryId ID or name of the repository. (required)
+   *
+   * @param organization  The name of the Azure DevOps organization. (required)
+   * @param repositoryId  ID or name of the repository. (required)
    * @param pullRequestId ID of the pull request. (required)
-   * @param iterationId ID of the iteration from which to get the commits. (required)
-   * @param project Project ID or project name (required)
-   * @param apiVersion Version of the API to use.  This should be set to &#39;7.2-preview.1&#39; to use this version of the api. (required)
-   * @param top Maximum number of commits to return. The maximum number of commits that can be returned per batch is 500. (optional)
-   * @param skip Number of commits to skip. (optional)
+   * @param iterationId   ID of the iteration from which to get the commits. (required)
+   * @param project       Project ID or project name (required)
+   * @param apiVersion    Version of the API to use.  This should be set to &#39;7.2-preview.1&#39; to use this version of the api. (required)
+   * @param top           Maximum number of commits to return. The maximum number of commits that can be returned per batch is 500. (optional)
+   * @param skip          Number of commits to skip. (optional)
    * @return List<GitCommitRef>
    * @throws ApiException if fails to make API call
    */
   public List<GitCommitRef> pullRequestCommitsGetPullRequestIterationCommits(String organization, String repositoryId, Integer pullRequestId, Integer iterationId, String project, String apiVersion, Integer top, Integer skip) throws ApiException {
     Object localVarPostBody = null;
-    
+
     // verify the required parameter 'organization' is set
     if (organization == null) {
       throw new ApiException(400, "Missing the required parameter 'organization' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // verify the required parameter 'repositoryId' is set
     if (repositoryId == null) {
       throw new ApiException(400, "Missing the required parameter 'repositoryId' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // verify the required parameter 'pullRequestId' is set
     if (pullRequestId == null) {
       throw new ApiException(400, "Missing the required parameter 'pullRequestId' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // verify the required parameter 'iterationId' is set
     if (iterationId == null) {
       throw new ApiException(400, "Missing the required parameter 'iterationId' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // verify the required parameter 'project' is set
     if (project == null) {
       throw new ApiException(400, "Missing the required parameter 'project' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // verify the required parameter 'apiVersion' is set
     if (apiVersion == null) {
       throw new ApiException(400, "Missing the required parameter 'apiVersion' when calling pullRequestCommitsGetPullRequestIterationCommits");
     }
-    
+
     // create path and map variables
-    String localVarPath = "/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullRequests/{pullRequestId}/iterations/{iterationId}/commits".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "organization" + "\\}", apiClient.escapeString(organization.toString()))
-      .replaceAll("\\{" + "repositoryId" + "\\}", apiClient.escapeString(repositoryId.toString()))
-      .replaceAll("\\{" + "pullRequestId" + "\\}", apiClient.escapeString(pullRequestId.toString()))
-      .replaceAll("\\{" + "iterationId" + "\\}", apiClient.escapeString(iterationId.toString()))
-      .replaceAll("\\{" + "project" + "\\}", apiClient.escapeString(project.toString()));
+    String localVarPath = "/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullRequests/{pullRequestId}/iterations/{iterationId}/commits".replaceAll("\\{format\\}", "json")
+            .replaceAll("\\{" + "organization" + "\\}", apiClient.escapeString(organization.toString()))
+            .replaceAll("\\{" + "repositoryId" + "\\}", apiClient.escapeString(repositoryId.toString()))
+            .replaceAll("\\{" + "pullRequestId" + "\\}", apiClient.escapeString(pullRequestId.toString()))
+            .replaceAll("\\{" + "iterationId" + "\\}", apiClient.escapeString(iterationId.toString()))
+            .replaceAll("\\{" + "project" + "\\}", apiClient.escapeString(project.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -172,21 +171,21 @@ public class PullRequestCommitsApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "skip", skip));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "api-version", apiVersion));
 
-    
-    
+
     final String[] localVarAccepts = {
-      "application/json"
+            "application/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "oauth2", "accessToken" };
+    String[] localVarAuthNames = new String[]{"oauth2", "accessToken"};
 
-    GenericType<List<GitCommitRef>> localVarReturnType = new GenericType<List<GitCommitRef>>() {};
+    GenericType<List<GitCommitRef>> localVarReturnType = new GenericType<List<GitCommitRef>>() {
+    };
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+  }
 }

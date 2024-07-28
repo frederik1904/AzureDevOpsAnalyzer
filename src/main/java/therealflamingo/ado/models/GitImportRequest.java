@@ -13,17 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitImportRequestParameters;
-import therealflamingo.ado.models.GitImportStatusDetail;
-import therealflamingo.ado.models.GitRepository;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * A request to import data from a remote source control system.
@@ -45,51 +41,8 @@ public class GitImportRequest {
 
   @JsonProperty("repository")
   private GitRepository repository = null;
-
-  /**
-   * Current status of the import.
-   */
-  public enum StatusEnum {
-    QUEUED("queued"),
-    
-    INPROGRESS("inProgress"),
-    
-    COMPLETED("completed"),
-    
-    FAILED("failed"),
-    
-    ABANDONED("abandoned");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("status")
   private StatusEnum status = null;
-
   @JsonProperty("url")
   private String url = null;
 
@@ -98,10 +51,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * Links to related resources.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to related resources.")
   public ReferenceLinks getLinks() {
     return links;
@@ -116,10 +70,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * Detailed status of the import, including the current step and an error message, if applicable.
+   *
    * @return detailedStatus
-  **/
+   **/
   @ApiModelProperty(value = "Detailed status of the import, including the current step and an error message, if applicable.")
   public GitImportStatusDetail getDetailedStatus() {
     return detailedStatus;
@@ -134,10 +89,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique identifier for this import request.
+   *
    * @return importRequestId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier for this import request.")
   public Integer getImportRequestId() {
     return importRequestId;
@@ -152,10 +108,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * Parameters for creating the import request.
+   *
    * @return parameters
-  **/
+   **/
   @ApiModelProperty(value = "Parameters for creating the import request.")
   public GitImportRequestParameters getParameters() {
     return parameters;
@@ -170,10 +127,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * The target repository for this import.
+   *
    * @return repository
-  **/
+   **/
   @ApiModelProperty(value = "The target repository for this import.")
   public GitRepository getRepository() {
     return repository;
@@ -188,10 +146,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * Current status of the import.
+   *
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Current status of the import.")
   public StatusEnum getStatus() {
     return status;
@@ -206,10 +165,11 @@ public class GitImportRequest {
     return this;
   }
 
-   /**
+  /**
    * A link back to this import request resource.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "A link back to this import request resource.")
   public String getUrl() {
     return url;
@@ -218,7 +178,6 @@ public class GitImportRequest {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -230,12 +189,12 @@ public class GitImportRequest {
     }
     GitImportRequest gitImportRequest = (GitImportRequest) o;
     return Objects.equals(this.links, gitImportRequest.links) &&
-        Objects.equals(this.detailedStatus, gitImportRequest.detailedStatus) &&
-        Objects.equals(this.importRequestId, gitImportRequest.importRequestId) &&
-        Objects.equals(this.parameters, gitImportRequest.parameters) &&
-        Objects.equals(this.repository, gitImportRequest.repository) &&
-        Objects.equals(this.status, gitImportRequest.status) &&
-        Objects.equals(this.url, gitImportRequest.url);
+            Objects.equals(this.detailedStatus, gitImportRequest.detailedStatus) &&
+            Objects.equals(this.importRequestId, gitImportRequest.importRequestId) &&
+            Objects.equals(this.parameters, gitImportRequest.parameters) &&
+            Objects.equals(this.repository, gitImportRequest.repository) &&
+            Objects.equals(this.status, gitImportRequest.status) &&
+            Objects.equals(this.url, gitImportRequest.url);
   }
 
   @Override
@@ -243,12 +202,11 @@ public class GitImportRequest {
     return Objects.hash(links, detailedStatus, importRequestId, parameters, repository, status, url);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitImportRequest {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
     sb.append("    importRequestId: ").append(toIndentedString(importRequestId)).append("\n");
@@ -269,6 +227,47 @@ public class GitImportRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Current status of the import.
+   */
+  public enum StatusEnum {
+    QUEUED("queued"),
+
+    INPROGRESS("inProgress"),
+
+    COMPLETED("completed"),
+
+    FAILED("failed"),
+
+    ABANDONED("abandoned");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static StatusEnum fromValue(String value) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

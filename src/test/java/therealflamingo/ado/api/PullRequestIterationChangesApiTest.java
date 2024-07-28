@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPullRequestIterationChanges;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.GitPullRequestIterationChanges;
 
 /**
  * API tests for PullRequestIterationChangesApi
@@ -31,14 +25,11 @@ public class PullRequestIterationChangesApiTest {
 
     private final PullRequestIterationChangesApi api = new PullRequestIterationChangesApi();
 
-    
+
     /**
-     * 
-     *
      * Retrieve the changes made in a pull request between two iterations.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationChangesGetTest() throws Exception {
@@ -55,5 +46,5 @@ public class PullRequestIterationChangesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

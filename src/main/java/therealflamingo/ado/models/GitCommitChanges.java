@@ -13,115 +13,113 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.ChangeCountDictionary;
-import therealflamingo.ado.models.GitChange;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitCommitChanges {
-  @JsonProperty("changeCounts")
-  private ChangeCountDictionary changeCounts = null;
+    @JsonProperty("changeCounts")
+    private ChangeCountDictionary changeCounts = null;
 
-  @JsonProperty("changes")
-  private List<GitChange> changes = null;
+    @JsonProperty("changes")
+    private List<GitChange> changes = null;
 
-  public GitCommitChanges changeCounts(ChangeCountDictionary changeCounts) {
-    this.changeCounts = changeCounts;
-    return this;
-  }
-
-   /**
-   * Get changeCounts
-   * @return changeCounts
-  **/
-  @ApiModelProperty(value = "")
-  public ChangeCountDictionary getChangeCounts() {
-    return changeCounts;
-  }
-
-  public void setChangeCounts(ChangeCountDictionary changeCounts) {
-    this.changeCounts = changeCounts;
-  }
-
-  public GitCommitChanges changes(List<GitChange> changes) {
-    this.changes = changes;
-    return this;
-  }
-
-  public GitCommitChanges addChangesItem(GitChange changesItem) {
-    if (this.changes == null) {
-      this.changes = new ArrayList<GitChange>();
+    public GitCommitChanges changeCounts(ChangeCountDictionary changeCounts) {
+        this.changeCounts = changeCounts;
+        return this;
     }
-    this.changes.add(changesItem);
-    return this;
-  }
 
-   /**
-   * Get changes
-   * @return changes
-  **/
-  @ApiModelProperty(value = "")
-  public List<GitChange> getChanges() {
-    return changes;
-  }
-
-  public void setChanges(List<GitChange> changes) {
-    this.changes = changes;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Get changeCounts
+     *
+     * @return changeCounts
+     **/
+    @ApiModelProperty(value = "")
+    public ChangeCountDictionary getChangeCounts() {
+        return changeCounts;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setChangeCounts(ChangeCountDictionary changeCounts) {
+        this.changeCounts = changeCounts;
     }
-    GitCommitChanges gitCommitChanges = (GitCommitChanges) o;
-    return Objects.equals(this.changeCounts, gitCommitChanges.changeCounts) &&
-        Objects.equals(this.changes, gitCommitChanges.changes);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(changeCounts, changes);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitCommitChanges {\n");
-    
-    sb.append("    changeCounts: ").append(toIndentedString(changeCounts)).append("\n");
-    sb.append("    changes: ").append(toIndentedString(changes)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitCommitChanges changes(List<GitChange> changes) {
+        this.changes = changes;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitCommitChanges addChangesItem(GitChange changesItem) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<GitChange>();
+        }
+        this.changes.add(changesItem);
+        return this;
+    }
+
+    /**
+     * Get changes
+     *
+     * @return changes
+     **/
+    @ApiModelProperty(value = "")
+    public List<GitChange> getChanges() {
+        return changes;
+    }
+
+    public void setChanges(List<GitChange> changes) {
+        this.changes = changes;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitCommitChanges gitCommitChanges = (GitCommitChanges) o;
+        return Objects.equals(this.changeCounts, gitCommitChanges.changeCounts) &&
+                Objects.equals(this.changes, gitCommitChanges.changes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(changeCounts, changes);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitCommitChanges {\n");
+
+        sb.append("    changeCounts: ").append(toIndentedString(changeCounts)).append("\n");
+        sb.append("    changes: ").append(toIndentedString(changes)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

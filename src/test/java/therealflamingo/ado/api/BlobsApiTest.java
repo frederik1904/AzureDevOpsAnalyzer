@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitBlobRef;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitBlobRef;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for BlobsApi
@@ -31,14 +27,11 @@ public class BlobsApiTest {
 
     private final BlobsApi api = new BlobsApi();
 
-    
+
     /**
-     * 
-     *
      * Get a single blob.  Repositories have both a name and an identifier. Identifiers are globally unique, but several projects may contain a repository of the same name. You don&#39;t need to include the project if you specify a repository by ID. However, if you specify a repository by name, you must also specify the project (by name or ID).
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void blobsGetBlobTest() throws Exception {
@@ -55,14 +48,11 @@ public class BlobsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Gets one or more blobs in a zip file download.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void blobsGetBlobsZipTest() throws Exception {
@@ -76,5 +66,5 @@ public class BlobsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

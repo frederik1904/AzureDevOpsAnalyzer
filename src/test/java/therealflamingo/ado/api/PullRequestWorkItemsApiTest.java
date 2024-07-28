@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.ResourceRef;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.ResourceRef;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestWorkItemsApi
@@ -31,14 +27,11 @@ public class PullRequestWorkItemsApiTest {
 
     private final PullRequestWorkItemsApi api = new PullRequestWorkItemsApi();
 
-    
+
     /**
-     * 
-     *
      * Retrieve a list of work items associated with a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestWorkItemsListTest() throws Exception {
@@ -51,5 +44,5 @@ public class PullRequestWorkItemsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

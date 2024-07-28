@@ -13,17 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitStatusContext;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * This class contains the metadata of a service/extension posting a status.
@@ -31,295 +28,299 @@ import therealflamingo.ado.models.ReferenceLinks;
 @ApiModel(description = "This class contains the metadata of a service/extension posting a status.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitStatus {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("context")
-  private GitStatusContext context = null;
+    @JsonProperty("context")
+    private GitStatusContext context = null;
 
-  @JsonProperty("createdBy")
-  private IdentityRef createdBy = null;
+    @JsonProperty("createdBy")
+    private IdentityRef createdBy = null;
 
-  @JsonProperty("creationDate")
-  private OffsetDateTime creationDate = null;
+    @JsonProperty("creationDate")
+    private OffsetDateTime creationDate = null;
 
-  @JsonProperty("description")
-  private String description = null;
+    @JsonProperty("description")
+    private String description = null;
 
-  @JsonProperty("id")
-  private Integer id = null;
+    @JsonProperty("id")
+    private Integer id = null;
+    @JsonProperty("state")
+    private StateEnum state = null;
+    @JsonProperty("targetUrl")
+    private String targetUrl = null;
+    @JsonProperty("updatedDate")
+    private OffsetDateTime updatedDate = null;
 
-  /**
-   * State of the status.
-   */
-  public enum StateEnum {
-    NOTSET("notSet"),
-    
-    PENDING("pending"),
-    
-    SUCCEEDED("succeeded"),
-    
-    FAILED("failed"),
-    
-    ERROR("error"),
-    
-    NOTAPPLICABLE("notApplicable"),
-    
-    PARTIALLYSUCCEEDED("partiallySucceeded");
-
-    private String value;
-
-    StateEnum(String value) {
-      this.value = value;
+    public GitStatus links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Reference links.
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "Reference links.")
+    public ReferenceLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
+    }
+
+    public GitStatus context(GitStatusContext context) {
+        this.context = context;
+        return this;
+    }
+
+    /**
+     * Context of the status.
+     *
+     * @return context
+     **/
+    @ApiModelProperty(value = "Context of the status.")
+    public GitStatusContext getContext() {
+        return context;
+    }
+
+    public void setContext(GitStatusContext context) {
+        this.context = context;
+    }
+
+    public GitStatus createdBy(IdentityRef createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+
+    /**
+     * Identity that created the status.
+     *
+     * @return createdBy
+     **/
+    @ApiModelProperty(value = "Identity that created the status.")
+    public IdentityRef getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(IdentityRef createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public GitStatus creationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+        return this;
+    }
+
+    /**
+     * Creation date and time of the status.
+     *
+     * @return creationDate
+     **/
+    @ApiModelProperty(value = "Creation date and time of the status.")
+    public OffsetDateTime getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public GitStatus description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Status description. Typically describes current state of the status.
+     *
+     * @return description
+     **/
+    @ApiModelProperty(value = "Status description. Typically describes current state of the status.")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public GitStatus id(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Status identifier.
+     *
+     * @return id
+     **/
+    @ApiModelProperty(value = "Status identifier.")
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public GitStatus state(StateEnum state) {
+        this.state = state;
+        return this;
+    }
+
+    /**
+     * State of the status.
+     *
+     * @return state
+     **/
+    @ApiModelProperty(value = "State of the status.")
+    public StateEnum getState() {
+        return state;
+    }
+
+    public void setState(StateEnum state) {
+        this.state = state;
+    }
+
+    public GitStatus targetUrl(String targetUrl) {
+        this.targetUrl = targetUrl;
+        return this;
+    }
+
+    /**
+     * URL with status details.
+     *
+     * @return targetUrl
+     **/
+    @ApiModelProperty(value = "URL with status details.")
+    public String getTargetUrl() {
+        return targetUrl;
+    }
+
+    public void setTargetUrl(String targetUrl) {
+        this.targetUrl = targetUrl;
+    }
+
+    public GitStatus updatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
+        return this;
+    }
+
+    /**
+     * Last update date and time of the status.
+     *
+     * @return updatedDate
+     **/
+    @ApiModelProperty(value = "Last update date and time of the status.")
+    public OffsetDateTime getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitStatus gitStatus = (GitStatus) o;
+        return Objects.equals(this.links, gitStatus.links) &&
+                Objects.equals(this.context, gitStatus.context) &&
+                Objects.equals(this.createdBy, gitStatus.createdBy) &&
+                Objects.equals(this.creationDate, gitStatus.creationDate) &&
+                Objects.equals(this.description, gitStatus.description) &&
+                Objects.equals(this.id, gitStatus.id) &&
+                Objects.equals(this.state, gitStatus.state) &&
+                Objects.equals(this.targetUrl, gitStatus.targetUrl) &&
+                Objects.equals(this.updatedDate, gitStatus.updatedDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, context, createdBy, creationDate, description, id, state, targetUrl, updatedDate);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitStatus {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    context: ").append(toIndentedString(context)).append("\n");
+        sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
+        sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    state: ").append(toIndentedString(state)).append("\n");
+        sb.append("    targetUrl: ").append(toIndentedString(targetUrl)).append("\n");
+        sb.append("    updatedDate: ").append(toIndentedString(updatedDate)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StateEnum fromValue(String value) {
-      for (StateEnum b : StateEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("state")
-  private StateEnum state = null;
+    /**
+     * State of the status.
+     */
+    public enum StateEnum {
+        NOTSET("notSet"),
 
-  @JsonProperty("targetUrl")
-  private String targetUrl = null;
+        PENDING("pending"),
 
-  @JsonProperty("updatedDate")
-  private OffsetDateTime updatedDate = null;
+        SUCCEEDED("succeeded"),
 
-  public GitStatus links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
+        FAILED("failed"),
 
-   /**
-   * Reference links.
-   * @return links
-  **/
-  @ApiModelProperty(value = "Reference links.")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
+        ERROR("error"),
 
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
+        NOTAPPLICABLE("notApplicable"),
 
-  public GitStatus context(GitStatusContext context) {
-    this.context = context;
-    return this;
-  }
+        PARTIALLYSUCCEEDED("partiallySucceeded");
 
-   /**
-   * Context of the status.
-   * @return context
-  **/
-  @ApiModelProperty(value = "Context of the status.")
-  public GitStatusContext getContext() {
-    return context;
-  }
+        private String value;
 
-  public void setContext(GitStatusContext context) {
-    this.context = context;
-  }
+        StateEnum(String value) {
+            this.value = value;
+        }
 
-  public GitStatus createdBy(IdentityRef createdBy) {
-    this.createdBy = createdBy;
-    return this;
-  }
+        @JsonCreator
+        public static StateEnum fromValue(String value) {
+            for (StateEnum b : StateEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-   /**
-   * Identity that created the status.
-   * @return createdBy
-  **/
-  @ApiModelProperty(value = "Identity that created the status.")
-  public IdentityRef getCreatedBy() {
-    return createdBy;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public void setCreatedBy(IdentityRef createdBy) {
-    this.createdBy = createdBy;
-  }
-
-  public GitStatus creationDate(OffsetDateTime creationDate) {
-    this.creationDate = creationDate;
-    return this;
-  }
-
-   /**
-   * Creation date and time of the status.
-   * @return creationDate
-  **/
-  @ApiModelProperty(value = "Creation date and time of the status.")
-  public OffsetDateTime getCreationDate() {
-    return creationDate;
-  }
-
-  public void setCreationDate(OffsetDateTime creationDate) {
-    this.creationDate = creationDate;
-  }
-
-  public GitStatus description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Status description. Typically describes current state of the status.
-   * @return description
-  **/
-  @ApiModelProperty(value = "Status description. Typically describes current state of the status.")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public GitStatus id(Integer id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Status identifier.
-   * @return id
-  **/
-  @ApiModelProperty(value = "Status identifier.")
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public GitStatus state(StateEnum state) {
-    this.state = state;
-    return this;
-  }
-
-   /**
-   * State of the status.
-   * @return state
-  **/
-  @ApiModelProperty(value = "State of the status.")
-  public StateEnum getState() {
-    return state;
-  }
-
-  public void setState(StateEnum state) {
-    this.state = state;
-  }
-
-  public GitStatus targetUrl(String targetUrl) {
-    this.targetUrl = targetUrl;
-    return this;
-  }
-
-   /**
-   * URL with status details.
-   * @return targetUrl
-  **/
-  @ApiModelProperty(value = "URL with status details.")
-  public String getTargetUrl() {
-    return targetUrl;
-  }
-
-  public void setTargetUrl(String targetUrl) {
-    this.targetUrl = targetUrl;
-  }
-
-  public GitStatus updatedDate(OffsetDateTime updatedDate) {
-    this.updatedDate = updatedDate;
-    return this;
-  }
-
-   /**
-   * Last update date and time of the status.
-   * @return updatedDate
-  **/
-  @ApiModelProperty(value = "Last update date and time of the status.")
-  public OffsetDateTime getUpdatedDate() {
-    return updatedDate;
-  }
-
-  public void setUpdatedDate(OffsetDateTime updatedDate) {
-    this.updatedDate = updatedDate;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitStatus gitStatus = (GitStatus) o;
-    return Objects.equals(this.links, gitStatus.links) &&
-        Objects.equals(this.context, gitStatus.context) &&
-        Objects.equals(this.createdBy, gitStatus.createdBy) &&
-        Objects.equals(this.creationDate, gitStatus.creationDate) &&
-        Objects.equals(this.description, gitStatus.description) &&
-        Objects.equals(this.id, gitStatus.id) &&
-        Objects.equals(this.state, gitStatus.state) &&
-        Objects.equals(this.targetUrl, gitStatus.targetUrl) &&
-        Objects.equals(this.updatedDate, gitStatus.updatedDate);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, context, createdBy, creationDate, description, id, state, targetUrl, updatedDate);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitStatus {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    context: ").append(toIndentedString(context)).append("\n");
-    sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
-    sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    targetUrl: ").append(toIndentedString(targetUrl)).append("\n");
-    sb.append("    updatedDate: ").append(toIndentedString(updatedDate)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

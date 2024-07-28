@@ -13,140 +13,28 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitTreeDiffEntry {
   @JsonProperty("baseObjectId")
   private String baseObjectId = null;
-
-  /**
-   * Type of change that affected this entry.
-   */
-  public enum ChangeTypeEnum {
-    NONE("none"),
-    
-    ADD("add"),
-    
-    EDIT("edit"),
-    
-    ENCODING("encoding"),
-    
-    RENAME("rename"),
-    
-    DELETE("delete"),
-    
-    UNDELETE("undelete"),
-    
-    BRANCH("branch"),
-    
-    MERGE("merge"),
-    
-    LOCK("lock"),
-    
-    ROLLBACK("rollback"),
-    
-    SOURCERENAME("sourceRename"),
-    
-    TARGETRENAME("targetRename"),
-    
-    PROPERTY("property"),
-    
-    ALL("all");
-
-    private String value;
-
-    ChangeTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ChangeTypeEnum fromValue(String value) {
-      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("changeType")
   private ChangeTypeEnum changeType = null;
-
-  /**
-   * Object type of the tree entry. Blob, Tree or Commit(\&quot;submodule\&quot;)
-   */
-  public enum ObjectTypeEnum {
-    BAD("bad"),
-    
-    COMMIT("commit"),
-    
-    TREE("tree"),
-    
-    BLOB("blob"),
-    
-    TAG("tag"),
-    
-    EXT2("ext2"),
-    
-    OFSDELTA("ofsDelta"),
-    
-    REFDELTA("refDelta");
-
-    private String value;
-
-    ObjectTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ObjectTypeEnum fromValue(String value) {
-      for (ObjectTypeEnum b : ObjectTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("objectType")
   private ObjectTypeEnum objectType = null;
-
   @JsonProperty("path")
   private String path = null;
-
   @JsonProperty("targetObjectId")
   private String targetObjectId = null;
 
@@ -155,10 +43,11 @@ public class GitTreeDiffEntry {
     return this;
   }
 
-   /**
+  /**
    * SHA1 hash of the object in the base tree, if it exists. Will be null in case of adds.
+   *
    * @return baseObjectId
-  **/
+   **/
   @ApiModelProperty(value = "SHA1 hash of the object in the base tree, if it exists. Will be null in case of adds.")
   public String getBaseObjectId() {
     return baseObjectId;
@@ -173,10 +62,11 @@ public class GitTreeDiffEntry {
     return this;
   }
 
-   /**
+  /**
    * Type of change that affected this entry.
+   *
    * @return changeType
-  **/
+   **/
   @ApiModelProperty(value = "Type of change that affected this entry.")
   public ChangeTypeEnum getChangeType() {
     return changeType;
@@ -191,10 +81,11 @@ public class GitTreeDiffEntry {
     return this;
   }
 
-   /**
+  /**
    * Object type of the tree entry. Blob, Tree or Commit(\&quot;submodule\&quot;)
+   *
    * @return objectType
-  **/
+   **/
   @ApiModelProperty(value = "Object type of the tree entry. Blob, Tree or Commit(\"submodule\")")
   public ObjectTypeEnum getObjectType() {
     return objectType;
@@ -209,10 +100,11 @@ public class GitTreeDiffEntry {
     return this;
   }
 
-   /**
+  /**
    * Relative path in base and target trees.
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "Relative path in base and target trees.")
   public String getPath() {
     return path;
@@ -227,10 +119,11 @@ public class GitTreeDiffEntry {
     return this;
   }
 
-   /**
+  /**
    * SHA1 hash of the object in the target tree, if it exists. Will be null in case of deletes.
+   *
    * @return targetObjectId
-  **/
+   **/
   @ApiModelProperty(value = "SHA1 hash of the object in the target tree, if it exists. Will be null in case of deletes.")
   public String getTargetObjectId() {
     return targetObjectId;
@@ -239,7 +132,6 @@ public class GitTreeDiffEntry {
   public void setTargetObjectId(String targetObjectId) {
     this.targetObjectId = targetObjectId;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -251,10 +143,10 @@ public class GitTreeDiffEntry {
     }
     GitTreeDiffEntry gitTreeDiffEntry = (GitTreeDiffEntry) o;
     return Objects.equals(this.baseObjectId, gitTreeDiffEntry.baseObjectId) &&
-        Objects.equals(this.changeType, gitTreeDiffEntry.changeType) &&
-        Objects.equals(this.objectType, gitTreeDiffEntry.objectType) &&
-        Objects.equals(this.path, gitTreeDiffEntry.path) &&
-        Objects.equals(this.targetObjectId, gitTreeDiffEntry.targetObjectId);
+            Objects.equals(this.changeType, gitTreeDiffEntry.changeType) &&
+            Objects.equals(this.objectType, gitTreeDiffEntry.objectType) &&
+            Objects.equals(this.path, gitTreeDiffEntry.path) &&
+            Objects.equals(this.targetObjectId, gitTreeDiffEntry.targetObjectId);
   }
 
   @Override
@@ -262,12 +154,11 @@ public class GitTreeDiffEntry {
     return Objects.hash(baseObjectId, changeType, objectType, path, targetObjectId);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitTreeDiffEntry {\n");
-    
+
     sb.append("    baseObjectId: ").append(toIndentedString(baseObjectId)).append("\n");
     sb.append("    changeType: ").append(toIndentedString(changeType)).append("\n");
     sb.append("    objectType: ").append(toIndentedString(objectType)).append("\n");
@@ -286,6 +177,115 @@ public class GitTreeDiffEntry {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+
+  /**
+   * Type of change that affected this entry.
+   */
+  public enum ChangeTypeEnum {
+    NONE("none"),
+
+    ADD("add"),
+
+    EDIT("edit"),
+
+    ENCODING("encoding"),
+
+    RENAME("rename"),
+
+    DELETE("delete"),
+
+    UNDELETE("undelete"),
+
+    BRANCH("branch"),
+
+    MERGE("merge"),
+
+    LOCK("lock"),
+
+    ROLLBACK("rollback"),
+
+    SOURCERENAME("sourceRename"),
+
+    TARGETRENAME("targetRename"),
+
+    PROPERTY("property"),
+
+    ALL("all");
+
+    private String value;
+
+    ChangeTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ChangeTypeEnum fromValue(String value) {
+      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  /**
+   * Object type of the tree entry. Blob, Tree or Commit(\&quot;submodule\&quot;)
+   */
+  public enum ObjectTypeEnum {
+    BAD("bad"),
+
+    COMMIT("commit"),
+
+    TREE("tree"),
+
+    BLOB("blob"),
+
+    TAG("tag"),
+
+    EXT2("ext2"),
+
+    OFSDELTA("ofsDelta"),
+
+    REFDELTA("refDelta");
+
+    private String value;
+
+    ObjectTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ObjectTypeEnum fromValue(String value) {
+      for (ObjectTypeEnum b : ObjectTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

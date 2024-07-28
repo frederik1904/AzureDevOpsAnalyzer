@@ -13,20 +13,18 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -48,10 +46,11 @@ public class IncludedGitCommit {
     return this;
   }
 
-   /**
+  /**
    * Get commitId
+   *
    * @return commitId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommitId() {
     return commitId;
@@ -66,10 +65,11 @@ public class IncludedGitCommit {
     return this;
   }
 
-   /**
+  /**
    * Get commitTime
+   *
    * @return commitTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getCommitTime() {
     return commitTime;
@@ -92,10 +92,11 @@ public class IncludedGitCommit {
     return this;
   }
 
-   /**
+  /**
    * Get parentCommitIds
+   *
    * @return parentCommitIds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<String> getParentCommitIds() {
     return parentCommitIds;
@@ -110,10 +111,11 @@ public class IncludedGitCommit {
     return this;
   }
 
-   /**
+  /**
    * Get repositoryId
+   *
    * @return repositoryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UUID getRepositoryId() {
     return repositoryId;
@@ -134,9 +136,9 @@ public class IncludedGitCommit {
     }
     IncludedGitCommit includedGitCommit = (IncludedGitCommit) o;
     return Objects.equals(this.commitId, includedGitCommit.commitId) &&
-        Objects.equals(this.commitTime, includedGitCommit.commitTime) &&
-        Objects.equals(this.parentCommitIds, includedGitCommit.parentCommitIds) &&
-        Objects.equals(this.repositoryId, includedGitCommit.repositoryId);
+            Objects.equals(this.commitTime, includedGitCommit.commitTime) &&
+            Objects.equals(this.parentCommitIds, includedGitCommit.parentCommitIds) &&
+            Objects.equals(this.repositoryId, includedGitCommit.repositoryId);
   }
 
   @Override
@@ -149,7 +151,7 @@ public class IncludedGitCommit {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IncludedGitCommit {\n");
-    
+
     sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
     sb.append("    commitTime: ").append(toIndentedString(commitTime)).append("\n");
     sb.append("    parentCommitIds: ").append(toIndentedString(parentCommitIds)).append("\n");

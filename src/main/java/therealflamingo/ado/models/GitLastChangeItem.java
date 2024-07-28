@@ -13,103 +13,103 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitLastChangeItem {
-  @JsonProperty("commitId")
-  private String commitId = null;
+    @JsonProperty("commitId")
+    private String commitId = null;
 
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
 
-  public GitLastChangeItem commitId(String commitId) {
-    this.commitId = commitId;
-    return this;
-  }
-
-   /**
-   * Gets or sets the commit Id this item was modified most recently for the provided version.
-   * @return commitId
-  **/
-  @ApiModelProperty(value = "Gets or sets the commit Id this item was modified most recently for the provided version.")
-  public String getCommitId() {
-    return commitId;
-  }
-
-  public void setCommitId(String commitId) {
-    this.commitId = commitId;
-  }
-
-  public GitLastChangeItem path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Gets or sets the path of the item.
-   * @return path
-  **/
-  @ApiModelProperty(value = "Gets or sets the path of the item.")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitLastChangeItem commitId(String commitId) {
+        this.commitId = commitId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Gets or sets the commit Id this item was modified most recently for the provided version.
+     *
+     * @return commitId
+     **/
+    @ApiModelProperty(value = "Gets or sets the commit Id this item was modified most recently for the provided version.")
+    public String getCommitId() {
+        return commitId;
     }
-    GitLastChangeItem gitLastChangeItem = (GitLastChangeItem) o;
-    return Objects.equals(this.commitId, gitLastChangeItem.commitId) &&
-        Objects.equals(this.path, gitLastChangeItem.path);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(commitId, path);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitLastChangeItem {\n");
-    
-    sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setCommitId(String commitId) {
+        this.commitId = commitId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitLastChangeItem path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Gets or sets the path of the item.
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "Gets or sets the path of the item.")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitLastChangeItem gitLastChangeItem = (GitLastChangeItem) o;
+        return Objects.equals(this.commitId, gitLastChangeItem.commitId) &&
+                Objects.equals(this.path, gitLastChangeItem.path);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commitId, path);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitLastChangeItem {\n");
+
+        sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

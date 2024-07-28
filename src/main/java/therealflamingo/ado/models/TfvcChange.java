@@ -13,18 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.Change;
-import therealflamingo.ado.models.ItemContent;
-import therealflamingo.ado.models.TfvcMergeSource;
+import java.util.Objects;
 
 /**
  * A change.
@@ -55,10 +50,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * Current version.
+   *
    * @return item
-  **/
+   **/
   @ApiModelProperty(value = "Current version.")
   public String getItem() {
     return item;
@@ -73,10 +69,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * Content of the item after the change.
+   *
    * @return newContent
-  **/
+   **/
   @ApiModelProperty(value = "Content of the item after the change.")
   public ItemContent getNewContent() {
     return newContent;
@@ -91,10 +88,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * Path of the item on the server.
+   *
    * @return sourceServerItem
-  **/
+   **/
   @ApiModelProperty(value = "Path of the item on the server.")
   public String getSourceServerItem() {
     return sourceServerItem;
@@ -109,10 +107,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve the item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve the item.")
   public String getUrl() {
     return url;
@@ -135,10 +134,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * List of merge sources in case of rename or branch creation.
+   *
    * @return mergeSources
-  **/
+   **/
   @ApiModelProperty(value = "List of merge sources in case of rename or branch creation.")
   public List<TfvcMergeSource> getMergeSources() {
     return mergeSources;
@@ -153,10 +153,11 @@ public class TfvcChange extends Change {
     return this;
   }
 
-   /**
+  /**
    * Version at which a (shelved) change was pended against
+   *
    * @return pendingVersion
-  **/
+   **/
   @ApiModelProperty(value = "Version at which a (shelved) change was pended against")
   public Integer getPendingVersion() {
     return pendingVersion;
@@ -177,12 +178,12 @@ public class TfvcChange extends Change {
     }
     TfvcChange tfvcChange = (TfvcChange) o;
     return Objects.equals(this.item, tfvcChange.item) &&
-        Objects.equals(this.newContent, tfvcChange.newContent) &&
-        Objects.equals(this.sourceServerItem, tfvcChange.sourceServerItem) &&
-        Objects.equals(this.url, tfvcChange.url) &&
-        Objects.equals(this.mergeSources, tfvcChange.mergeSources) &&
-        Objects.equals(this.pendingVersion, tfvcChange.pendingVersion) &&
-        super.equals(o);
+            Objects.equals(this.newContent, tfvcChange.newContent) &&
+            Objects.equals(this.sourceServerItem, tfvcChange.sourceServerItem) &&
+            Objects.equals(this.url, tfvcChange.url) &&
+            Objects.equals(this.mergeSources, tfvcChange.mergeSources) &&
+            Objects.equals(this.pendingVersion, tfvcChange.pendingVersion) &&
+            super.equals(o);
   }
 
   @Override

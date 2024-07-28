@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Comment iteration context is used to identify which diff was being viewed when the thread was created.
@@ -27,89 +25,91 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Comment iteration context is used to identify which diff was being viewed when the thread was created.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class CommentIterationContext {
-  @JsonProperty("firstComparingIteration")
-  private Integer firstComparingIteration = null;
+    @JsonProperty("firstComparingIteration")
+    private Integer firstComparingIteration = null;
 
-  @JsonProperty("secondComparingIteration")
-  private Integer secondComparingIteration = null;
+    @JsonProperty("secondComparingIteration")
+    private Integer secondComparingIteration = null;
 
-  public CommentIterationContext firstComparingIteration(Integer firstComparingIteration) {
-    this.firstComparingIteration = firstComparingIteration;
-    return this;
-  }
-
-   /**
-   * The iteration of the file on the left side of the diff when the thread was created. If this value is equal to SecondComparingIteration, then this version is the common commit between the source and target branches of the pull request.
-   * @return firstComparingIteration
-  **/
-  @ApiModelProperty(value = "The iteration of the file on the left side of the diff when the thread was created. If this value is equal to SecondComparingIteration, then this version is the common commit between the source and target branches of the pull request.")
-  public Integer getFirstComparingIteration() {
-    return firstComparingIteration;
-  }
-
-  public void setFirstComparingIteration(Integer firstComparingIteration) {
-    this.firstComparingIteration = firstComparingIteration;
-  }
-
-  public CommentIterationContext secondComparingIteration(Integer secondComparingIteration) {
-    this.secondComparingIteration = secondComparingIteration;
-    return this;
-  }
-
-   /**
-   * The iteration of the file on the right side of the diff when the thread was created.
-   * @return secondComparingIteration
-  **/
-  @ApiModelProperty(value = "The iteration of the file on the right side of the diff when the thread was created.")
-  public Integer getSecondComparingIteration() {
-    return secondComparingIteration;
-  }
-
-  public void setSecondComparingIteration(Integer secondComparingIteration) {
-    this.secondComparingIteration = secondComparingIteration;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public CommentIterationContext firstComparingIteration(Integer firstComparingIteration) {
+        this.firstComparingIteration = firstComparingIteration;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * The iteration of the file on the left side of the diff when the thread was created. If this value is equal to SecondComparingIteration, then this version is the common commit between the source and target branches of the pull request.
+     *
+     * @return firstComparingIteration
+     **/
+    @ApiModelProperty(value = "The iteration of the file on the left side of the diff when the thread was created. If this value is equal to SecondComparingIteration, then this version is the common commit between the source and target branches of the pull request.")
+    public Integer getFirstComparingIteration() {
+        return firstComparingIteration;
     }
-    CommentIterationContext commentIterationContext = (CommentIterationContext) o;
-    return Objects.equals(this.firstComparingIteration, commentIterationContext.firstComparingIteration) &&
-        Objects.equals(this.secondComparingIteration, commentIterationContext.secondComparingIteration);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(firstComparingIteration, secondComparingIteration);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CommentIterationContext {\n");
-    
-    sb.append("    firstComparingIteration: ").append(toIndentedString(firstComparingIteration)).append("\n");
-    sb.append("    secondComparingIteration: ").append(toIndentedString(secondComparingIteration)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setFirstComparingIteration(Integer firstComparingIteration) {
+        this.firstComparingIteration = firstComparingIteration;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public CommentIterationContext secondComparingIteration(Integer secondComparingIteration) {
+        this.secondComparingIteration = secondComparingIteration;
+        return this;
+    }
+
+    /**
+     * The iteration of the file on the right side of the diff when the thread was created.
+     *
+     * @return secondComparingIteration
+     **/
+    @ApiModelProperty(value = "The iteration of the file on the right side of the diff when the thread was created.")
+    public Integer getSecondComparingIteration() {
+        return secondComparingIteration;
+    }
+
+    public void setSecondComparingIteration(Integer secondComparingIteration) {
+        this.secondComparingIteration = secondComparingIteration;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CommentIterationContext commentIterationContext = (CommentIterationContext) o;
+        return Objects.equals(this.firstComparingIteration, commentIterationContext.firstComparingIteration) &&
+                Objects.equals(this.secondComparingIteration, commentIterationContext.secondComparingIteration);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstComparingIteration, secondComparingIteration);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CommentIterationContext {\n");
+
+        sb.append("    firstComparingIteration: ").append(toIndentedString(firstComparingIteration)).append("\n");
+        sb.append("    secondComparingIteration: ").append(toIndentedString(secondComparingIteration)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

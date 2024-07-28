@@ -13,184 +13,185 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitCommit;
-import therealflamingo.ado.models.GitRepository;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitPushEventData {
-  @JsonProperty("afterId")
-  private String afterId = null;
+    @JsonProperty("afterId")
+    private String afterId = null;
 
-  @JsonProperty("beforeId")
-  private String beforeId = null;
+    @JsonProperty("beforeId")
+    private String beforeId = null;
 
-  @JsonProperty("branch")
-  private String branch = null;
+    @JsonProperty("branch")
+    private String branch = null;
 
-  @JsonProperty("commits")
-  private List<GitCommit> commits = null;
+    @JsonProperty("commits")
+    private List<GitCommit> commits = null;
 
-  @JsonProperty("repository")
-  private GitRepository repository = null;
+    @JsonProperty("repository")
+    private GitRepository repository = null;
 
-  public GitPushEventData afterId(String afterId) {
-    this.afterId = afterId;
-    return this;
-  }
-
-   /**
-   * Get afterId
-   * @return afterId
-  **/
-  @ApiModelProperty(value = "")
-  public String getAfterId() {
-    return afterId;
-  }
-
-  public void setAfterId(String afterId) {
-    this.afterId = afterId;
-  }
-
-  public GitPushEventData beforeId(String beforeId) {
-    this.beforeId = beforeId;
-    return this;
-  }
-
-   /**
-   * Get beforeId
-   * @return beforeId
-  **/
-  @ApiModelProperty(value = "")
-  public String getBeforeId() {
-    return beforeId;
-  }
-
-  public void setBeforeId(String beforeId) {
-    this.beforeId = beforeId;
-  }
-
-  public GitPushEventData branch(String branch) {
-    this.branch = branch;
-    return this;
-  }
-
-   /**
-   * Get branch
-   * @return branch
-  **/
-  @ApiModelProperty(value = "")
-  public String getBranch() {
-    return branch;
-  }
-
-  public void setBranch(String branch) {
-    this.branch = branch;
-  }
-
-  public GitPushEventData commits(List<GitCommit> commits) {
-    this.commits = commits;
-    return this;
-  }
-
-  public GitPushEventData addCommitsItem(GitCommit commitsItem) {
-    if (this.commits == null) {
-      this.commits = new ArrayList<GitCommit>();
+    public GitPushEventData afterId(String afterId) {
+        this.afterId = afterId;
+        return this;
     }
-    this.commits.add(commitsItem);
-    return this;
-  }
 
-   /**
-   * Get commits
-   * @return commits
-  **/
-  @ApiModelProperty(value = "")
-  public List<GitCommit> getCommits() {
-    return commits;
-  }
-
-  public void setCommits(List<GitCommit> commits) {
-    this.commits = commits;
-  }
-
-  public GitPushEventData repository(GitRepository repository) {
-    this.repository = repository;
-    return this;
-  }
-
-   /**
-   * Get repository
-   * @return repository
-  **/
-  @ApiModelProperty(value = "")
-  public GitRepository getRepository() {
-    return repository;
-  }
-
-  public void setRepository(GitRepository repository) {
-    this.repository = repository;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Get afterId
+     *
+     * @return afterId
+     **/
+    @ApiModelProperty(value = "")
+    public String getAfterId() {
+        return afterId;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setAfterId(String afterId) {
+        this.afterId = afterId;
     }
-    GitPushEventData gitPushEventData = (GitPushEventData) o;
-    return Objects.equals(this.afterId, gitPushEventData.afterId) &&
-        Objects.equals(this.beforeId, gitPushEventData.beforeId) &&
-        Objects.equals(this.branch, gitPushEventData.branch) &&
-        Objects.equals(this.commits, gitPushEventData.commits) &&
-        Objects.equals(this.repository, gitPushEventData.repository);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(afterId, beforeId, branch, commits, repository);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitPushEventData {\n");
-    
-    sb.append("    afterId: ").append(toIndentedString(afterId)).append("\n");
-    sb.append("    beforeId: ").append(toIndentedString(beforeId)).append("\n");
-    sb.append("    branch: ").append(toIndentedString(branch)).append("\n");
-    sb.append("    commits: ").append(toIndentedString(commits)).append("\n");
-    sb.append("    repository: ").append(toIndentedString(repository)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitPushEventData beforeId(String beforeId) {
+        this.beforeId = beforeId;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    /**
+     * Get beforeId
+     *
+     * @return beforeId
+     **/
+    @ApiModelProperty(value = "")
+    public String getBeforeId() {
+        return beforeId;
+    }
+
+    public void setBeforeId(String beforeId) {
+        this.beforeId = beforeId;
+    }
+
+    public GitPushEventData branch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+
+    /**
+     * Get branch
+     *
+     * @return branch
+     **/
+    @ApiModelProperty(value = "")
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    public GitPushEventData commits(List<GitCommit> commits) {
+        this.commits = commits;
+        return this;
+    }
+
+    public GitPushEventData addCommitsItem(GitCommit commitsItem) {
+        if (this.commits == null) {
+            this.commits = new ArrayList<GitCommit>();
+        }
+        this.commits.add(commitsItem);
+        return this;
+    }
+
+    /**
+     * Get commits
+     *
+     * @return commits
+     **/
+    @ApiModelProperty(value = "")
+    public List<GitCommit> getCommits() {
+        return commits;
+    }
+
+    public void setCommits(List<GitCommit> commits) {
+        this.commits = commits;
+    }
+
+    public GitPushEventData repository(GitRepository repository) {
+        this.repository = repository;
+        return this;
+    }
+
+    /**
+     * Get repository
+     *
+     * @return repository
+     **/
+    @ApiModelProperty(value = "")
+    public GitRepository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(GitRepository repository) {
+        this.repository = repository;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitPushEventData gitPushEventData = (GitPushEventData) o;
+        return Objects.equals(this.afterId, gitPushEventData.afterId) &&
+                Objects.equals(this.beforeId, gitPushEventData.beforeId) &&
+                Objects.equals(this.branch, gitPushEventData.branch) &&
+                Objects.equals(this.commits, gitPushEventData.commits) &&
+                Objects.equals(this.repository, gitPushEventData.repository);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(afterId, beforeId, branch, commits, repository);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitPushEventData {\n");
+
+        sb.append("    afterId: ").append(toIndentedString(afterId)).append("\n");
+        sb.append("    beforeId: ").append(toIndentedString(beforeId)).append("\n");
+        sb.append("    branch: ").append(toIndentedString(branch)).append("\n");
+        sb.append("    commits: ").append(toIndentedString(commits)).append("\n");
+        sb.append("    repository: ").append(toIndentedString(repository)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

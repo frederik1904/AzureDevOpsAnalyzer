@@ -13,100 +13,24 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitVersionDescriptor {
   @JsonProperty("version")
   private String version = null;
-
-  /**
-   * Version options - Specify additional modifiers to version (e.g Previous)
-   */
-  public enum VersionOptionsEnum {
-    NONE("none"),
-    
-    PREVIOUSCHANGE("previousChange"),
-    
-    FIRSTPARENT("firstParent");
-
-    private String value;
-
-    VersionOptionsEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static VersionOptionsEnum fromValue(String value) {
-      for (VersionOptionsEnum b : VersionOptionsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("versionOptions")
   private VersionOptionsEnum versionOptions = null;
-
-  /**
-   * Version type (branch, tag, or commit). Determines how Id is interpreted
-   */
-  public enum VersionTypeEnum {
-    BRANCH("branch"),
-    
-    TAG("tag"),
-    
-    COMMIT("commit");
-
-    private String value;
-
-    VersionTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static VersionTypeEnum fromValue(String value) {
-      for (VersionTypeEnum b : VersionTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("versionType")
   private VersionTypeEnum versionType = null;
 
@@ -115,10 +39,11 @@ public class GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version string identifier (name of tag/branch, SHA1 of commit)
+   *
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
   public String getVersion() {
     return version;
@@ -133,10 +58,11 @@ public class GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version options - Specify additional modifiers to version (e.g Previous)
+   *
    * @return versionOptions
-  **/
+   **/
   @ApiModelProperty(value = "Version options - Specify additional modifiers to version (e.g Previous)")
   public VersionOptionsEnum getVersionOptions() {
     return versionOptions;
@@ -151,10 +77,11 @@ public class GitVersionDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version type (branch, tag, or commit). Determines how Id is interpreted
+   *
    * @return versionType
-  **/
+   **/
   @ApiModelProperty(value = "Version type (branch, tag, or commit). Determines how Id is interpreted")
   public VersionTypeEnum getVersionType() {
     return versionType;
@@ -163,7 +90,6 @@ public class GitVersionDescriptor {
   public void setVersionType(VersionTypeEnum versionType) {
     this.versionType = versionType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -175,8 +101,8 @@ public class GitVersionDescriptor {
     }
     GitVersionDescriptor gitVersionDescriptor = (GitVersionDescriptor) o;
     return Objects.equals(this.version, gitVersionDescriptor.version) &&
-        Objects.equals(this.versionOptions, gitVersionDescriptor.versionOptions) &&
-        Objects.equals(this.versionType, gitVersionDescriptor.versionType);
+            Objects.equals(this.versionOptions, gitVersionDescriptor.versionOptions) &&
+            Objects.equals(this.versionType, gitVersionDescriptor.versionType);
   }
 
   @Override
@@ -184,12 +110,11 @@ public class GitVersionDescriptor {
     return Objects.hash(version, versionOptions, versionType);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitVersionDescriptor {\n");
-    
+
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    versionOptions: ").append(toIndentedString(versionOptions)).append("\n");
     sb.append("    versionType: ").append(toIndentedString(versionType)).append("\n");
@@ -206,6 +131,81 @@ public class GitVersionDescriptor {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+
+  /**
+   * Version options - Specify additional modifiers to version (e.g Previous)
+   */
+  public enum VersionOptionsEnum {
+    NONE("none"),
+
+    PREVIOUSCHANGE("previousChange"),
+
+    FIRSTPARENT("firstParent");
+
+    private String value;
+
+    VersionOptionsEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static VersionOptionsEnum fromValue(String value) {
+      for (VersionOptionsEnum b : VersionOptionsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  /**
+   * Version type (branch, tag, or commit). Determines how Id is interpreted
+   */
+  public enum VersionTypeEnum {
+    BRANCH("branch"),
+
+    TAG("tag"),
+
+    COMMIT("commit");
+
+    private String value;
+
+    VersionTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static VersionTypeEnum fromValue(String value) {
+      for (VersionTypeEnum b : VersionTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

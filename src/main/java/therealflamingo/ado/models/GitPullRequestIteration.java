@@ -13,21 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitPullRequestChange;
-import therealflamingo.ado.models.GitPushRef;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
  * Provides properties that describe a Git pull request iteration. Iterations are created as a result of creating and pushing updates to a pull request.
@@ -70,61 +65,12 @@ public class GitPullRequestIteration {
 
   @JsonProperty("push")
   private GitPushRef push = null;
-
-  /**
-   * The reason for which the pull request iteration was created.
-   */
-  public enum ReasonEnum {
-    PUSH("push"),
-    
-    FORCEPUSH("forcePush"),
-    
-    CREATE("create"),
-    
-    REBASE("rebase"),
-    
-    UNKNOWN("unknown"),
-    
-    RETARGET("retarget"),
-    
-    RESOLVECONFLICTS("resolveConflicts");
-
-    private String value;
-
-    ReasonEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ReasonEnum fromValue(String value) {
-      for (ReasonEnum b : ReasonEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("reason")
   private ReasonEnum reason = null;
-
   @JsonProperty("sourceRefCommit")
   private GitCommitRef sourceRefCommit = null;
-
   @JsonProperty("targetRefCommit")
   private GitCommitRef targetRefCommit = null;
-
   @JsonProperty("updatedDate")
   private OffsetDateTime updatedDate = null;
 
@@ -133,10 +79,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * A collection of related REST reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "A collection of related REST reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -151,10 +98,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * Author of the pull request iteration.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "Author of the pull request iteration.")
   public IdentityRef getAuthor() {
     return author;
@@ -177,10 +125,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * Changes included with the pull request iteration.
+   *
    * @return changeList
-  **/
+   **/
   @ApiModelProperty(value = "Changes included with the pull request iteration.")
   public List<GitPullRequestChange> getChangeList() {
     return changeList;
@@ -203,10 +152,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The commits included with the pull request iteration.
+   *
    * @return commits
-  **/
+   **/
   @ApiModelProperty(value = "The commits included with the pull request iteration.")
   public List<GitCommitRef> getCommits() {
     return commits;
@@ -221,10 +171,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The first common Git commit of the source and target refs.
+   *
    * @return commonRefCommit
-  **/
+   **/
   @ApiModelProperty(value = "The first common Git commit of the source and target refs.")
   public GitCommitRef getCommonRefCommit() {
     return commonRefCommit;
@@ -239,10 +190,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The creation date of the pull request iteration.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "The creation date of the pull request iteration.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -257,10 +209,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * Description of the pull request iteration.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "Description of the pull request iteration.")
   public String getDescription() {
     return description;
@@ -275,10 +228,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * Indicates if the Commits property contains a truncated list of commits in this pull request iteration.
+   *
    * @return hasMoreCommits
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if the Commits property contains a truncated list of commits in this pull request iteration.")
   public Boolean isHasMoreCommits() {
     return hasMoreCommits;
@@ -293,10 +247,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * ID of the pull request iteration. Iterations are created as a result of creating and pushing updates to a pull request.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "ID of the pull request iteration. Iterations are created as a result of creating and pushing updates to a pull request.")
   public Integer getId() {
     return id;
@@ -311,10 +266,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * If the iteration reason is Retarget, this is the refName of the new target
+   *
    * @return newTargetRefName
-  **/
+   **/
   @ApiModelProperty(value = "If the iteration reason is Retarget, this is the refName of the new target")
   public String getNewTargetRefName() {
     return newTargetRefName;
@@ -329,10 +285,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * If the iteration reason is Retarget, this is the original target refName
+   *
    * @return oldTargetRefName
-  **/
+   **/
   @ApiModelProperty(value = "If the iteration reason is Retarget, this is the original target refName")
   public String getOldTargetRefName() {
     return oldTargetRefName;
@@ -347,10 +304,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The Git push information associated with this pull request iteration.
+   *
    * @return push
-  **/
+   **/
   @ApiModelProperty(value = "The Git push information associated with this pull request iteration.")
   public GitPushRef getPush() {
     return push;
@@ -365,10 +323,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The reason for which the pull request iteration was created.
+   *
    * @return reason
-  **/
+   **/
   @ApiModelProperty(value = "The reason for which the pull request iteration was created.")
   public ReasonEnum getReason() {
     return reason;
@@ -383,10 +342,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The source Git commit of this iteration.
+   *
    * @return sourceRefCommit
-  **/
+   **/
   @ApiModelProperty(value = "The source Git commit of this iteration.")
   public GitCommitRef getSourceRefCommit() {
     return sourceRefCommit;
@@ -401,10 +361,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The target Git commit of this iteration.
+   *
    * @return targetRefCommit
-  **/
+   **/
   @ApiModelProperty(value = "The target Git commit of this iteration.")
   public GitCommitRef getTargetRefCommit() {
     return targetRefCommit;
@@ -419,10 +380,11 @@ public class GitPullRequestIteration {
     return this;
   }
 
-   /**
+  /**
    * The updated date of the pull request iteration.
+   *
    * @return updatedDate
-  **/
+   **/
   @ApiModelProperty(value = "The updated date of the pull request iteration.")
   public OffsetDateTime getUpdatedDate() {
     return updatedDate;
@@ -431,7 +393,6 @@ public class GitPullRequestIteration {
   public void setUpdatedDate(OffsetDateTime updatedDate) {
     this.updatedDate = updatedDate;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -443,21 +404,21 @@ public class GitPullRequestIteration {
     }
     GitPullRequestIteration gitPullRequestIteration = (GitPullRequestIteration) o;
     return Objects.equals(this.links, gitPullRequestIteration.links) &&
-        Objects.equals(this.author, gitPullRequestIteration.author) &&
-        Objects.equals(this.changeList, gitPullRequestIteration.changeList) &&
-        Objects.equals(this.commits, gitPullRequestIteration.commits) &&
-        Objects.equals(this.commonRefCommit, gitPullRequestIteration.commonRefCommit) &&
-        Objects.equals(this.createdDate, gitPullRequestIteration.createdDate) &&
-        Objects.equals(this.description, gitPullRequestIteration.description) &&
-        Objects.equals(this.hasMoreCommits, gitPullRequestIteration.hasMoreCommits) &&
-        Objects.equals(this.id, gitPullRequestIteration.id) &&
-        Objects.equals(this.newTargetRefName, gitPullRequestIteration.newTargetRefName) &&
-        Objects.equals(this.oldTargetRefName, gitPullRequestIteration.oldTargetRefName) &&
-        Objects.equals(this.push, gitPullRequestIteration.push) &&
-        Objects.equals(this.reason, gitPullRequestIteration.reason) &&
-        Objects.equals(this.sourceRefCommit, gitPullRequestIteration.sourceRefCommit) &&
-        Objects.equals(this.targetRefCommit, gitPullRequestIteration.targetRefCommit) &&
-        Objects.equals(this.updatedDate, gitPullRequestIteration.updatedDate);
+            Objects.equals(this.author, gitPullRequestIteration.author) &&
+            Objects.equals(this.changeList, gitPullRequestIteration.changeList) &&
+            Objects.equals(this.commits, gitPullRequestIteration.commits) &&
+            Objects.equals(this.commonRefCommit, gitPullRequestIteration.commonRefCommit) &&
+            Objects.equals(this.createdDate, gitPullRequestIteration.createdDate) &&
+            Objects.equals(this.description, gitPullRequestIteration.description) &&
+            Objects.equals(this.hasMoreCommits, gitPullRequestIteration.hasMoreCommits) &&
+            Objects.equals(this.id, gitPullRequestIteration.id) &&
+            Objects.equals(this.newTargetRefName, gitPullRequestIteration.newTargetRefName) &&
+            Objects.equals(this.oldTargetRefName, gitPullRequestIteration.oldTargetRefName) &&
+            Objects.equals(this.push, gitPullRequestIteration.push) &&
+            Objects.equals(this.reason, gitPullRequestIteration.reason) &&
+            Objects.equals(this.sourceRefCommit, gitPullRequestIteration.sourceRefCommit) &&
+            Objects.equals(this.targetRefCommit, gitPullRequestIteration.targetRefCommit) &&
+            Objects.equals(this.updatedDate, gitPullRequestIteration.updatedDate);
   }
 
   @Override
@@ -465,12 +426,11 @@ public class GitPullRequestIteration {
     return Objects.hash(links, author, changeList, commits, commonRefCommit, createdDate, description, hasMoreCommits, id, newTargetRefName, oldTargetRefName, push, reason, sourceRefCommit, targetRefCommit, updatedDate);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequestIteration {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    changeList: ").append(toIndentedString(changeList)).append("\n");
@@ -500,6 +460,51 @@ public class GitPullRequestIteration {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The reason for which the pull request iteration was created.
+   */
+  public enum ReasonEnum {
+    PUSH("push"),
+
+    FORCEPUSH("forcePush"),
+
+    CREATE("create"),
+
+    REBASE("rebase"),
+
+    UNKNOWN("unknown"),
+
+    RETARGET("retarget"),
+
+    RESOLVECONFLICTS("resolveConflicts");
+
+    private String value;
+
+    ReasonEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ReasonEnum fromValue(String value) {
+      for (ReasonEnum b : ReasonEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

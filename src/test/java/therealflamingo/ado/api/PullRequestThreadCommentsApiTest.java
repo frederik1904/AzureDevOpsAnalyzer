@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.Comment;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.Comment;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestThreadCommentsApi
@@ -31,14 +27,11 @@ public class PullRequestThreadCommentsApiTest {
 
     private final PullRequestThreadCommentsApi api = new PullRequestThreadCommentsApi();
 
-    
+
     /**
-     * 
-     *
      * Create a comment on a specific thread in a pull request (up to 500 comments can be created per thread).
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadCommentsCreateTest() throws Exception {
@@ -53,14 +46,11 @@ public class PullRequestThreadCommentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Delete a comment associated with a specific thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadCommentsDeleteTest() throws Exception {
@@ -75,14 +65,11 @@ public class PullRequestThreadCommentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a comment associated with a specific thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadCommentsGetTest() throws Exception {
@@ -97,14 +84,11 @@ public class PullRequestThreadCommentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all comments associated with a specific thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadCommentsListTest() throws Exception {
@@ -118,14 +102,11 @@ public class PullRequestThreadCommentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Update a comment associated with a specific thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadCommentsUpdateTest() throws Exception {
@@ -141,5 +122,5 @@ public class PullRequestThreadCommentsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

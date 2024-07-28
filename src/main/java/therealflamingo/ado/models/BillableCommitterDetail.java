@@ -13,19 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.BillableCommitter;
+
+import java.util.Objects;
+import java.util.UUID;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -77,10 +74,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * RepositoryId commit was pushed to.
+   *
    * @return repoId
-  **/
+   **/
   @ApiModelProperty(value = "RepositoryId commit was pushed to.")
   public UUID getRepoId() {
     return repoId;
@@ -95,10 +93,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Visual Studio ID /Team Foundation ID
+   *
    * @return vsid
-  **/
+   **/
   @ApiModelProperty(value = "Visual Studio ID /Team Foundation ID")
   public UUID getVsid() {
     return vsid;
@@ -113,10 +112,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * ID (SHA-1) of the commit.
+   *
    * @return commitId
-  **/
+   **/
   @ApiModelProperty(value = "ID (SHA-1) of the commit.")
   public String getCommitId() {
     return commitId;
@@ -131,10 +131,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Committer email address after parsing.
+   *
    * @return committerEmail
-  **/
+   **/
   @ApiModelProperty(value = "Committer email address after parsing.")
   public String getCommitterEmail() {
     return committerEmail;
@@ -149,10 +150,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Time reported by the commit.
+   *
    * @return commitTime
-  **/
+   **/
   @ApiModelProperty(value = "Time reported by the commit.")
   public OffsetDateTime getCommitTime() {
     return commitTime;
@@ -167,10 +169,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * DisplayName of the Pusher.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "DisplayName of the Pusher.")
   public String getDisplayName() {
     return displayName;
@@ -185,10 +188,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * MailNickName of the Pusher.
+   *
    * @return mailNickName
-  **/
+   **/
   @ApiModelProperty(value = "MailNickName of the Pusher.")
   public String getMailNickName() {
     return mailNickName;
@@ -203,10 +207,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Project Id commit was pushed to.
+   *
    * @return projectId
-  **/
+   **/
   @ApiModelProperty(value = "Project Id commit was pushed to.")
   public UUID getProjectId() {
     return projectId;
@@ -221,10 +226,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Project name commit was pushed to.
+   *
    * @return projectName
-  **/
+   **/
   @ApiModelProperty(value = "Project name commit was pushed to.")
   public String getProjectName() {
     return projectName;
@@ -239,10 +245,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Time of the push that contained the commit.
+   *
    * @return pushedTime
-  **/
+   **/
   @ApiModelProperty(value = "Time of the push that contained the commit.")
   public OffsetDateTime getPushedTime() {
     return pushedTime;
@@ -257,10 +264,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Pusher Id for the push.
+   *
    * @return pusherId
-  **/
+   **/
   @ApiModelProperty(value = "Pusher Id for the push.")
   public UUID getPusherId() {
     return pusherId;
@@ -275,10 +283,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Push Id that contained the commit.
+   *
    * @return pushId
-  **/
+   **/
   @ApiModelProperty(value = "Push Id that contained the commit.")
   public Integer getPushId() {
     return pushId;
@@ -293,10 +302,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Repository name commit was pushed to.
+   *
    * @return repoName
-  **/
+   **/
   @ApiModelProperty(value = "Repository name commit was pushed to.")
   public String getRepoName() {
     return repoName;
@@ -311,10 +321,11 @@ public class BillableCommitterDetail extends BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * SamAccountName of the Pusher.
+   *
    * @return samAccountName
-  **/
+   **/
   @ApiModelProperty(value = "SamAccountName of the Pusher.")
   public String getSamAccountName() {
     return samAccountName;
@@ -335,20 +346,20 @@ public class BillableCommitterDetail extends BillableCommitter {
     }
     BillableCommitterDetail billableCommitterDetail = (BillableCommitterDetail) o;
     return Objects.equals(this.repoId, billableCommitterDetail.repoId) &&
-        Objects.equals(this.vsid, billableCommitterDetail.vsid) &&
-        Objects.equals(this.commitId, billableCommitterDetail.commitId) &&
-        Objects.equals(this.committerEmail, billableCommitterDetail.committerEmail) &&
-        Objects.equals(this.commitTime, billableCommitterDetail.commitTime) &&
-        Objects.equals(this.displayName, billableCommitterDetail.displayName) &&
-        Objects.equals(this.mailNickName, billableCommitterDetail.mailNickName) &&
-        Objects.equals(this.projectId, billableCommitterDetail.projectId) &&
-        Objects.equals(this.projectName, billableCommitterDetail.projectName) &&
-        Objects.equals(this.pushedTime, billableCommitterDetail.pushedTime) &&
-        Objects.equals(this.pusherId, billableCommitterDetail.pusherId) &&
-        Objects.equals(this.pushId, billableCommitterDetail.pushId) &&
-        Objects.equals(this.repoName, billableCommitterDetail.repoName) &&
-        Objects.equals(this.samAccountName, billableCommitterDetail.samAccountName) &&
-        super.equals(o);
+            Objects.equals(this.vsid, billableCommitterDetail.vsid) &&
+            Objects.equals(this.commitId, billableCommitterDetail.commitId) &&
+            Objects.equals(this.committerEmail, billableCommitterDetail.committerEmail) &&
+            Objects.equals(this.commitTime, billableCommitterDetail.commitTime) &&
+            Objects.equals(this.displayName, billableCommitterDetail.displayName) &&
+            Objects.equals(this.mailNickName, billableCommitterDetail.mailNickName) &&
+            Objects.equals(this.projectId, billableCommitterDetail.projectId) &&
+            Objects.equals(this.projectName, billableCommitterDetail.projectName) &&
+            Objects.equals(this.pushedTime, billableCommitterDetail.pushedTime) &&
+            Objects.equals(this.pusherId, billableCommitterDetail.pusherId) &&
+            Objects.equals(this.pushId, billableCommitterDetail.pushId) &&
+            Objects.equals(this.repoName, billableCommitterDetail.repoName) &&
+            Objects.equals(this.samAccountName, billableCommitterDetail.samAccountName) &&
+            super.equals(o);
   }
 
   @Override

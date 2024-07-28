@@ -13,18 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
  * Represents a comment which is one of potentially many in a comment thread.
@@ -37,70 +35,22 @@ public class Comment {
 
   @JsonProperty("author")
   private IdentityRef author = null;
-
-  /**
-   * The comment type at the time of creation.
-   */
-  public enum CommentTypeEnum {
-    UNKNOWN("unknown"),
-    
-    TEXT("text"),
-    
-    CODECHANGE("codeChange"),
-    
-    SYSTEM("system");
-
-    private String value;
-
-    CommentTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static CommentTypeEnum fromValue(String value) {
-      for (CommentTypeEnum b : CommentTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("commentType")
   private CommentTypeEnum commentType = null;
-
   @JsonProperty("content")
   private String content = null;
-
   @JsonProperty("id")
   private Integer id = null;
-
   @JsonProperty("isDeleted")
   private Boolean isDeleted = null;
-
   @JsonProperty("lastContentUpdatedDate")
   private OffsetDateTime lastContentUpdatedDate = null;
-
   @JsonProperty("lastUpdatedDate")
   private OffsetDateTime lastUpdatedDate = null;
-
   @JsonProperty("parentCommentId")
   private Integer parentCommentId = null;
-
   @JsonProperty("publishedDate")
   private OffsetDateTime publishedDate = null;
-
   @JsonProperty("usersLiked")
   private List<IdentityRef> usersLiked = null;
 
@@ -109,10 +59,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * Links to other related objects.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to other related objects.")
   public ReferenceLinks getLinks() {
     return links;
@@ -127,10 +78,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The author of the comment.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "The author of the comment.")
   public IdentityRef getAuthor() {
     return author;
@@ -145,10 +97,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The comment type at the time of creation.
+   *
    * @return commentType
-  **/
+   **/
   @ApiModelProperty(value = "The comment type at the time of creation.")
   public CommentTypeEnum getCommentType() {
     return commentType;
@@ -163,10 +116,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The comment content.
+   *
    * @return content
-  **/
+   **/
   @ApiModelProperty(value = "The comment content.")
   public String getContent() {
     return content;
@@ -181,10 +135,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The comment ID. IDs start at 1 and are unique to a pull request.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The comment ID. IDs start at 1 and are unique to a pull request.")
   public Integer getId() {
     return id;
@@ -199,10 +154,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * Whether or not this comment was soft-deleted.
+   *
    * @return isDeleted
-  **/
+   **/
   @ApiModelProperty(value = "Whether or not this comment was soft-deleted.")
   public Boolean isIsDeleted() {
     return isDeleted;
@@ -217,10 +173,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The date the comment&#39;s content was last updated.
+   *
    * @return lastContentUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "The date the comment's content was last updated.")
   public OffsetDateTime getLastContentUpdatedDate() {
     return lastContentUpdatedDate;
@@ -235,10 +192,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The date the comment was last updated.
+   *
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "The date the comment was last updated.")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
@@ -253,10 +211,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The ID of the parent comment. This is used for replies.
+   *
    * @return parentCommentId
-  **/
+   **/
   @ApiModelProperty(value = "The ID of the parent comment. This is used for replies.")
   public Integer getParentCommentId() {
     return parentCommentId;
@@ -271,10 +230,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * The date the comment was first published.
+   *
    * @return publishedDate
-  **/
+   **/
   @ApiModelProperty(value = "The date the comment was first published.")
   public OffsetDateTime getPublishedDate() {
     return publishedDate;
@@ -297,10 +257,11 @@ public class Comment {
     return this;
   }
 
-   /**
+  /**
    * A list of the users who have liked this comment.
+   *
    * @return usersLiked
-  **/
+   **/
   @ApiModelProperty(value = "A list of the users who have liked this comment.")
   public List<IdentityRef> getUsersLiked() {
     return usersLiked;
@@ -309,7 +270,6 @@ public class Comment {
   public void setUsersLiked(List<IdentityRef> usersLiked) {
     this.usersLiked = usersLiked;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -321,16 +281,16 @@ public class Comment {
     }
     Comment comment = (Comment) o;
     return Objects.equals(this.links, comment.links) &&
-        Objects.equals(this.author, comment.author) &&
-        Objects.equals(this.commentType, comment.commentType) &&
-        Objects.equals(this.content, comment.content) &&
-        Objects.equals(this.id, comment.id) &&
-        Objects.equals(this.isDeleted, comment.isDeleted) &&
-        Objects.equals(this.lastContentUpdatedDate, comment.lastContentUpdatedDate) &&
-        Objects.equals(this.lastUpdatedDate, comment.lastUpdatedDate) &&
-        Objects.equals(this.parentCommentId, comment.parentCommentId) &&
-        Objects.equals(this.publishedDate, comment.publishedDate) &&
-        Objects.equals(this.usersLiked, comment.usersLiked);
+            Objects.equals(this.author, comment.author) &&
+            Objects.equals(this.commentType, comment.commentType) &&
+            Objects.equals(this.content, comment.content) &&
+            Objects.equals(this.id, comment.id) &&
+            Objects.equals(this.isDeleted, comment.isDeleted) &&
+            Objects.equals(this.lastContentUpdatedDate, comment.lastContentUpdatedDate) &&
+            Objects.equals(this.lastUpdatedDate, comment.lastUpdatedDate) &&
+            Objects.equals(this.parentCommentId, comment.parentCommentId) &&
+            Objects.equals(this.publishedDate, comment.publishedDate) &&
+            Objects.equals(this.usersLiked, comment.usersLiked);
   }
 
   @Override
@@ -338,12 +298,11 @@ public class Comment {
     return Objects.hash(links, author, commentType, content, id, isDeleted, lastContentUpdatedDate, lastUpdatedDate, parentCommentId, publishedDate, usersLiked);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Comment {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    commentType: ").append(toIndentedString(commentType)).append("\n");
@@ -368,6 +327,45 @@ public class Comment {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The comment type at the time of creation.
+   */
+  public enum CommentTypeEnum {
+    UNKNOWN("unknown"),
+
+    TEXT("text"),
+
+    CODECHANGE("codeChange"),
+
+    SYSTEM("system");
+
+    private String value;
+
+    CommentTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static CommentTypeEnum fromValue(String value) {
+      for (CommentTypeEnum b : CommentTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

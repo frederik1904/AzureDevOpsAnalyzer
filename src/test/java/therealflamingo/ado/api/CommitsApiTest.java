@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitCommit;
 import therealflamingo.ado.models.GitCommitChanges;
 import therealflamingo.ado.models.GitCommitRef;
 import therealflamingo.ado.models.GitQueryCommitsCriteria;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for CommitsApi
@@ -34,14 +30,11 @@ public class CommitsApiTest {
 
     private final CommitsApi api = new CommitsApi();
 
-    
+
     /**
-     * 
-     *
      * Retrieve a particular commit.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void commitsGetTest() throws Exception {
@@ -55,14 +48,11 @@ public class CommitsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve changes for a particular commit.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void commitsGetChangesTest() throws Exception {
@@ -77,14 +67,11 @@ public class CommitsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve git commits for a project matching the search criteria
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void commitsGetCommitsBatchTest() throws Exception {
@@ -100,14 +87,11 @@ public class CommitsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a list of commits associated with a particular push.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void commitsGetPushCommitsTest() throws Exception {
@@ -123,5 +107,5 @@ public class CommitsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

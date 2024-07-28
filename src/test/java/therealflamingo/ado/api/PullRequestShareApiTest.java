@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.ShareNotificationContext;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.ShareNotificationContext;
 
 /**
  * API tests for PullRequestShareApi
@@ -31,14 +25,11 @@ public class PullRequestShareApiTest {
 
     private final PullRequestShareApi api = new PullRequestShareApi();
 
-    
+
     /**
-     * 
-     *
      * Sends an e-mail notification about a specific pull request to a set of recipients
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestShareSharePullRequestTest() throws Exception {
@@ -52,5 +43,5 @@ public class PullRequestShareApiTest {
 
         // TODO: test validations
     }
-    
+
 }

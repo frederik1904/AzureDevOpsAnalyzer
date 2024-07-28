@@ -13,20 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitRef;
-import therealflamingo.ado.models.GitRepository;
-import therealflamingo.ado.models.GitStatus;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
  * Information about a fork ref.
@@ -69,10 +62,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -87,10 +81,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get creator
+   *
    * @return creator
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getCreator() {
     return creator;
@@ -105,10 +100,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get isLocked
+   *
    * @return isLocked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsLocked() {
     return isLocked;
@@ -123,10 +119,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get isLockedBy
+   *
    * @return isLockedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getIsLockedBy() {
     return isLockedBy;
@@ -141,10 +138,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -159,10 +157,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get objectId
+   *
    * @return objectId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getObjectId() {
     return objectId;
@@ -177,10 +176,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get peeledObjectId
+   *
    * @return peeledObjectId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPeeledObjectId() {
     return peeledObjectId;
@@ -203,10 +203,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get statuses
+   *
    * @return statuses
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<GitStatus> getStatuses() {
     return statuses;
@@ -221,10 +222,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -239,10 +241,11 @@ public class GitForkRef extends GitRef {
     return this;
   }
 
-   /**
+  /**
    * The repository ID of the fork.
+   *
    * @return repository
-  **/
+   **/
   @ApiModelProperty(value = "The repository ID of the fork.")
   public GitRepository getRepository() {
     return repository;
@@ -263,16 +266,16 @@ public class GitForkRef extends GitRef {
     }
     GitForkRef gitForkRef = (GitForkRef) o;
     return Objects.equals(this.links, gitForkRef.links) &&
-        Objects.equals(this.creator, gitForkRef.creator) &&
-        Objects.equals(this.isLocked, gitForkRef.isLocked) &&
-        Objects.equals(this.isLockedBy, gitForkRef.isLockedBy) &&
-        Objects.equals(this.name, gitForkRef.name) &&
-        Objects.equals(this.objectId, gitForkRef.objectId) &&
-        Objects.equals(this.peeledObjectId, gitForkRef.peeledObjectId) &&
-        Objects.equals(this.statuses, gitForkRef.statuses) &&
-        Objects.equals(this.url, gitForkRef.url) &&
-        Objects.equals(this.repository, gitForkRef.repository) &&
-        super.equals(o);
+            Objects.equals(this.creator, gitForkRef.creator) &&
+            Objects.equals(this.isLocked, gitForkRef.isLocked) &&
+            Objects.equals(this.isLockedBy, gitForkRef.isLockedBy) &&
+            Objects.equals(this.name, gitForkRef.name) &&
+            Objects.equals(this.objectId, gitForkRef.objectId) &&
+            Objects.equals(this.peeledObjectId, gitForkRef.peeledObjectId) &&
+            Objects.equals(this.statuses, gitForkRef.statuses) &&
+            Objects.equals(this.url, gitForkRef.url) &&
+            Objects.equals(this.repository, gitForkRef.repository) &&
+            super.equals(o);
   }
 
   @Override

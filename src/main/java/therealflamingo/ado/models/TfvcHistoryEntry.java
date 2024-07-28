@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.ChangeList;
-import therealflamingo.ado.models.HistoryEntry;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -46,10 +42,11 @@ public class TfvcHistoryEntry extends HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The Change list (changeset/commit/shelveset) for this point in history
+   *
    * @return changeList
-  **/
+   **/
   @ApiModelProperty(value = "The Change list (changeset/commit/shelveset) for this point in history")
   public ChangeList getChangeList() {
     return changeList;
@@ -64,10 +61,11 @@ public class TfvcHistoryEntry extends HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The path of the item at this point in history (only relevant for File history, not folders)
+   *
    * @return serverItem
-  **/
+   **/
   @ApiModelProperty(value = "The path of the item at this point in history (only relevant for File history, not folders)")
   public String getServerItem() {
     return serverItem;
@@ -82,10 +80,11 @@ public class TfvcHistoryEntry extends HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The encoding of the item at this point in history (only relevant for File history, not folders)
+   *
    * @return encoding
-  **/
+   **/
   @ApiModelProperty(value = "The encoding of the item at this point in history (only relevant for File history, not folders)")
   public Integer getEncoding() {
     return encoding;
@@ -100,10 +99,11 @@ public class TfvcHistoryEntry extends HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The file id of the item at this point in history (only relevant for File history, not folders)
+   *
    * @return fileId
-  **/
+   **/
   @ApiModelProperty(value = "The file id of the item at this point in history (only relevant for File history, not folders)")
   public Integer getFileId() {
     return fileId;
@@ -124,10 +124,10 @@ public class TfvcHistoryEntry extends HistoryEntry {
     }
     TfvcHistoryEntry tfvcHistoryEntry = (TfvcHistoryEntry) o;
     return Objects.equals(this.changeList, tfvcHistoryEntry.changeList) &&
-        Objects.equals(this.serverItem, tfvcHistoryEntry.serverItem) &&
-        Objects.equals(this.encoding, tfvcHistoryEntry.encoding) &&
-        Objects.equals(this.fileId, tfvcHistoryEntry.fileId) &&
-        super.equals(o);
+            Objects.equals(this.serverItem, tfvcHistoryEntry.serverItem) &&
+            Objects.equals(this.encoding, tfvcHistoryEntry.encoding) &&
+            Objects.equals(this.fileId, tfvcHistoryEntry.fileId) &&
+            super.equals(o);
   }
 
   @Override

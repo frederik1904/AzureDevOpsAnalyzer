@@ -13,18 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
 
+import java.util.Objects;
+import java.util.UUID;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -52,10 +50,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * Enabled by VSID
+   *
    * @return changedById
-  **/
+   **/
   @ApiModelProperty(value = "Enabled by VSID")
   public UUID getChangedById() {
     return changedById;
@@ -70,10 +69,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * Enabled changed on datetime
+   *
    * @return changedOnDate
-  **/
+   **/
   @ApiModelProperty(value = "Enabled changed on datetime")
   public OffsetDateTime getChangedOnDate() {
     return changedOnDate;
@@ -88,10 +88,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * True if Dependabot is enabled for the repository, false if it is disabled.
+   *
    * @return dependabotEnabled
-  **/
+   **/
   @ApiModelProperty(value = "True if Dependabot is enabled for the repository, false if it is disabled.")
   public Boolean isDependabotEnabled() {
     return dependabotEnabled;
@@ -106,10 +107,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * Enabled status 0 disabled, 1 enabled, Null never explicitly set, always whatever project is, ya this should probably be an enum somewhere
+   *
    * @return enabled
-  **/
+   **/
   @ApiModelProperty(value = "Enabled status 0 disabled, 1 enabled, Null never explicitly set, always whatever project is, ya this should probably be an enum somewhere")
   public Boolean isEnabled() {
     return enabled;
@@ -124,10 +126,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * ProjectId
+   *
    * @return projectId
-  **/
+   **/
   @ApiModelProperty(value = "ProjectId")
   public UUID getProjectId() {
     return projectId;
@@ -142,10 +145,11 @@ public class AdvSecEnablementStatus {
     return this;
   }
 
-   /**
+  /**
    * RepositoryId
+   *
    * @return repositoryId
-  **/
+   **/
   @ApiModelProperty(value = "RepositoryId")
   public UUID getRepositoryId() {
     return repositoryId;
@@ -166,11 +170,11 @@ public class AdvSecEnablementStatus {
     }
     AdvSecEnablementStatus advSecEnablementStatus = (AdvSecEnablementStatus) o;
     return Objects.equals(this.changedById, advSecEnablementStatus.changedById) &&
-        Objects.equals(this.changedOnDate, advSecEnablementStatus.changedOnDate) &&
-        Objects.equals(this.dependabotEnabled, advSecEnablementStatus.dependabotEnabled) &&
-        Objects.equals(this.enabled, advSecEnablementStatus.enabled) &&
-        Objects.equals(this.projectId, advSecEnablementStatus.projectId) &&
-        Objects.equals(this.repositoryId, advSecEnablementStatus.repositoryId);
+            Objects.equals(this.changedOnDate, advSecEnablementStatus.changedOnDate) &&
+            Objects.equals(this.dependabotEnabled, advSecEnablementStatus.dependabotEnabled) &&
+            Objects.equals(this.enabled, advSecEnablementStatus.enabled) &&
+            Objects.equals(this.projectId, advSecEnablementStatus.projectId) &&
+            Objects.equals(this.repositoryId, advSecEnablementStatus.repositoryId);
   }
 
   @Override
@@ -183,7 +187,7 @@ public class AdvSecEnablementStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdvSecEnablementStatus {\n");
-    
+
     sb.append("    changedById: ").append(toIndentedString(changedById)).append("\n");
     sb.append("    changedOnDate: ").append(toIndentedString(changedOnDate)).append("\n");
     sb.append("    dependabotEnabled: ").append(toIndentedString(dependabotEnabled)).append("\n");

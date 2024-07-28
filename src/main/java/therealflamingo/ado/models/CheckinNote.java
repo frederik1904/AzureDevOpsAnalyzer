@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -38,10 +36,11 @@ public class CheckinNote {
     return this;
   }
 
-   /**
+  /**
    * Get name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -56,10 +55,11 @@ public class CheckinNote {
     return this;
   }
 
-   /**
+  /**
    * Get value
+   *
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getValue() {
     return value;
@@ -80,7 +80,7 @@ public class CheckinNote {
     }
     CheckinNote checkinNote = (CheckinNote) o;
     return Objects.equals(this.name, checkinNote.name) &&
-        Objects.equals(this.value, checkinNote.value);
+            Objects.equals(this.value, checkinNote.value);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class CheckinNote {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CheckinNote {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");

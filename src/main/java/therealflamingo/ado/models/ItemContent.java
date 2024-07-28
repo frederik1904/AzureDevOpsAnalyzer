@@ -13,58 +13,22 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class ItemContent {
   @JsonProperty("content")
   private String content = null;
-
-  /**
-   * Gets or Sets contentType
-   */
-  public enum ContentTypeEnum {
-    RAWTEXT("rawText"),
-    
-    BASE64ENCODED("base64Encoded");
-
-    private String value;
-
-    ContentTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ContentTypeEnum fromValue(String value) {
-      for (ContentTypeEnum b : ContentTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("contentType")
   private ContentTypeEnum contentType = null;
 
@@ -73,10 +37,11 @@ public class ItemContent {
     return this;
   }
 
-   /**
+  /**
    * Get content
+   *
    * @return content
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContent() {
     return content;
@@ -91,10 +56,11 @@ public class ItemContent {
     return this;
   }
 
-   /**
+  /**
    * Get contentType
+   *
    * @return contentType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ContentTypeEnum getContentType() {
     return contentType;
@@ -103,7 +69,6 @@ public class ItemContent {
   public void setContentType(ContentTypeEnum contentType) {
     this.contentType = contentType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,7 +80,7 @@ public class ItemContent {
     }
     ItemContent itemContent = (ItemContent) o;
     return Objects.equals(this.content, itemContent.content) &&
-        Objects.equals(this.contentType, itemContent.contentType);
+            Objects.equals(this.contentType, itemContent.contentType);
   }
 
   @Override
@@ -123,12 +88,11 @@ public class ItemContent {
     return Objects.hash(content, contentType);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ItemContent {\n");
-    
+
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("}");
@@ -144,6 +108,41 @@ public class ItemContent {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Gets or Sets contentType
+   */
+  public enum ContentTypeEnum {
+    RAWTEXT("rawText"),
+
+    BASE64ENCODED("base64Encoded");
+
+    private String value;
+
+    ContentTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ContentTypeEnum fromValue(String value) {
+      for (ContentTypeEnum b : ContentTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

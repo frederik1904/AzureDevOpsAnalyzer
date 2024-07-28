@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -38,10 +36,11 @@ public class CommentPosition {
     return this;
   }
 
-   /**
+  /**
    * The line number of a thread&#39;s position. Starts at 1.
+   *
    * @return line
-  **/
+   **/
   @ApiModelProperty(value = "The line number of a thread's position. Starts at 1.")
   public Integer getLine() {
     return line;
@@ -56,10 +55,11 @@ public class CommentPosition {
     return this;
   }
 
-   /**
+  /**
    * The character offset of a thread&#39;s position inside of a line. Starts at 1.
+   *
    * @return offset
-  **/
+   **/
   @ApiModelProperty(value = "The character offset of a thread's position inside of a line. Starts at 1.")
   public Integer getOffset() {
     return offset;
@@ -80,7 +80,7 @@ public class CommentPosition {
     }
     CommentPosition commentPosition = (CommentPosition) o;
     return Objects.equals(this.line, commentPosition.line) &&
-        Objects.equals(this.offset, commentPosition.offset);
+            Objects.equals(this.offset, commentPosition.offset);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class CommentPosition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentPosition {\n");
-    
+
     sb.append("    line: ").append(toIndentedString(line)).append("\n");
     sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
     sb.append("}");

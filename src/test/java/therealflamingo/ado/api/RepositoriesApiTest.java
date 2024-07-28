@@ -13,19 +13,15 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitDeletedRepository;
 import therealflamingo.ado.models.GitRecycleBinRepositoryDetails;
 import therealflamingo.ado.models.GitRepository;
 import therealflamingo.ado.models.GitRepositoryCreateOptions;
-import java.util.UUID;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 
 /**
  * API tests for RepositoriesApi
@@ -35,14 +31,11 @@ public class RepositoriesApiTest {
 
     private final RepositoriesApi api = new RepositoriesApi();
 
-    
+
     /**
-     * 
-     *
      * Create a git repository in a team project.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesCreateTest() throws Exception {
@@ -55,14 +48,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Delete a git repository
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesDeleteTest() throws Exception {
@@ -74,14 +64,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Destroy (hard delete) a soft-deleted Git repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesDeleteRepositoryFromRecycleBinTest() throws Exception {
@@ -93,14 +80,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve deleted git repositories.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesGetDeletedRepositoriesTest() throws Exception {
@@ -111,14 +95,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve soft-deleted git repositories from the recycle bin.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesGetRecycleBinRepositoriesTest() throws Exception {
@@ -129,14 +110,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a git repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesGetRepositoryTest() throws Exception {
@@ -148,14 +126,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve git repositories.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesListTest() throws Exception {
@@ -169,14 +144,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Recover a soft-deleted Git repository. Recently deleted repositories go into a soft-delete state for a period of time before they are hard deleted and become unrecoverable.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesRestoreRepositoryFromRecycleBinTest() throws Exception {
@@ -189,14 +161,11 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Updates the Git repository with either a new repo name or a new default branch.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void repositoriesUpdateTest() throws Exception {
@@ -209,5 +178,5 @@ public class RepositoriesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

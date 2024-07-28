@@ -13,213 +13,212 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitPathAction {
-  /**
-   * Gets or Sets action
-   */
-  public enum ActionEnum {
-    NONE("none"),
-    
-    EDIT("edit"),
-    
-    DELETE("delete"),
-    
-    ADD("add"),
-    
-    RENAME("rename");
+    @JsonProperty("action")
+    private ActionEnum action = null;
+    @JsonProperty("base64Content")
+    private String base64Content = null;
+    @JsonProperty("path")
+    private String path = null;
+    @JsonProperty("rawTextContent")
+    private String rawTextContent = null;
+    @JsonProperty("targetPath")
+    private String targetPath = null;
 
-    private String value;
-
-    ActionEnum(String value) {
-      this.value = value;
+    public GitPathAction action(ActionEnum action) {
+        this.action = action;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get action
+     *
+     * @return action
+     **/
+    @ApiModelProperty(value = "")
+    public ActionEnum getAction() {
+        return action;
+    }
+
+    public void setAction(ActionEnum action) {
+        this.action = action;
+    }
+
+    public GitPathAction base64Content(String base64Content) {
+        this.base64Content = base64Content;
+        return this;
+    }
+
+    /**
+     * Get base64Content
+     *
+     * @return base64Content
+     **/
+    @ApiModelProperty(value = "")
+    public String getBase64Content() {
+        return base64Content;
+    }
+
+    public void setBase64Content(String base64Content) {
+        this.base64Content = base64Content;
+    }
+
+    public GitPathAction path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public GitPathAction rawTextContent(String rawTextContent) {
+        this.rawTextContent = rawTextContent;
+        return this;
+    }
+
+    /**
+     * Get rawTextContent
+     *
+     * @return rawTextContent
+     **/
+    @ApiModelProperty(value = "")
+    public String getRawTextContent() {
+        return rawTextContent;
+    }
+
+    public void setRawTextContent(String rawTextContent) {
+        this.rawTextContent = rawTextContent;
+    }
+
+    public GitPathAction targetPath(String targetPath) {
+        this.targetPath = targetPath;
+        return this;
+    }
+
+    /**
+     * Get targetPath
+     *
+     * @return targetPath
+     **/
+    @ApiModelProperty(value = "")
+    public String getTargetPath() {
+        return targetPath;
+    }
+
+    public void setTargetPath(String targetPath) {
+        this.targetPath = targetPath;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitPathAction gitPathAction = (GitPathAction) o;
+        return Objects.equals(this.action, gitPathAction.action) &&
+                Objects.equals(this.base64Content, gitPathAction.base64Content) &&
+                Objects.equals(this.path, gitPathAction.path) &&
+                Objects.equals(this.rawTextContent, gitPathAction.rawTextContent) &&
+                Objects.equals(this.targetPath, gitPathAction.targetPath);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(action, base64Content, path, rawTextContent, targetPath);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitPathAction {\n");
+
+        sb.append("    action: ").append(toIndentedString(action)).append("\n");
+        sb.append("    base64Content: ").append(toIndentedString(base64Content)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    rawTextContent: ").append(toIndentedString(rawTextContent)).append("\n");
+        sb.append("    targetPath: ").append(toIndentedString(targetPath)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static ActionEnum fromValue(String value) {
-      for (ActionEnum b : ActionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("action")
-  private ActionEnum action = null;
+    /**
+     * Gets or Sets action
+     */
+    public enum ActionEnum {
+        NONE("none"),
 
-  @JsonProperty("base64Content")
-  private String base64Content = null;
+        EDIT("edit"),
 
-  @JsonProperty("path")
-  private String path = null;
+        DELETE("delete"),
 
-  @JsonProperty("rawTextContent")
-  private String rawTextContent = null;
+        ADD("add"),
 
-  @JsonProperty("targetPath")
-  private String targetPath = null;
+        RENAME("rename");
 
-  public GitPathAction action(ActionEnum action) {
-    this.action = action;
-    return this;
-  }
+        private String value;
 
-   /**
-   * Get action
-   * @return action
-  **/
-  @ApiModelProperty(value = "")
-  public ActionEnum getAction() {
-    return action;
-  }
+        ActionEnum(String value) {
+            this.value = value;
+        }
 
-  public void setAction(ActionEnum action) {
-    this.action = action;
-  }
+        @JsonCreator
+        public static ActionEnum fromValue(String value) {
+            for (ActionEnum b : ActionEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-  public GitPathAction base64Content(String base64Content) {
-    this.base64Content = base64Content;
-    return this;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-   /**
-   * Get base64Content
-   * @return base64Content
-  **/
-  @ApiModelProperty(value = "")
-  public String getBase64Content() {
-    return base64Content;
-  }
-
-  public void setBase64Content(String base64Content) {
-    this.base64Content = base64Content;
-  }
-
-  public GitPathAction path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Get path
-   * @return path
-  **/
-  @ApiModelProperty(value = "")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-  public GitPathAction rawTextContent(String rawTextContent) {
-    this.rawTextContent = rawTextContent;
-    return this;
-  }
-
-   /**
-   * Get rawTextContent
-   * @return rawTextContent
-  **/
-  @ApiModelProperty(value = "")
-  public String getRawTextContent() {
-    return rawTextContent;
-  }
-
-  public void setRawTextContent(String rawTextContent) {
-    this.rawTextContent = rawTextContent;
-  }
-
-  public GitPathAction targetPath(String targetPath) {
-    this.targetPath = targetPath;
-    return this;
-  }
-
-   /**
-   * Get targetPath
-   * @return targetPath
-  **/
-  @ApiModelProperty(value = "")
-  public String getTargetPath() {
-    return targetPath;
-  }
-
-  public void setTargetPath(String targetPath) {
-    this.targetPath = targetPath;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitPathAction gitPathAction = (GitPathAction) o;
-    return Objects.equals(this.action, gitPathAction.action) &&
-        Objects.equals(this.base64Content, gitPathAction.base64Content) &&
-        Objects.equals(this.path, gitPathAction.path) &&
-        Objects.equals(this.rawTextContent, gitPathAction.rawTextContent) &&
-        Objects.equals(this.targetPath, gitPathAction.targetPath);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(action, base64Content, path, rawTextContent, targetPath);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitPathAction {\n");
-    
-    sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("    base64Content: ").append(toIndentedString(base64Content)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("    rawTextContent: ").append(toIndentedString(rawTextContent)).append("\n");
-    sb.append("    targetPath: ").append(toIndentedString(targetPath)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

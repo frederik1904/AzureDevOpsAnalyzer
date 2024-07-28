@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Provides parameters that describe inputs for the file diff
@@ -27,89 +25,91 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Provides parameters that describe inputs for the file diff")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class FileDiffParams {
-  @JsonProperty("originalPath")
-  private String originalPath = null;
+    @JsonProperty("originalPath")
+    private String originalPath = null;
 
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
 
-  public FileDiffParams originalPath(String originalPath) {
-    this.originalPath = originalPath;
-    return this;
-  }
-
-   /**
-   * Original path of the file
-   * @return originalPath
-  **/
-  @ApiModelProperty(value = "Original path of the file")
-  public String getOriginalPath() {
-    return originalPath;
-  }
-
-  public void setOriginalPath(String originalPath) {
-    this.originalPath = originalPath;
-  }
-
-  public FileDiffParams path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Current path of the file
-   * @return path
-  **/
-  @ApiModelProperty(value = "Current path of the file")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public FileDiffParams originalPath(String originalPath) {
+        this.originalPath = originalPath;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Original path of the file
+     *
+     * @return originalPath
+     **/
+    @ApiModelProperty(value = "Original path of the file")
+    public String getOriginalPath() {
+        return originalPath;
     }
-    FileDiffParams fileDiffParams = (FileDiffParams) o;
-    return Objects.equals(this.originalPath, fileDiffParams.originalPath) &&
-        Objects.equals(this.path, fileDiffParams.path);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(originalPath, path);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class FileDiffParams {\n");
-    
-    sb.append("    originalPath: ").append(toIndentedString(originalPath)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setOriginalPath(String originalPath) {
+        this.originalPath = originalPath;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public FileDiffParams path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Current path of the file
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "Current path of the file")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        FileDiffParams fileDiffParams = (FileDiffParams) o;
+        return Objects.equals(this.originalPath, fileDiffParams.originalPath) &&
+                Objects.equals(this.path, fileDiffParams.path);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(originalPath, path);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class FileDiffParams {\n");
+
+        sb.append("    originalPath: ").append(toIndentedString(originalPath)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

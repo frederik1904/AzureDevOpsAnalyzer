@@ -13,244 +13,248 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
-import therealflamingo.ado.models.TeamProjectCollectionReference;
-import therealflamingo.ado.models.TeamProjectReference;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRepositoryRef {
-  @JsonProperty("collection")
-  private TeamProjectCollectionReference collection = null;
+    @JsonProperty("collection")
+    private TeamProjectCollectionReference collection = null;
 
-  @JsonProperty("id")
-  private UUID id = null;
+    @JsonProperty("id")
+    private UUID id = null;
 
-  @JsonProperty("isFork")
-  private Boolean isFork = null;
+    @JsonProperty("isFork")
+    private Boolean isFork = null;
 
-  @JsonProperty("name")
-  private String name = null;
+    @JsonProperty("name")
+    private String name = null;
 
-  @JsonProperty("project")
-  private TeamProjectReference project = null;
+    @JsonProperty("project")
+    private TeamProjectReference project = null;
 
-  @JsonProperty("remoteUrl")
-  private String remoteUrl = null;
+    @JsonProperty("remoteUrl")
+    private String remoteUrl = null;
 
-  @JsonProperty("sshUrl")
-  private String sshUrl = null;
+    @JsonProperty("sshUrl")
+    private String sshUrl = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  public GitRepositoryRef collection(TeamProjectCollectionReference collection) {
-    this.collection = collection;
-    return this;
-  }
-
-   /**
-   * Team Project Collection where this Fork resides
-   * @return collection
-  **/
-  @ApiModelProperty(value = "Team Project Collection where this Fork resides")
-  public TeamProjectCollectionReference getCollection() {
-    return collection;
-  }
-
-  public void setCollection(TeamProjectCollectionReference collection) {
-    this.collection = collection;
-  }
-
-  public GitRepositoryRef id(UUID id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public UUID getId() {
-    return id;
-  }
-
-  public void setId(UUID id) {
-    this.id = id;
-  }
-
-  public GitRepositoryRef isFork(Boolean isFork) {
-    this.isFork = isFork;
-    return this;
-  }
-
-   /**
-   * True if the repository was created as a fork
-   * @return isFork
-  **/
-  @ApiModelProperty(value = "True if the repository was created as a fork")
-  public Boolean isIsFork() {
-    return isFork;
-  }
-
-  public void setIsFork(Boolean isFork) {
-    this.isFork = isFork;
-  }
-
-  public GitRepositoryRef name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public GitRepositoryRef project(TeamProjectReference project) {
-    this.project = project;
-    return this;
-  }
-
-   /**
-   * Get project
-   * @return project
-  **/
-  @ApiModelProperty(value = "")
-  public TeamProjectReference getProject() {
-    return project;
-  }
-
-  public void setProject(TeamProjectReference project) {
-    this.project = project;
-  }
-
-  public GitRepositoryRef remoteUrl(String remoteUrl) {
-    this.remoteUrl = remoteUrl;
-    return this;
-  }
-
-   /**
-   * Get remoteUrl
-   * @return remoteUrl
-  **/
-  @ApiModelProperty(value = "")
-  public String getRemoteUrl() {
-    return remoteUrl;
-  }
-
-  public void setRemoteUrl(String remoteUrl) {
-    this.remoteUrl = remoteUrl;
-  }
-
-  public GitRepositoryRef sshUrl(String sshUrl) {
-    this.sshUrl = sshUrl;
-    return this;
-  }
-
-   /**
-   * Get sshUrl
-   * @return sshUrl
-  **/
-  @ApiModelProperty(value = "")
-  public String getSshUrl() {
-    return sshUrl;
-  }
-
-  public void setSshUrl(String sshUrl) {
-    this.sshUrl = sshUrl;
-  }
-
-  public GitRepositoryRef url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitRepositoryRef collection(TeamProjectCollectionReference collection) {
+        this.collection = collection;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Team Project Collection where this Fork resides
+     *
+     * @return collection
+     **/
+    @ApiModelProperty(value = "Team Project Collection where this Fork resides")
+    public TeamProjectCollectionReference getCollection() {
+        return collection;
     }
-    GitRepositoryRef gitRepositoryRef = (GitRepositoryRef) o;
-    return Objects.equals(this.collection, gitRepositoryRef.collection) &&
-        Objects.equals(this.id, gitRepositoryRef.id) &&
-        Objects.equals(this.isFork, gitRepositoryRef.isFork) &&
-        Objects.equals(this.name, gitRepositoryRef.name) &&
-        Objects.equals(this.project, gitRepositoryRef.project) &&
-        Objects.equals(this.remoteUrl, gitRepositoryRef.remoteUrl) &&
-        Objects.equals(this.sshUrl, gitRepositoryRef.sshUrl) &&
-        Objects.equals(this.url, gitRepositoryRef.url);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(collection, id, isFork, name, project, remoteUrl, sshUrl, url);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRepositoryRef {\n");
-    
-    sb.append("    collection: ").append(toIndentedString(collection)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    isFork: ").append(toIndentedString(isFork)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    project: ").append(toIndentedString(project)).append("\n");
-    sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
-    sb.append("    sshUrl: ").append(toIndentedString(sshUrl)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setCollection(TeamProjectCollectionReference collection) {
+        this.collection = collection;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitRepositoryRef id(UUID id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     **/
+    @ApiModelProperty(value = "")
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public GitRepositoryRef isFork(Boolean isFork) {
+        this.isFork = isFork;
+        return this;
+    }
+
+    /**
+     * True if the repository was created as a fork
+     *
+     * @return isFork
+     **/
+    @ApiModelProperty(value = "True if the repository was created as a fork")
+    public Boolean isIsFork() {
+        return isFork;
+    }
+
+    public void setIsFork(Boolean isFork) {
+        this.isFork = isFork;
+    }
+
+    public GitRepositoryRef name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public GitRepositoryRef project(TeamProjectReference project) {
+        this.project = project;
+        return this;
+    }
+
+    /**
+     * Get project
+     *
+     * @return project
+     **/
+    @ApiModelProperty(value = "")
+    public TeamProjectReference getProject() {
+        return project;
+    }
+
+    public void setProject(TeamProjectReference project) {
+        this.project = project;
+    }
+
+    public GitRepositoryRef remoteUrl(String remoteUrl) {
+        this.remoteUrl = remoteUrl;
+        return this;
+    }
+
+    /**
+     * Get remoteUrl
+     *
+     * @return remoteUrl
+     **/
+    @ApiModelProperty(value = "")
+    public String getRemoteUrl() {
+        return remoteUrl;
+    }
+
+    public void setRemoteUrl(String remoteUrl) {
+        this.remoteUrl = remoteUrl;
+    }
+
+    public GitRepositoryRef sshUrl(String sshUrl) {
+        this.sshUrl = sshUrl;
+        return this;
+    }
+
+    /**
+     * Get sshUrl
+     *
+     * @return sshUrl
+     **/
+    @ApiModelProperty(value = "")
+    public String getSshUrl() {
+        return sshUrl;
+    }
+
+    public void setSshUrl(String sshUrl) {
+        this.sshUrl = sshUrl;
+    }
+
+    public GitRepositoryRef url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRepositoryRef gitRepositoryRef = (GitRepositoryRef) o;
+        return Objects.equals(this.collection, gitRepositoryRef.collection) &&
+                Objects.equals(this.id, gitRepositoryRef.id) &&
+                Objects.equals(this.isFork, gitRepositoryRef.isFork) &&
+                Objects.equals(this.name, gitRepositoryRef.name) &&
+                Objects.equals(this.project, gitRepositoryRef.project) &&
+                Objects.equals(this.remoteUrl, gitRepositoryRef.remoteUrl) &&
+                Objects.equals(this.sshUrl, gitRepositoryRef.sshUrl) &&
+                Objects.equals(this.url, gitRepositoryRef.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(collection, id, isFork, name, project, remoteUrl, sshUrl, url);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRepositoryRef {\n");
+
+        sb.append("    collection: ").append(toIndentedString(collection)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    isFork: ").append(toIndentedString(isFork)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    project: ").append(toIndentedString(project)).append("\n");
+        sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
+        sb.append("    sshUrl: ").append(toIndentedString(sshUrl)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

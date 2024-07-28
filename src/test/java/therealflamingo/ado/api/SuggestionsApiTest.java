@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitSuggestion;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitSuggestion;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for SuggestionsApi
@@ -31,14 +27,11 @@ public class SuggestionsApiTest {
 
     private final SuggestionsApi api = new SuggestionsApi();
 
-    
+
     /**
-     * 
-     *
      * Retrieve a pull request suggestion for a particular repository or team project.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void suggestionsListTest() throws Exception {
@@ -51,5 +44,5 @@ public class SuggestionsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

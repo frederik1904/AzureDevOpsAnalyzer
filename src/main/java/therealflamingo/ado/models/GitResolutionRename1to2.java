@@ -13,202 +13,200 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitResolutionMergeContent;
-import therealflamingo.ado.models.IdentityRef;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitResolutionRename1to2 extends GitResolutionMergeContent {
-  @JsonProperty("userMergedBlob")
-  private GitBlobRef userMergedBlob = null;
+    @JsonProperty("userMergedBlob")
+    private GitBlobRef userMergedBlob = null;
 
-  @JsonProperty("userMergedContent")
-  private List<byte[]> userMergedContent = null;
+    @JsonProperty("userMergedContent")
+    private List<byte[]> userMergedContent = null;
 
-  @JsonProperty("author")
-  private IdentityRef author = null;
+    @JsonProperty("author")
+    private IdentityRef author = null;
+    @JsonProperty("action")
+    private ActionEnum action = null;
 
-  /**
-   * Gets or Sets action
-   */
-  public enum ActionEnum {
-    UNDECIDED("undecided"),
-    
-    KEEPSOURCEPATH("keepSourcePath"),
-    
-    KEEPTARGETPATH("keepTargetPath"),
-    
-    KEEPBOTHFILES("keepBothFiles");
-
-    private String value;
-
-    ActionEnum(String value) {
-      this.value = value;
+    public GitResolutionRename1to2 userMergedBlob(GitBlobRef userMergedBlob) {
+        this.userMergedBlob = userMergedBlob;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get userMergedBlob
+     *
+     * @return userMergedBlob
+     **/
+    @ApiModelProperty(value = "")
+    public GitBlobRef getUserMergedBlob() {
+        return userMergedBlob;
+    }
+
+    public void setUserMergedBlob(GitBlobRef userMergedBlob) {
+        this.userMergedBlob = userMergedBlob;
+    }
+
+    public GitResolutionRename1to2 userMergedContent(List<byte[]> userMergedContent) {
+        this.userMergedContent = userMergedContent;
+        return this;
+    }
+
+    public GitResolutionRename1to2 addUserMergedContentItem(byte[] userMergedContentItem) {
+        if (this.userMergedContent == null) {
+            this.userMergedContent = new ArrayList<byte[]>();
+        }
+        this.userMergedContent.add(userMergedContentItem);
+        return this;
+    }
+
+    /**
+     * Get userMergedContent
+     *
+     * @return userMergedContent
+     **/
+    @ApiModelProperty(value = "")
+    public List<byte[]> getUserMergedContent() {
+        return userMergedContent;
+    }
+
+    public void setUserMergedContent(List<byte[]> userMergedContent) {
+        this.userMergedContent = userMergedContent;
+    }
+
+    public GitResolutionRename1to2 author(IdentityRef author) {
+        this.author = author;
+        return this;
+    }
+
+    /**
+     * User who created the resolution.
+     *
+     * @return author
+     **/
+    @ApiModelProperty(value = "User who created the resolution.")
+    public IdentityRef getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(IdentityRef author) {
+        this.author = author;
+    }
+
+    public GitResolutionRename1to2 action(ActionEnum action) {
+        this.action = action;
+        return this;
+    }
+
+    /**
+     * Get action
+     *
+     * @return action
+     **/
+    @ApiModelProperty(value = "")
+    public ActionEnum getAction() {
+        return action;
+    }
+
+    public void setAction(ActionEnum action) {
+        this.action = action;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitResolutionRename1to2 gitResolutionRename1to2 = (GitResolutionRename1to2) o;
+        return Objects.equals(this.userMergedBlob, gitResolutionRename1to2.userMergedBlob) &&
+                Objects.equals(this.userMergedContent, gitResolutionRename1to2.userMergedContent) &&
+                Objects.equals(this.author, gitResolutionRename1to2.author) &&
+                Objects.equals(this.action, gitResolutionRename1to2.action) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userMergedBlob, userMergedContent, author, action, super.hashCode());
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitResolutionRename1to2 {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    userMergedBlob: ").append(toIndentedString(userMergedBlob)).append("\n");
+        sb.append("    userMergedContent: ").append(toIndentedString(userMergedContent)).append("\n");
+        sb.append("    author: ").append(toIndentedString(author)).append("\n");
+        sb.append("    action: ").append(toIndentedString(action)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static ActionEnum fromValue(String value) {
-      for (ActionEnum b : ActionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("action")
-  private ActionEnum action = null;
+    /**
+     * Gets or Sets action
+     */
+    public enum ActionEnum {
+        UNDECIDED("undecided"),
 
-  public GitResolutionRename1to2 userMergedBlob(GitBlobRef userMergedBlob) {
-    this.userMergedBlob = userMergedBlob;
-    return this;
-  }
+        KEEPSOURCEPATH("keepSourcePath"),
 
-   /**
-   * Get userMergedBlob
-   * @return userMergedBlob
-  **/
-  @ApiModelProperty(value = "")
-  public GitBlobRef getUserMergedBlob() {
-    return userMergedBlob;
-  }
+        KEEPTARGETPATH("keepTargetPath"),
 
-  public void setUserMergedBlob(GitBlobRef userMergedBlob) {
-    this.userMergedBlob = userMergedBlob;
-  }
+        KEEPBOTHFILES("keepBothFiles");
 
-  public GitResolutionRename1to2 userMergedContent(List<byte[]> userMergedContent) {
-    this.userMergedContent = userMergedContent;
-    return this;
-  }
+        private String value;
 
-  public GitResolutionRename1to2 addUserMergedContentItem(byte[] userMergedContentItem) {
-    if (this.userMergedContent == null) {
-      this.userMergedContent = new ArrayList<byte[]>();
+        ActionEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static ActionEnum fromValue(String value) {
+            for (ActionEnum b : ActionEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.userMergedContent.add(userMergedContentItem);
-    return this;
-  }
-
-   /**
-   * Get userMergedContent
-   * @return userMergedContent
-  **/
-  @ApiModelProperty(value = "")
-  public List<byte[]> getUserMergedContent() {
-    return userMergedContent;
-  }
-
-  public void setUserMergedContent(List<byte[]> userMergedContent) {
-    this.userMergedContent = userMergedContent;
-  }
-
-  public GitResolutionRename1to2 author(IdentityRef author) {
-    this.author = author;
-    return this;
-  }
-
-   /**
-   * User who created the resolution.
-   * @return author
-  **/
-  @ApiModelProperty(value = "User who created the resolution.")
-  public IdentityRef getAuthor() {
-    return author;
-  }
-
-  public void setAuthor(IdentityRef author) {
-    this.author = author;
-  }
-
-  public GitResolutionRename1to2 action(ActionEnum action) {
-    this.action = action;
-    return this;
-  }
-
-   /**
-   * Get action
-   * @return action
-  **/
-  @ApiModelProperty(value = "")
-  public ActionEnum getAction() {
-    return action;
-  }
-
-  public void setAction(ActionEnum action) {
-    this.action = action;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitResolutionRename1to2 gitResolutionRename1to2 = (GitResolutionRename1to2) o;
-    return Objects.equals(this.userMergedBlob, gitResolutionRename1to2.userMergedBlob) &&
-        Objects.equals(this.userMergedContent, gitResolutionRename1to2.userMergedContent) &&
-        Objects.equals(this.author, gitResolutionRename1to2.author) &&
-        Objects.equals(this.action, gitResolutionRename1to2.action) &&
-        super.equals(o);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(userMergedBlob, userMergedContent, author, action, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitResolutionRename1to2 {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    userMergedBlob: ").append(toIndentedString(userMergedBlob)).append("\n");
-    sb.append("    userMergedContent: ").append(toIndentedString(userMergedContent)).append("\n");
-    sb.append("    author: ").append(toIndentedString(author)).append("\n");
-    sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

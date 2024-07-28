@@ -13,15 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Represents a Supported IDE entity.
@@ -29,227 +29,226 @@ import java.util.List;
 @ApiModel(description = "Represents a Supported IDE entity.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class SupportedIde {
-  @JsonProperty("downloadUrl")
-  private String downloadUrl = null;
+    @JsonProperty("downloadUrl")
+    private String downloadUrl = null;
+    @JsonProperty("ideType")
+    private IdeTypeEnum ideType = null;
+    @JsonProperty("name")
+    private String name = null;
+    @JsonProperty("protocolHandlerUrl")
+    private String protocolHandlerUrl = null;
+    @JsonProperty("supportedPlatforms")
+    private List<String> supportedPlatforms = null;
 
-  /**
-   * The type of the IDE.
-   */
-  public enum IdeTypeEnum {
-    UNKNOWN("unknown"),
-    
-    ANDROIDSTUDIO("androidStudio"),
-    
-    APPCODE("appCode"),
-    
-    CLION("cLion"),
-    
-    DATAGRIP("dataGrip"),
-    
-    ECLIPSE("eclipse"),
-    
-    INTELLIJ("intelliJ"),
-    
-    MPS("mps"),
-    
-    PHPSTORM("phpStorm"),
-    
-    PYCHARM("pyCharm"),
-    
-    RUBYMINE("rubyMine"),
-    
-    TOWER("tower"),
-    
-    VISUALSTUDIO("visualStudio"),
-    
-    VSCODE("vsCode"),
-    
-    WEBSTORM("webStorm");
-
-    private String value;
-
-    IdeTypeEnum(String value) {
-      this.value = value;
+    public SupportedIde downloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * The download URL for the IDE.
+     *
+     * @return downloadUrl
+     **/
+    @ApiModelProperty(value = "The download URL for the IDE.")
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
+
+    public SupportedIde ideType(IdeTypeEnum ideType) {
+        this.ideType = ideType;
+        return this;
+    }
+
+    /**
+     * The type of the IDE.
+     *
+     * @return ideType
+     **/
+    @ApiModelProperty(value = "The type of the IDE.")
+    public IdeTypeEnum getIdeType() {
+        return ideType;
+    }
+
+    public void setIdeType(IdeTypeEnum ideType) {
+        this.ideType = ideType;
+    }
+
+    public SupportedIde name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * The name of the IDE.
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "The name of the IDE.")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public SupportedIde protocolHandlerUrl(String protocolHandlerUrl) {
+        this.protocolHandlerUrl = protocolHandlerUrl;
+        return this;
+    }
+
+    /**
+     * The URL to open the protocol handler for the IDE.
+     *
+     * @return protocolHandlerUrl
+     **/
+    @ApiModelProperty(value = "The URL to open the protocol handler for the IDE.")
+    public String getProtocolHandlerUrl() {
+        return protocolHandlerUrl;
+    }
+
+    public void setProtocolHandlerUrl(String protocolHandlerUrl) {
+        this.protocolHandlerUrl = protocolHandlerUrl;
+    }
+
+    public SupportedIde supportedPlatforms(List<String> supportedPlatforms) {
+        this.supportedPlatforms = supportedPlatforms;
+        return this;
+    }
+
+    public SupportedIde addSupportedPlatformsItem(String supportedPlatformsItem) {
+        if (this.supportedPlatforms == null) {
+            this.supportedPlatforms = new ArrayList<String>();
+        }
+        this.supportedPlatforms.add(supportedPlatformsItem);
+        return this;
+    }
+
+    /**
+     * A list of SupportedPlatforms.
+     *
+     * @return supportedPlatforms
+     **/
+    @ApiModelProperty(value = "A list of SupportedPlatforms.")
+    public List<String> getSupportedPlatforms() {
+        return supportedPlatforms;
+    }
+
+    public void setSupportedPlatforms(List<String> supportedPlatforms) {
+        this.supportedPlatforms = supportedPlatforms;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SupportedIde supportedIde = (SupportedIde) o;
+        return Objects.equals(this.downloadUrl, supportedIde.downloadUrl) &&
+                Objects.equals(this.ideType, supportedIde.ideType) &&
+                Objects.equals(this.name, supportedIde.name) &&
+                Objects.equals(this.protocolHandlerUrl, supportedIde.protocolHandlerUrl) &&
+                Objects.equals(this.supportedPlatforms, supportedIde.supportedPlatforms);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(downloadUrl, ideType, name, protocolHandlerUrl, supportedPlatforms);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SupportedIde {\n");
+
+        sb.append("    downloadUrl: ").append(toIndentedString(downloadUrl)).append("\n");
+        sb.append("    ideType: ").append(toIndentedString(ideType)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    protocolHandlerUrl: ").append(toIndentedString(protocolHandlerUrl)).append("\n");
+        sb.append("    supportedPlatforms: ").append(toIndentedString(supportedPlatforms)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static IdeTypeEnum fromValue(String value) {
-      for (IdeTypeEnum b : IdeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("ideType")
-  private IdeTypeEnum ideType = null;
+    /**
+     * The type of the IDE.
+     */
+    public enum IdeTypeEnum {
+        UNKNOWN("unknown"),
 
-  @JsonProperty("name")
-  private String name = null;
+        ANDROIDSTUDIO("androidStudio"),
 
-  @JsonProperty("protocolHandlerUrl")
-  private String protocolHandlerUrl = null;
+        APPCODE("appCode"),
 
-  @JsonProperty("supportedPlatforms")
-  private List<String> supportedPlatforms = null;
+        CLION("cLion"),
 
-  public SupportedIde downloadUrl(String downloadUrl) {
-    this.downloadUrl = downloadUrl;
-    return this;
-  }
+        DATAGRIP("dataGrip"),
 
-   /**
-   * The download URL for the IDE.
-   * @return downloadUrl
-  **/
-  @ApiModelProperty(value = "The download URL for the IDE.")
-  public String getDownloadUrl() {
-    return downloadUrl;
-  }
+        ECLIPSE("eclipse"),
 
-  public void setDownloadUrl(String downloadUrl) {
-    this.downloadUrl = downloadUrl;
-  }
+        INTELLIJ("intelliJ"),
 
-  public SupportedIde ideType(IdeTypeEnum ideType) {
-    this.ideType = ideType;
-    return this;
-  }
+        MPS("mps"),
 
-   /**
-   * The type of the IDE.
-   * @return ideType
-  **/
-  @ApiModelProperty(value = "The type of the IDE.")
-  public IdeTypeEnum getIdeType() {
-    return ideType;
-  }
+        PHPSTORM("phpStorm"),
 
-  public void setIdeType(IdeTypeEnum ideType) {
-    this.ideType = ideType;
-  }
+        PYCHARM("pyCharm"),
 
-  public SupportedIde name(String name) {
-    this.name = name;
-    return this;
-  }
+        RUBYMINE("rubyMine"),
 
-   /**
-   * The name of the IDE.
-   * @return name
-  **/
-  @ApiModelProperty(value = "The name of the IDE.")
-  public String getName() {
-    return name;
-  }
+        TOWER("tower"),
 
-  public void setName(String name) {
-    this.name = name;
-  }
+        VISUALSTUDIO("visualStudio"),
 
-  public SupportedIde protocolHandlerUrl(String protocolHandlerUrl) {
-    this.protocolHandlerUrl = protocolHandlerUrl;
-    return this;
-  }
+        VSCODE("vsCode"),
 
-   /**
-   * The URL to open the protocol handler for the IDE.
-   * @return protocolHandlerUrl
-  **/
-  @ApiModelProperty(value = "The URL to open the protocol handler for the IDE.")
-  public String getProtocolHandlerUrl() {
-    return protocolHandlerUrl;
-  }
+        WEBSTORM("webStorm");
 
-  public void setProtocolHandlerUrl(String protocolHandlerUrl) {
-    this.protocolHandlerUrl = protocolHandlerUrl;
-  }
+        private String value;
 
-  public SupportedIde supportedPlatforms(List<String> supportedPlatforms) {
-    this.supportedPlatforms = supportedPlatforms;
-    return this;
-  }
+        IdeTypeEnum(String value) {
+            this.value = value;
+        }
 
-  public SupportedIde addSupportedPlatformsItem(String supportedPlatformsItem) {
-    if (this.supportedPlatforms == null) {
-      this.supportedPlatforms = new ArrayList<String>();
+        @JsonCreator
+        public static IdeTypeEnum fromValue(String value) {
+            for (IdeTypeEnum b : IdeTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.supportedPlatforms.add(supportedPlatformsItem);
-    return this;
-  }
-
-   /**
-   * A list of SupportedPlatforms.
-   * @return supportedPlatforms
-  **/
-  @ApiModelProperty(value = "A list of SupportedPlatforms.")
-  public List<String> getSupportedPlatforms() {
-    return supportedPlatforms;
-  }
-
-  public void setSupportedPlatforms(List<String> supportedPlatforms) {
-    this.supportedPlatforms = supportedPlatforms;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    SupportedIde supportedIde = (SupportedIde) o;
-    return Objects.equals(this.downloadUrl, supportedIde.downloadUrl) &&
-        Objects.equals(this.ideType, supportedIde.ideType) &&
-        Objects.equals(this.name, supportedIde.name) &&
-        Objects.equals(this.protocolHandlerUrl, supportedIde.protocolHandlerUrl) &&
-        Objects.equals(this.supportedPlatforms, supportedIde.supportedPlatforms);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(downloadUrl, ideType, name, protocolHandlerUrl, supportedPlatforms);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SupportedIde {\n");
-    
-    sb.append("    downloadUrl: ").append(toIndentedString(downloadUrl)).append("\n");
-    sb.append("    ideType: ").append(toIndentedString(ideType)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    protocolHandlerUrl: ").append(toIndentedString(protocolHandlerUrl)).append("\n");
-    sb.append("    supportedPlatforms: ").append(toIndentedString(supportedPlatforms)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

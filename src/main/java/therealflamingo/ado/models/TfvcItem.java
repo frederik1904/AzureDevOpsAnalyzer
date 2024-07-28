@@ -13,17 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.FileContentMetadata;
-import therealflamingo.ado.models.ItemModel;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Metadata for an item.
@@ -81,10 +76,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -99,10 +95,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get content
+   *
    * @return content
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContent() {
     return content;
@@ -117,10 +114,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get contentMetadata
+   *
    * @return contentMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public FileContentMetadata getContentMetadata() {
     return contentMetadata;
@@ -135,10 +133,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get isFolder
+   *
    * @return isFolder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsFolder() {
     return isFolder;
@@ -153,10 +152,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get isSymLink
+   *
    * @return isSymLink
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsSymLink() {
     return isSymLink;
@@ -171,10 +171,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get path
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPath() {
     return path;
@@ -189,10 +190,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -207,10 +209,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Item changed datetime.
+   *
    * @return changeDate
-  **/
+   **/
   @ApiModelProperty(value = "Item changed datetime.")
   public OffsetDateTime getChangeDate() {
     return changeDate;
@@ -225,10 +228,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Greater than 0 if item is deleted.
+   *
    * @return deletionId
-  **/
+   **/
   @ApiModelProperty(value = "Greater than 0 if item is deleted.")
   public Integer getDeletionId() {
     return deletionId;
@@ -243,10 +247,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * File encoding from database, -1 represents binary.
+   *
    * @return encoding
-  **/
+   **/
   @ApiModelProperty(value = "File encoding from database, -1 represents binary.")
   public Integer getEncoding() {
     return encoding;
@@ -261,10 +266,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * MD5 hash as a base 64 string, applies to files only.
+   *
    * @return hashValue
-  **/
+   **/
   @ApiModelProperty(value = "MD5 hash as a base 64 string, applies to files only.")
   public String getHashValue() {
     return hashValue;
@@ -279,10 +285,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * True if item is a branch.
+   *
    * @return isBranch
-  **/
+   **/
   @ApiModelProperty(value = "True if item is a branch.")
   public Boolean isIsBranch() {
     return isBranch;
@@ -297,10 +304,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * True if there is a change pending.
+   *
    * @return isPendingChange
-  **/
+   **/
   @ApiModelProperty(value = "True if there is a change pending.")
   public Boolean isIsPendingChange() {
     return isPendingChange;
@@ -315,10 +323,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * The size of the file, if applicable.
+   *
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "The size of the file, if applicable.")
   public Long getSize() {
     return size;
@@ -333,10 +342,11 @@ public class TfvcItem extends ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Changeset version Id.
+   *
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "Changeset version Id.")
   public Integer getVersion() {
     return version;
@@ -357,21 +367,21 @@ public class TfvcItem extends ItemModel {
     }
     TfvcItem tfvcItem = (TfvcItem) o;
     return Objects.equals(this.links, tfvcItem.links) &&
-        Objects.equals(this.content, tfvcItem.content) &&
-        Objects.equals(this.contentMetadata, tfvcItem.contentMetadata) &&
-        Objects.equals(this.isFolder, tfvcItem.isFolder) &&
-        Objects.equals(this.isSymLink, tfvcItem.isSymLink) &&
-        Objects.equals(this.path, tfvcItem.path) &&
-        Objects.equals(this.url, tfvcItem.url) &&
-        Objects.equals(this.changeDate, tfvcItem.changeDate) &&
-        Objects.equals(this.deletionId, tfvcItem.deletionId) &&
-        Objects.equals(this.encoding, tfvcItem.encoding) &&
-        Objects.equals(this.hashValue, tfvcItem.hashValue) &&
-        Objects.equals(this.isBranch, tfvcItem.isBranch) &&
-        Objects.equals(this.isPendingChange, tfvcItem.isPendingChange) &&
-        Objects.equals(this.size, tfvcItem.size) &&
-        Objects.equals(this.version, tfvcItem.version) &&
-        super.equals(o);
+            Objects.equals(this.content, tfvcItem.content) &&
+            Objects.equals(this.contentMetadata, tfvcItem.contentMetadata) &&
+            Objects.equals(this.isFolder, tfvcItem.isFolder) &&
+            Objects.equals(this.isSymLink, tfvcItem.isSymLink) &&
+            Objects.equals(this.path, tfvcItem.path) &&
+            Objects.equals(this.url, tfvcItem.url) &&
+            Objects.equals(this.changeDate, tfvcItem.changeDate) &&
+            Objects.equals(this.deletionId, tfvcItem.deletionId) &&
+            Objects.equals(this.encoding, tfvcItem.encoding) &&
+            Objects.equals(this.hashValue, tfvcItem.hashValue) &&
+            Objects.equals(this.isBranch, tfvcItem.isBranch) &&
+            Objects.equals(this.isPendingChange, tfvcItem.isPendingChange) &&
+            Objects.equals(this.size, tfvcItem.size) &&
+            Objects.equals(this.version, tfvcItem.version) &&
+            super.equals(o);
   }
 
   @Override

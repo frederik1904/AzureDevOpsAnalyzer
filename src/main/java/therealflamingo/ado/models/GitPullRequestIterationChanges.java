@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitPullRequestChange;
+import java.util.Objects;
 
 /**
  * Collection of changes made in a pull request.
@@ -52,10 +49,11 @@ public class GitPullRequestIterationChanges {
     return this;
   }
 
-   /**
+  /**
    * Changes made in the iteration.
+   *
    * @return changeEntries
-  **/
+   **/
   @ApiModelProperty(value = "Changes made in the iteration.")
   public List<GitPullRequestChange> getChangeEntries() {
     return changeEntries;
@@ -70,10 +68,11 @@ public class GitPullRequestIterationChanges {
     return this;
   }
 
-   /**
+  /**
    * Value to specify as skip to get the next page of changes.  This will be zero if there are no more changes.
+   *
    * @return nextSkip
-  **/
+   **/
   @ApiModelProperty(value = "Value to specify as skip to get the next page of changes.  This will be zero if there are no more changes.")
   public Integer getNextSkip() {
     return nextSkip;
@@ -88,10 +87,11 @@ public class GitPullRequestIterationChanges {
     return this;
   }
 
-   /**
+  /**
    * Value to specify as top to get the next page of changes.  This will be zero if there are no more changes.
+   *
    * @return nextTop
-  **/
+   **/
   @ApiModelProperty(value = "Value to specify as top to get the next page of changes.  This will be zero if there are no more changes.")
   public Integer getNextTop() {
     return nextTop;
@@ -112,8 +112,8 @@ public class GitPullRequestIterationChanges {
     }
     GitPullRequestIterationChanges gitPullRequestIterationChanges = (GitPullRequestIterationChanges) o;
     return Objects.equals(this.changeEntries, gitPullRequestIterationChanges.changeEntries) &&
-        Objects.equals(this.nextSkip, gitPullRequestIterationChanges.nextSkip) &&
-        Objects.equals(this.nextTop, gitPullRequestIterationChanges.nextTop);
+            Objects.equals(this.nextSkip, gitPullRequestIterationChanges.nextSkip) &&
+            Objects.equals(this.nextTop, gitPullRequestIterationChanges.nextTop);
   }
 
   @Override
@@ -126,7 +126,7 @@ public class GitPullRequestIterationChanges {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequestIterationChanges {\n");
-    
+
     sb.append("    changeEntries: ").append(toIndentedString(changeEntries)).append("\n");
     sb.append("    nextSkip: ").append(toIndentedString(nextSkip)).append("\n");
     sb.append("    nextTop: ").append(toIndentedString(nextTop)).append("\n");

@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitItem;
 import therealflamingo.ado.models.GitItemRequestData;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for ItemsApi
@@ -32,14 +28,11 @@ public class ItemsApiTest {
 
     private final ItemsApi api = new ItemsApi();
 
-    
+
     /**
-     * 
-     *
      * Post for retrieving a creating a batch out of a set of items in a repo / project given a list of paths or a long path
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void itemsGetItemsBatchTest() throws Exception {
@@ -48,18 +41,15 @@ public class ItemsApiTest {
         String repositoryId = null;
         String project = null;
         String apiVersion = null;
-        List<null> response = api.itemsGetItemsBatch(organization, body, repositoryId, project, apiVersion);
+        List < null > response = api.itemsGetItemsBatch(organization, body, repositoryId, project, apiVersion);
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get Item Metadata and/or Content for a collection of items. The download parameter is to indicate whether the content should be available as a download or just sent as a stream in the response. Doesn&#39;t apply to zipped content which is always returned as a download.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void itemsListTest() throws Exception {
@@ -82,5 +72,5 @@ public class ItemsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -50,10 +48,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Whether to include the _links field on the shallow references
+   *
    * @return includeLinks
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include the _links field on the shallow references")
   public Boolean isIncludeLinks() {
     return includeLinks;
@@ -68,10 +67,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get itemLabelFilter
+   *
    * @return itemLabelFilter
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getItemLabelFilter() {
     return itemLabelFilter;
@@ -86,10 +86,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get labelScope
+   *
    * @return labelScope
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLabelScope() {
     return labelScope;
@@ -104,10 +105,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get maxItemCount
+   *
    * @return maxItemCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getMaxItemCount() {
     return maxItemCount;
@@ -122,10 +124,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -140,10 +143,11 @@ public class TfvcLabelRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get owner
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwner() {
     return owner;
@@ -164,11 +168,11 @@ public class TfvcLabelRequestData {
     }
     TfvcLabelRequestData tfvcLabelRequestData = (TfvcLabelRequestData) o;
     return Objects.equals(this.includeLinks, tfvcLabelRequestData.includeLinks) &&
-        Objects.equals(this.itemLabelFilter, tfvcLabelRequestData.itemLabelFilter) &&
-        Objects.equals(this.labelScope, tfvcLabelRequestData.labelScope) &&
-        Objects.equals(this.maxItemCount, tfvcLabelRequestData.maxItemCount) &&
-        Objects.equals(this.name, tfvcLabelRequestData.name) &&
-        Objects.equals(this.owner, tfvcLabelRequestData.owner);
+            Objects.equals(this.itemLabelFilter, tfvcLabelRequestData.itemLabelFilter) &&
+            Objects.equals(this.labelScope, tfvcLabelRequestData.labelScope) &&
+            Objects.equals(this.maxItemCount, tfvcLabelRequestData.maxItemCount) &&
+            Objects.equals(this.name, tfvcLabelRequestData.name) &&
+            Objects.equals(this.owner, tfvcLabelRequestData.owner);
   }
 
   @Override
@@ -181,7 +185,7 @@ public class TfvcLabelRequestData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcLabelRequestData {\n");
-    
+
     sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
     sb.append("    itemLabelFilter: ").append(toIndentedString(itemLabelFilter)).append("\n");
     sb.append("    labelScope: ").append(toIndentedString(labelScope)).append("\n");

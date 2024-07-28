@@ -13,17 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitConflict;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -36,48 +35,6 @@ public class GitConflictUpdateResult {
 
   @JsonProperty("updatedConflict")
   private GitConflict updatedConflict = null;
-
-  /**
-   * Status of the update on the server
-   */
-  public enum UpdateStatusEnum {
-    SUCCEEDED("succeeded"),
-    
-    BADREQUEST("badRequest"),
-    
-    INVALIDRESOLUTION("invalidResolution"),
-    
-    UNSUPPORTEDCONFLICTTYPE("unsupportedConflictType"),
-    
-    NOTFOUND("notFound");
-
-    private String value;
-
-    UpdateStatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static UpdateStatusEnum fromValue(String value) {
-      for (UpdateStatusEnum b : UpdateStatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("updateStatus")
   private UpdateStatusEnum updateStatus = null;
 
@@ -86,10 +43,11 @@ public class GitConflictUpdateResult {
     return this;
   }
 
-   /**
+  /**
    * Conflict ID that was provided by input
+   *
    * @return conflictId
-  **/
+   **/
   @ApiModelProperty(value = "Conflict ID that was provided by input")
   public Integer getConflictId() {
     return conflictId;
@@ -104,10 +62,11 @@ public class GitConflictUpdateResult {
     return this;
   }
 
-   /**
+  /**
    * Reason for failing
+   *
    * @return customMessage
-  **/
+   **/
   @ApiModelProperty(value = "Reason for failing")
   public String getCustomMessage() {
     return customMessage;
@@ -122,10 +81,11 @@ public class GitConflictUpdateResult {
     return this;
   }
 
-   /**
+  /**
    * New state of the conflict after updating
+   *
    * @return updatedConflict
-  **/
+   **/
   @ApiModelProperty(value = "New state of the conflict after updating")
   public GitConflict getUpdatedConflict() {
     return updatedConflict;
@@ -140,10 +100,11 @@ public class GitConflictUpdateResult {
     return this;
   }
 
-   /**
+  /**
    * Status of the update on the server
+   *
    * @return updateStatus
-  **/
+   **/
   @ApiModelProperty(value = "Status of the update on the server")
   public UpdateStatusEnum getUpdateStatus() {
     return updateStatus;
@@ -152,7 +113,6 @@ public class GitConflictUpdateResult {
   public void setUpdateStatus(UpdateStatusEnum updateStatus) {
     this.updateStatus = updateStatus;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -164,9 +124,9 @@ public class GitConflictUpdateResult {
     }
     GitConflictUpdateResult gitConflictUpdateResult = (GitConflictUpdateResult) o;
     return Objects.equals(this.conflictId, gitConflictUpdateResult.conflictId) &&
-        Objects.equals(this.customMessage, gitConflictUpdateResult.customMessage) &&
-        Objects.equals(this.updatedConflict, gitConflictUpdateResult.updatedConflict) &&
-        Objects.equals(this.updateStatus, gitConflictUpdateResult.updateStatus);
+            Objects.equals(this.customMessage, gitConflictUpdateResult.customMessage) &&
+            Objects.equals(this.updatedConflict, gitConflictUpdateResult.updatedConflict) &&
+            Objects.equals(this.updateStatus, gitConflictUpdateResult.updateStatus);
   }
 
   @Override
@@ -174,12 +134,11 @@ public class GitConflictUpdateResult {
     return Objects.hash(conflictId, customMessage, updatedConflict, updateStatus);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitConflictUpdateResult {\n");
-    
+
     sb.append("    conflictId: ").append(toIndentedString(conflictId)).append("\n");
     sb.append("    customMessage: ").append(toIndentedString(customMessage)).append("\n");
     sb.append("    updatedConflict: ").append(toIndentedString(updatedConflict)).append("\n");
@@ -197,6 +156,47 @@ public class GitConflictUpdateResult {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Status of the update on the server
+   */
+  public enum UpdateStatusEnum {
+    SUCCEEDED("succeeded"),
+
+    BADREQUEST("badRequest"),
+
+    INVALIDRESOLUTION("invalidResolution"),
+
+    UNSUPPORTEDCONFLICTTYPE("unsupportedConflictType"),
+
+    NOTFOUND("notFound");
+
+    private String value;
+
+    UpdateStatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static UpdateStatusEnum fromValue(String value) {
+      for (UpdateStatusEnum b : UpdateStatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

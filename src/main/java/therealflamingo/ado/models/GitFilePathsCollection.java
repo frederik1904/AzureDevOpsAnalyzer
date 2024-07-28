@@ -13,136 +13,137 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitFilePathsCollection {
-  @JsonProperty("commitId")
-  private String commitId = null;
+    @JsonProperty("commitId")
+    private String commitId = null;
 
-  @JsonProperty("paths")
-  private List<String> paths = null;
+    @JsonProperty("paths")
+    private List<String> paths = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  public GitFilePathsCollection commitId(String commitId) {
-    this.commitId = commitId;
-    return this;
-  }
-
-   /**
-   * Get commitId
-   * @return commitId
-  **/
-  @ApiModelProperty(value = "")
-  public String getCommitId() {
-    return commitId;
-  }
-
-  public void setCommitId(String commitId) {
-    this.commitId = commitId;
-  }
-
-  public GitFilePathsCollection paths(List<String> paths) {
-    this.paths = paths;
-    return this;
-  }
-
-  public GitFilePathsCollection addPathsItem(String pathsItem) {
-    if (this.paths == null) {
-      this.paths = new ArrayList<String>();
+    public GitFilePathsCollection commitId(String commitId) {
+        this.commitId = commitId;
+        return this;
     }
-    this.paths.add(pathsItem);
-    return this;
-  }
 
-   /**
-   * Get paths
-   * @return paths
-  **/
-  @ApiModelProperty(value = "")
-  public List<String> getPaths() {
-    return paths;
-  }
-
-  public void setPaths(List<String> paths) {
-    this.paths = paths;
-  }
-
-  public GitFilePathsCollection url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Get commitId
+     *
+     * @return commitId
+     **/
+    @ApiModelProperty(value = "")
+    public String getCommitId() {
+        return commitId;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setCommitId(String commitId) {
+        this.commitId = commitId;
     }
-    GitFilePathsCollection gitFilePathsCollection = (GitFilePathsCollection) o;
-    return Objects.equals(this.commitId, gitFilePathsCollection.commitId) &&
-        Objects.equals(this.paths, gitFilePathsCollection.paths) &&
-        Objects.equals(this.url, gitFilePathsCollection.url);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(commitId, paths, url);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitFilePathsCollection {\n");
-    
-    sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
-    sb.append("    paths: ").append(toIndentedString(paths)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitFilePathsCollection paths(List<String> paths) {
+        this.paths = paths;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitFilePathsCollection addPathsItem(String pathsItem) {
+        if (this.paths == null) {
+            this.paths = new ArrayList<String>();
+        }
+        this.paths.add(pathsItem);
+        return this;
+    }
+
+    /**
+     * Get paths
+     *
+     * @return paths
+     **/
+    @ApiModelProperty(value = "")
+    public List<String> getPaths() {
+        return paths;
+    }
+
+    public void setPaths(List<String> paths) {
+        this.paths = paths;
+    }
+
+    public GitFilePathsCollection url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitFilePathsCollection gitFilePathsCollection = (GitFilePathsCollection) o;
+        return Objects.equals(this.commitId, gitFilePathsCollection.commitId) &&
+                Objects.equals(this.paths, gitFilePathsCollection.paths) &&
+                Objects.equals(this.url, gitFilePathsCollection.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commitId, paths, url);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitFilePathsCollection {\n");
+
+        sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
+        sb.append("    paths: ").append(toIndentedString(paths)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

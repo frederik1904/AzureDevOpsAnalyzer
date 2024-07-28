@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.FileDiffParams;
+import java.util.Objects;
 
 /**
  * Provides properties that describe inputs for the file diffs
@@ -44,10 +41,11 @@ public class FileDiffsCriteria {
     return this;
   }
 
-   /**
+  /**
    * Commit ID of the base version
+   *
    * @return baseVersionCommit
-  **/
+   **/
   @ApiModelProperty(value = "Commit ID of the base version")
   public String getBaseVersionCommit() {
     return baseVersionCommit;
@@ -70,10 +68,11 @@ public class FileDiffsCriteria {
     return this;
   }
 
-   /**
+  /**
    * List of parameters for each of the files for which we need to get the file diff
+   *
    * @return fileDiffParams
-  **/
+   **/
   @ApiModelProperty(value = "List of parameters for each of the files for which we need to get the file diff")
   public List<FileDiffParams> getFileDiffParams() {
     return fileDiffParams;
@@ -88,10 +87,11 @@ public class FileDiffsCriteria {
     return this;
   }
 
-   /**
+  /**
    * Commit ID of the target version
+   *
    * @return targetVersionCommit
-  **/
+   **/
   @ApiModelProperty(value = "Commit ID of the target version")
   public String getTargetVersionCommit() {
     return targetVersionCommit;
@@ -112,8 +112,8 @@ public class FileDiffsCriteria {
     }
     FileDiffsCriteria fileDiffsCriteria = (FileDiffsCriteria) o;
     return Objects.equals(this.baseVersionCommit, fileDiffsCriteria.baseVersionCommit) &&
-        Objects.equals(this.fileDiffParams, fileDiffsCriteria.fileDiffParams) &&
-        Objects.equals(this.targetVersionCommit, fileDiffsCriteria.targetVersionCommit);
+            Objects.equals(this.fileDiffParams, fileDiffsCriteria.fileDiffParams) &&
+            Objects.equals(this.targetVersionCommit, fileDiffsCriteria.targetVersionCommit);
   }
 
   @Override
@@ -126,7 +126,7 @@ public class FileDiffsCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileDiffsCriteria {\n");
-    
+
     sb.append("    baseVersionCommit: ").append(toIndentedString(baseVersionCommit)).append("\n");
     sb.append("    fileDiffParams: ").append(toIndentedString(fileDiffParams)).append("\n");
     sb.append("    targetVersionCommit: ").append(toIndentedString(targetVersionCommit)).append("\n");

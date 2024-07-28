@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * The representation of data needed to create a tag definition which is sent across the wire.
@@ -35,10 +33,11 @@ public class WebApiCreateTagRequestData {
     return this;
   }
 
-   /**
+  /**
    * Name of the tag definition that will be created.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Name of the tag definition that will be created.")
   public String getName() {
     return name;
@@ -71,7 +70,7 @@ public class WebApiCreateTagRequestData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebApiCreateTagRequestData {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();

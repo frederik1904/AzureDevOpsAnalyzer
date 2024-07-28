@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.WebApiCreateTagRequestData;
 import therealflamingo.ado.models.WebApiTagDefinition;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestLabelsApi
@@ -32,14 +28,11 @@ public class PullRequestLabelsApiTest {
 
     private final PullRequestLabelsApi api = new PullRequestLabelsApi();
 
-    
+
     /**
-     * 
-     *
      * Create a tag (if that does not exists yet) and add that as a label (tag) for a specified pull request. The only required field is the name of the new label (tag).
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestLabelsCreateTest() throws Exception {
@@ -54,14 +47,11 @@ public class PullRequestLabelsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Removes a label (tag) from the set of those assigned to the pull request. The tag itself will not be deleted.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestLabelsDeleteTest() throws Exception {
@@ -76,14 +66,11 @@ public class PullRequestLabelsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieves a single label (tag) that has been assigned to a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestLabelsGetTest() throws Exception {
@@ -98,14 +85,11 @@ public class PullRequestLabelsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get all the labels (tags) assigned to a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestLabelsListTest() throws Exception {
@@ -119,5 +103,5 @@ public class PullRequestLabelsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

@@ -13,14 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.VssJsonCollectionWrapperBase;
+
+import java.util.Objects;
 
 /**
  * This class is used to serialize collections as a single JSON object on the wire.
@@ -39,10 +36,11 @@ public class VssJsonCollectionWrapper extends VssJsonCollectionWrapperBase {
     return this;
   }
 
-   /**
+  /**
    * The number of serialized items.
+   *
    * @return count
-  **/
+   **/
   @ApiModelProperty(value = "The number of serialized items.")
   public Integer getCount() {
     return count;
@@ -57,10 +55,11 @@ public class VssJsonCollectionWrapper extends VssJsonCollectionWrapperBase {
     return this;
   }
 
-   /**
+  /**
    * The serialized item.
+   *
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "The serialized item.")
   public String getValue() {
     return value;
@@ -81,8 +80,8 @@ public class VssJsonCollectionWrapper extends VssJsonCollectionWrapperBase {
     }
     VssJsonCollectionWrapper vssJsonCollectionWrapper = (VssJsonCollectionWrapper) o;
     return Objects.equals(this.count, vssJsonCollectionWrapper.count) &&
-        Objects.equals(this.value, vssJsonCollectionWrapper.value) &&
-        super.equals(o);
+            Objects.equals(this.value, vssJsonCollectionWrapper.value) &&
+            super.equals(o);
   }
 
   @Override

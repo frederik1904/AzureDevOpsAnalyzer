@@ -13,13 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Information about the progress of a cherry pick or revert operation.
@@ -27,234 +27,236 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Information about the progress of a cherry pick or revert operation.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitAsyncRefOperationDetail {
-  @JsonProperty("conflict")
-  private Boolean conflict = null;
+    @JsonProperty("conflict")
+    private Boolean conflict = null;
 
-  @JsonProperty("currentCommitId")
-  private String currentCommitId = null;
+    @JsonProperty("currentCommitId")
+    private String currentCommitId = null;
 
-  @JsonProperty("failureMessage")
-  private String failureMessage = null;
+    @JsonProperty("failureMessage")
+    private String failureMessage = null;
 
-  @JsonProperty("progress")
-  private Double progress = null;
+    @JsonProperty("progress")
+    private Double progress = null;
+    @JsonProperty("status")
+    private StatusEnum status = null;
+    @JsonProperty("timedout")
+    private Boolean timedout = null;
 
-  /**
-   * Provides a status code that indicates the reason the cherry pick or revert failed.
-   */
-  public enum StatusEnum {
-    NONE("none"),
-    
-    INVALIDREFNAME("invalidRefName"),
-    
-    REFNAMECONFLICT("refNameConflict"),
-    
-    CREATEBRANCHPERMISSIONREQUIRED("createBranchPermissionRequired"),
-    
-    WRITEPERMISSIONREQUIRED("writePermissionRequired"),
-    
-    TARGETBRANCHDELETED("targetBranchDeleted"),
-    
-    GITOBJECTTOOLARGE("gitObjectTooLarge"),
-    
-    OPERATIONINDENTITYNOTFOUND("operationIndentityNotFound"),
-    
-    ASYNCOPERATIONNOTFOUND("asyncOperationNotFound"),
-    
-    OTHER("other"),
-    
-    EMPTYCOMMITTERSIGNATURE("emptyCommitterSignature");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
+    public GitAsyncRefOperationDetail conflict(Boolean conflict) {
+        this.conflict = conflict;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Indicates if there was a conflict generated when trying to cherry pick or revert the changes.
+     *
+     * @return conflict
+     **/
+    @ApiModelProperty(value = "Indicates if there was a conflict generated when trying to cherry pick or revert the changes.")
+    public Boolean isConflict() {
+        return conflict;
+    }
+
+    public void setConflict(Boolean conflict) {
+        this.conflict = conflict;
+    }
+
+    public GitAsyncRefOperationDetail currentCommitId(String currentCommitId) {
+        this.currentCommitId = currentCommitId;
+        return this;
+    }
+
+    /**
+     * The current commit from the list of commits that are being cherry picked or reverted.
+     *
+     * @return currentCommitId
+     **/
+    @ApiModelProperty(value = "The current commit from the list of commits that are being cherry picked or reverted.")
+    public String getCurrentCommitId() {
+        return currentCommitId;
+    }
+
+    public void setCurrentCommitId(String currentCommitId) {
+        this.currentCommitId = currentCommitId;
+    }
+
+    public GitAsyncRefOperationDetail failureMessage(String failureMessage) {
+        this.failureMessage = failureMessage;
+        return this;
+    }
+
+    /**
+     * Detailed information about why the cherry pick or revert failed to complete.
+     *
+     * @return failureMessage
+     **/
+    @ApiModelProperty(value = "Detailed information about why the cherry pick or revert failed to complete.")
+    public String getFailureMessage() {
+        return failureMessage;
+    }
+
+    public void setFailureMessage(String failureMessage) {
+        this.failureMessage = failureMessage;
+    }
+
+    public GitAsyncRefOperationDetail progress(Double progress) {
+        this.progress = progress;
+        return this;
+    }
+
+    /**
+     * A number between 0 and 1 indicating the percent complete of the operation.
+     *
+     * @return progress
+     **/
+    @ApiModelProperty(value = "A number between 0 and 1 indicating the percent complete of the operation.")
+    public Double getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Double progress) {
+        this.progress = progress;
+    }
+
+    public GitAsyncRefOperationDetail status(StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Provides a status code that indicates the reason the cherry pick or revert failed.
+     *
+     * @return status
+     **/
+    @ApiModelProperty(value = "Provides a status code that indicates the reason the cherry pick or revert failed.")
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    public GitAsyncRefOperationDetail timedout(Boolean timedout) {
+        this.timedout = timedout;
+        return this;
+    }
+
+    /**
+     * Indicates if the operation went beyond the maximum time allowed for a cherry pick or revert operation.
+     *
+     * @return timedout
+     **/
+    @ApiModelProperty(value = "Indicates if the operation went beyond the maximum time allowed for a cherry pick or revert operation.")
+    public Boolean isTimedout() {
+        return timedout;
+    }
+
+    public void setTimedout(Boolean timedout) {
+        this.timedout = timedout;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitAsyncRefOperationDetail gitAsyncRefOperationDetail = (GitAsyncRefOperationDetail) o;
+        return Objects.equals(this.conflict, gitAsyncRefOperationDetail.conflict) &&
+                Objects.equals(this.currentCommitId, gitAsyncRefOperationDetail.currentCommitId) &&
+                Objects.equals(this.failureMessage, gitAsyncRefOperationDetail.failureMessage) &&
+                Objects.equals(this.progress, gitAsyncRefOperationDetail.progress) &&
+                Objects.equals(this.status, gitAsyncRefOperationDetail.status) &&
+                Objects.equals(this.timedout, gitAsyncRefOperationDetail.timedout);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(conflict, currentCommitId, failureMessage, progress, status, timedout);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitAsyncRefOperationDetail {\n");
+
+        sb.append("    conflict: ").append(toIndentedString(conflict)).append("\n");
+        sb.append("    currentCommitId: ").append(toIndentedString(currentCommitId)).append("\n");
+        sb.append("    failureMessage: ").append(toIndentedString(failureMessage)).append("\n");
+        sb.append("    progress: ").append(toIndentedString(progress)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("    timedout: ").append(toIndentedString(timedout)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("status")
-  private StatusEnum status = null;
+    /**
+     * Provides a status code that indicates the reason the cherry pick or revert failed.
+     */
+    public enum StatusEnum {
+        NONE("none"),
 
-  @JsonProperty("timedout")
-  private Boolean timedout = null;
+        INVALIDREFNAME("invalidRefName"),
 
-  public GitAsyncRefOperationDetail conflict(Boolean conflict) {
-    this.conflict = conflict;
-    return this;
-  }
+        REFNAMECONFLICT("refNameConflict"),
 
-   /**
-   * Indicates if there was a conflict generated when trying to cherry pick or revert the changes.
-   * @return conflict
-  **/
-  @ApiModelProperty(value = "Indicates if there was a conflict generated when trying to cherry pick or revert the changes.")
-  public Boolean isConflict() {
-    return conflict;
-  }
+        CREATEBRANCHPERMISSIONREQUIRED("createBranchPermissionRequired"),
 
-  public void setConflict(Boolean conflict) {
-    this.conflict = conflict;
-  }
+        WRITEPERMISSIONREQUIRED("writePermissionRequired"),
 
-  public GitAsyncRefOperationDetail currentCommitId(String currentCommitId) {
-    this.currentCommitId = currentCommitId;
-    return this;
-  }
+        TARGETBRANCHDELETED("targetBranchDeleted"),
 
-   /**
-   * The current commit from the list of commits that are being cherry picked or reverted.
-   * @return currentCommitId
-  **/
-  @ApiModelProperty(value = "The current commit from the list of commits that are being cherry picked or reverted.")
-  public String getCurrentCommitId() {
-    return currentCommitId;
-  }
+        GITOBJECTTOOLARGE("gitObjectTooLarge"),
 
-  public void setCurrentCommitId(String currentCommitId) {
-    this.currentCommitId = currentCommitId;
-  }
+        OPERATIONINDENTITYNOTFOUND("operationIndentityNotFound"),
 
-  public GitAsyncRefOperationDetail failureMessage(String failureMessage) {
-    this.failureMessage = failureMessage;
-    return this;
-  }
+        ASYNCOPERATIONNOTFOUND("asyncOperationNotFound"),
 
-   /**
-   * Detailed information about why the cherry pick or revert failed to complete.
-   * @return failureMessage
-  **/
-  @ApiModelProperty(value = "Detailed information about why the cherry pick or revert failed to complete.")
-  public String getFailureMessage() {
-    return failureMessage;
-  }
+        OTHER("other"),
 
-  public void setFailureMessage(String failureMessage) {
-    this.failureMessage = failureMessage;
-  }
+        EMPTYCOMMITTERSIGNATURE("emptyCommitterSignature");
 
-  public GitAsyncRefOperationDetail progress(Double progress) {
-    this.progress = progress;
-    return this;
-  }
+        private String value;
 
-   /**
-   * A number between 0 and 1 indicating the percent complete of the operation.
-   * @return progress
-  **/
-  @ApiModelProperty(value = "A number between 0 and 1 indicating the percent complete of the operation.")
-  public Double getProgress() {
-    return progress;
-  }
+        StatusEnum(String value) {
+            this.value = value;
+        }
 
-  public void setProgress(Double progress) {
-    this.progress = progress;
-  }
+        @JsonCreator
+        public static StatusEnum fromValue(String value) {
+            for (StatusEnum b : StatusEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-  public GitAsyncRefOperationDetail status(StatusEnum status) {
-    this.status = status;
-    return this;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-   /**
-   * Provides a status code that indicates the reason the cherry pick or revert failed.
-   * @return status
-  **/
-  @ApiModelProperty(value = "Provides a status code that indicates the reason the cherry pick or revert failed.")
-  public StatusEnum getStatus() {
-    return status;
-  }
-
-  public void setStatus(StatusEnum status) {
-    this.status = status;
-  }
-
-  public GitAsyncRefOperationDetail timedout(Boolean timedout) {
-    this.timedout = timedout;
-    return this;
-  }
-
-   /**
-   * Indicates if the operation went beyond the maximum time allowed for a cherry pick or revert operation.
-   * @return timedout
-  **/
-  @ApiModelProperty(value = "Indicates if the operation went beyond the maximum time allowed for a cherry pick or revert operation.")
-  public Boolean isTimedout() {
-    return timedout;
-  }
-
-  public void setTimedout(Boolean timedout) {
-    this.timedout = timedout;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitAsyncRefOperationDetail gitAsyncRefOperationDetail = (GitAsyncRefOperationDetail) o;
-    return Objects.equals(this.conflict, gitAsyncRefOperationDetail.conflict) &&
-        Objects.equals(this.currentCommitId, gitAsyncRefOperationDetail.currentCommitId) &&
-        Objects.equals(this.failureMessage, gitAsyncRefOperationDetail.failureMessage) &&
-        Objects.equals(this.progress, gitAsyncRefOperationDetail.progress) &&
-        Objects.equals(this.status, gitAsyncRefOperationDetail.status) &&
-        Objects.equals(this.timedout, gitAsyncRefOperationDetail.timedout);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(conflict, currentCommitId, failureMessage, progress, status, timedout);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitAsyncRefOperationDetail {\n");
-    
-    sb.append("    conflict: ").append(toIndentedString(conflict)).append("\n");
-    sb.append("    currentCommitId: ").append(toIndentedString(currentCommitId)).append("\n");
-    sb.append("    failureMessage: ").append(toIndentedString(failureMessage)).append("\n");
-    sb.append("    progress: ").append(toIndentedString(progress)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    timedout: ").append(toIndentedString(timedout)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

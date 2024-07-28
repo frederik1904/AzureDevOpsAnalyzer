@@ -13,17 +13,13 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitRef;
 import therealflamingo.ado.models.GitRefUpdate;
 import therealflamingo.ado.models.GitRefUpdateResult;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for RefsApi
@@ -33,14 +29,11 @@ public class RefsApiTest {
 
     private final RefsApi api = new RefsApi();
 
-    
+
     /**
-     * 
-     *
      * Queries the provided repository for its refs and returns them.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsListTest() throws Exception {
@@ -61,14 +54,11 @@ public class RefsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Lock or Unlock a branch.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsUpdateRefTest() throws Exception {
@@ -83,14 +73,11 @@ public class RefsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Creating, updating, or deleting refs(branches).  Updating a ref means making it point at a different commit than it used to. You must specify both the old and new commit to avoid race conditions.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsUpdateRefsTest() throws Exception {
@@ -104,5 +91,5 @@ public class RefsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

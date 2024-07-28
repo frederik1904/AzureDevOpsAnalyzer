@@ -13,17 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.PropertiesCollection;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Meta data for a file attached to an artifact.
@@ -63,10 +58,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * Links to other related objects.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to other related objects.")
   public ReferenceLinks getLinks() {
     return links;
@@ -81,10 +77,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * The person that uploaded this attachment.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "The person that uploaded this attachment.")
   public IdentityRef getAuthor() {
     return author;
@@ -99,10 +96,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * Content hash of on-disk representation of file content. Its calculated by the server by using SHA1 hash function.
+   *
    * @return contentHash
-  **/
+   **/
   @ApiModelProperty(value = "Content hash of on-disk representation of file content. Its calculated by the server by using SHA1 hash function.")
   public String getContentHash() {
     return contentHash;
@@ -117,10 +115,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * The time the attachment was uploaded.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "The time the attachment was uploaded.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -135,10 +134,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * The description of the attachment.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "The description of the attachment.")
   public String getDescription() {
     return description;
@@ -153,10 +153,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * The display name of the attachment. Can&#39;t be null or empty.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "The display name of the attachment. Can't be null or empty.")
   public String getDisplayName() {
     return displayName;
@@ -171,10 +172,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * Id of the attachment.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Id of the attachment.")
   public Integer getId() {
     return id;
@@ -189,10 +191,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * Extended properties.
+   *
    * @return properties
-  **/
+   **/
   @ApiModelProperty(value = "Extended properties.")
   public PropertiesCollection getProperties() {
     return properties;
@@ -207,10 +210,11 @@ public class Attachment {
     return this;
   }
 
-   /**
+  /**
    * The url to download the content of the attachment.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The url to download the content of the attachment.")
   public String getUrl() {
     return url;
@@ -231,14 +235,14 @@ public class Attachment {
     }
     Attachment attachment = (Attachment) o;
     return Objects.equals(this.links, attachment.links) &&
-        Objects.equals(this.author, attachment.author) &&
-        Objects.equals(this.contentHash, attachment.contentHash) &&
-        Objects.equals(this.createdDate, attachment.createdDate) &&
-        Objects.equals(this.description, attachment.description) &&
-        Objects.equals(this.displayName, attachment.displayName) &&
-        Objects.equals(this.id, attachment.id) &&
-        Objects.equals(this.properties, attachment.properties) &&
-        Objects.equals(this.url, attachment.url);
+            Objects.equals(this.author, attachment.author) &&
+            Objects.equals(this.contentHash, attachment.contentHash) &&
+            Objects.equals(this.createdDate, attachment.createdDate) &&
+            Objects.equals(this.description, attachment.description) &&
+            Objects.equals(this.displayName, attachment.displayName) &&
+            Objects.equals(this.id, attachment.id) &&
+            Objects.equals(this.properties, attachment.properties) &&
+            Objects.equals(this.url, attachment.url);
   }
 
   @Override
@@ -251,7 +255,7 @@ public class Attachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Attachment {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    contentHash: ").append(toIndentedString(contentHash)).append("\n");

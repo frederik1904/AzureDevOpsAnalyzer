@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * MappingFilter can be used to include or exclude specific paths.
@@ -38,10 +36,11 @@ public class TfvcMappingFilter {
     return this;
   }
 
-   /**
+  /**
    * True if ServerPath should be excluded.
+   *
    * @return exclude
-  **/
+   **/
   @ApiModelProperty(value = "True if ServerPath should be excluded.")
   public Boolean isExclude() {
     return exclude;
@@ -56,10 +55,11 @@ public class TfvcMappingFilter {
     return this;
   }
 
-   /**
+  /**
    * Path to be included or excluded.
+   *
    * @return serverPath
-  **/
+   **/
   @ApiModelProperty(value = "Path to be included or excluded.")
   public String getServerPath() {
     return serverPath;
@@ -80,7 +80,7 @@ public class TfvcMappingFilter {
     }
     TfvcMappingFilter tfvcMappingFilter = (TfvcMappingFilter) o;
     return Objects.equals(this.exclude, tfvcMappingFilter.exclude) &&
-        Objects.equals(this.serverPath, tfvcMappingFilter.serverPath);
+            Objects.equals(this.serverPath, tfvcMappingFilter.serverPath);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class TfvcMappingFilter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcMappingFilter {\n");
-    
+
     sb.append("    exclude: ").append(toIndentedString(exclude)).append("\n");
     sb.append("    serverPath: ").append(toIndentedString(serverPath)).append("\n");
     sb.append("}");

@@ -13,17 +13,13 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPullRequest;
-import org.threeten.bp.OffsetDateTime;
-import java.util.UUID;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import therealflamingo.ado.models.GitPullRequest;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 
 /**
  * API tests for PullRequestsApi
@@ -33,14 +29,11 @@ public class PullRequestsApiTest {
 
     private final PullRequestsApi api = new PullRequestsApi();
 
-    
+
     /**
-     * 
-     *
      * Create a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsCreateTest() throws Exception {
@@ -54,14 +47,11 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsGetPullRequestTest() throws Exception {
@@ -79,14 +69,11 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsGetPullRequestByIdTest() throws Exception {
@@ -98,14 +85,11 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all pull requests matching a specified criteria.  Please note that description field will be truncated up to 400 symbols in the result.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsGetPullRequestsTest() throws Exception {
@@ -131,14 +115,11 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all pull requests matching a specified criteria.  Please note that description field will be truncated up to 400 symbols in the result.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsGetPullRequestsByProjectTest() throws Exception {
@@ -163,14 +144,11 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Update a pull request  These are the properties that can be updated with the API:  - Status  - Title  - Description (up to 4000 characters)  - CompletionOptions  - MergeOptions  - AutoCompleteSetBy.Id  - TargetRefName (when the PR retargeting feature is enabled)  Attempting to update other properties outside of this list will either cause the server to throw an &#x60;InvalidArgumentValueException&#x60;,  or to silently ignore the update.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestsUpdateTest() throws Exception {
@@ -184,5 +162,5 @@ public class PullRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

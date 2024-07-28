@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.PolicyConfigurationRef;
-import therealflamingo.ado.models.PolicyTypeRef;
+
+import java.util.Objects;
 
 /**
  * A particular revision for a policy configuration.
@@ -46,10 +42,11 @@ public class VersionedPolicyConfigurationRef extends PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration ID.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration ID.")
   public Integer getId() {
     return id;
@@ -64,10 +61,11 @@ public class VersionedPolicyConfigurationRef extends PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration type.
+   *
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration type.")
   public PolicyTypeRef getType() {
     return type;
@@ -82,10 +80,11 @@ public class VersionedPolicyConfigurationRef extends PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The URL where the policy configuration can be retrieved.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The URL where the policy configuration can be retrieved.")
   public String getUrl() {
     return url;
@@ -100,10 +99,11 @@ public class VersionedPolicyConfigurationRef extends PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration revision ID.
+   *
    * @return revision
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration revision ID.")
   public Integer getRevision() {
     return revision;
@@ -124,10 +124,10 @@ public class VersionedPolicyConfigurationRef extends PolicyConfigurationRef {
     }
     VersionedPolicyConfigurationRef versionedPolicyConfigurationRef = (VersionedPolicyConfigurationRef) o;
     return Objects.equals(this.id, versionedPolicyConfigurationRef.id) &&
-        Objects.equals(this.type, versionedPolicyConfigurationRef.type) &&
-        Objects.equals(this.url, versionedPolicyConfigurationRef.url) &&
-        Objects.equals(this.revision, versionedPolicyConfigurationRef.revision) &&
-        super.equals(o);
+            Objects.equals(this.type, versionedPolicyConfigurationRef.type) &&
+            Objects.equals(this.url, versionedPolicyConfigurationRef.url) &&
+            Objects.equals(this.revision, versionedPolicyConfigurationRef.revision) &&
+            super.equals(o);
   }
 
   @Override

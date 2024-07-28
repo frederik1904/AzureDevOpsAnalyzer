@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -41,10 +39,11 @@ public class GitMergeOriginRef {
     return this;
   }
 
-   /**
+  /**
    * Get cherryPickId
+   *
    * @return cherryPickId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getCherryPickId() {
     return cherryPickId;
@@ -59,10 +58,11 @@ public class GitMergeOriginRef {
     return this;
   }
 
-   /**
+  /**
    * Get pullRequestId
+   *
    * @return pullRequestId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getPullRequestId() {
     return pullRequestId;
@@ -77,10 +77,11 @@ public class GitMergeOriginRef {
     return this;
   }
 
-   /**
+  /**
    * Get revertId
+   *
    * @return revertId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRevertId() {
     return revertId;
@@ -101,8 +102,8 @@ public class GitMergeOriginRef {
     }
     GitMergeOriginRef gitMergeOriginRef = (GitMergeOriginRef) o;
     return Objects.equals(this.cherryPickId, gitMergeOriginRef.cherryPickId) &&
-        Objects.equals(this.pullRequestId, gitMergeOriginRef.pullRequestId) &&
-        Objects.equals(this.revertId, gitMergeOriginRef.revertId);
+            Objects.equals(this.pullRequestId, gitMergeOriginRef.pullRequestId) &&
+            Objects.equals(this.revertId, gitMergeOriginRef.revertId);
   }
 
   @Override
@@ -115,7 +116,7 @@ public class GitMergeOriginRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitMergeOriginRef {\n");
-    
+
     sb.append("    cherryPickId: ").append(toIndentedString(cherryPickId)).append("\n");
     sb.append("    pullRequestId: ").append(toIndentedString(pullRequestId)).append("\n");
     sb.append("    revertId: ").append(toIndentedString(revertId)).append("\n");

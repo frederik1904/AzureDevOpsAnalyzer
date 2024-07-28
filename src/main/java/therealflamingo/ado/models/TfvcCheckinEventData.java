@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.TeamProjectReference;
-import therealflamingo.ado.models.TfvcChangeset;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -40,10 +36,11 @@ public class TfvcCheckinEventData {
     return this;
   }
 
-   /**
+  /**
    * Get changeset
+   *
    * @return changeset
-  **/
+   **/
   @ApiModelProperty(value = "")
   public TfvcChangeset getChangeset() {
     return changeset;
@@ -58,10 +55,11 @@ public class TfvcCheckinEventData {
     return this;
   }
 
-   /**
+  /**
    * Get project
+   *
    * @return project
-  **/
+   **/
   @ApiModelProperty(value = "")
   public TeamProjectReference getProject() {
     return project;
@@ -82,7 +80,7 @@ public class TfvcCheckinEventData {
     }
     TfvcCheckinEventData tfvcCheckinEventData = (TfvcCheckinEventData) o;
     return Objects.equals(this.changeset, tfvcCheckinEventData.changeset) &&
-        Objects.equals(this.project, tfvcCheckinEventData.project);
+            Objects.equals(this.project, tfvcCheckinEventData.project);
   }
 
   @Override
@@ -95,7 +93,7 @@ public class TfvcCheckinEventData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcCheckinEventData {\n");
-    
+
     sb.append("    changeset: ").append(toIndentedString(changeset)).append("\n");
     sb.append("    project: ").append(toIndentedString(project)).append("\n");
     sb.append("}");

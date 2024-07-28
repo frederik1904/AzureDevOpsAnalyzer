@@ -13,17 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.CommentPosition;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -48,10 +45,11 @@ public class CommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * File path relative to the root of the repository. It&#39;s up to the client to use any path format.
+   *
    * @return filePath
-  **/
+   **/
   @ApiModelProperty(value = "File path relative to the root of the repository. It's up to the client to use any path format.")
   public String getFilePath() {
     return filePath;
@@ -66,10 +64,11 @@ public class CommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * Position of last character of the thread&#39;s span in left file.
+   *
    * @return leftFileEnd
-  **/
+   **/
   @ApiModelProperty(value = "Position of last character of the thread's span in left file.")
   public CommentPosition getLeftFileEnd() {
     return leftFileEnd;
@@ -84,10 +83,11 @@ public class CommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * Position of first character of the thread&#39;s span in left file.
+   *
    * @return leftFileStart
-  **/
+   **/
   @ApiModelProperty(value = "Position of first character of the thread's span in left file.")
   public CommentPosition getLeftFileStart() {
     return leftFileStart;
@@ -102,10 +102,11 @@ public class CommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * Position of last character of the thread&#39;s span in right file.
+   *
    * @return rightFileEnd
-  **/
+   **/
   @ApiModelProperty(value = "Position of last character of the thread's span in right file.")
   public CommentPosition getRightFileEnd() {
     return rightFileEnd;
@@ -120,10 +121,11 @@ public class CommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * Position of first character of the thread&#39;s span in right file.
+   *
    * @return rightFileStart
-  **/
+   **/
   @ApiModelProperty(value = "Position of first character of the thread's span in right file.")
   public CommentPosition getRightFileStart() {
     return rightFileStart;
@@ -144,10 +146,10 @@ public class CommentThreadContext {
     }
     CommentThreadContext commentThreadContext = (CommentThreadContext) o;
     return Objects.equals(this.filePath, commentThreadContext.filePath) &&
-        Objects.equals(this.leftFileEnd, commentThreadContext.leftFileEnd) &&
-        Objects.equals(this.leftFileStart, commentThreadContext.leftFileStart) &&
-        Objects.equals(this.rightFileEnd, commentThreadContext.rightFileEnd) &&
-        Objects.equals(this.rightFileStart, commentThreadContext.rightFileStart);
+            Objects.equals(this.leftFileEnd, commentThreadContext.leftFileEnd) &&
+            Objects.equals(this.leftFileStart, commentThreadContext.leftFileStart) &&
+            Objects.equals(this.rightFileEnd, commentThreadContext.rightFileEnd) &&
+            Objects.equals(this.rightFileStart, commentThreadContext.rightFileStart);
   }
 
   @Override
@@ -160,7 +162,7 @@ public class CommentThreadContext {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentThreadContext {\n");
-    
+
     sb.append("    filePath: ").append(toIndentedString(filePath)).append("\n");
     sb.append("    leftFileEnd: ").append(toIndentedString(leftFileEnd)).append("\n");
     sb.append("    leftFileStart: ").append(toIndentedString(leftFileStart)).append("\n");

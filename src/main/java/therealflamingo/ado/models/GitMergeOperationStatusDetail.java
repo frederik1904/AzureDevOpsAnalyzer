@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Status information about a requested merge operation.
@@ -38,10 +36,11 @@ public class GitMergeOperationStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * Error message if the operation failed.
+   *
    * @return failureMessage
-  **/
+   **/
   @ApiModelProperty(value = "Error message if the operation failed.")
   public String getFailureMessage() {
     return failureMessage;
@@ -56,10 +55,11 @@ public class GitMergeOperationStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * The commitId of the resultant merge commit.
+   *
    * @return mergeCommitId
-  **/
+   **/
   @ApiModelProperty(value = "The commitId of the resultant merge commit.")
   public String getMergeCommitId() {
     return mergeCommitId;
@@ -80,7 +80,7 @@ public class GitMergeOperationStatusDetail {
     }
     GitMergeOperationStatusDetail gitMergeOperationStatusDetail = (GitMergeOperationStatusDetail) o;
     return Objects.equals(this.failureMessage, gitMergeOperationStatusDetail.failureMessage) &&
-        Objects.equals(this.mergeCommitId, gitMergeOperationStatusDetail.mergeCommitId);
+            Objects.equals(this.mergeCommitId, gitMergeOperationStatusDetail.mergeCommitId);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class GitMergeOperationStatusDetail {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitMergeOperationStatusDetail {\n");
-    
+
     sb.append("    failureMessage: ").append(toIndentedString(failureMessage)).append("\n");
     sb.append("    mergeCommitId: ").append(toIndentedString(mergeCommitId)).append("\n");
     sb.append("}");

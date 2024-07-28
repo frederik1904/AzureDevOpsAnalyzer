@@ -13,22 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.ChangeCountDictionary;
-import therealflamingo.ado.models.GitChange;
-import therealflamingo.ado.models.GitPushRef;
-import therealflamingo.ado.models.GitStatus;
-import therealflamingo.ado.models.GitUserDate;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.ResourceRef;
+import java.util.Objects;
 
 /**
  * Provides properties that describe a Git commit and associated metadata.
@@ -86,10 +77,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * A collection of related REST reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "A collection of related REST reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -104,10 +96,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Author of the commit.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "Author of the commit.")
   public GitUserDate getAuthor() {
     return author;
@@ -122,10 +115,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Counts of the types of changes (edits, deletes, etc.) included with the commit.
+   *
    * @return changeCounts
-  **/
+   **/
   @ApiModelProperty(value = "Counts of the types of changes (edits, deletes, etc.) included with the commit.")
   public ChangeCountDictionary getChangeCounts() {
     return changeCounts;
@@ -148,10 +142,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * An enumeration of the changes included with the commit.
+   *
    * @return changes
-  **/
+   **/
   @ApiModelProperty(value = "An enumeration of the changes included with the commit.")
   public List<GitChange> getChanges() {
     return changes;
@@ -166,10 +161,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Comment or message of the commit.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Comment or message of the commit.")
   public String getComment() {
     return comment;
@@ -184,10 +180,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates if the comment is truncated from the full Git commit comment message.
+   *
    * @return commentTruncated
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if the comment is truncated from the full Git commit comment message.")
   public Boolean isCommentTruncated() {
     return commentTruncated;
@@ -202,10 +199,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * ID (SHA-1) of the commit.
+   *
    * @return commitId
-  **/
+   **/
   @ApiModelProperty(value = "ID (SHA-1) of the commit.")
   public String getCommitId() {
     return commitId;
@@ -220,10 +218,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Committer of the commit.
+   *
    * @return committer
-  **/
+   **/
   @ApiModelProperty(value = "Committer of the commit.")
   public GitUserDate getCommitter() {
     return committer;
@@ -238,10 +237,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates that commit contains too many changes to be displayed
+   *
    * @return commitTooManyChanges
-  **/
+   **/
   @ApiModelProperty(value = "Indicates that commit contains too many changes to be displayed")
   public Boolean isCommitTooManyChanges() {
     return commitTooManyChanges;
@@ -264,10 +264,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * An enumeration of the parent commit IDs for this commit.
+   *
    * @return parents
-  **/
+   **/
   @ApiModelProperty(value = "An enumeration of the parent commit IDs for this commit.")
   public List<String> getParents() {
     return parents;
@@ -282,10 +283,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * The push associated with this commit.
+   *
    * @return push
-  **/
+   **/
   @ApiModelProperty(value = "The push associated with this commit.")
   public GitPushRef getPush() {
     return push;
@@ -300,10 +302,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * Remote URL path to the commit.
+   *
    * @return remoteUrl
-  **/
+   **/
   @ApiModelProperty(value = "Remote URL path to the commit.")
   public String getRemoteUrl() {
     return remoteUrl;
@@ -326,10 +329,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * A list of status metadata from services and extensions that may associate additional information to the commit.
+   *
    * @return statuses
-  **/
+   **/
   @ApiModelProperty(value = "A list of status metadata from services and extensions that may associate additional information to the commit.")
   public List<GitStatus> getStatuses() {
     return statuses;
@@ -344,10 +348,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * REST URL for this resource.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "REST URL for this resource.")
   public String getUrl() {
     return url;
@@ -370,10 +375,11 @@ public class GitCommitRef {
     return this;
   }
 
-   /**
+  /**
    * A list of workitems associated with this commit.
+   *
    * @return workItems
-  **/
+   **/
   @ApiModelProperty(value = "A list of workitems associated with this commit.")
   public List<ResourceRef> getWorkItems() {
     return workItems;
@@ -394,20 +400,20 @@ public class GitCommitRef {
     }
     GitCommitRef gitCommitRef = (GitCommitRef) o;
     return Objects.equals(this.links, gitCommitRef.links) &&
-        Objects.equals(this.author, gitCommitRef.author) &&
-        Objects.equals(this.changeCounts, gitCommitRef.changeCounts) &&
-        Objects.equals(this.changes, gitCommitRef.changes) &&
-        Objects.equals(this.comment, gitCommitRef.comment) &&
-        Objects.equals(this.commentTruncated, gitCommitRef.commentTruncated) &&
-        Objects.equals(this.commitId, gitCommitRef.commitId) &&
-        Objects.equals(this.committer, gitCommitRef.committer) &&
-        Objects.equals(this.commitTooManyChanges, gitCommitRef.commitTooManyChanges) &&
-        Objects.equals(this.parents, gitCommitRef.parents) &&
-        Objects.equals(this.push, gitCommitRef.push) &&
-        Objects.equals(this.remoteUrl, gitCommitRef.remoteUrl) &&
-        Objects.equals(this.statuses, gitCommitRef.statuses) &&
-        Objects.equals(this.url, gitCommitRef.url) &&
-        Objects.equals(this.workItems, gitCommitRef.workItems);
+            Objects.equals(this.author, gitCommitRef.author) &&
+            Objects.equals(this.changeCounts, gitCommitRef.changeCounts) &&
+            Objects.equals(this.changes, gitCommitRef.changes) &&
+            Objects.equals(this.comment, gitCommitRef.comment) &&
+            Objects.equals(this.commentTruncated, gitCommitRef.commentTruncated) &&
+            Objects.equals(this.commitId, gitCommitRef.commitId) &&
+            Objects.equals(this.committer, gitCommitRef.committer) &&
+            Objects.equals(this.commitTooManyChanges, gitCommitRef.commitTooManyChanges) &&
+            Objects.equals(this.parents, gitCommitRef.parents) &&
+            Objects.equals(this.push, gitCommitRef.push) &&
+            Objects.equals(this.remoteUrl, gitCommitRef.remoteUrl) &&
+            Objects.equals(this.statuses, gitCommitRef.statuses) &&
+            Objects.equals(this.url, gitCommitRef.url) &&
+            Objects.equals(this.workItems, gitCommitRef.workItems);
   }
 
   @Override
@@ -420,7 +426,7 @@ public class GitCommitRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitCommitRef {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    changeCounts: ").append(toIndentedString(changeCounts)).append("\n");

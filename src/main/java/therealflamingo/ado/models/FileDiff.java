@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.LineDiffBlock;
+import java.util.Objects;
 
 /**
  * Provides properties that describe file differences
@@ -52,10 +49,11 @@ public class FileDiff {
     return this;
   }
 
-   /**
+  /**
    * The collection of line diff blocks
+   *
    * @return lineDiffBlocks
-  **/
+   **/
   @ApiModelProperty(value = "The collection of line diff blocks")
   public List<LineDiffBlock> getLineDiffBlocks() {
     return lineDiffBlocks;
@@ -70,10 +68,11 @@ public class FileDiff {
     return this;
   }
 
-   /**
+  /**
    * Original path of item if different from current path.
+   *
    * @return originalPath
-  **/
+   **/
   @ApiModelProperty(value = "Original path of item if different from current path.")
   public String getOriginalPath() {
     return originalPath;
@@ -88,10 +87,11 @@ public class FileDiff {
     return this;
   }
 
-   /**
+  /**
    * Current path of item
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "Current path of item")
   public String getPath() {
     return path;
@@ -112,8 +112,8 @@ public class FileDiff {
     }
     FileDiff fileDiff = (FileDiff) o;
     return Objects.equals(this.lineDiffBlocks, fileDiff.lineDiffBlocks) &&
-        Objects.equals(this.originalPath, fileDiff.originalPath) &&
-        Objects.equals(this.path, fileDiff.path);
+            Objects.equals(this.originalPath, fileDiff.originalPath) &&
+            Objects.equals(this.path, fileDiff.path);
   }
 
   @Override
@@ -126,7 +126,7 @@ public class FileDiff {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileDiff {\n");
-    
+
     sb.append("    lineDiffBlocks: ").append(toIndentedString(lineDiffBlocks)).append("\n");
     sb.append("    originalPath: ").append(toIndentedString(originalPath)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");

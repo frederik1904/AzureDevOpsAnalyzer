@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The class represents a property bag as a collection of key-value pairs. Values of all primitive types (any type with a &#x60;TypeCode !&#x3D; TypeCode.Object&#x60;) except for &#x60;DBNull&#x60; are accepted. Values of type Byte[], Int32, Double, DateType and String preserve their type, other primitives are retuned as a String. Byte[] expected as base64 encoded string.
@@ -46,10 +44,11 @@ public class PropertiesCollection {
     return this;
   }
 
-   /**
+  /**
    * The count of properties in the collection.
+   *
    * @return count
-  **/
+   **/
   @ApiModelProperty(value = "The count of properties in the collection.")
   public Integer getCount() {
     return count;
@@ -64,10 +63,11 @@ public class PropertiesCollection {
     return this;
   }
 
-   /**
+  /**
    * Get item
+   *
    * @return item
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getItem() {
     return item;
@@ -90,10 +90,11 @@ public class PropertiesCollection {
     return this;
   }
 
-   /**
+  /**
    * The set of keys in the collection.
+   *
    * @return keys
-  **/
+   **/
   @ApiModelProperty(value = "The set of keys in the collection.")
   public List<String> getKeys() {
     return keys;
@@ -116,10 +117,11 @@ public class PropertiesCollection {
     return this;
   }
 
-   /**
+  /**
    * The set of values in the collection.
+   *
    * @return values
-  **/
+   **/
   @ApiModelProperty(value = "The set of values in the collection.")
   public List<String> getValues() {
     return values;
@@ -140,9 +142,9 @@ public class PropertiesCollection {
     }
     PropertiesCollection propertiesCollection = (PropertiesCollection) o;
     return Objects.equals(this.count, propertiesCollection.count) &&
-        Objects.equals(this.item, propertiesCollection.item) &&
-        Objects.equals(this.keys, propertiesCollection.keys) &&
-        Objects.equals(this.values, propertiesCollection.values);
+            Objects.equals(this.item, propertiesCollection.item) &&
+            Objects.equals(this.keys, propertiesCollection.keys) &&
+            Objects.equals(this.values, propertiesCollection.values);
   }
 
   @Override
@@ -155,7 +157,7 @@ public class PropertiesCollection {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertiesCollection {\n");
-    
+
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    item: ").append(toIndentedString(item)).append("\n");
     sb.append("    keys: ").append(toIndentedString(keys)).append("\n");

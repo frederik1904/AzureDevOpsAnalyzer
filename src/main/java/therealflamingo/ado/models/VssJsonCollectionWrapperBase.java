@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -35,10 +33,11 @@ public class VssJsonCollectionWrapperBase {
     return this;
   }
 
-   /**
+  /**
    * The number of serialized items.
+   *
    * @return count
-  **/
+   **/
   @ApiModelProperty(value = "The number of serialized items.")
   public Integer getCount() {
     return count;
@@ -71,7 +70,7 @@ public class VssJsonCollectionWrapperBase {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VssJsonCollectionWrapperBase {\n");
-    
+
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitCommitRef;
-import java.util.UUID;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitCommitRef;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 
 /**
  * API tests for MergeBasesApi
@@ -32,14 +28,11 @@ public class MergeBasesApiTest {
 
     private final MergeBasesApi api = new MergeBasesApi();
 
-    
+
     /**
-     * 
-     *
      * Find the merge bases of two commits, optionally across forks. If otherRepositoryId is not specified, the merge bases will only be calculated within the context of the local repositoryNameOrId.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void mergeBasesListTest() throws Exception {
@@ -55,5 +48,5 @@ public class MergeBasesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

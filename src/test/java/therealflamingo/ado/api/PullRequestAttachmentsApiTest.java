@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.Attachment;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.Attachment;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestAttachmentsApi
@@ -31,14 +27,11 @@ public class PullRequestAttachmentsApiTest {
 
     private final PullRequestAttachmentsApi api = new PullRequestAttachmentsApi();
 
-    
+
     /**
-     * 
-     *
      * Attach a new file to a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestAttachmentsCreateTest() throws Exception {
@@ -53,14 +46,11 @@ public class PullRequestAttachmentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Delete a pull request attachment.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestAttachmentsDeleteTest() throws Exception {
@@ -74,14 +64,11 @@ public class PullRequestAttachmentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get the file content of a pull request attachment.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestAttachmentsGetTest() throws Exception {
@@ -95,14 +82,11 @@ public class PullRequestAttachmentsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get a list of files attached to a given pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestAttachmentsListTest() throws Exception {
@@ -115,5 +99,5 @@ public class PullRequestAttachmentsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

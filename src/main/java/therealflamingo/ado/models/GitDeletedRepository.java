@@ -13,20 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.TeamProjectReference;
+
+import java.util.Objects;
+import java.util.UUID;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -54,10 +50,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get createdDate
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -72,10 +69,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get deletedBy
+   *
    * @return deletedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getDeletedBy() {
     return deletedBy;
@@ -90,10 +88,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get deletedDate
+   *
    * @return deletedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getDeletedDate() {
     return deletedDate;
@@ -108,10 +107,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get id
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UUID getId() {
     return id;
@@ -126,10 +126,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -144,10 +145,11 @@ public class GitDeletedRepository {
     return this;
   }
 
-   /**
+  /**
    * Get project
+   *
    * @return project
-  **/
+   **/
   @ApiModelProperty(value = "")
   public TeamProjectReference getProject() {
     return project;
@@ -168,11 +170,11 @@ public class GitDeletedRepository {
     }
     GitDeletedRepository gitDeletedRepository = (GitDeletedRepository) o;
     return Objects.equals(this.createdDate, gitDeletedRepository.createdDate) &&
-        Objects.equals(this.deletedBy, gitDeletedRepository.deletedBy) &&
-        Objects.equals(this.deletedDate, gitDeletedRepository.deletedDate) &&
-        Objects.equals(this.id, gitDeletedRepository.id) &&
-        Objects.equals(this.name, gitDeletedRepository.name) &&
-        Objects.equals(this.project, gitDeletedRepository.project);
+            Objects.equals(this.deletedBy, gitDeletedRepository.deletedBy) &&
+            Objects.equals(this.deletedDate, gitDeletedRepository.deletedDate) &&
+            Objects.equals(this.id, gitDeletedRepository.id) &&
+            Objects.equals(this.name, gitDeletedRepository.name) &&
+            Objects.equals(this.project, gitDeletedRepository.project);
   }
 
   @Override
@@ -185,7 +187,7 @@ public class GitDeletedRepository {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitDeletedRepository {\n");
-    
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    deletedBy: ").append(toIndentedString(deletedBy)).append("\n");
     sb.append("    deletedDate: ").append(toIndentedString(deletedDate)).append("\n");

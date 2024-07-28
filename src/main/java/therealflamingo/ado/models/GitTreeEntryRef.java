@@ -13,82 +13,30 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitTreeEntryRef {
-  /**
-   * Blob or tree
-   */
-  public enum GitObjectTypeEnum {
-    BAD("bad"),
-    
-    COMMIT("commit"),
-    
-    TREE("tree"),
-    
-    BLOB("blob"),
-    
-    TAG("tag"),
-    
-    EXT2("ext2"),
-    
-    OFSDELTA("ofsDelta"),
-    
-    REFDELTA("refDelta");
-
-    private String value;
-
-    GitObjectTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static GitObjectTypeEnum fromValue(String value) {
-      for (GitObjectTypeEnum b : GitObjectTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("gitObjectType")
   private GitObjectTypeEnum gitObjectType = null;
-
   @JsonProperty("mode")
   private String mode = null;
-
   @JsonProperty("objectId")
   private String objectId = null;
-
   @JsonProperty("relativePath")
   private String relativePath = null;
-
   @JsonProperty("size")
   private Long size = null;
-
   @JsonProperty("url")
   private String url = null;
 
@@ -97,10 +45,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * Blob or tree
+   *
    * @return gitObjectType
-  **/
+   **/
   @ApiModelProperty(value = "Blob or tree")
   public GitObjectTypeEnum getGitObjectType() {
     return gitObjectType;
@@ -115,10 +64,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * Mode represented as octal string
+   *
    * @return mode
-  **/
+   **/
   @ApiModelProperty(value = "Mode represented as octal string")
   public String getMode() {
     return mode;
@@ -133,10 +83,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * SHA1 hash of git object
+   *
    * @return objectId
-  **/
+   **/
   @ApiModelProperty(value = "SHA1 hash of git object")
   public String getObjectId() {
     return objectId;
@@ -151,10 +102,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * Path relative to parent tree object
+   *
    * @return relativePath
-  **/
+   **/
   @ApiModelProperty(value = "Path relative to parent tree object")
   public String getRelativePath() {
     return relativePath;
@@ -169,10 +121,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * Size of content
+   *
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "Size of content")
   public Long getSize() {
     return size;
@@ -187,10 +140,11 @@ public class GitTreeEntryRef {
     return this;
   }
 
-   /**
+  /**
    * url to retrieve tree or blob
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "url to retrieve tree or blob")
   public String getUrl() {
     return url;
@@ -199,7 +153,6 @@ public class GitTreeEntryRef {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -211,11 +164,11 @@ public class GitTreeEntryRef {
     }
     GitTreeEntryRef gitTreeEntryRef = (GitTreeEntryRef) o;
     return Objects.equals(this.gitObjectType, gitTreeEntryRef.gitObjectType) &&
-        Objects.equals(this.mode, gitTreeEntryRef.mode) &&
-        Objects.equals(this.objectId, gitTreeEntryRef.objectId) &&
-        Objects.equals(this.relativePath, gitTreeEntryRef.relativePath) &&
-        Objects.equals(this.size, gitTreeEntryRef.size) &&
-        Objects.equals(this.url, gitTreeEntryRef.url);
+            Objects.equals(this.mode, gitTreeEntryRef.mode) &&
+            Objects.equals(this.objectId, gitTreeEntryRef.objectId) &&
+            Objects.equals(this.relativePath, gitTreeEntryRef.relativePath) &&
+            Objects.equals(this.size, gitTreeEntryRef.size) &&
+            Objects.equals(this.url, gitTreeEntryRef.url);
   }
 
   @Override
@@ -223,12 +176,11 @@ public class GitTreeEntryRef {
     return Objects.hash(gitObjectType, mode, objectId, relativePath, size, url);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitTreeEntryRef {\n");
-    
+
     sb.append("    gitObjectType: ").append(toIndentedString(gitObjectType)).append("\n");
     sb.append("    mode: ").append(toIndentedString(mode)).append("\n");
     sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
@@ -248,6 +200,53 @@ public class GitTreeEntryRef {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Blob or tree
+   */
+  public enum GitObjectTypeEnum {
+    BAD("bad"),
+
+    COMMIT("commit"),
+
+    TREE("tree"),
+
+    BLOB("blob"),
+
+    TAG("tag"),
+
+    EXT2("ext2"),
+
+    OFSDELTA("ofsDelta"),
+
+    REFDELTA("refDelta");
+
+    private String value;
+
+    GitObjectTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static GitObjectTypeEnum fromValue(String value) {
+      for (GitObjectTypeEnum b : GitObjectTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

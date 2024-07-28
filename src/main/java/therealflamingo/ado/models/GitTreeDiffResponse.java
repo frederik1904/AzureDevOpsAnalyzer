@@ -13,19 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitTreeDiff;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -49,10 +46,11 @@ public class GitTreeDiffResponse {
     return this;
   }
 
-   /**
+  /**
    * The HTTP client methods find the continuation token header in the response and populate this field.
+   *
    * @return continuationToken
-  **/
+   **/
   @ApiModelProperty(value = "The HTTP client methods find the continuation token header in the response and populate this field.")
   public List<String> getContinuationToken() {
     return continuationToken;
@@ -67,10 +65,11 @@ public class GitTreeDiffResponse {
     return this;
   }
 
-   /**
+  /**
    * Get treeDiff
+   *
    * @return treeDiff
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitTreeDiff getTreeDiff() {
     return treeDiff;
@@ -91,7 +90,7 @@ public class GitTreeDiffResponse {
     }
     GitTreeDiffResponse gitTreeDiffResponse = (GitTreeDiffResponse) o;
     return Objects.equals(this.continuationToken, gitTreeDiffResponse.continuationToken) &&
-        Objects.equals(this.treeDiff, gitTreeDiffResponse.treeDiff);
+            Objects.equals(this.treeDiff, gitTreeDiffResponse.treeDiff);
   }
 
   @Override
@@ -104,7 +103,7 @@ public class GitTreeDiffResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitTreeDiffResponse {\n");
-    
+
     sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    treeDiff: ").append(toIndentedString(treeDiff)).append("\n");
     sb.append("}");

@@ -7,7 +7,7 @@ import therealflamingo.config.models.Config;
 import java.io.File;
 import java.io.IOException;
 
-public class YamlConfigLoader implements IConfigLoader{
+public class YamlConfigLoader implements IConfigLoader {
 
     @Override
     public Config load() throws IOException {

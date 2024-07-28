@@ -13,93 +13,28 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class Change {
-  /**
-   * The type of change that was made to the item.
-   */
-  public enum ChangeTypeEnum {
-    NONE("none"),
-    
-    ADD("add"),
-    
-    EDIT("edit"),
-    
-    ENCODING("encoding"),
-    
-    RENAME("rename"),
-    
-    DELETE("delete"),
-    
-    UNDELETE("undelete"),
-    
-    BRANCH("branch"),
-    
-    MERGE("merge"),
-    
-    LOCK("lock"),
-    
-    ROLLBACK("rollback"),
-    
-    SOURCERENAME("sourceRename"),
-    
-    TARGETRENAME("targetRename"),
-    
-    PROPERTY("property"),
-    
-    ALL("all");
-
-    private String value;
-
-    ChangeTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ChangeTypeEnum fromValue(String value) {
-      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("changeType")
   private ChangeTypeEnum changeType = null;
-
   @JsonProperty("item")
   private String item = null;
-
   @JsonProperty("newContent")
   private ItemContent newContent = null;
-
   @JsonProperty("sourceServerItem")
   private String sourceServerItem = null;
-
   @JsonProperty("url")
   private String url = null;
 
@@ -108,11 +43,11 @@ public class Change {
     return this;
   }
 
-   /**
-    * The type of change that was made to the item.
-    *
-    * @return changeType
-    **/
+  /**
+   * The type of change that was made to the item.
+   *
+   * @return changeType
+   **/
   @ApiModelProperty(value = "The type of change that was made to the item.")
   public GitPullRequestChange.ChangeTypeEnum getChangeType() {
     return changeType;
@@ -127,10 +62,11 @@ public class Change {
     return this;
   }
 
-   /**
+  /**
    * Current version.
+   *
    * @return item
-  **/
+   **/
   @ApiModelProperty(value = "Current version.")
   public String getItem() {
     return item;
@@ -145,10 +81,11 @@ public class Change {
     return this;
   }
 
-   /**
+  /**
    * Content of the item after the change.
+   *
    * @return newContent
-  **/
+   **/
   @ApiModelProperty(value = "Content of the item after the change.")
   public ItemContent getNewContent() {
     return newContent;
@@ -163,10 +100,11 @@ public class Change {
     return this;
   }
 
-   /**
+  /**
    * Path of the item on the server.
+   *
    * @return sourceServerItem
-  **/
+   **/
   @ApiModelProperty(value = "Path of the item on the server.")
   public String getSourceServerItem() {
     return sourceServerItem;
@@ -181,10 +119,11 @@ public class Change {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve the item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve the item.")
   public String getUrl() {
     return url;
@@ -193,7 +132,6 @@ public class Change {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -205,10 +143,10 @@ public class Change {
     }
     Change change = (Change) o;
     return Objects.equals(this.changeType, change.changeType) &&
-        Objects.equals(this.item, change.item) &&
-        Objects.equals(this.newContent, change.newContent) &&
-        Objects.equals(this.sourceServerItem, change.sourceServerItem) &&
-        Objects.equals(this.url, change.url);
+            Objects.equals(this.item, change.item) &&
+            Objects.equals(this.newContent, change.newContent) &&
+            Objects.equals(this.sourceServerItem, change.sourceServerItem) &&
+            Objects.equals(this.url, change.url);
   }
 
   @Override
@@ -216,12 +154,11 @@ public class Change {
     return Objects.hash(changeType, item, newContent, sourceServerItem, url);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Change {\n");
-    
+
     sb.append("    changeType: ").append(toIndentedString(changeType)).append("\n");
     sb.append("    item: ").append(toIndentedString(item)).append("\n");
     sb.append("    newContent: ").append(toIndentedString(newContent)).append("\n");
@@ -240,6 +177,67 @@ public class Change {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The type of change that was made to the item.
+   */
+  public enum ChangeTypeEnum {
+    NONE("none"),
+
+    ADD("add"),
+
+    EDIT("edit"),
+
+    ENCODING("encoding"),
+
+    RENAME("rename"),
+
+    DELETE("delete"),
+
+    UNDELETE("undelete"),
+
+    BRANCH("branch"),
+
+    MERGE("merge"),
+
+    LOCK("lock"),
+
+    ROLLBACK("rollback"),
+
+    SOURCERENAME("sourceRename"),
+
+    TARGETRENAME("targetRename"),
+
+    PROPERTY("property"),
+
+    ALL("all");
+
+    private String value;
+
+    ChangeTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ChangeTypeEnum fromValue(String value) {
+      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

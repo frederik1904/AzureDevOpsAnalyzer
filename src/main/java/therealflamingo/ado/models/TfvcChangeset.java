@@ -13,24 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.AssociatedWorkItem;
-import therealflamingo.ado.models.CheckinNote;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.TfvcChange;
-import therealflamingo.ado.models.TfvcChangesetRef;
-import therealflamingo.ado.models.TfvcPolicyOverrideInfo;
 
 /**
  * A collection of changes.
@@ -91,10 +82,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * A collection of REST reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "A collection of REST reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -109,10 +101,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user.")
   public IdentityRef getAuthor() {
     return author;
@@ -127,10 +120,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Changeset Id.
+   *
    * @return changesetId
-  **/
+   **/
   @ApiModelProperty(value = "Changeset Id.")
   public Integer getChangesetId() {
     return changesetId;
@@ -145,10 +139,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user.
+   *
    * @return checkedInBy
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user.")
   public IdentityRef getCheckedInBy() {
     return checkedInBy;
@@ -163,10 +158,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Comment for the changeset.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Comment for the changeset.")
   public String getComment() {
     return comment;
@@ -181,10 +177,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Was the Comment result truncated?
+   *
    * @return commentTruncated
-  **/
+   **/
   @ApiModelProperty(value = "Was the Comment result truncated?")
   public Boolean isCommentTruncated() {
     return commentTruncated;
@@ -199,10 +196,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Creation date of the changeset.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "Creation date of the changeset.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -217,10 +215,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve the item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve the item.")
   public String getUrl() {
     return url;
@@ -235,10 +234,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Changeset Account Id also known as Organization Id.
+   *
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "Changeset Account Id also known as Organization Id.")
   public UUID getAccountId() {
     return accountId;
@@ -261,10 +261,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of associated changes.
+   *
    * @return changes
-  **/
+   **/
   @ApiModelProperty(value = "List of associated changes.")
   public List<TfvcChange> getChanges() {
     return changes;
@@ -287,10 +288,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of Checkin Notes for the changeset.
+   *
    * @return checkinNotes
-  **/
+   **/
   @ApiModelProperty(value = "List of Checkin Notes for the changeset.")
   public List<CheckinNote> getCheckinNotes() {
     return checkinNotes;
@@ -305,10 +307,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Changeset collection Id.
+   *
    * @return collectionId
-  **/
+   **/
   @ApiModelProperty(value = "Changeset collection Id.")
   public UUID getCollectionId() {
     return collectionId;
@@ -323,10 +326,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * True if more changes are available.
+   *
    * @return hasMoreChanges
-  **/
+   **/
   @ApiModelProperty(value = "True if more changes are available.")
   public Boolean isHasMoreChanges() {
     return hasMoreChanges;
@@ -341,10 +345,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Policy Override for the changeset.
+   *
    * @return policyOverride
-  **/
+   **/
   @ApiModelProperty(value = "Policy Override for the changeset.")
   public TfvcPolicyOverrideInfo getPolicyOverride() {
     return policyOverride;
@@ -367,10 +372,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Team Project Ids for the changeset.
+   *
    * @return teamProjectIds
-  **/
+   **/
   @ApiModelProperty(value = "Team Project Ids for the changeset.")
   public List<UUID> getTeamProjectIds() {
     return teamProjectIds;
@@ -393,10 +399,11 @@ public class TfvcChangeset extends TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of work items associated with the changeset.
+   *
    * @return workItems
-  **/
+   **/
   @ApiModelProperty(value = "List of work items associated with the changeset.")
   public List<AssociatedWorkItem> getWorkItems() {
     return workItems;
@@ -417,22 +424,22 @@ public class TfvcChangeset extends TfvcChangesetRef {
     }
     TfvcChangeset tfvcChangeset = (TfvcChangeset) o;
     return Objects.equals(this.links, tfvcChangeset.links) &&
-        Objects.equals(this.author, tfvcChangeset.author) &&
-        Objects.equals(this.changesetId, tfvcChangeset.changesetId) &&
-        Objects.equals(this.checkedInBy, tfvcChangeset.checkedInBy) &&
-        Objects.equals(this.comment, tfvcChangeset.comment) &&
-        Objects.equals(this.commentTruncated, tfvcChangeset.commentTruncated) &&
-        Objects.equals(this.createdDate, tfvcChangeset.createdDate) &&
-        Objects.equals(this.url, tfvcChangeset.url) &&
-        Objects.equals(this.accountId, tfvcChangeset.accountId) &&
-        Objects.equals(this.changes, tfvcChangeset.changes) &&
-        Objects.equals(this.checkinNotes, tfvcChangeset.checkinNotes) &&
-        Objects.equals(this.collectionId, tfvcChangeset.collectionId) &&
-        Objects.equals(this.hasMoreChanges, tfvcChangeset.hasMoreChanges) &&
-        Objects.equals(this.policyOverride, tfvcChangeset.policyOverride) &&
-        Objects.equals(this.teamProjectIds, tfvcChangeset.teamProjectIds) &&
-        Objects.equals(this.workItems, tfvcChangeset.workItems) &&
-        super.equals(o);
+            Objects.equals(this.author, tfvcChangeset.author) &&
+            Objects.equals(this.changesetId, tfvcChangeset.changesetId) &&
+            Objects.equals(this.checkedInBy, tfvcChangeset.checkedInBy) &&
+            Objects.equals(this.comment, tfvcChangeset.comment) &&
+            Objects.equals(this.commentTruncated, tfvcChangeset.commentTruncated) &&
+            Objects.equals(this.createdDate, tfvcChangeset.createdDate) &&
+            Objects.equals(this.url, tfvcChangeset.url) &&
+            Objects.equals(this.accountId, tfvcChangeset.accountId) &&
+            Objects.equals(this.changes, tfvcChangeset.changes) &&
+            Objects.equals(this.checkinNotes, tfvcChangeset.checkinNotes) &&
+            Objects.equals(this.collectionId, tfvcChangeset.collectionId) &&
+            Objects.equals(this.hasMoreChanges, tfvcChangeset.hasMoreChanges) &&
+            Objects.equals(this.policyOverride, tfvcChangeset.policyOverride) &&
+            Objects.equals(this.teamProjectIds, tfvcChangeset.teamProjectIds) &&
+            Objects.equals(this.workItems, tfvcChangeset.workItems) &&
+            super.equals(o);
   }
 
   @Override

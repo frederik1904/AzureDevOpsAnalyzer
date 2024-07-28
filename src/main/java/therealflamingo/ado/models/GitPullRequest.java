@@ -13,27 +13,17 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitForkRef;
-import therealflamingo.ado.models.GitPullRequestCompletionOptions;
-import therealflamingo.ado.models.GitPullRequestMergeOptions;
-import therealflamingo.ado.models.GitRepository;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.IdentityRefWithVote;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.ResourceRef;
-import therealflamingo.ado.models.WebApiTagDefinition;
 
 /**
  * Represents all the data associated with a pull request.
@@ -100,172 +90,34 @@ public class GitPullRequest {
 
   @JsonProperty("mergeFailureMessage")
   private String mergeFailureMessage = null;
-
-  /**
-   * The type of failure (if any) of the pull request merge.
-   */
-  public enum MergeFailureTypeEnum {
-    NONE("none"),
-    
-    UNKNOWN("unknown"),
-    
-    CASESENSITIVE("caseSensitive"),
-    
-    OBJECTTOOLARGE("objectTooLarge");
-
-    private String value;
-
-    MergeFailureTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static MergeFailureTypeEnum fromValue(String value) {
-      for (MergeFailureTypeEnum b : MergeFailureTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("mergeFailureType")
   private MergeFailureTypeEnum mergeFailureType = null;
-
   @JsonProperty("mergeId")
   private UUID mergeId = null;
-
   @JsonProperty("mergeOptions")
   private GitPullRequestMergeOptions mergeOptions = null;
-
-  /**
-   * The current status of the pull request merge.
-   */
-  public enum MergeStatusEnum {
-    NOTSET("notSet"),
-    
-    QUEUED("queued"),
-    
-    CONFLICTS("conflicts"),
-    
-    SUCCEEDED("succeeded"),
-    
-    REJECTEDBYPOLICY("rejectedByPolicy"),
-    
-    FAILURE("failure");
-
-    private String value;
-
-    MergeStatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static MergeStatusEnum fromValue(String value) {
-      for (MergeStatusEnum b : MergeStatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("mergeStatus")
   private MergeStatusEnum mergeStatus = null;
-
   @JsonProperty("pullRequestId")
   private Integer pullRequestId = null;
-
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
-
   @JsonProperty("repository")
   private GitRepository repository = null;
-
   @JsonProperty("reviewers")
   private List<IdentityRefWithVote> reviewers = null;
-
   @JsonProperty("sourceRefName")
   private String sourceRefName = null;
-
-  /**
-   * The status of the pull request.
-   */
-  public enum StatusEnum {
-    NOTSET("notSet"),
-    
-    ACTIVE("active"),
-    
-    ABANDONED("abandoned"),
-    
-    COMPLETED("completed"),
-    
-    ALL("all");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("status")
   private StatusEnum status = null;
-
   @JsonProperty("supportsIterations")
   private Boolean supportsIterations = null;
-
   @JsonProperty("targetRefName")
   private String targetRefName = null;
-
   @JsonProperty("title")
   private String title = null;
-
   @JsonProperty("url")
   private String url = null;
-
   @JsonProperty("workItemRefs")
   private List<ResourceRef> workItemRefs = null;
 
@@ -274,10 +126,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Links to other related objects.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to other related objects.")
   public ReferenceLinks getLinks() {
     return links;
@@ -292,10 +145,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * A string which uniquely identifies this pull request. To generate an artifact ID for a pull request, use this template: &#x60;&#x60;&#x60;vstfs:///Git/PullRequestId/{projectId}/{repositoryId}/{pullRequestId}&#x60;&#x60;&#x60;
+   *
    * @return artifactId
-  **/
+   **/
   @ApiModelProperty(value = "A string which uniquely identifies this pull request. To generate an artifact ID for a pull request, use this template: ```vstfs:///Git/PullRequestId/{projectId}/{repositoryId}/{pullRequestId}```")
   public String getArtifactId() {
     return artifactId;
@@ -310,10 +164,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * If set, auto-complete is enabled for this pull request and this is the identity that enabled it.
+   *
    * @return autoCompleteSetBy
-  **/
+   **/
   @ApiModelProperty(value = "If set, auto-complete is enabled for this pull request and this is the identity that enabled it.")
   public IdentityRef getAutoCompleteSetBy() {
     return autoCompleteSetBy;
@@ -328,10 +183,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The user who closed the pull request.
+   *
    * @return closedBy
-  **/
+   **/
   @ApiModelProperty(value = "The user who closed the pull request.")
   public IdentityRef getClosedBy() {
     return closedBy;
@@ -346,10 +202,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The date when the pull request was closed (completed, abandoned, or merged externally).
+   *
    * @return closedDate
-  **/
+   **/
   @ApiModelProperty(value = "The date when the pull request was closed (completed, abandoned, or merged externally).")
   public OffsetDateTime getClosedDate() {
     return closedDate;
@@ -364,10 +221,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The code review ID of the pull request. Used internally.
+   *
    * @return codeReviewId
-  **/
+   **/
   @ApiModelProperty(value = "The code review ID of the pull request. Used internally.")
   public Integer getCodeReviewId() {
     return codeReviewId;
@@ -390,10 +248,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The commits contained in the pull request.
+   *
    * @return commits
-  **/
+   **/
   @ApiModelProperty(value = "The commits contained in the pull request.")
   public List<GitCommitRef> getCommits() {
     return commits;
@@ -408,10 +267,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Options which affect how the pull request will be merged when it is completed.
+   *
    * @return completionOptions
-  **/
+   **/
   @ApiModelProperty(value = "Options which affect how the pull request will be merged when it is completed.")
   public GitPullRequestCompletionOptions getCompletionOptions() {
     return completionOptions;
@@ -426,10 +286,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The most recent date at which the pull request entered the queue to be completed. Used internally.
+   *
    * @return completionQueueTime
-  **/
+   **/
   @ApiModelProperty(value = "The most recent date at which the pull request entered the queue to be completed. Used internally.")
   public OffsetDateTime getCompletionQueueTime() {
     return completionQueueTime;
@@ -444,10 +305,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The identity of the user who created the pull request.
+   *
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "The identity of the user who created the pull request.")
   public IdentityRef getCreatedBy() {
     return createdBy;
@@ -462,10 +324,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The date when the pull request was created.
+   *
    * @return creationDate
-  **/
+   **/
   @ApiModelProperty(value = "The date when the pull request was created.")
   public OffsetDateTime getCreationDate() {
     return creationDate;
@@ -480,10 +343,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The description of the pull request.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "The description of the pull request.")
   public String getDescription() {
     return description;
@@ -498,10 +362,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * If this is a PR from a fork this will contain information about its source.
+   *
    * @return forkSource
-  **/
+   **/
   @ApiModelProperty(value = "If this is a PR from a fork this will contain information about its source.")
   public GitForkRef getForkSource() {
     return forkSource;
@@ -516,10 +381,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Multiple mergebases warning
+   *
    * @return hasMultipleMergeBases
-  **/
+   **/
   @ApiModelProperty(value = "Multiple mergebases warning")
   public Boolean isHasMultipleMergeBases() {
     return hasMultipleMergeBases;
@@ -534,10 +400,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Draft / WIP pull request.
+   *
    * @return isDraft
-  **/
+   **/
   @ApiModelProperty(value = "Draft / WIP pull request.")
   public Boolean isIsDraft() {
     return isDraft;
@@ -560,10 +427,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The labels associated with the pull request.
+   *
    * @return labels
-  **/
+   **/
   @ApiModelProperty(value = "The labels associated with the pull request.")
   public List<WebApiTagDefinition> getLabels() {
     return labels;
@@ -578,10 +446,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The commit of the most recent pull request merge. If empty, the most recent merge is in progress or was unsuccessful.
+   *
    * @return lastMergeCommit
-  **/
+   **/
   @ApiModelProperty(value = "The commit of the most recent pull request merge. If empty, the most recent merge is in progress or was unsuccessful.")
   public GitCommitRef getLastMergeCommit() {
     return lastMergeCommit;
@@ -596,10 +465,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The commit at the head of the source branch at the time of the last pull request merge.
+   *
    * @return lastMergeSourceCommit
-  **/
+   **/
   @ApiModelProperty(value = "The commit at the head of the source branch at the time of the last pull request merge.")
   public GitCommitRef getLastMergeSourceCommit() {
     return lastMergeSourceCommit;
@@ -614,10 +484,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The commit at the head of the target branch at the time of the last pull request merge.
+   *
    * @return lastMergeTargetCommit
-  **/
+   **/
   @ApiModelProperty(value = "The commit at the head of the target branch at the time of the last pull request merge.")
   public GitCommitRef getLastMergeTargetCommit() {
     return lastMergeTargetCommit;
@@ -632,10 +503,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * If set, pull request merge failed for this reason.
+   *
    * @return mergeFailureMessage
-  **/
+   **/
   @ApiModelProperty(value = "If set, pull request merge failed for this reason.")
   public String getMergeFailureMessage() {
     return mergeFailureMessage;
@@ -650,10 +522,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The type of failure (if any) of the pull request merge.
+   *
    * @return mergeFailureType
-  **/
+   **/
   @ApiModelProperty(value = "The type of failure (if any) of the pull request merge.")
   public MergeFailureTypeEnum getMergeFailureType() {
     return mergeFailureType;
@@ -668,10 +541,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The ID of the job used to run the pull request merge. Used internally.
+   *
    * @return mergeId
-  **/
+   **/
   @ApiModelProperty(value = "The ID of the job used to run the pull request merge. Used internally.")
   public UUID getMergeId() {
     return mergeId;
@@ -686,10 +560,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Options used when the pull request merge runs. These are separate from completion options since completion happens only once and a new merge will run every time the source branch of the pull request changes.
+   *
    * @return mergeOptions
-  **/
+   **/
   @ApiModelProperty(value = "Options used when the pull request merge runs. These are separate from completion options since completion happens only once and a new merge will run every time the source branch of the pull request changes.")
   public GitPullRequestMergeOptions getMergeOptions() {
     return mergeOptions;
@@ -704,10 +579,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The current status of the pull request merge.
+   *
    * @return mergeStatus
-  **/
+   **/
   @ApiModelProperty(value = "The current status of the pull request merge.")
   public MergeStatusEnum getMergeStatus() {
     return mergeStatus;
@@ -722,10 +598,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The ID of the pull request.
+   *
    * @return pullRequestId
-  **/
+   **/
   @ApiModelProperty(value = "The ID of the pull request.")
   public Integer getPullRequestId() {
     return pullRequestId;
@@ -740,10 +617,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Used internally.
+   *
    * @return remoteUrl
-  **/
+   **/
   @ApiModelProperty(value = "Used internally.")
   public String getRemoteUrl() {
     return remoteUrl;
@@ -758,10 +636,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The repository containing the target branch of the pull request.
+   *
    * @return repository
-  **/
+   **/
   @ApiModelProperty(value = "The repository containing the target branch of the pull request.")
   public GitRepository getRepository() {
     return repository;
@@ -784,10 +663,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * A list of reviewers on the pull request along with the state of their votes.
+   *
    * @return reviewers
-  **/
+   **/
   @ApiModelProperty(value = "A list of reviewers on the pull request along with the state of their votes.")
   public List<IdentityRefWithVote> getReviewers() {
     return reviewers;
@@ -802,10 +682,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The name of the source branch of the pull request.
+   *
    * @return sourceRefName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the source branch of the pull request.")
   public String getSourceRefName() {
     return sourceRefName;
@@ -820,10 +701,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The status of the pull request.
+   *
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "The status of the pull request.")
   public StatusEnum getStatus() {
     return status;
@@ -838,10 +720,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * If true, this pull request supports multiple iterations. Iteration support means individual pushes to the source branch of the pull request can be reviewed and comments left in one iteration will be tracked across future iterations.
+   *
    * @return supportsIterations
-  **/
+   **/
   @ApiModelProperty(value = "If true, this pull request supports multiple iterations. Iteration support means individual pushes to the source branch of the pull request can be reviewed and comments left in one iteration will be tracked across future iterations.")
   public Boolean isSupportsIterations() {
     return supportsIterations;
@@ -856,10 +739,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The name of the target branch of the pull request.
+   *
    * @return targetRefName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the target branch of the pull request.")
   public String getTargetRefName() {
     return targetRefName;
@@ -874,10 +758,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * The title of the pull request.
+   *
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "The title of the pull request.")
   public String getTitle() {
     return title;
@@ -892,10 +777,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Used internally.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Used internally.")
   public String getUrl() {
     return url;
@@ -918,10 +804,11 @@ public class GitPullRequest {
     return this;
   }
 
-   /**
+  /**
    * Any work item references associated with this pull request.
+   *
    * @return workItemRefs
-  **/
+   **/
   @ApiModelProperty(value = "Any work item references associated with this pull request.")
   public List<ResourceRef> getWorkItemRefs() {
     return workItemRefs;
@@ -930,7 +817,6 @@ public class GitPullRequest {
   public void setWorkItemRefs(List<ResourceRef> workItemRefs) {
     this.workItemRefs = workItemRefs;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -942,40 +828,40 @@ public class GitPullRequest {
     }
     GitPullRequest gitPullRequest = (GitPullRequest) o;
     return Objects.equals(this.links, gitPullRequest.links) &&
-        Objects.equals(this.artifactId, gitPullRequest.artifactId) &&
-        Objects.equals(this.autoCompleteSetBy, gitPullRequest.autoCompleteSetBy) &&
-        Objects.equals(this.closedBy, gitPullRequest.closedBy) &&
-        Objects.equals(this.closedDate, gitPullRequest.closedDate) &&
-        Objects.equals(this.codeReviewId, gitPullRequest.codeReviewId) &&
-        Objects.equals(this.commits, gitPullRequest.commits) &&
-        Objects.equals(this.completionOptions, gitPullRequest.completionOptions) &&
-        Objects.equals(this.completionQueueTime, gitPullRequest.completionQueueTime) &&
-        Objects.equals(this.createdBy, gitPullRequest.createdBy) &&
-        Objects.equals(this.creationDate, gitPullRequest.creationDate) &&
-        Objects.equals(this.description, gitPullRequest.description) &&
-        Objects.equals(this.forkSource, gitPullRequest.forkSource) &&
-        Objects.equals(this.hasMultipleMergeBases, gitPullRequest.hasMultipleMergeBases) &&
-        Objects.equals(this.isDraft, gitPullRequest.isDraft) &&
-        Objects.equals(this.labels, gitPullRequest.labels) &&
-        Objects.equals(this.lastMergeCommit, gitPullRequest.lastMergeCommit) &&
-        Objects.equals(this.lastMergeSourceCommit, gitPullRequest.lastMergeSourceCommit) &&
-        Objects.equals(this.lastMergeTargetCommit, gitPullRequest.lastMergeTargetCommit) &&
-        Objects.equals(this.mergeFailureMessage, gitPullRequest.mergeFailureMessage) &&
-        Objects.equals(this.mergeFailureType, gitPullRequest.mergeFailureType) &&
-        Objects.equals(this.mergeId, gitPullRequest.mergeId) &&
-        Objects.equals(this.mergeOptions, gitPullRequest.mergeOptions) &&
-        Objects.equals(this.mergeStatus, gitPullRequest.mergeStatus) &&
-        Objects.equals(this.pullRequestId, gitPullRequest.pullRequestId) &&
-        Objects.equals(this.remoteUrl, gitPullRequest.remoteUrl) &&
-        Objects.equals(this.repository, gitPullRequest.repository) &&
-        Objects.equals(this.reviewers, gitPullRequest.reviewers) &&
-        Objects.equals(this.sourceRefName, gitPullRequest.sourceRefName) &&
-        Objects.equals(this.status, gitPullRequest.status) &&
-        Objects.equals(this.supportsIterations, gitPullRequest.supportsIterations) &&
-        Objects.equals(this.targetRefName, gitPullRequest.targetRefName) &&
-        Objects.equals(this.title, gitPullRequest.title) &&
-        Objects.equals(this.url, gitPullRequest.url) &&
-        Objects.equals(this.workItemRefs, gitPullRequest.workItemRefs);
+            Objects.equals(this.artifactId, gitPullRequest.artifactId) &&
+            Objects.equals(this.autoCompleteSetBy, gitPullRequest.autoCompleteSetBy) &&
+            Objects.equals(this.closedBy, gitPullRequest.closedBy) &&
+            Objects.equals(this.closedDate, gitPullRequest.closedDate) &&
+            Objects.equals(this.codeReviewId, gitPullRequest.codeReviewId) &&
+            Objects.equals(this.commits, gitPullRequest.commits) &&
+            Objects.equals(this.completionOptions, gitPullRequest.completionOptions) &&
+            Objects.equals(this.completionQueueTime, gitPullRequest.completionQueueTime) &&
+            Objects.equals(this.createdBy, gitPullRequest.createdBy) &&
+            Objects.equals(this.creationDate, gitPullRequest.creationDate) &&
+            Objects.equals(this.description, gitPullRequest.description) &&
+            Objects.equals(this.forkSource, gitPullRequest.forkSource) &&
+            Objects.equals(this.hasMultipleMergeBases, gitPullRequest.hasMultipleMergeBases) &&
+            Objects.equals(this.isDraft, gitPullRequest.isDraft) &&
+            Objects.equals(this.labels, gitPullRequest.labels) &&
+            Objects.equals(this.lastMergeCommit, gitPullRequest.lastMergeCommit) &&
+            Objects.equals(this.lastMergeSourceCommit, gitPullRequest.lastMergeSourceCommit) &&
+            Objects.equals(this.lastMergeTargetCommit, gitPullRequest.lastMergeTargetCommit) &&
+            Objects.equals(this.mergeFailureMessage, gitPullRequest.mergeFailureMessage) &&
+            Objects.equals(this.mergeFailureType, gitPullRequest.mergeFailureType) &&
+            Objects.equals(this.mergeId, gitPullRequest.mergeId) &&
+            Objects.equals(this.mergeOptions, gitPullRequest.mergeOptions) &&
+            Objects.equals(this.mergeStatus, gitPullRequest.mergeStatus) &&
+            Objects.equals(this.pullRequestId, gitPullRequest.pullRequestId) &&
+            Objects.equals(this.remoteUrl, gitPullRequest.remoteUrl) &&
+            Objects.equals(this.repository, gitPullRequest.repository) &&
+            Objects.equals(this.reviewers, gitPullRequest.reviewers) &&
+            Objects.equals(this.sourceRefName, gitPullRequest.sourceRefName) &&
+            Objects.equals(this.status, gitPullRequest.status) &&
+            Objects.equals(this.supportsIterations, gitPullRequest.supportsIterations) &&
+            Objects.equals(this.targetRefName, gitPullRequest.targetRefName) &&
+            Objects.equals(this.title, gitPullRequest.title) &&
+            Objects.equals(this.url, gitPullRequest.url) &&
+            Objects.equals(this.workItemRefs, gitPullRequest.workItemRefs);
   }
 
   @Override
@@ -983,12 +869,11 @@ public class GitPullRequest {
     return Objects.hash(links, artifactId, autoCompleteSetBy, closedBy, closedDate, codeReviewId, commits, completionOptions, completionQueueTime, createdBy, creationDate, description, forkSource, hasMultipleMergeBases, isDraft, labels, lastMergeCommit, lastMergeSourceCommit, lastMergeTargetCommit, mergeFailureMessage, mergeFailureType, mergeId, mergeOptions, mergeStatus, pullRequestId, remoteUrl, repository, reviewers, sourceRefName, status, supportsIterations, targetRefName, title, url, workItemRefs);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequest {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    artifactId: ").append(toIndentedString(artifactId)).append("\n");
     sb.append("    autoCompleteSetBy: ").append(toIndentedString(autoCompleteSetBy)).append("\n");
@@ -1037,6 +922,130 @@ public class GitPullRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The type of failure (if any) of the pull request merge.
+   */
+  public enum MergeFailureTypeEnum {
+    NONE("none"),
+
+    UNKNOWN("unknown"),
+
+    CASESENSITIVE("caseSensitive"),
+
+    OBJECTTOOLARGE("objectTooLarge");
+
+    private String value;
+
+    MergeFailureTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static MergeFailureTypeEnum fromValue(String value) {
+      for (MergeFailureTypeEnum b : MergeFailureTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+
+  /**
+   * The current status of the pull request merge.
+   */
+  public enum MergeStatusEnum {
+    NOTSET("notSet"),
+
+    QUEUED("queued"),
+
+    CONFLICTS("conflicts"),
+
+    SUCCEEDED("succeeded"),
+
+    REJECTEDBYPOLICY("rejectedByPolicy"),
+
+    FAILURE("failure");
+
+    private String value;
+
+    MergeStatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static MergeStatusEnum fromValue(String value) {
+      for (MergeStatusEnum b : MergeStatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  /**
+   * The status of the pull request.
+   */
+  public enum StatusEnum {
+    NOTSET("notSet"),
+
+    ACTIVE("active"),
+
+    ABANDONED("abandoned"),
+
+    COMPLETED("completed"),
+
+    ALL("all");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static StatusEnum fromValue(String value) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

@@ -13,23 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.AssociatedWorkItem;
-import therealflamingo.ado.models.CheckinNote;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.TfvcChange;
-import therealflamingo.ado.models.TfvcPolicyOverrideInfo;
-import therealflamingo.ado.models.TfvcShelvesetRef;
+import java.util.Objects;
 
 /**
  * Metadata for a shelveset.
@@ -78,10 +69,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of reference links for the shelveset.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "List of reference links for the shelveset.")
   public ReferenceLinks getLinks() {
     return links;
@@ -96,10 +88,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset comment.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset comment.")
   public String getComment() {
     return comment;
@@ -114,10 +107,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset comment truncated as applicable.
+   *
    * @return commentTruncated
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset comment truncated as applicable.")
   public Boolean isCommentTruncated() {
     return commentTruncated;
@@ -132,10 +126,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset create date.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset create date.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -150,10 +145,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Id.")
   public String getId() {
     return id;
@@ -168,10 +164,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset name.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset name.")
   public String getName() {
     return name;
@@ -186,10 +183,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Owner.
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Owner.")
   public IdentityRef getOwner() {
     return owner;
@@ -204,10 +202,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Url.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Url.")
   public String getUrl() {
     return url;
@@ -230,10 +229,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of changes.
+   *
    * @return changes
-  **/
+   **/
   @ApiModelProperty(value = "List of changes.")
   public List<TfvcChange> getChanges() {
     return changes;
@@ -256,10 +256,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of checkin notes.
+   *
    * @return notes
-  **/
+   **/
   @ApiModelProperty(value = "List of checkin notes.")
   public List<CheckinNote> getNotes() {
     return notes;
@@ -274,10 +275,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Policy override information if applicable.
+   *
    * @return policyOverride
-  **/
+   **/
   @ApiModelProperty(value = "Policy override information if applicable.")
   public TfvcPolicyOverrideInfo getPolicyOverride() {
     return policyOverride;
@@ -300,10 +302,11 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of associated workitems.
+   *
    * @return workItems
-  **/
+   **/
   @ApiModelProperty(value = "List of associated workitems.")
   public List<AssociatedWorkItem> getWorkItems() {
     return workItems;
@@ -324,18 +327,18 @@ public class TfvcShelveset extends TfvcShelvesetRef {
     }
     TfvcShelveset tfvcShelveset = (TfvcShelveset) o;
     return Objects.equals(this.links, tfvcShelveset.links) &&
-        Objects.equals(this.comment, tfvcShelveset.comment) &&
-        Objects.equals(this.commentTruncated, tfvcShelveset.commentTruncated) &&
-        Objects.equals(this.createdDate, tfvcShelveset.createdDate) &&
-        Objects.equals(this.id, tfvcShelveset.id) &&
-        Objects.equals(this.name, tfvcShelveset.name) &&
-        Objects.equals(this.owner, tfvcShelveset.owner) &&
-        Objects.equals(this.url, tfvcShelveset.url) &&
-        Objects.equals(this.changes, tfvcShelveset.changes) &&
-        Objects.equals(this.notes, tfvcShelveset.notes) &&
-        Objects.equals(this.policyOverride, tfvcShelveset.policyOverride) &&
-        Objects.equals(this.workItems, tfvcShelveset.workItems) &&
-        super.equals(o);
+            Objects.equals(this.comment, tfvcShelveset.comment) &&
+            Objects.equals(this.commentTruncated, tfvcShelveset.commentTruncated) &&
+            Objects.equals(this.createdDate, tfvcShelveset.createdDate) &&
+            Objects.equals(this.id, tfvcShelveset.id) &&
+            Objects.equals(this.name, tfvcShelveset.name) &&
+            Objects.equals(this.owner, tfvcShelveset.owner) &&
+            Objects.equals(this.url, tfvcShelveset.url) &&
+            Objects.equals(this.changes, tfvcShelveset.changes) &&
+            Objects.equals(this.notes, tfvcShelveset.notes) &&
+            Objects.equals(this.policyOverride, tfvcShelveset.policyOverride) &&
+            Objects.equals(this.workItems, tfvcShelveset.workItems) &&
+            super.equals(o);
   }
 
   @Override

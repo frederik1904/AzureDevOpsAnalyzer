@@ -13,14 +13,12 @@
 
 package therealflamingo.ado.invoker.auth;
 
+import com.migcomponents.migbase64.Base64;
 import therealflamingo.ado.invoker.Pair;
 
-import com.migcomponents.migbase64.Base64;
-
-import java.util.Map;
-import java.util.List;
-
 import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Map;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class HttpBasicAuth implements Authentication {

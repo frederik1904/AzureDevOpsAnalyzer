@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitRefFavorite;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitRefFavorite;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for RefsFavoritesForProjectApi
@@ -31,14 +27,9 @@ public class RefsFavoritesForProjectApiTest {
 
     private final RefsFavoritesForProjectApi api = new RefsFavoritesForProjectApi();
 
-    
+
     /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsFavoritesForProjectListTest() throws Exception {
@@ -50,5 +41,5 @@ public class RefsFavoritesForProjectApiTest {
 
         // TODO: test validations
     }
-    
+
 }

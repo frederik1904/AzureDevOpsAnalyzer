@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.IdentityRef;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.IdentityRef;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestCommentLikesApi
@@ -31,14 +27,11 @@ public class PullRequestCommentLikesApiTest {
 
     private final PullRequestCommentLikesApi api = new PullRequestCommentLikesApi();
 
-    
+
     /**
-     * 
-     *
      * Add a like on a comment.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestCommentLikesCreateTest() throws Exception {
@@ -53,14 +46,11 @@ public class PullRequestCommentLikesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Delete a like on a comment.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestCommentLikesDeleteTest() throws Exception {
@@ -75,14 +65,11 @@ public class PullRequestCommentLikesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get likes for a comment.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestCommentLikesListTest() throws Exception {
@@ -97,5 +84,5 @@ public class PullRequestCommentLikesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

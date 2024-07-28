@@ -13,17 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitAsyncRefOperation;
-import therealflamingo.ado.models.GitAsyncRefOperationDetail;
-import therealflamingo.ado.models.GitAsyncRefOperationParameters;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * This object is returned from Cherry Pick operations and provides the id and status of the operation
@@ -31,159 +25,164 @@ import therealflamingo.ado.models.ReferenceLinks;
 @ApiModel(description = "This object is returned from Cherry Pick operations and provides the id and status of the operation")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitCherryPick extends GitAsyncRefOperation {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("detailedStatus")
-  private GitAsyncRefOperationDetail detailedStatus = null;
+    @JsonProperty("detailedStatus")
+    private GitAsyncRefOperationDetail detailedStatus = null;
 
-  @JsonProperty("parameters")
-  private GitAsyncRefOperationParameters parameters = null;
+    @JsonProperty("parameters")
+    private GitAsyncRefOperationParameters parameters = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  @JsonProperty("cherryPickId")
-  private Integer cherryPickId = null;
+    @JsonProperty("cherryPickId")
+    private Integer cherryPickId = null;
 
-  public GitCherryPick links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitCherryPick detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-    return this;
-  }
-
-   /**
-   * Get detailedStatus
-   * @return detailedStatus
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationDetail getDetailedStatus() {
-    return detailedStatus;
-  }
-
-  public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-  }
-
-  public GitCherryPick parameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-    return this;
-  }
-
-   /**
-   * Get parameters
-   * @return parameters
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationParameters getParameters() {
-    return parameters;
-  }
-
-  public void setParameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-  }
-
-  public GitCherryPick url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * A URL that can be used to make further requests for status about the operation
-   * @return url
-  **/
-  @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public GitCherryPick cherryPickId(Integer cherryPickId) {
-    this.cherryPickId = cherryPickId;
-    return this;
-  }
-
-   /**
-   * Get cherryPickId
-   * @return cherryPickId
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getCherryPickId() {
-    return cherryPickId;
-  }
-
-  public void setCherryPickId(Integer cherryPickId) {
-    this.cherryPickId = cherryPickId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitCherryPick links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
     }
-    GitCherryPick gitCherryPick = (GitCherryPick) o;
-    return Objects.equals(this.links, gitCherryPick.links) &&
-        Objects.equals(this.detailedStatus, gitCherryPick.detailedStatus) &&
-        Objects.equals(this.parameters, gitCherryPick.parameters) &&
-        Objects.equals(this.url, gitCherryPick.url) &&
-        Objects.equals(this.cherryPickId, gitCherryPick.cherryPickId) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, detailedStatus, parameters, url, cherryPickId, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitCherryPick {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
-    sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    cherryPickId: ").append(toIndentedString(cherryPickId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitCherryPick detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+        return this;
+    }
+
+    /**
+     * Get detailedStatus
+     *
+     * @return detailedStatus
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationDetail getDetailedStatus() {
+        return detailedStatus;
+    }
+
+    public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    public GitCherryPick parameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+
+    /**
+     * Get parameters
+     *
+     * @return parameters
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationParameters getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+    }
+
+    public GitCherryPick url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * A URL that can be used to make further requests for status about the operation
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public GitCherryPick cherryPickId(Integer cherryPickId) {
+        this.cherryPickId = cherryPickId;
+        return this;
+    }
+
+    /**
+     * Get cherryPickId
+     *
+     * @return cherryPickId
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getCherryPickId() {
+        return cherryPickId;
+    }
+
+    public void setCherryPickId(Integer cherryPickId) {
+        this.cherryPickId = cherryPickId;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitCherryPick gitCherryPick = (GitCherryPick) o;
+        return Objects.equals(this.links, gitCherryPick.links) &&
+                Objects.equals(this.detailedStatus, gitCherryPick.detailedStatus) &&
+                Objects.equals(this.parameters, gitCherryPick.parameters) &&
+                Objects.equals(this.url, gitCherryPick.url) &&
+                Objects.equals(this.cherryPickId, gitCherryPick.cherryPickId) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, detailedStatus, parameters, url, cherryPickId, super.hashCode());
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitCherryPick {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
+        sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    cherryPickId: ").append(toIndentedString(cherryPickId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

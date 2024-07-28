@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitAnnotatedTag;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.GitAnnotatedTag;
 
 /**
  * API tests for AnnotatedTagsApi
@@ -31,14 +25,11 @@ public class AnnotatedTagsApiTest {
 
     private final AnnotatedTagsApi api = new AnnotatedTagsApi();
 
-    
+
     /**
-     * 
-     *
      * Create an annotated tag.  Repositories have both a name and an identifier. Identifiers are globally unique, but several projects may contain a repository of the same name. You don&#39;t need to include the project if you specify a repository by ID. However, if you specify a repository by name, you must also specify the project (by name or ID).
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void annotatedTagsCreateTest() throws Exception {
@@ -51,14 +42,11 @@ public class AnnotatedTagsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get an annotated tag.  Repositories have both a name and an identifier. Identifiers are globally unique, but several projects may contain a repository of the same name. You don&#39;t need to include the project if you specify a repository by ID. However, if you specify a repository by name, you must also specify the project (by name or ID).
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void annotatedTagsGetTest() throws Exception {
@@ -71,5 +59,5 @@ public class AnnotatedTagsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

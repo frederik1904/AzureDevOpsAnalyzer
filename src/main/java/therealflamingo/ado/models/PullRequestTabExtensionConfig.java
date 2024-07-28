@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Initial config contract sent to extensions creating tabs on the pull request page
@@ -38,10 +36,11 @@ public class PullRequestTabExtensionConfig {
     return this;
   }
 
-   /**
+  /**
    * Get pullRequestId
+   *
    * @return pullRequestId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getPullRequestId() {
     return pullRequestId;
@@ -56,10 +55,11 @@ public class PullRequestTabExtensionConfig {
     return this;
   }
 
-   /**
+  /**
    * Get repositoryId
+   *
    * @return repositoryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRepositoryId() {
     return repositoryId;
@@ -80,7 +80,7 @@ public class PullRequestTabExtensionConfig {
     }
     PullRequestTabExtensionConfig pullRequestTabExtensionConfig = (PullRequestTabExtensionConfig) o;
     return Objects.equals(this.pullRequestId, pullRequestTabExtensionConfig.pullRequestId) &&
-        Objects.equals(this.repositoryId, pullRequestTabExtensionConfig.repositoryId);
+            Objects.equals(this.repositoryId, pullRequestTabExtensionConfig.repositoryId);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class PullRequestTabExtensionConfig {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PullRequestTabExtensionConfig {\n");
-    
+
     sb.append("    pullRequestId: ").append(toIndentedString(pullRequestId)).append("\n");
     sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
     sb.append("}");

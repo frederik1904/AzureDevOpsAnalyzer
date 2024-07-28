@@ -13,20 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitTreeEntryRef;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -51,10 +47,11 @@ public class GitTreeRef {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -69,10 +66,11 @@ public class GitTreeRef {
     return this;
   }
 
-   /**
+  /**
    * SHA1 hash of git object
+   *
    * @return objectId
-  **/
+   **/
   @ApiModelProperty(value = "SHA1 hash of git object")
   public String getObjectId() {
     return objectId;
@@ -87,10 +85,11 @@ public class GitTreeRef {
     return this;
   }
 
-   /**
+  /**
    * Sum of sizes of all children
+   *
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "Sum of sizes of all children")
   public Long getSize() {
     return size;
@@ -113,10 +112,11 @@ public class GitTreeRef {
     return this;
   }
 
-   /**
+  /**
    * Blobs and trees under this tree
+   *
    * @return treeEntries
-  **/
+   **/
   @ApiModelProperty(value = "Blobs and trees under this tree")
   public List<GitTreeEntryRef> getTreeEntries() {
     return treeEntries;
@@ -131,10 +131,11 @@ public class GitTreeRef {
     return this;
   }
 
-   /**
+  /**
    * Url to tree
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Url to tree")
   public String getUrl() {
     return url;
@@ -155,10 +156,10 @@ public class GitTreeRef {
     }
     GitTreeRef gitTreeRef = (GitTreeRef) o;
     return Objects.equals(this.links, gitTreeRef.links) &&
-        Objects.equals(this.objectId, gitTreeRef.objectId) &&
-        Objects.equals(this.size, gitTreeRef.size) &&
-        Objects.equals(this.treeEntries, gitTreeRef.treeEntries) &&
-        Objects.equals(this.url, gitTreeRef.url);
+            Objects.equals(this.objectId, gitTreeRef.objectId) &&
+            Objects.equals(this.size, gitTreeRef.size) &&
+            Objects.equals(this.treeEntries, gitTreeRef.treeEntries) &&
+            Objects.equals(this.url, gitTreeRef.url);
   }
 
   @Override
@@ -171,7 +172,7 @@ public class GitTreeRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitTreeRef {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");

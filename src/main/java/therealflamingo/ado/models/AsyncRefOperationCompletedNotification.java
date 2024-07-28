@@ -13,17 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.AsyncGitOperationNotification;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -39,10 +36,11 @@ public class AsyncRefOperationCompletedNotification extends AsyncGitOperationNot
     return this;
   }
 
-   /**
+  /**
    * Get operationId
+   *
    * @return operationId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOperationId() {
     return operationId;
@@ -57,10 +55,11 @@ public class AsyncRefOperationCompletedNotification extends AsyncGitOperationNot
     return this;
   }
 
-   /**
+  /**
    * Get newRefName
+   *
    * @return newRefName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNewRefName() {
     return newRefName;
@@ -81,8 +80,8 @@ public class AsyncRefOperationCompletedNotification extends AsyncGitOperationNot
     }
     AsyncRefOperationCompletedNotification asyncRefOperationCompletedNotification = (AsyncRefOperationCompletedNotification) o;
     return Objects.equals(this.operationId, asyncRefOperationCompletedNotification.operationId) &&
-        Objects.equals(this.newRefName, asyncRefOperationCompletedNotification.newRefName) &&
-        super.equals(o);
+            Objects.equals(this.newRefName, asyncRefOperationCompletedNotification.newRefName) &&
+            super.equals(o);
   }
 
   @Override

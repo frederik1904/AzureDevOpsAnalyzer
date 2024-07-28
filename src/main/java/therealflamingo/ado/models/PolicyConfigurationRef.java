@@ -13,14 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.PolicyTypeRef;
+
+import java.util.Objects;
 
 /**
  * Policy configuration reference.
@@ -42,10 +39,11 @@ public class PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration ID.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration ID.")
   public Integer getId() {
     return id;
@@ -60,10 +58,11 @@ public class PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The policy configuration type.
+   *
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "The policy configuration type.")
   public PolicyTypeRef getType() {
     return type;
@@ -78,10 +77,11 @@ public class PolicyConfigurationRef {
     return this;
   }
 
-   /**
+  /**
    * The URL where the policy configuration can be retrieved.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The URL where the policy configuration can be retrieved.")
   public String getUrl() {
     return url;
@@ -102,8 +102,8 @@ public class PolicyConfigurationRef {
     }
     PolicyConfigurationRef policyConfigurationRef = (PolicyConfigurationRef) o;
     return Objects.equals(this.id, policyConfigurationRef.id) &&
-        Objects.equals(this.type, policyConfigurationRef.type) &&
-        Objects.equals(this.url, policyConfigurationRef.url);
+            Objects.equals(this.type, policyConfigurationRef.type) &&
+            Objects.equals(this.url, policyConfigurationRef.url);
   }
 
   @Override
@@ -116,7 +116,7 @@ public class PolicyConfigurationRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PolicyConfigurationRef {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");

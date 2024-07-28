@@ -13,185 +13,183 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.TeamProjectReference;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class VersionControlProjectInfo {
-  /**
-   * Gets or Sets defaultSourceControlType
-   */
-  public enum DefaultSourceControlTypeEnum {
-    TFVC("tfvc"),
-    
-    GIT("git");
+    @JsonProperty("defaultSourceControlType")
+    private DefaultSourceControlTypeEnum defaultSourceControlType = null;
+    @JsonProperty("project")
+    private TeamProjectReference project = null;
+    @JsonProperty("supportsGit")
+    private Boolean supportsGit = null;
+    @JsonProperty("supportsTFVC")
+    private Boolean supportsTFVC = null;
 
-    private String value;
-
-    DefaultSourceControlTypeEnum(String value) {
-      this.value = value;
+    public VersionControlProjectInfo defaultSourceControlType(DefaultSourceControlTypeEnum defaultSourceControlType) {
+        this.defaultSourceControlType = defaultSourceControlType;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get defaultSourceControlType
+     *
+     * @return defaultSourceControlType
+     **/
+    @ApiModelProperty(value = "")
+    public DefaultSourceControlTypeEnum getDefaultSourceControlType() {
+        return defaultSourceControlType;
+    }
+
+    public void setDefaultSourceControlType(DefaultSourceControlTypeEnum defaultSourceControlType) {
+        this.defaultSourceControlType = defaultSourceControlType;
+    }
+
+    public VersionControlProjectInfo project(TeamProjectReference project) {
+        this.project = project;
+        return this;
+    }
+
+    /**
+     * Get project
+     *
+     * @return project
+     **/
+    @ApiModelProperty(value = "")
+    public TeamProjectReference getProject() {
+        return project;
+    }
+
+    public void setProject(TeamProjectReference project) {
+        this.project = project;
+    }
+
+    public VersionControlProjectInfo supportsGit(Boolean supportsGit) {
+        this.supportsGit = supportsGit;
+        return this;
+    }
+
+    /**
+     * Get supportsGit
+     *
+     * @return supportsGit
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isSupportsGit() {
+        return supportsGit;
+    }
+
+    public void setSupportsGit(Boolean supportsGit) {
+        this.supportsGit = supportsGit;
+    }
+
+    public VersionControlProjectInfo supportsTFVC(Boolean supportsTFVC) {
+        this.supportsTFVC = supportsTFVC;
+        return this;
+    }
+
+    /**
+     * Get supportsTFVC
+     *
+     * @return supportsTFVC
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isSupportsTFVC() {
+        return supportsTFVC;
+    }
+
+    public void setSupportsTFVC(Boolean supportsTFVC) {
+        this.supportsTFVC = supportsTFVC;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VersionControlProjectInfo versionControlProjectInfo = (VersionControlProjectInfo) o;
+        return Objects.equals(this.defaultSourceControlType, versionControlProjectInfo.defaultSourceControlType) &&
+                Objects.equals(this.project, versionControlProjectInfo.project) &&
+                Objects.equals(this.supportsGit, versionControlProjectInfo.supportsGit) &&
+                Objects.equals(this.supportsTFVC, versionControlProjectInfo.supportsTFVC);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(defaultSourceControlType, project, supportsGit, supportsTFVC);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VersionControlProjectInfo {\n");
+
+        sb.append("    defaultSourceControlType: ").append(toIndentedString(defaultSourceControlType)).append("\n");
+        sb.append("    project: ").append(toIndentedString(project)).append("\n");
+        sb.append("    supportsGit: ").append(toIndentedString(supportsGit)).append("\n");
+        sb.append("    supportsTFVC: ").append(toIndentedString(supportsTFVC)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static DefaultSourceControlTypeEnum fromValue(String value) {
-      for (DefaultSourceControlTypeEnum b : DefaultSourceControlTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("defaultSourceControlType")
-  private DefaultSourceControlTypeEnum defaultSourceControlType = null;
+    /**
+     * Gets or Sets defaultSourceControlType
+     */
+    public enum DefaultSourceControlTypeEnum {
+        TFVC("tfvc"),
 
-  @JsonProperty("project")
-  private TeamProjectReference project = null;
+        GIT("git");
 
-  @JsonProperty("supportsGit")
-  private Boolean supportsGit = null;
+        private String value;
 
-  @JsonProperty("supportsTFVC")
-  private Boolean supportsTFVC = null;
+        DefaultSourceControlTypeEnum(String value) {
+            this.value = value;
+        }
 
-  public VersionControlProjectInfo defaultSourceControlType(DefaultSourceControlTypeEnum defaultSourceControlType) {
-    this.defaultSourceControlType = defaultSourceControlType;
-    return this;
-  }
+        @JsonCreator
+        public static DefaultSourceControlTypeEnum fromValue(String value) {
+            for (DefaultSourceControlTypeEnum b : DefaultSourceControlTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-   /**
-   * Get defaultSourceControlType
-   * @return defaultSourceControlType
-  **/
-  @ApiModelProperty(value = "")
-  public DefaultSourceControlTypeEnum getDefaultSourceControlType() {
-    return defaultSourceControlType;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public void setDefaultSourceControlType(DefaultSourceControlTypeEnum defaultSourceControlType) {
-    this.defaultSourceControlType = defaultSourceControlType;
-  }
-
-  public VersionControlProjectInfo project(TeamProjectReference project) {
-    this.project = project;
-    return this;
-  }
-
-   /**
-   * Get project
-   * @return project
-  **/
-  @ApiModelProperty(value = "")
-  public TeamProjectReference getProject() {
-    return project;
-  }
-
-  public void setProject(TeamProjectReference project) {
-    this.project = project;
-  }
-
-  public VersionControlProjectInfo supportsGit(Boolean supportsGit) {
-    this.supportsGit = supportsGit;
-    return this;
-  }
-
-   /**
-   * Get supportsGit
-   * @return supportsGit
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isSupportsGit() {
-    return supportsGit;
-  }
-
-  public void setSupportsGit(Boolean supportsGit) {
-    this.supportsGit = supportsGit;
-  }
-
-  public VersionControlProjectInfo supportsTFVC(Boolean supportsTFVC) {
-    this.supportsTFVC = supportsTFVC;
-    return this;
-  }
-
-   /**
-   * Get supportsTFVC
-   * @return supportsTFVC
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isSupportsTFVC() {
-    return supportsTFVC;
-  }
-
-  public void setSupportsTFVC(Boolean supportsTFVC) {
-    this.supportsTFVC = supportsTFVC;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    VersionControlProjectInfo versionControlProjectInfo = (VersionControlProjectInfo) o;
-    return Objects.equals(this.defaultSourceControlType, versionControlProjectInfo.defaultSourceControlType) &&
-        Objects.equals(this.project, versionControlProjectInfo.project) &&
-        Objects.equals(this.supportsGit, versionControlProjectInfo.supportsGit) &&
-        Objects.equals(this.supportsTFVC, versionControlProjectInfo.supportsTFVC);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(defaultSourceControlType, project, supportsGit, supportsTFVC);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VersionControlProjectInfo {\n");
-    
-    sb.append("    defaultSourceControlType: ").append(toIndentedString(defaultSourceControlType)).append("\n");
-    sb.append("    project: ").append(toIndentedString(project)).append("\n");
-    sb.append("    supportsGit: ").append(toIndentedString(supportsGit)).append("\n");
-    sb.append("    supportsTFVC: ").append(toIndentedString(supportsTFVC)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

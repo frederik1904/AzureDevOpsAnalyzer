@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -39,10 +37,11 @@ public class BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * RepositoryId commit was pushed to.
+   *
    * @return repoId
-  **/
+   **/
   @ApiModelProperty(value = "RepositoryId commit was pushed to.")
   public UUID getRepoId() {
     return repoId;
@@ -57,10 +56,11 @@ public class BillableCommitter {
     return this;
   }
 
-   /**
+  /**
    * Visual Studio ID /Team Foundation ID
+   *
    * @return vsid
-  **/
+   **/
   @ApiModelProperty(value = "Visual Studio ID /Team Foundation ID")
   public UUID getVsid() {
     return vsid;
@@ -81,7 +81,7 @@ public class BillableCommitter {
     }
     BillableCommitter billableCommitter = (BillableCommitter) o;
     return Objects.equals(this.repoId, billableCommitter.repoId) &&
-        Objects.equals(this.vsid, billableCommitter.vsid);
+            Objects.equals(this.vsid, billableCommitter.vsid);
   }
 
   @Override
@@ -94,7 +94,7 @@ public class BillableCommitter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillableCommitter {\n");
-    
+
     sb.append("    repoId: ").append(toIndentedString(repoId)).append("\n");
     sb.append("    vsid: ").append(toIndentedString(vsid)).append("\n");
     sb.append("}");

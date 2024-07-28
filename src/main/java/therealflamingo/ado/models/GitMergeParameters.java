@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Parameters required for performing git merge.
@@ -40,10 +38,11 @@ public class GitMergeParameters {
     return this;
   }
 
-   /**
+  /**
    * Comment or message of the commit.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Comment or message of the commit.")
   public String getComment() {
     return comment;
@@ -66,10 +65,11 @@ public class GitMergeParameters {
     return this;
   }
 
-   /**
+  /**
    * An enumeration of the parent commit IDs for the merge  commit.
+   *
    * @return parents
-  **/
+   **/
   @ApiModelProperty(value = "An enumeration of the parent commit IDs for the merge  commit.")
   public List<String> getParents() {
     return parents;
@@ -90,7 +90,7 @@ public class GitMergeParameters {
     }
     GitMergeParameters gitMergeParameters = (GitMergeParameters) o;
     return Objects.equals(this.comment, gitMergeParameters.comment) &&
-        Objects.equals(this.parents, gitMergeParameters.parents);
+            Objects.equals(this.parents, gitMergeParameters.parents);
   }
 
   @Override
@@ -103,7 +103,7 @@ public class GitMergeParameters {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitMergeParameters {\n");
-    
+
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    parents: ").append(toIndentedString(parents)).append("\n");
     sb.append("}");

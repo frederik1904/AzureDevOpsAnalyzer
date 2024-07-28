@@ -13,16 +13,10 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitMerge;
 import therealflamingo.ado.models.GitMergeParameters;
-import org.junit.Test;
-import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for MergesApi
@@ -32,14 +26,11 @@ public class MergesApiTest {
 
     private final MergesApi api = new MergesApi();
 
-    
+
     /**
-     * 
-     *
      * Request a git merge operation. Currently we support merging only 2 commits.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void mergesCreateTest() throws Exception {
@@ -53,14 +44,11 @@ public class MergesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get a specific merge operation&#39;s details.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void mergesGetTest() throws Exception {
@@ -74,5 +62,5 @@ public class MergesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

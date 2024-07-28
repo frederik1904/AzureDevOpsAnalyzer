@@ -13,17 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -45,10 +42,11 @@ public class GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.")
   public ReferenceLinks getLinks() {
     return links;
@@ -63,10 +61,11 @@ public class GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.
+   *
    * @return descriptor
-  **/
+   **/
   @ApiModelProperty(value = "The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.")
   public String getDescriptor() {
     return descriptor;
@@ -81,10 +80,11 @@ public class GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.")
   public String getDisplayName() {
     return displayName;
@@ -99,10 +99,11 @@ public class GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This url is the full route to the source resource of this graph subject.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "This url is the full route to the source resource of this graph subject.")
   public String getUrl() {
     return url;
@@ -123,9 +124,9 @@ public class GraphSubjectBase {
     }
     GraphSubjectBase graphSubjectBase = (GraphSubjectBase) o;
     return Objects.equals(this.links, graphSubjectBase.links) &&
-        Objects.equals(this.descriptor, graphSubjectBase.descriptor) &&
-        Objects.equals(this.displayName, graphSubjectBase.displayName) &&
-        Objects.equals(this.url, graphSubjectBase.url);
+            Objects.equals(this.descriptor, graphSubjectBase.descriptor) &&
+            Objects.equals(this.displayName, graphSubjectBase.displayName) &&
+            Objects.equals(this.url, graphSubjectBase.url);
   }
 
   @Override
@@ -138,7 +139,7 @@ public class GraphSubjectBase {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphSubjectBase {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    descriptor: ").append(toIndentedString(descriptor)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");

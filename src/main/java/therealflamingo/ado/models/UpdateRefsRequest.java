@@ -13,61 +13,24 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitRefUpdate;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class UpdateRefsRequest {
   @JsonProperty("refUpdateRequests")
   private List<GitRefUpdate> refUpdateRequests = null;
-
-  /**
-   * Gets or Sets updateMode
-   */
-  public enum UpdateModeEnum {
-    BESTEFFORT("bestEffort"),
-    
-    ALLORNONE("allOrNone");
-
-    private String value;
-
-    UpdateModeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static UpdateModeEnum fromValue(String value) {
-      for (UpdateModeEnum b : UpdateModeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("updateMode")
   private UpdateModeEnum updateMode = null;
 
@@ -84,10 +47,11 @@ public class UpdateRefsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get refUpdateRequests
+   *
    * @return refUpdateRequests
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<GitRefUpdate> getRefUpdateRequests() {
     return refUpdateRequests;
@@ -102,10 +66,11 @@ public class UpdateRefsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get updateMode
+   *
    * @return updateMode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UpdateModeEnum getUpdateMode() {
     return updateMode;
@@ -114,7 +79,6 @@ public class UpdateRefsRequest {
   public void setUpdateMode(UpdateModeEnum updateMode) {
     this.updateMode = updateMode;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -126,7 +90,7 @@ public class UpdateRefsRequest {
     }
     UpdateRefsRequest updateRefsRequest = (UpdateRefsRequest) o;
     return Objects.equals(this.refUpdateRequests, updateRefsRequest.refUpdateRequests) &&
-        Objects.equals(this.updateMode, updateRefsRequest.updateMode);
+            Objects.equals(this.updateMode, updateRefsRequest.updateMode);
   }
 
   @Override
@@ -134,12 +98,11 @@ public class UpdateRefsRequest {
     return Objects.hash(refUpdateRequests, updateMode);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UpdateRefsRequest {\n");
-    
+
     sb.append("    refUpdateRequests: ").append(toIndentedString(refUpdateRequests)).append("\n");
     sb.append("    updateMode: ").append(toIndentedString(updateMode)).append("\n");
     sb.append("}");
@@ -155,6 +118,41 @@ public class UpdateRefsRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Gets or Sets updateMode
+   */
+  public enum UpdateModeEnum {
+    BESTEFFORT("bestEffort"),
+
+    ALLORNONE("allOrNone");
+
+    private String value;
+
+    UpdateModeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static UpdateModeEnum fromValue(String value) {
+      for (UpdateModeEnum b : UpdateModeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

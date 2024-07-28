@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * A branch mapping.
@@ -41,10 +39,11 @@ public class TfvcBranchMapping {
     return this;
   }
 
-   /**
+  /**
    * Depth of the branch.
+   *
    * @return depth
-  **/
+   **/
   @ApiModelProperty(value = "Depth of the branch.")
   public String getDepth() {
     return depth;
@@ -59,10 +58,11 @@ public class TfvcBranchMapping {
     return this;
   }
 
-   /**
+  /**
    * Server item for the branch.
+   *
    * @return serverItem
-  **/
+   **/
   @ApiModelProperty(value = "Server item for the branch.")
   public String getServerItem() {
     return serverItem;
@@ -77,10 +77,11 @@ public class TfvcBranchMapping {
     return this;
   }
 
-   /**
+  /**
    * Type of the branch.
+   *
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "Type of the branch.")
   public String getType() {
     return type;
@@ -101,8 +102,8 @@ public class TfvcBranchMapping {
     }
     TfvcBranchMapping tfvcBranchMapping = (TfvcBranchMapping) o;
     return Objects.equals(this.depth, tfvcBranchMapping.depth) &&
-        Objects.equals(this.serverItem, tfvcBranchMapping.serverItem) &&
-        Objects.equals(this.type, tfvcBranchMapping.type);
+            Objects.equals(this.serverItem, tfvcBranchMapping.serverItem) &&
+            Objects.equals(this.type, tfvcBranchMapping.type);
   }
 
   @Override
@@ -115,7 +116,7 @@ public class TfvcBranchMapping {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcBranchMapping {\n");
-    
+
     sb.append("    depth: ").append(toIndentedString(depth)).append("\n");
     sb.append("    serverItem: ").append(toIndentedString(serverItem)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

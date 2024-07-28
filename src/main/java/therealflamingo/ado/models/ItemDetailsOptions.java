@@ -13,13 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Optional details to include when returning an item model
@@ -29,46 +29,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class ItemDetailsOptions {
   @JsonProperty("includeContentMetadata")
   private Boolean includeContentMetadata = null;
-
-  /**
-   * Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items
-   */
-  public enum RecursionLevelEnum {
-    NONE("none"),
-    
-    ONELEVEL("oneLevel"),
-    
-    ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
-    
-    FULL("full");
-
-    private String value;
-
-    RecursionLevelEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static RecursionLevelEnum fromValue(String value) {
-      for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("recursionLevel")
   private RecursionLevelEnum recursionLevel = null;
 
@@ -77,10 +37,11 @@ public class ItemDetailsOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, include metadata about the file type
+   *
    * @return includeContentMetadata
-  **/
+   **/
   @ApiModelProperty(value = "If true, include metadata about the file type")
   public Boolean isIncludeContentMetadata() {
     return includeContentMetadata;
@@ -95,10 +56,11 @@ public class ItemDetailsOptions {
     return this;
   }
 
-   /**
+  /**
    * Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items
+   *
    * @return recursionLevel
-  **/
+   **/
   @ApiModelProperty(value = "Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items")
   public RecursionLevelEnum getRecursionLevel() {
     return recursionLevel;
@@ -107,7 +69,6 @@ public class ItemDetailsOptions {
   public void setRecursionLevel(RecursionLevelEnum recursionLevel) {
     this.recursionLevel = recursionLevel;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -119,7 +80,7 @@ public class ItemDetailsOptions {
     }
     ItemDetailsOptions itemDetailsOptions = (ItemDetailsOptions) o;
     return Objects.equals(this.includeContentMetadata, itemDetailsOptions.includeContentMetadata) &&
-        Objects.equals(this.recursionLevel, itemDetailsOptions.recursionLevel);
+            Objects.equals(this.recursionLevel, itemDetailsOptions.recursionLevel);
   }
 
   @Override
@@ -127,12 +88,11 @@ public class ItemDetailsOptions {
     return Objects.hash(includeContentMetadata, recursionLevel);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ItemDetailsOptions {\n");
-    
+
     sb.append("    includeContentMetadata: ").append(toIndentedString(includeContentMetadata)).append("\n");
     sb.append("    recursionLevel: ").append(toIndentedString(recursionLevel)).append("\n");
     sb.append("}");
@@ -148,6 +108,45 @@ public class ItemDetailsOptions {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items
+   */
+  public enum RecursionLevelEnum {
+    NONE("none"),
+
+    ONELEVEL("oneLevel"),
+
+    ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
+
+    FULL("full");
+
+    private String value;
+
+    RecursionLevelEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static RecursionLevelEnum fromValue(String value) {
+      for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

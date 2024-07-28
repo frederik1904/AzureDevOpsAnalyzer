@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Additional status information about an import request.
@@ -51,10 +49,11 @@ public class GitImportStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * All valid steps for the import process
+   *
    * @return allSteps
-  **/
+   **/
   @ApiModelProperty(value = "All valid steps for the import process")
   public List<String> getAllSteps() {
     return allSteps;
@@ -69,10 +68,11 @@ public class GitImportStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * Index into AllSteps for the current step
+   *
    * @return currentStep
-  **/
+   **/
   @ApiModelProperty(value = "Index into AllSteps for the current step")
   public Integer getCurrentStep() {
     return currentStep;
@@ -87,10 +87,11 @@ public class GitImportStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * Error message if the operation failed.
+   *
    * @return errorMessage
-  **/
+   **/
   @ApiModelProperty(value = "Error message if the operation failed.")
   public String getErrorMessage() {
     return errorMessage;
@@ -111,8 +112,8 @@ public class GitImportStatusDetail {
     }
     GitImportStatusDetail gitImportStatusDetail = (GitImportStatusDetail) o;
     return Objects.equals(this.allSteps, gitImportStatusDetail.allSteps) &&
-        Objects.equals(this.currentStep, gitImportStatusDetail.currentStep) &&
-        Objects.equals(this.errorMessage, gitImportStatusDetail.errorMessage);
+            Objects.equals(this.currentStep, gitImportStatusDetail.currentStep) &&
+            Objects.equals(this.errorMessage, gitImportStatusDetail.errorMessage);
   }
 
   @Override
@@ -125,7 +126,7 @@ public class GitImportStatusDetail {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitImportStatusDetail {\n");
-    
+
     sb.append("    allSteps: ").append(toIndentedString(allSteps)).append("\n");
     sb.append("    currentStep: ").append(toIndentedString(currentStep)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");

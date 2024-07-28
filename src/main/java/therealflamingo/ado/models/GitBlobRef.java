@@ -13,150 +13,151 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitBlobRef {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("objectId")
-  private String objectId = null;
+    @JsonProperty("objectId")
+    private String objectId = null;
 
-  @JsonProperty("size")
-  private Long size = null;
+    @JsonProperty("size")
+    private Long size = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  public GitBlobRef links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitBlobRef objectId(String objectId) {
-    this.objectId = objectId;
-    return this;
-  }
-
-   /**
-   * SHA1 hash of git object
-   * @return objectId
-  **/
-  @ApiModelProperty(value = "SHA1 hash of git object")
-  public String getObjectId() {
-    return objectId;
-  }
-
-  public void setObjectId(String objectId) {
-    this.objectId = objectId;
-  }
-
-  public GitBlobRef size(Long size) {
-    this.size = size;
-    return this;
-  }
-
-   /**
-   * Size of blob content (in bytes)
-   * @return size
-  **/
-  @ApiModelProperty(value = "Size of blob content (in bytes)")
-  public Long getSize() {
-    return size;
-  }
-
-  public void setSize(Long size) {
-    this.size = size;
-  }
-
-  public GitBlobRef url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitBlobRef links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
     }
-    GitBlobRef gitBlobRef = (GitBlobRef) o;
-    return Objects.equals(this.links, gitBlobRef.links) &&
-        Objects.equals(this.objectId, gitBlobRef.objectId) &&
-        Objects.equals(this.size, gitBlobRef.size) &&
-        Objects.equals(this.url, gitBlobRef.url);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, objectId, size, url);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitBlobRef {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitBlobRef objectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+
+    /**
+     * SHA1 hash of git object
+     *
+     * @return objectId
+     **/
+    @ApiModelProperty(value = "SHA1 hash of git object")
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
+
+    public GitBlobRef size(Long size) {
+        this.size = size;
+        return this;
+    }
+
+    /**
+     * Size of blob content (in bytes)
+     *
+     * @return size
+     **/
+    @ApiModelProperty(value = "Size of blob content (in bytes)")
+    public Long getSize() {
+        return size;
+    }
+
+    public void setSize(Long size) {
+        this.size = size;
+    }
+
+    public GitBlobRef url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitBlobRef gitBlobRef = (GitBlobRef) o;
+        return Objects.equals(this.links, gitBlobRef.links) &&
+                Objects.equals(this.objectId, gitBlobRef.objectId) &&
+                Objects.equals(this.size, gitBlobRef.size) &&
+                Objects.equals(this.url, gitBlobRef.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, objectId, size, url);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitBlobRef {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
+        sb.append("    size: ").append(toIndentedString(size)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

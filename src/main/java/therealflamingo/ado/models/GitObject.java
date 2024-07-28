@@ -13,13 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Git object identifier and type information.
@@ -29,54 +29,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class GitObject {
   @JsonProperty("objectId")
   private String objectId = null;
-
-  /**
-   * Type of object (Commit, Tree, Blob, Tag)
-   */
-  public enum ObjectTypeEnum {
-    BAD("bad"),
-    
-    COMMIT("commit"),
-    
-    TREE("tree"),
-    
-    BLOB("blob"),
-    
-    TAG("tag"),
-    
-    EXT2("ext2"),
-    
-    OFSDELTA("ofsDelta"),
-    
-    REFDELTA("refDelta");
-
-    private String value;
-
-    ObjectTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ObjectTypeEnum fromValue(String value) {
-      for (ObjectTypeEnum b : ObjectTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("objectType")
   private ObjectTypeEnum objectType = null;
 
@@ -85,10 +37,11 @@ public class GitObject {
     return this;
   }
 
-   /**
+  /**
    * Object Id (Sha1Id).
+   *
    * @return objectId
-  **/
+   **/
   @ApiModelProperty(value = "Object Id (Sha1Id).")
   public String getObjectId() {
     return objectId;
@@ -103,10 +56,11 @@ public class GitObject {
     return this;
   }
 
-   /**
+  /**
    * Type of object (Commit, Tree, Blob, Tag)
+   *
    * @return objectType
-  **/
+   **/
   @ApiModelProperty(value = "Type of object (Commit, Tree, Blob, Tag)")
   public ObjectTypeEnum getObjectType() {
     return objectType;
@@ -115,7 +69,6 @@ public class GitObject {
   public void setObjectType(ObjectTypeEnum objectType) {
     this.objectType = objectType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -127,7 +80,7 @@ public class GitObject {
     }
     GitObject gitObject = (GitObject) o;
     return Objects.equals(this.objectId, gitObject.objectId) &&
-        Objects.equals(this.objectType, gitObject.objectType);
+            Objects.equals(this.objectType, gitObject.objectType);
   }
 
   @Override
@@ -135,12 +88,11 @@ public class GitObject {
     return Objects.hash(objectId, objectType);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitObject {\n");
-    
+
     sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
     sb.append("    objectType: ").append(toIndentedString(objectType)).append("\n");
     sb.append("}");
@@ -156,6 +108,53 @@ public class GitObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Type of object (Commit, Tree, Blob, Tag)
+   */
+  public enum ObjectTypeEnum {
+    BAD("bad"),
+
+    COMMIT("commit"),
+
+    TREE("tree"),
+
+    BLOB("blob"),
+
+    TAG("tag"),
+
+    EXT2("ext2"),
+
+    OFSDELTA("ofsDelta"),
+
+    REFDELTA("refDelta");
+
+    private String value;
+
+    ObjectTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ObjectTypeEnum fromValue(String value) {
+      for (ObjectTypeEnum b : ObjectTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

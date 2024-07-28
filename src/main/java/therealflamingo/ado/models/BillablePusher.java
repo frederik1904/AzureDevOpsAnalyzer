@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -42,10 +40,11 @@ public class BillablePusher {
     return this;
   }
 
-   /**
+  /**
    * ProjectId that was pushed to.
+   *
    * @return projectId
-  **/
+   **/
   @ApiModelProperty(value = "ProjectId that was pushed to.")
   public UUID getProjectId() {
     return projectId;
@@ -60,10 +59,11 @@ public class BillablePusher {
     return this;
   }
 
-   /**
+  /**
    * RepositoryId that was pushed to.
+   *
    * @return repoId
-  **/
+   **/
   @ApiModelProperty(value = "RepositoryId that was pushed to.")
   public UUID getRepoId() {
     return repoId;
@@ -78,10 +78,11 @@ public class BillablePusher {
     return this;
   }
 
-   /**
+  /**
    * Visual Studio ID /Team Foundation ID
+   *
    * @return vsid
-  **/
+   **/
   @ApiModelProperty(value = "Visual Studio ID /Team Foundation ID")
   public UUID getVsid() {
     return vsid;
@@ -102,8 +103,8 @@ public class BillablePusher {
     }
     BillablePusher billablePusher = (BillablePusher) o;
     return Objects.equals(this.projectId, billablePusher.projectId) &&
-        Objects.equals(this.repoId, billablePusher.repoId) &&
-        Objects.equals(this.vsid, billablePusher.vsid);
+            Objects.equals(this.repoId, billablePusher.repoId) &&
+            Objects.equals(this.vsid, billablePusher.vsid);
   }
 
   @Override
@@ -116,7 +117,7 @@ public class BillablePusher {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillablePusher {\n");
-    
+
     sb.append("    projectId: ").append(toIndentedString(projectId)).append("\n");
     sb.append("    repoId: ").append(toIndentedString(repoId)).append("\n");
     sb.append("    vsid: ").append(toIndentedString(vsid)).append("\n");

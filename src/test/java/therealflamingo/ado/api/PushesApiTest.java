@@ -13,17 +13,13 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPush;
-import org.threeten.bp.OffsetDateTime;
-import java.util.UUID;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import therealflamingo.ado.models.GitPush;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 
 /**
  * API tests for PushesApi
@@ -33,14 +29,11 @@ public class PushesApiTest {
 
     private final PushesApi api = new PushesApi();
 
-    
+
     /**
-     * 
-     *
      * Push changes to the repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pushesCreateTest() throws Exception {
@@ -53,14 +46,11 @@ public class PushesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieves a particular push.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pushesGetTest() throws Exception {
@@ -75,14 +65,11 @@ public class PushesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieves pushes associated with the specified repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pushesListTest() throws Exception {
@@ -102,5 +89,5 @@ public class PushesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

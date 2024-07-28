@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitStatus;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitStatus;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for StatusesApi
@@ -31,14 +27,11 @@ public class StatusesApiTest {
 
     private final StatusesApi api = new StatusesApi();
 
-    
+
     /**
-     * 
-     *
      * Create Git commit status.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void statusesCreateTest() throws Exception {
@@ -52,14 +45,11 @@ public class StatusesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get statuses associated with the Git commit.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void statusesListTest() throws Exception {
@@ -75,5 +65,5 @@ public class StatusesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

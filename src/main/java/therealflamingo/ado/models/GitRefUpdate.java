@@ -13,173 +13,176 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRefUpdate {
-  @JsonProperty("isLocked")
-  private Boolean isLocked = null;
+    @JsonProperty("isLocked")
+    private Boolean isLocked = null;
 
-  @JsonProperty("name")
-  private String name = null;
+    @JsonProperty("name")
+    private String name = null;
 
-  @JsonProperty("newObjectId")
-  private String newObjectId = null;
+    @JsonProperty("newObjectId")
+    private String newObjectId = null;
 
-  @JsonProperty("oldObjectId")
-  private String oldObjectId = null;
+    @JsonProperty("oldObjectId")
+    private String oldObjectId = null;
 
-  @JsonProperty("repositoryId")
-  private UUID repositoryId = null;
+    @JsonProperty("repositoryId")
+    private UUID repositoryId = null;
 
-  public GitRefUpdate isLocked(Boolean isLocked) {
-    this.isLocked = isLocked;
-    return this;
-  }
-
-   /**
-   * Get isLocked
-   * @return isLocked
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsLocked() {
-    return isLocked;
-  }
-
-  public void setIsLocked(Boolean isLocked) {
-    this.isLocked = isLocked;
-  }
-
-  public GitRefUpdate name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public GitRefUpdate newObjectId(String newObjectId) {
-    this.newObjectId = newObjectId;
-    return this;
-  }
-
-   /**
-   * Get newObjectId
-   * @return newObjectId
-  **/
-  @ApiModelProperty(value = "")
-  public String getNewObjectId() {
-    return newObjectId;
-  }
-
-  public void setNewObjectId(String newObjectId) {
-    this.newObjectId = newObjectId;
-  }
-
-  public GitRefUpdate oldObjectId(String oldObjectId) {
-    this.oldObjectId = oldObjectId;
-    return this;
-  }
-
-   /**
-   * Get oldObjectId
-   * @return oldObjectId
-  **/
-  @ApiModelProperty(value = "")
-  public String getOldObjectId() {
-    return oldObjectId;
-  }
-
-  public void setOldObjectId(String oldObjectId) {
-    this.oldObjectId = oldObjectId;
-  }
-
-  public GitRefUpdate repositoryId(UUID repositoryId) {
-    this.repositoryId = repositoryId;
-    return this;
-  }
-
-   /**
-   * Get repositoryId
-   * @return repositoryId
-  **/
-  @ApiModelProperty(value = "")
-  public UUID getRepositoryId() {
-    return repositoryId;
-  }
-
-  public void setRepositoryId(UUID repositoryId) {
-    this.repositoryId = repositoryId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitRefUpdate isLocked(Boolean isLocked) {
+        this.isLocked = isLocked;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get isLocked
+     *
+     * @return isLocked
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isIsLocked() {
+        return isLocked;
     }
-    GitRefUpdate gitRefUpdate = (GitRefUpdate) o;
-    return Objects.equals(this.isLocked, gitRefUpdate.isLocked) &&
-        Objects.equals(this.name, gitRefUpdate.name) &&
-        Objects.equals(this.newObjectId, gitRefUpdate.newObjectId) &&
-        Objects.equals(this.oldObjectId, gitRefUpdate.oldObjectId) &&
-        Objects.equals(this.repositoryId, gitRefUpdate.repositoryId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(isLocked, name, newObjectId, oldObjectId, repositoryId);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRefUpdate {\n");
-    
-    sb.append("    isLocked: ").append(toIndentedString(isLocked)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    newObjectId: ").append(toIndentedString(newObjectId)).append("\n");
-    sb.append("    oldObjectId: ").append(toIndentedString(oldObjectId)).append("\n");
-    sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setIsLocked(Boolean isLocked) {
+        this.isLocked = isLocked;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitRefUpdate name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public GitRefUpdate newObjectId(String newObjectId) {
+        this.newObjectId = newObjectId;
+        return this;
+    }
+
+    /**
+     * Get newObjectId
+     *
+     * @return newObjectId
+     **/
+    @ApiModelProperty(value = "")
+    public String getNewObjectId() {
+        return newObjectId;
+    }
+
+    public void setNewObjectId(String newObjectId) {
+        this.newObjectId = newObjectId;
+    }
+
+    public GitRefUpdate oldObjectId(String oldObjectId) {
+        this.oldObjectId = oldObjectId;
+        return this;
+    }
+
+    /**
+     * Get oldObjectId
+     *
+     * @return oldObjectId
+     **/
+    @ApiModelProperty(value = "")
+    public String getOldObjectId() {
+        return oldObjectId;
+    }
+
+    public void setOldObjectId(String oldObjectId) {
+        this.oldObjectId = oldObjectId;
+    }
+
+    public GitRefUpdate repositoryId(UUID repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+
+    /**
+     * Get repositoryId
+     *
+     * @return repositoryId
+     **/
+    @ApiModelProperty(value = "")
+    public UUID getRepositoryId() {
+        return repositoryId;
+    }
+
+    public void setRepositoryId(UUID repositoryId) {
+        this.repositoryId = repositoryId;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRefUpdate gitRefUpdate = (GitRefUpdate) o;
+        return Objects.equals(this.isLocked, gitRefUpdate.isLocked) &&
+                Objects.equals(this.name, gitRefUpdate.name) &&
+                Objects.equals(this.newObjectId, gitRefUpdate.newObjectId) &&
+                Objects.equals(this.oldObjectId, gitRefUpdate.oldObjectId) &&
+                Objects.equals(this.repositoryId, gitRefUpdate.repositoryId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isLocked, name, newObjectId, oldObjectId, repositoryId);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRefUpdate {\n");
+
+        sb.append("    isLocked: ").append(toIndentedString(isLocked)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    newObjectId: ").append(toIndentedString(newObjectId)).append("\n");
+        sb.append("    oldObjectId: ").append(toIndentedString(oldObjectId)).append("\n");
+        sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

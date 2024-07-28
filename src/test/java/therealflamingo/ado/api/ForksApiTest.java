@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitForkSyncRequest;
 import therealflamingo.ado.models.GitForkSyncRequestParameters;
 import therealflamingo.ado.models.GitRepositoryRef;
-import java.util.UUID;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 
 /**
  * API tests for ForksApi
@@ -34,14 +30,11 @@ public class ForksApiTest {
 
     private final ForksApi api = new ForksApi();
 
-    
+
     /**
-     * 
-     *
      * Request that another repository&#39;s refs be fetched into this one. It syncs two existing forks. To create a fork, please see the &lt;a href&#x3D;\&quot;https://docs.microsoft.com/en-us/rest/api/vsts/git/repositories/create?view&#x3D;azure-devops-rest-5.1\&quot;&gt; repositories endpoint&lt;/a&gt;
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void forksCreateForkSyncRequestTest() throws Exception {
@@ -55,14 +48,11 @@ public class ForksApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get a specific fork sync operation&#39;s details.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void forksGetForkSyncRequestTest() throws Exception {
@@ -76,14 +66,11 @@ public class ForksApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all requested fork sync operations on this repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void forksGetForkSyncRequestsTest() throws Exception {
@@ -97,14 +84,11 @@ public class ForksApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all forks of a repository in the collection.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void forksListTest() throws Exception {
@@ -118,5 +102,5 @@ public class ForksApiTest {
 
         // TODO: test validations
     }
-    
+
 }

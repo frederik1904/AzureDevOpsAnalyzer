@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitCommitRef;
+import java.util.Objects;
 
 /**
  * GitAsyncRefOperationSource specifies the pull request or list of commits to use when making a cherry pick and revert operation request. Only one should be provided.
@@ -49,10 +46,11 @@ public class GitAsyncRefOperationSource {
     return this;
   }
 
-   /**
+  /**
    * A list of commits to cherry pick or revert
+   *
    * @return commitList
-  **/
+   **/
   @ApiModelProperty(value = "A list of commits to cherry pick or revert")
   public List<GitCommitRef> getCommitList() {
     return commitList;
@@ -67,10 +65,11 @@ public class GitAsyncRefOperationSource {
     return this;
   }
 
-   /**
+  /**
    * Id of the pull request to cherry pick or revert
+   *
    * @return pullRequestId
-  **/
+   **/
   @ApiModelProperty(value = "Id of the pull request to cherry pick or revert")
   public Integer getPullRequestId() {
     return pullRequestId;
@@ -91,7 +90,7 @@ public class GitAsyncRefOperationSource {
     }
     GitAsyncRefOperationSource gitAsyncRefOperationSource = (GitAsyncRefOperationSource) o;
     return Objects.equals(this.commitList, gitAsyncRefOperationSource.commitList) &&
-        Objects.equals(this.pullRequestId, gitAsyncRefOperationSource.pullRequestId);
+            Objects.equals(this.pullRequestId, gitAsyncRefOperationSource.pullRequestId);
   }
 
   @Override
@@ -104,7 +103,7 @@ public class GitAsyncRefOperationSource {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitAsyncRefOperationSource {\n");
-    
+
     sb.append("    commitList: ").append(toIndentedString(commitList)).append("\n");
     sb.append("    pullRequestId: ").append(toIndentedString(pullRequestId)).append("\n");
     sb.append("}");

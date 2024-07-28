@@ -13,88 +13,24 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.ChangeList;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class HistoryEntry {
   @JsonProperty("changeList")
   private ChangeList changeList = null;
-
-  /**
-   * The change made to the item from this change list (only relevant for File history, not folders)
-   */
-  public enum ItemChangeTypeEnum {
-    NONE("none"),
-    
-    ADD("add"),
-    
-    EDIT("edit"),
-    
-    ENCODING("encoding"),
-    
-    RENAME("rename"),
-    
-    DELETE("delete"),
-    
-    UNDELETE("undelete"),
-    
-    BRANCH("branch"),
-    
-    MERGE("merge"),
-    
-    LOCK("lock"),
-    
-    ROLLBACK("rollback"),
-    
-    SOURCERENAME("sourceRename"),
-    
-    TARGETRENAME("targetRename"),
-    
-    PROPERTY("property"),
-    
-    ALL("all");
-
-    private String value;
-
-    ItemChangeTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ItemChangeTypeEnum fromValue(String value) {
-      for (ItemChangeTypeEnum b : ItemChangeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("itemChangeType")
   private ItemChangeTypeEnum itemChangeType = null;
-
   @JsonProperty("serverItem")
   private String serverItem = null;
 
@@ -103,10 +39,11 @@ public class HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The Change list (changeset/commit/shelveset) for this point in history
+   *
    * @return changeList
-  **/
+   **/
   @ApiModelProperty(value = "The Change list (changeset/commit/shelveset) for this point in history")
   public ChangeList getChangeList() {
     return changeList;
@@ -121,10 +58,11 @@ public class HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The change made to the item from this change list (only relevant for File history, not folders)
+   *
    * @return itemChangeType
-  **/
+   **/
   @ApiModelProperty(value = "The change made to the item from this change list (only relevant for File history, not folders)")
   public ItemChangeTypeEnum getItemChangeType() {
     return itemChangeType;
@@ -139,10 +77,11 @@ public class HistoryEntry {
     return this;
   }
 
-   /**
+  /**
    * The path of the item at this point in history (only relevant for File history, not folders)
+   *
    * @return serverItem
-  **/
+   **/
   @ApiModelProperty(value = "The path of the item at this point in history (only relevant for File history, not folders)")
   public String getServerItem() {
     return serverItem;
@@ -151,7 +90,6 @@ public class HistoryEntry {
   public void setServerItem(String serverItem) {
     this.serverItem = serverItem;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -163,8 +101,8 @@ public class HistoryEntry {
     }
     HistoryEntry historyEntry = (HistoryEntry) o;
     return Objects.equals(this.changeList, historyEntry.changeList) &&
-        Objects.equals(this.itemChangeType, historyEntry.itemChangeType) &&
-        Objects.equals(this.serverItem, historyEntry.serverItem);
+            Objects.equals(this.itemChangeType, historyEntry.itemChangeType) &&
+            Objects.equals(this.serverItem, historyEntry.serverItem);
   }
 
   @Override
@@ -172,12 +110,11 @@ public class HistoryEntry {
     return Objects.hash(changeList, itemChangeType, serverItem);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class HistoryEntry {\n");
-    
+
     sb.append("    changeList: ").append(toIndentedString(changeList)).append("\n");
     sb.append("    itemChangeType: ").append(toIndentedString(itemChangeType)).append("\n");
     sb.append("    serverItem: ").append(toIndentedString(serverItem)).append("\n");
@@ -194,6 +131,67 @@ public class HistoryEntry {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The change made to the item from this change list (only relevant for File history, not folders)
+   */
+  public enum ItemChangeTypeEnum {
+    NONE("none"),
+
+    ADD("add"),
+
+    EDIT("edit"),
+
+    ENCODING("encoding"),
+
+    RENAME("rename"),
+
+    DELETE("delete"),
+
+    UNDELETE("undelete"),
+
+    BRANCH("branch"),
+
+    MERGE("merge"),
+
+    LOCK("lock"),
+
+    ROLLBACK("rollback"),
+
+    SOURCERENAME("sourceRename"),
+
+    TARGETRENAME("targetRename"),
+
+    PROPERTY("property"),
+
+    ALL("all");
+
+    private String value;
+
+    ItemChangeTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ItemChangeTypeEnum fromValue(String value) {
+      for (ItemChangeTypeEnum b : ItemChangeTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

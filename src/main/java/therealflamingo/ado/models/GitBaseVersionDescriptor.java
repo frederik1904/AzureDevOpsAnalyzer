@@ -13,225 +13,225 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitVersionDescriptor;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitBaseVersionDescriptor extends GitVersionDescriptor {
-  @JsonProperty("version")
-  private String version = null;
+    @JsonProperty("version")
+    private String version = null;
 
-  @JsonProperty("baseVersion")
-  private String baseVersion = null;
+    @JsonProperty("baseVersion")
+    private String baseVersion = null;
+    @JsonProperty("baseVersionOptions")
+    private BaseVersionOptionsEnum baseVersionOptions = null;
+    @JsonProperty("baseVersionType")
+    private BaseVersionTypeEnum baseVersionType = null;
 
-  /**
-   * Version options - Specify additional modifiers to version (e.g Previous)
-   */
-  public enum BaseVersionOptionsEnum {
-    NONE("none"),
-    
-    PREVIOUSCHANGE("previousChange"),
-    
-    FIRSTPARENT("firstParent");
-
-    private String value;
-
-    BaseVersionOptionsEnum(String value) {
-      this.value = value;
+    public GitBaseVersionDescriptor version(String version) {
+        this.version = version;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Version string identifier (name of tag/branch, SHA1 of commit)
+     *
+     * @return version
+     **/
+    @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public GitBaseVersionDescriptor baseVersion(String baseVersion) {
+        this.baseVersion = baseVersion;
+        return this;
+    }
+
+    /**
+     * Version string identifier (name of tag/branch, SHA1 of commit)
+     *
+     * @return baseVersion
+     **/
+    @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
+    public String getBaseVersion() {
+        return baseVersion;
+    }
+
+    public void setBaseVersion(String baseVersion) {
+        this.baseVersion = baseVersion;
+    }
+
+    public GitBaseVersionDescriptor baseVersionOptions(BaseVersionOptionsEnum baseVersionOptions) {
+        this.baseVersionOptions = baseVersionOptions;
+        return this;
+    }
+
+    /**
+     * Version options - Specify additional modifiers to version (e.g Previous)
+     *
+     * @return baseVersionOptions
+     **/
+    @ApiModelProperty(value = "Version options - Specify additional modifiers to version (e.g Previous)")
+    public BaseVersionOptionsEnum getBaseVersionOptions() {
+        return baseVersionOptions;
+    }
+
+    public void setBaseVersionOptions(BaseVersionOptionsEnum baseVersionOptions) {
+        this.baseVersionOptions = baseVersionOptions;
+    }
+
+    public GitBaseVersionDescriptor baseVersionType(BaseVersionTypeEnum baseVersionType) {
+        this.baseVersionType = baseVersionType;
+        return this;
+    }
+
+    /**
+     * Version type (branch, tag, or commit). Determines how Id is interpreted
+     *
+     * @return baseVersionType
+     **/
+    @ApiModelProperty(value = "Version type (branch, tag, or commit). Determines how Id is interpreted")
+    public BaseVersionTypeEnum getBaseVersionType() {
+        return baseVersionType;
+    }
+
+    public void setBaseVersionType(BaseVersionTypeEnum baseVersionType) {
+        this.baseVersionType = baseVersionType;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitBaseVersionDescriptor gitBaseVersionDescriptor = (GitBaseVersionDescriptor) o;
+        return Objects.equals(this.version, gitBaseVersionDescriptor.version) &&
+                Objects.equals(this.baseVersion, gitBaseVersionDescriptor.baseVersion) &&
+                Objects.equals(this.baseVersionOptions, gitBaseVersionDescriptor.baseVersionOptions) &&
+                Objects.equals(this.baseVersionType, gitBaseVersionDescriptor.baseVersionType) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(version, baseVersion, baseVersionOptions, baseVersionType, super.hashCode());
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitBaseVersionDescriptor {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    version: ").append(toIndentedString(version)).append("\n");
+        sb.append("    baseVersion: ").append(toIndentedString(baseVersion)).append("\n");
+        sb.append("    baseVersionOptions: ").append(toIndentedString(baseVersionOptions)).append("\n");
+        sb.append("    baseVersionType: ").append(toIndentedString(baseVersionType)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static BaseVersionOptionsEnum fromValue(String value) {
-      for (BaseVersionOptionsEnum b : BaseVersionOptionsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
-    }
-  }
-
-  @JsonProperty("baseVersionOptions")
-  private BaseVersionOptionsEnum baseVersionOptions = null;
-
-  /**
-   * Version type (branch, tag, or commit). Determines how Id is interpreted
-   */
-  public enum BaseVersionTypeEnum {
-    BRANCH("branch"),
-    
-    TAG("tag"),
-    
-    COMMIT("commit");
-
-    private String value;
-
-    BaseVersionTypeEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+    /**
+     * Version options - Specify additional modifiers to version (e.g Previous)
+     */
+    public enum BaseVersionOptionsEnum {
+        NONE("none"),
 
-    @JsonCreator
-    public static BaseVersionTypeEnum fromValue(String value) {
-      for (BaseVersionTypeEnum b : BaseVersionTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        PREVIOUSCHANGE("previousChange"),
+
+        FIRSTPARENT("firstParent");
+
+        private String value;
+
+        BaseVersionOptionsEnum(String value) {
+            this.value = value;
         }
-      }
-      return null;
+
+        @JsonCreator
+        public static BaseVersionOptionsEnum fromValue(String value) {
+            for (BaseVersionOptionsEnum b : BaseVersionOptionsEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  @JsonProperty("baseVersionType")
-  private BaseVersionTypeEnum baseVersionType = null;
+    /**
+     * Version type (branch, tag, or commit). Determines how Id is interpreted
+     */
+    public enum BaseVersionTypeEnum {
+        BRANCH("branch"),
 
-  public GitBaseVersionDescriptor version(String version) {
-    this.version = version;
-    return this;
-  }
+        TAG("tag"),
 
-   /**
-   * Version string identifier (name of tag/branch, SHA1 of commit)
-   * @return version
-  **/
-  @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
-  public String getVersion() {
-    return version;
-  }
+        COMMIT("commit");
 
-  public void setVersion(String version) {
-    this.version = version;
-  }
+        private String value;
 
-  public GitBaseVersionDescriptor baseVersion(String baseVersion) {
-    this.baseVersion = baseVersion;
-    return this;
-  }
+        BaseVersionTypeEnum(String value) {
+            this.value = value;
+        }
 
-   /**
-   * Version string identifier (name of tag/branch, SHA1 of commit)
-   * @return baseVersion
-  **/
-  @ApiModelProperty(value = "Version string identifier (name of tag/branch, SHA1 of commit)")
-  public String getBaseVersion() {
-    return baseVersion;
-  }
+        @JsonCreator
+        public static BaseVersionTypeEnum fromValue(String value) {
+            for (BaseVersionTypeEnum b : BaseVersionTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-  public void setBaseVersion(String baseVersion) {
-    this.baseVersion = baseVersion;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public GitBaseVersionDescriptor baseVersionOptions(BaseVersionOptionsEnum baseVersionOptions) {
-    this.baseVersionOptions = baseVersionOptions;
-    return this;
-  }
-
-   /**
-   * Version options - Specify additional modifiers to version (e.g Previous)
-   * @return baseVersionOptions
-  **/
-  @ApiModelProperty(value = "Version options - Specify additional modifiers to version (e.g Previous)")
-  public BaseVersionOptionsEnum getBaseVersionOptions() {
-    return baseVersionOptions;
-  }
-
-  public void setBaseVersionOptions(BaseVersionOptionsEnum baseVersionOptions) {
-    this.baseVersionOptions = baseVersionOptions;
-  }
-
-  public GitBaseVersionDescriptor baseVersionType(BaseVersionTypeEnum baseVersionType) {
-    this.baseVersionType = baseVersionType;
-    return this;
-  }
-
-   /**
-   * Version type (branch, tag, or commit). Determines how Id is interpreted
-   * @return baseVersionType
-  **/
-  @ApiModelProperty(value = "Version type (branch, tag, or commit). Determines how Id is interpreted")
-  public BaseVersionTypeEnum getBaseVersionType() {
-    return baseVersionType;
-  }
-
-  public void setBaseVersionType(BaseVersionTypeEnum baseVersionType) {
-    this.baseVersionType = baseVersionType;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitBaseVersionDescriptor gitBaseVersionDescriptor = (GitBaseVersionDescriptor) o;
-    return Objects.equals(this.version, gitBaseVersionDescriptor.version) &&
-        Objects.equals(this.baseVersion, gitBaseVersionDescriptor.baseVersion) &&
-        Objects.equals(this.baseVersionOptions, gitBaseVersionDescriptor.baseVersionOptions) &&
-        Objects.equals(this.baseVersionType, gitBaseVersionDescriptor.baseVersionType) &&
-        super.equals(o);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(version, baseVersion, baseVersionOptions, baseVersionType, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitBaseVersionDescriptor {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    baseVersion: ").append(toIndentedString(baseVersion)).append("\n");
-    sb.append("    baseVersionOptions: ").append(toIndentedString(baseVersionOptions)).append("\n");
-    sb.append("    baseVersionType: ").append(toIndentedString(baseVersionType)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

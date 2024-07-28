@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.TfvcMappingFilter;
+import java.util.Objects;
 
 /**
  * Criteria used in a search for change lists.
@@ -62,10 +59,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user who made the changes.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user who made the changes.")
   public String getAuthor() {
     return author;
@@ -80,10 +78,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Whether or not to follow renames for the given item being queried.
+   *
    * @return followRenames
-  **/
+   **/
   @ApiModelProperty(value = "Whether or not to follow renames for the given item being queried.")
   public Boolean isFollowRenames() {
     return followRenames;
@@ -98,10 +97,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, only include changesets created after this date (string).
+   *
    * @return fromDate
-  **/
+   **/
   @ApiModelProperty(value = "If provided, only include changesets created after this date (string).")
   public String getFromDate() {
     return fromDate;
@@ -116,10 +116,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, only include changesets after this changesetID.
+   *
    * @return fromId
-  **/
+   **/
   @ApiModelProperty(value = "If provided, only include changesets after this changesetID.")
   public Integer getFromId() {
     return fromId;
@@ -134,10 +135,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Whether to include the _links field on the shallow references.
+   *
    * @return includeLinks
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include the _links field on the shallow references.")
   public Boolean isIncludeLinks() {
     return includeLinks;
@@ -152,10 +154,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Path of item to search under.
+   *
    * @return itemPath
-  **/
+   **/
   @ApiModelProperty(value = "Path of item to search under.")
   public String getItemPath() {
     return itemPath;
@@ -178,10 +181,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get mappings
+   *
    * @return mappings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<TfvcMappingFilter> getMappings() {
     return mappings;
@@ -196,10 +200,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, only include changesets created before this date (string).
+   *
    * @return toDate
-  **/
+   **/
   @ApiModelProperty(value = "If provided, only include changesets created before this date (string).")
   public String getToDate() {
     return toDate;
@@ -214,10 +219,11 @@ public class TfvcChangesetSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, a version descriptor for the latest change list to include.
+   *
    * @return toId
-  **/
+   **/
   @ApiModelProperty(value = "If provided, a version descriptor for the latest change list to include.")
   public Integer getToId() {
     return toId;
@@ -238,14 +244,14 @@ public class TfvcChangesetSearchCriteria {
     }
     TfvcChangesetSearchCriteria tfvcChangesetSearchCriteria = (TfvcChangesetSearchCriteria) o;
     return Objects.equals(this.author, tfvcChangesetSearchCriteria.author) &&
-        Objects.equals(this.followRenames, tfvcChangesetSearchCriteria.followRenames) &&
-        Objects.equals(this.fromDate, tfvcChangesetSearchCriteria.fromDate) &&
-        Objects.equals(this.fromId, tfvcChangesetSearchCriteria.fromId) &&
-        Objects.equals(this.includeLinks, tfvcChangesetSearchCriteria.includeLinks) &&
-        Objects.equals(this.itemPath, tfvcChangesetSearchCriteria.itemPath) &&
-        Objects.equals(this.mappings, tfvcChangesetSearchCriteria.mappings) &&
-        Objects.equals(this.toDate, tfvcChangesetSearchCriteria.toDate) &&
-        Objects.equals(this.toId, tfvcChangesetSearchCriteria.toId);
+            Objects.equals(this.followRenames, tfvcChangesetSearchCriteria.followRenames) &&
+            Objects.equals(this.fromDate, tfvcChangesetSearchCriteria.fromDate) &&
+            Objects.equals(this.fromId, tfvcChangesetSearchCriteria.fromId) &&
+            Objects.equals(this.includeLinks, tfvcChangesetSearchCriteria.includeLinks) &&
+            Objects.equals(this.itemPath, tfvcChangesetSearchCriteria.itemPath) &&
+            Objects.equals(this.mappings, tfvcChangesetSearchCriteria.mappings) &&
+            Objects.equals(this.toDate, tfvcChangesetSearchCriteria.toDate) &&
+            Objects.equals(this.toId, tfvcChangesetSearchCriteria.toId);
   }
 
   @Override
@@ -258,7 +264,7 @@ public class TfvcChangesetSearchCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcChangesetSearchCriteria {\n");
-    
+
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    followRenames: ").append(toIndentedString(followRenames)).append("\n");
     sb.append("    fromDate: ").append(toIndentedString(fromDate)).append("\n");

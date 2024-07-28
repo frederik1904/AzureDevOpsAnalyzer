@@ -13,22 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitConflict;
-import therealflamingo.ado.models.GitMergeOriginRef;
-import therealflamingo.ado.models.GitResolutionPathConflict;
-import therealflamingo.ado.models.GitTreeRef;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Data object for DirectoryFile conflict
@@ -80,10 +70,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -98,10 +89,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictId
+   *
    * @return conflictId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getConflictId() {
     return conflictId;
@@ -116,10 +108,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictPath
+   *
    * @return conflictPath
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConflictPath() {
     return conflictPath;
@@ -134,10 +127,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeBaseCommit
+   *
    * @return mergeBaseCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeBaseCommit() {
     return mergeBaseCommit;
@@ -152,10 +146,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeOrigin
+   *
    * @return mergeOrigin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitMergeOriginRef getMergeOrigin() {
     return mergeOrigin;
@@ -170,10 +165,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeSourceCommit
+   *
    * @return mergeSourceCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeSourceCommit() {
     return mergeSourceCommit;
@@ -188,10 +184,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeTargetCommit
+   *
    * @return mergeTargetCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeTargetCommit() {
     return mergeTargetCommit;
@@ -206,10 +203,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedBy
+   *
    * @return resolvedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getResolvedBy() {
     return resolvedBy;
@@ -224,10 +222,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedDate
+   *
    * @return resolvedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getResolvedDate() {
     return resolvedDate;
@@ -242,10 +241,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -260,10 +260,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolution
+   *
    * @return resolution
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitResolutionPathConflict getResolution() {
     return resolution;
@@ -278,10 +279,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get sourceBlob
+   *
    * @return sourceBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getSourceBlob() {
     return sourceBlob;
@@ -296,10 +298,11 @@ public class GitConflictFileDirectory extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get targetTree
+   *
    * @return targetTree
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitTreeRef getTargetTree() {
     return targetTree;
@@ -320,19 +323,19 @@ public class GitConflictFileDirectory extends GitConflict {
     }
     GitConflictFileDirectory gitConflictFileDirectory = (GitConflictFileDirectory) o;
     return Objects.equals(this.links, gitConflictFileDirectory.links) &&
-        Objects.equals(this.conflictId, gitConflictFileDirectory.conflictId) &&
-        Objects.equals(this.conflictPath, gitConflictFileDirectory.conflictPath) &&
-        Objects.equals(this.mergeBaseCommit, gitConflictFileDirectory.mergeBaseCommit) &&
-        Objects.equals(this.mergeOrigin, gitConflictFileDirectory.mergeOrigin) &&
-        Objects.equals(this.mergeSourceCommit, gitConflictFileDirectory.mergeSourceCommit) &&
-        Objects.equals(this.mergeTargetCommit, gitConflictFileDirectory.mergeTargetCommit) &&
-        Objects.equals(this.resolvedBy, gitConflictFileDirectory.resolvedBy) &&
-        Objects.equals(this.resolvedDate, gitConflictFileDirectory.resolvedDate) &&
-        Objects.equals(this.url, gitConflictFileDirectory.url) &&
-        Objects.equals(this.resolution, gitConflictFileDirectory.resolution) &&
-        Objects.equals(this.sourceBlob, gitConflictFileDirectory.sourceBlob) &&
-        Objects.equals(this.targetTree, gitConflictFileDirectory.targetTree) &&
-        super.equals(o);
+            Objects.equals(this.conflictId, gitConflictFileDirectory.conflictId) &&
+            Objects.equals(this.conflictPath, gitConflictFileDirectory.conflictPath) &&
+            Objects.equals(this.mergeBaseCommit, gitConflictFileDirectory.mergeBaseCommit) &&
+            Objects.equals(this.mergeOrigin, gitConflictFileDirectory.mergeOrigin) &&
+            Objects.equals(this.mergeSourceCommit, gitConflictFileDirectory.mergeSourceCommit) &&
+            Objects.equals(this.mergeTargetCommit, gitConflictFileDirectory.mergeTargetCommit) &&
+            Objects.equals(this.resolvedBy, gitConflictFileDirectory.resolvedBy) &&
+            Objects.equals(this.resolvedDate, gitConflictFileDirectory.resolvedDate) &&
+            Objects.equals(this.url, gitConflictFileDirectory.url) &&
+            Objects.equals(this.resolution, gitConflictFileDirectory.resolution) &&
+            Objects.equals(this.sourceBlob, gitConflictFileDirectory.sourceBlob) &&
+            Objects.equals(this.targetTree, gitConflictFileDirectory.targetTree) &&
+            super.equals(o);
   }
 
   @Override

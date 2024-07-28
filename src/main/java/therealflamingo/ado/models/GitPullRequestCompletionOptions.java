@@ -13,15 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Preferences about how the pull request should be completed.
@@ -43,55 +43,12 @@ public class GitPullRequestCompletionOptions {
 
   @JsonProperty("mergeCommitMessage")
   private String mergeCommitMessage = null;
-
-  /**
-   * Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge &#x3D;&#x3D; false. If MergeStrategy is not set to any value, the pull request commits will be squashed if SquashMerge &#x3D;&#x3D; true. The SquashMerge property is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge property will be ignored.
-   */
-  public enum MergeStrategyEnum {
-    NOFASTFORWARD("noFastForward"),
-    
-    SQUASH("squash"),
-    
-    REBASE("rebase"),
-    
-    REBASEMERGE("rebaseMerge");
-
-    private String value;
-
-    MergeStrategyEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static MergeStrategyEnum fromValue(String value) {
-      for (MergeStrategyEnum b : MergeStrategyEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("mergeStrategy")
   private MergeStrategyEnum mergeStrategy = null;
-
   @JsonProperty("squashMerge")
   private Boolean squashMerge = null;
-
   @JsonProperty("transitionWorkItems")
   private Boolean transitionWorkItems = null;
-
   @JsonProperty("triggeredByAutoComplete")
   private Boolean triggeredByAutoComplete = null;
 
@@ -108,10 +65,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * List of any policy configuration Id&#39;s which auto-complete should not wait for. Only applies to optional policies (isBlocking &#x3D;&#x3D; false). Auto-complete always waits for required policies (isBlocking &#x3D;&#x3D; true).
+   *
    * @return autoCompleteIgnoreConfigIds
-  **/
+   **/
   @ApiModelProperty(value = "List of any policy configuration Id's which auto-complete should not wait for. Only applies to optional policies (isBlocking == false). Auto-complete always waits for required policies (isBlocking == true).")
   public List<Integer> getAutoCompleteIgnoreConfigIds() {
     return autoCompleteIgnoreConfigIds;
@@ -126,10 +84,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, policies will be explicitly bypassed while the pull request is completed.
+   *
    * @return bypassPolicy
-  **/
+   **/
   @ApiModelProperty(value = "If true, policies will be explicitly bypassed while the pull request is completed.")
   public Boolean isBypassPolicy() {
     return bypassPolicy;
@@ -144,10 +103,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If policies are bypassed, this reason is stored as to why bypass was used.
+   *
    * @return bypassReason
-  **/
+   **/
   @ApiModelProperty(value = "If policies are bypassed, this reason is stored as to why bypass was used.")
   public String getBypassReason() {
     return bypassReason;
@@ -162,10 +122,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, the source branch of the pull request will be deleted after completion.
+   *
    * @return deleteSourceBranch
-  **/
+   **/
   @ApiModelProperty(value = "If true, the source branch of the pull request will be deleted after completion.")
   public Boolean isDeleteSourceBranch() {
     return deleteSourceBranch;
@@ -180,10 +141,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If set, this will be used as the commit message of the merge commit.
+   *
    * @return mergeCommitMessage
-  **/
+   **/
   @ApiModelProperty(value = "If set, this will be used as the commit message of the merge commit.")
   public String getMergeCommitMessage() {
     return mergeCommitMessage;
@@ -198,10 +160,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge &#x3D;&#x3D; false. If MergeStrategy is not set to any value, the pull request commits will be squashed if SquashMerge &#x3D;&#x3D; true. The SquashMerge property is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge property will be ignored.
+   *
    * @return mergeStrategy
-  **/
+   **/
   @ApiModelProperty(value = "Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge == false. If MergeStrategy is not set to any value, the pull request commits will be squashed if SquashMerge == true. The SquashMerge property is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge property will be ignored.")
   public MergeStrategyEnum getMergeStrategy() {
     return mergeStrategy;
@@ -216,10 +179,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * SquashMerge is deprecated. You should explicitly set the value of MergeStrategy. If MergeStrategy is set to any value, the SquashMerge value will be ignored. If MergeStrategy is not set, the merge strategy will be no-fast-forward if this flag is false, or squash if true.
+   *
    * @return squashMerge
-  **/
+   **/
   @ApiModelProperty(value = "SquashMerge is deprecated. You should explicitly set the value of MergeStrategy. If MergeStrategy is set to any value, the SquashMerge value will be ignored. If MergeStrategy is not set, the merge strategy will be no-fast-forward if this flag is false, or squash if true.")
   public Boolean isSquashMerge() {
     return squashMerge;
@@ -234,10 +198,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, we will attempt to transition any work items linked to the pull request into the next logical state (i.e. Active -&gt; Resolved)
+   *
    * @return transitionWorkItems
-  **/
+   **/
   @ApiModelProperty(value = "If true, we will attempt to transition any work items linked to the pull request into the next logical state (i.e. Active -> Resolved)")
   public Boolean isTransitionWorkItems() {
     return transitionWorkItems;
@@ -252,10 +217,11 @@ public class GitPullRequestCompletionOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, the current completion attempt was triggered via auto-complete. Used internally.
+   *
    * @return triggeredByAutoComplete
-  **/
+   **/
   @ApiModelProperty(value = "If true, the current completion attempt was triggered via auto-complete. Used internally.")
   public Boolean isTriggeredByAutoComplete() {
     return triggeredByAutoComplete;
@@ -264,7 +230,6 @@ public class GitPullRequestCompletionOptions {
   public void setTriggeredByAutoComplete(Boolean triggeredByAutoComplete) {
     this.triggeredByAutoComplete = triggeredByAutoComplete;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -276,14 +241,14 @@ public class GitPullRequestCompletionOptions {
     }
     GitPullRequestCompletionOptions gitPullRequestCompletionOptions = (GitPullRequestCompletionOptions) o;
     return Objects.equals(this.autoCompleteIgnoreConfigIds, gitPullRequestCompletionOptions.autoCompleteIgnoreConfigIds) &&
-        Objects.equals(this.bypassPolicy, gitPullRequestCompletionOptions.bypassPolicy) &&
-        Objects.equals(this.bypassReason, gitPullRequestCompletionOptions.bypassReason) &&
-        Objects.equals(this.deleteSourceBranch, gitPullRequestCompletionOptions.deleteSourceBranch) &&
-        Objects.equals(this.mergeCommitMessage, gitPullRequestCompletionOptions.mergeCommitMessage) &&
-        Objects.equals(this.mergeStrategy, gitPullRequestCompletionOptions.mergeStrategy) &&
-        Objects.equals(this.squashMerge, gitPullRequestCompletionOptions.squashMerge) &&
-        Objects.equals(this.transitionWorkItems, gitPullRequestCompletionOptions.transitionWorkItems) &&
-        Objects.equals(this.triggeredByAutoComplete, gitPullRequestCompletionOptions.triggeredByAutoComplete);
+            Objects.equals(this.bypassPolicy, gitPullRequestCompletionOptions.bypassPolicy) &&
+            Objects.equals(this.bypassReason, gitPullRequestCompletionOptions.bypassReason) &&
+            Objects.equals(this.deleteSourceBranch, gitPullRequestCompletionOptions.deleteSourceBranch) &&
+            Objects.equals(this.mergeCommitMessage, gitPullRequestCompletionOptions.mergeCommitMessage) &&
+            Objects.equals(this.mergeStrategy, gitPullRequestCompletionOptions.mergeStrategy) &&
+            Objects.equals(this.squashMerge, gitPullRequestCompletionOptions.squashMerge) &&
+            Objects.equals(this.transitionWorkItems, gitPullRequestCompletionOptions.transitionWorkItems) &&
+            Objects.equals(this.triggeredByAutoComplete, gitPullRequestCompletionOptions.triggeredByAutoComplete);
   }
 
   @Override
@@ -291,12 +256,11 @@ public class GitPullRequestCompletionOptions {
     return Objects.hash(autoCompleteIgnoreConfigIds, bypassPolicy, bypassReason, deleteSourceBranch, mergeCommitMessage, mergeStrategy, squashMerge, transitionWorkItems, triggeredByAutoComplete);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequestCompletionOptions {\n");
-    
+
     sb.append("    autoCompleteIgnoreConfigIds: ").append(toIndentedString(autoCompleteIgnoreConfigIds)).append("\n");
     sb.append("    bypassPolicy: ").append(toIndentedString(bypassPolicy)).append("\n");
     sb.append("    bypassReason: ").append(toIndentedString(bypassReason)).append("\n");
@@ -319,6 +283,45 @@ public class GitPullRequestCompletionOptions {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge &#x3D;&#x3D; false. If MergeStrategy is not set to any value, the pull request commits will be squashed if SquashMerge &#x3D;&#x3D; true. The SquashMerge property is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge property will be ignored.
+   */
+  public enum MergeStrategyEnum {
+    NOFASTFORWARD("noFastForward"),
+
+    SQUASH("squash"),
+
+    REBASE("rebase"),
+
+    REBASEMERGE("rebaseMerge");
+
+    private String value;
+
+    MergeStrategyEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static MergeStrategyEnum fromValue(String value) {
+      for (MergeStrategyEnum b : MergeStrategyEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

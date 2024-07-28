@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Criteria used in a search for change lists
@@ -73,10 +71,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, a version descriptor to compare against base
+   *
    * @return compareVersion
-  **/
+   **/
   @ApiModelProperty(value = "If provided, a version descriptor to compare against base")
   public String getCompareVersion() {
     return compareVersion;
@@ -91,10 +90,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If true, don&#39;t include delete history entries
+   *
    * @return excludeDeletes
-  **/
+   **/
   @ApiModelProperty(value = "If true, don't include delete history entries")
   public Boolean isExcludeDeletes() {
     return excludeDeletes;
@@ -109,10 +109,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Whether or not to follow renames for the given item being queried
+   *
    * @return followRenames
-  **/
+   **/
   @ApiModelProperty(value = "Whether or not to follow renames for the given item being queried")
   public Boolean isFollowRenames() {
     return followRenames;
@@ -127,10 +128,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, only include history entries created after this date (string)
+   *
    * @return fromDate
-  **/
+   **/
   @ApiModelProperty(value = "If provided, only include history entries created after this date (string)")
   public String getFromDate() {
     return fromDate;
@@ -145,10 +147,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, a version descriptor for the earliest change list to include
+   *
    * @return fromVersion
-  **/
+   **/
   @ApiModelProperty(value = "If provided, a version descriptor for the earliest change list to include")
   public String getFromVersion() {
     return fromVersion;
@@ -163,10 +166,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Path of item to search under. If the itemPaths memebr is used then it will take precedence over this.
+   *
    * @return itemPath
-  **/
+   **/
   @ApiModelProperty(value = "Path of item to search under. If the itemPaths memebr is used then it will take precedence over this.")
   public String getItemPath() {
     return itemPath;
@@ -189,10 +193,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * List of item paths to search under. If this member is used then itemPath will be ignored.
+   *
    * @return itemPaths
-  **/
+   **/
   @ApiModelProperty(value = "List of item paths to search under. If this member is used then itemPath will be ignored.")
   public List<String> getItemPaths() {
     return itemPaths;
@@ -207,10 +212,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Version of the items to search
+   *
    * @return itemVersion
-  **/
+   **/
   @ApiModelProperty(value = "Version of the items to search")
   public String getItemVersion() {
     return itemVersion;
@@ -225,10 +231,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Number of results to skip (used when clicking more...)
+   *
    * @return skip
-  **/
+   **/
   @ApiModelProperty(value = "Number of results to skip (used when clicking more...)")
   public Integer getSkip() {
     return skip;
@@ -243,10 +250,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, only include history entries created before this date (string)
+   *
    * @return toDate
-  **/
+   **/
   @ApiModelProperty(value = "If provided, only include history entries created before this date (string)")
   public String getToDate() {
     return toDate;
@@ -261,10 +269,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, the maximum number of history entries to return
+   *
    * @return top
-  **/
+   **/
   @ApiModelProperty(value = "If provided, the maximum number of history entries to return")
   public Integer getTop() {
     return top;
@@ -279,10 +288,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * If provided, a version descriptor for the latest change list to include
+   *
    * @return toVersion
-  **/
+   **/
   @ApiModelProperty(value = "If provided, a version descriptor for the latest change list to include")
   public String getToVersion() {
     return toVersion;
@@ -297,10 +307,11 @@ public class ChangeListSearchCriteria {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user who made the changes
+   *
    * @return user
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user who made the changes")
   public String getUser() {
     return user;
@@ -321,18 +332,18 @@ public class ChangeListSearchCriteria {
     }
     ChangeListSearchCriteria changeListSearchCriteria = (ChangeListSearchCriteria) o;
     return Objects.equals(this.compareVersion, changeListSearchCriteria.compareVersion) &&
-        Objects.equals(this.excludeDeletes, changeListSearchCriteria.excludeDeletes) &&
-        Objects.equals(this.followRenames, changeListSearchCriteria.followRenames) &&
-        Objects.equals(this.fromDate, changeListSearchCriteria.fromDate) &&
-        Objects.equals(this.fromVersion, changeListSearchCriteria.fromVersion) &&
-        Objects.equals(this.itemPath, changeListSearchCriteria.itemPath) &&
-        Objects.equals(this.itemPaths, changeListSearchCriteria.itemPaths) &&
-        Objects.equals(this.itemVersion, changeListSearchCriteria.itemVersion) &&
-        Objects.equals(this.skip, changeListSearchCriteria.skip) &&
-        Objects.equals(this.toDate, changeListSearchCriteria.toDate) &&
-        Objects.equals(this.top, changeListSearchCriteria.top) &&
-        Objects.equals(this.toVersion, changeListSearchCriteria.toVersion) &&
-        Objects.equals(this.user, changeListSearchCriteria.user);
+            Objects.equals(this.excludeDeletes, changeListSearchCriteria.excludeDeletes) &&
+            Objects.equals(this.followRenames, changeListSearchCriteria.followRenames) &&
+            Objects.equals(this.fromDate, changeListSearchCriteria.fromDate) &&
+            Objects.equals(this.fromVersion, changeListSearchCriteria.fromVersion) &&
+            Objects.equals(this.itemPath, changeListSearchCriteria.itemPath) &&
+            Objects.equals(this.itemPaths, changeListSearchCriteria.itemPaths) &&
+            Objects.equals(this.itemVersion, changeListSearchCriteria.itemVersion) &&
+            Objects.equals(this.skip, changeListSearchCriteria.skip) &&
+            Objects.equals(this.toDate, changeListSearchCriteria.toDate) &&
+            Objects.equals(this.top, changeListSearchCriteria.top) &&
+            Objects.equals(this.toVersion, changeListSearchCriteria.toVersion) &&
+            Objects.equals(this.user, changeListSearchCriteria.user);
   }
 
   @Override
@@ -345,7 +356,7 @@ public class ChangeListSearchCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChangeListSearchCriteria {\n");
-    
+
     sb.append("    compareVersion: ").append(toIndentedString(compareVersion)).append("\n");
     sb.append("    excludeDeletes: ").append(toIndentedString(excludeDeletes)).append("\n");
     sb.append("    followRenames: ").append(toIndentedString(followRenames)).append("\n");

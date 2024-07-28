@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * The options which are used when a pull request merge is created.
@@ -41,10 +39,11 @@ public class GitPullRequestMergeOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, conflict resolutions applied during the merge will be put in separate commits to preserve authorship info for git blame, etc.
+   *
    * @return conflictAuthorshipCommits
-  **/
+   **/
   @ApiModelProperty(value = "If true, conflict resolutions applied during the merge will be put in separate commits to preserve authorship info for git blame, etc.")
   public Boolean isConflictAuthorshipCommits() {
     return conflictAuthorshipCommits;
@@ -59,10 +58,11 @@ public class GitPullRequestMergeOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, renames where there is more than one valid way to map the original file locations to renamed file locations will be treated as false positives and ignored.
+   *
    * @return detectRenameFalsePositives
-  **/
+   **/
   @ApiModelProperty(value = "If true, renames where there is more than one valid way to map the original file locations to renamed file locations will be treated as false positives and ignored.")
   public Boolean isDetectRenameFalsePositives() {
     return detectRenameFalsePositives;
@@ -77,10 +77,11 @@ public class GitPullRequestMergeOptions {
     return this;
   }
 
-   /**
+  /**
    * If true, rename detection will not be performed during the merge.
+   *
    * @return disableRenames
-  **/
+   **/
   @ApiModelProperty(value = "If true, rename detection will not be performed during the merge.")
   public Boolean isDisableRenames() {
     return disableRenames;
@@ -101,8 +102,8 @@ public class GitPullRequestMergeOptions {
     }
     GitPullRequestMergeOptions gitPullRequestMergeOptions = (GitPullRequestMergeOptions) o;
     return Objects.equals(this.conflictAuthorshipCommits, gitPullRequestMergeOptions.conflictAuthorshipCommits) &&
-        Objects.equals(this.detectRenameFalsePositives, gitPullRequestMergeOptions.detectRenameFalsePositives) &&
-        Objects.equals(this.disableRenames, gitPullRequestMergeOptions.disableRenames);
+            Objects.equals(this.detectRenameFalsePositives, gitPullRequestMergeOptions.detectRenameFalsePositives) &&
+            Objects.equals(this.disableRenames, gitPullRequestMergeOptions.disableRenames);
   }
 
   @Override
@@ -115,7 +116,7 @@ public class GitPullRequestMergeOptions {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequestMergeOptions {\n");
-    
+
     sb.append("    conflictAuthorshipCommits: ").append(toIndentedString(conflictAuthorshipCommits)).append("\n");
     sb.append("    detectRenameFalsePositives: ").append(toIndentedString(detectRenameFalsePositives)).append("\n");
     sb.append("    disableRenames: ").append(toIndentedString(disableRenames)).append("\n");

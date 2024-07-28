@@ -13,15 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Status information about a requested fork operation.
@@ -51,10 +49,11 @@ public class GitForkOperationStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * All valid steps for the forking process
+   *
    * @return allSteps
-  **/
+   **/
   @ApiModelProperty(value = "All valid steps for the forking process")
   public List<String> getAllSteps() {
     return allSteps;
@@ -69,10 +68,11 @@ public class GitForkOperationStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * Index into AllSteps for the current step
+   *
    * @return currentStep
-  **/
+   **/
   @ApiModelProperty(value = "Index into AllSteps for the current step")
   public Integer getCurrentStep() {
     return currentStep;
@@ -87,10 +87,11 @@ public class GitForkOperationStatusDetail {
     return this;
   }
 
-   /**
+  /**
    * Error message if the operation failed.
+   *
    * @return errorMessage
-  **/
+   **/
   @ApiModelProperty(value = "Error message if the operation failed.")
   public String getErrorMessage() {
     return errorMessage;
@@ -111,8 +112,8 @@ public class GitForkOperationStatusDetail {
     }
     GitForkOperationStatusDetail gitForkOperationStatusDetail = (GitForkOperationStatusDetail) o;
     return Objects.equals(this.allSteps, gitForkOperationStatusDetail.allSteps) &&
-        Objects.equals(this.currentStep, gitForkOperationStatusDetail.currentStep) &&
-        Objects.equals(this.errorMessage, gitForkOperationStatusDetail.errorMessage);
+            Objects.equals(this.currentStep, gitForkOperationStatusDetail.currentStep) &&
+            Objects.equals(this.errorMessage, gitForkOperationStatusDetail.errorMessage);
   }
 
   @Override
@@ -125,7 +126,7 @@ public class GitForkOperationStatusDetail {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitForkOperationStatusDetail {\n");
-    
+
     sb.append("    allSteps: ").append(toIndentedString(allSteps)).append("\n");
     sb.append("    currentStep: ").append(toIndentedString(currentStep)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");

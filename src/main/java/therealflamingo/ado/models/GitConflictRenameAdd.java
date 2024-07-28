@@ -13,21 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitConflict;
-import therealflamingo.ado.models.GitMergeOriginRef;
-import therealflamingo.ado.models.GitResolutionPathConflict;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Data object for AddRename conflict
@@ -85,10 +76,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -103,10 +95,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictId
+   *
    * @return conflictId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getConflictId() {
     return conflictId;
@@ -121,10 +114,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get conflictPath
+   *
    * @return conflictPath
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConflictPath() {
     return conflictPath;
@@ -139,10 +133,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeBaseCommit
+   *
    * @return mergeBaseCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeBaseCommit() {
     return mergeBaseCommit;
@@ -157,10 +152,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeOrigin
+   *
    * @return mergeOrigin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitMergeOriginRef getMergeOrigin() {
     return mergeOrigin;
@@ -175,10 +171,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeSourceCommit
+   *
    * @return mergeSourceCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeSourceCommit() {
     return mergeSourceCommit;
@@ -193,10 +190,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get mergeTargetCommit
+   *
    * @return mergeTargetCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitCommitRef getMergeTargetCommit() {
     return mergeTargetCommit;
@@ -211,10 +209,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedBy
+   *
    * @return resolvedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public IdentityRef getResolvedBy() {
     return resolvedBy;
@@ -229,10 +228,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolvedDate
+   *
    * @return resolvedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public OffsetDateTime getResolvedDate() {
     return resolvedDate;
@@ -247,10 +247,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -265,10 +266,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get baseBlob
+   *
    * @return baseBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getBaseBlob() {
     return baseBlob;
@@ -283,10 +285,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get resolution
+   *
    * @return resolution
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitResolutionPathConflict getResolution() {
     return resolution;
@@ -301,10 +304,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get sourceBlob
+   *
    * @return sourceBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getSourceBlob() {
     return sourceBlob;
@@ -319,10 +323,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get sourceOriginalPath
+   *
    * @return sourceOriginalPath
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSourceOriginalPath() {
     return sourceOriginalPath;
@@ -337,10 +342,11 @@ public class GitConflictRenameAdd extends GitConflict {
     return this;
   }
 
-   /**
+  /**
    * Get targetBlob
+   *
    * @return targetBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getTargetBlob() {
     return targetBlob;
@@ -361,21 +367,21 @@ public class GitConflictRenameAdd extends GitConflict {
     }
     GitConflictRenameAdd gitConflictRenameAdd = (GitConflictRenameAdd) o;
     return Objects.equals(this.links, gitConflictRenameAdd.links) &&
-        Objects.equals(this.conflictId, gitConflictRenameAdd.conflictId) &&
-        Objects.equals(this.conflictPath, gitConflictRenameAdd.conflictPath) &&
-        Objects.equals(this.mergeBaseCommit, gitConflictRenameAdd.mergeBaseCommit) &&
-        Objects.equals(this.mergeOrigin, gitConflictRenameAdd.mergeOrigin) &&
-        Objects.equals(this.mergeSourceCommit, gitConflictRenameAdd.mergeSourceCommit) &&
-        Objects.equals(this.mergeTargetCommit, gitConflictRenameAdd.mergeTargetCommit) &&
-        Objects.equals(this.resolvedBy, gitConflictRenameAdd.resolvedBy) &&
-        Objects.equals(this.resolvedDate, gitConflictRenameAdd.resolvedDate) &&
-        Objects.equals(this.url, gitConflictRenameAdd.url) &&
-        Objects.equals(this.baseBlob, gitConflictRenameAdd.baseBlob) &&
-        Objects.equals(this.resolution, gitConflictRenameAdd.resolution) &&
-        Objects.equals(this.sourceBlob, gitConflictRenameAdd.sourceBlob) &&
-        Objects.equals(this.sourceOriginalPath, gitConflictRenameAdd.sourceOriginalPath) &&
-        Objects.equals(this.targetBlob, gitConflictRenameAdd.targetBlob) &&
-        super.equals(o);
+            Objects.equals(this.conflictId, gitConflictRenameAdd.conflictId) &&
+            Objects.equals(this.conflictPath, gitConflictRenameAdd.conflictPath) &&
+            Objects.equals(this.mergeBaseCommit, gitConflictRenameAdd.mergeBaseCommit) &&
+            Objects.equals(this.mergeOrigin, gitConflictRenameAdd.mergeOrigin) &&
+            Objects.equals(this.mergeSourceCommit, gitConflictRenameAdd.mergeSourceCommit) &&
+            Objects.equals(this.mergeTargetCommit, gitConflictRenameAdd.mergeTargetCommit) &&
+            Objects.equals(this.resolvedBy, gitConflictRenameAdd.resolvedBy) &&
+            Objects.equals(this.resolvedDate, gitConflictRenameAdd.resolvedDate) &&
+            Objects.equals(this.url, gitConflictRenameAdd.url) &&
+            Objects.equals(this.baseBlob, gitConflictRenameAdd.baseBlob) &&
+            Objects.equals(this.resolution, gitConflictRenameAdd.resolution) &&
+            Objects.equals(this.sourceBlob, gitConflictRenameAdd.sourceBlob) &&
+            Objects.equals(this.sourceOriginalPath, gitConflictRenameAdd.sourceOriginalPath) &&
+            Objects.equals(this.targetBlob, gitConflictRenameAdd.targetBlob) &&
+            super.equals(o);
   }
 
   @Override

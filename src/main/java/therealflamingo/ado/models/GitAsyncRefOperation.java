@@ -13,216 +13,214 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitAsyncRefOperationDetail;
-import therealflamingo.ado.models.GitAsyncRefOperationParameters;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitAsyncRefOperation {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("detailedStatus")
-  private GitAsyncRefOperationDetail detailedStatus = null;
+    @JsonProperty("detailedStatus")
+    private GitAsyncRefOperationDetail detailedStatus = null;
 
-  @JsonProperty("parameters")
-  private GitAsyncRefOperationParameters parameters = null;
+    @JsonProperty("parameters")
+    private GitAsyncRefOperationParameters parameters = null;
+    @JsonProperty("status")
+    private StatusEnum status = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  /**
-   * Gets or Sets status
-   */
-  public enum StatusEnum {
-    QUEUED("queued"),
-    
-    INPROGRESS("inProgress"),
-    
-    COMPLETED("completed"),
-    
-    FAILED("failed"),
-    
-    ABANDONED("abandoned");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
+    public GitAsyncRefOperation links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
+    }
+
+    public GitAsyncRefOperation detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+        return this;
+    }
+
+    /**
+     * Get detailedStatus
+     *
+     * @return detailedStatus
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationDetail getDetailedStatus() {
+        return detailedStatus;
+    }
+
+    public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    public GitAsyncRefOperation parameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+
+    /**
+     * Get parameters
+     *
+     * @return parameters
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationParameters getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+    }
+
+    public GitAsyncRefOperation status(StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return status
+     **/
+    @ApiModelProperty(value = "")
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    public GitAsyncRefOperation url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * A URL that can be used to make further requests for status about the operation
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitAsyncRefOperation gitAsyncRefOperation = (GitAsyncRefOperation) o;
+        return Objects.equals(this.links, gitAsyncRefOperation.links) &&
+                Objects.equals(this.detailedStatus, gitAsyncRefOperation.detailedStatus) &&
+                Objects.equals(this.parameters, gitAsyncRefOperation.parameters) &&
+                Objects.equals(this.status, gitAsyncRefOperation.status) &&
+                Objects.equals(this.url, gitAsyncRefOperation.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, detailedStatus, parameters, status, url);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitAsyncRefOperation {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
+        sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("status")
-  private StatusEnum status = null;
+    /**
+     * Gets or Sets status
+     */
+    public enum StatusEnum {
+        QUEUED("queued"),
 
-  @JsonProperty("url")
-  private String url = null;
+        INPROGRESS("inProgress"),
 
-  public GitAsyncRefOperation links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
+        COMPLETED("completed"),
 
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
+        FAILED("failed"),
 
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
+        ABANDONED("abandoned");
 
-  public GitAsyncRefOperation detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-    return this;
-  }
+        private String value;
 
-   /**
-   * Get detailedStatus
-   * @return detailedStatus
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationDetail getDetailedStatus() {
-    return detailedStatus;
-  }
+        StatusEnum(String value) {
+            this.value = value;
+        }
 
-  public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-  }
+        @JsonCreator
+        public static StatusEnum fromValue(String value) {
+            for (StatusEnum b : StatusEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-  public GitAsyncRefOperation parameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-    return this;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-   /**
-   * Get parameters
-   * @return parameters
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationParameters getParameters() {
-    return parameters;
-  }
-
-  public void setParameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-  }
-
-  public GitAsyncRefOperation status(StatusEnum status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public StatusEnum getStatus() {
-    return status;
-  }
-
-  public void setStatus(StatusEnum status) {
-    this.status = status;
-  }
-
-  public GitAsyncRefOperation url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * A URL that can be used to make further requests for status about the operation
-   * @return url
-  **/
-  @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitAsyncRefOperation gitAsyncRefOperation = (GitAsyncRefOperation) o;
-    return Objects.equals(this.links, gitAsyncRefOperation.links) &&
-        Objects.equals(this.detailedStatus, gitAsyncRefOperation.detailedStatus) &&
-        Objects.equals(this.parameters, gitAsyncRefOperation.parameters) &&
-        Objects.equals(this.status, gitAsyncRefOperation.status) &&
-        Objects.equals(this.url, gitAsyncRefOperation.url);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, detailedStatus, parameters, status, url);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitAsyncRefOperation {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
-    sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

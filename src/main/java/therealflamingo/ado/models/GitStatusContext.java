@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Status context that uniquely identifies the status.
@@ -38,10 +36,11 @@ public class GitStatusContext {
     return this;
   }
 
-   /**
+  /**
    * Genre of the status. Typically name of the service/tool generating the status, can be empty.
+   *
    * @return genre
-  **/
+   **/
   @ApiModelProperty(value = "Genre of the status. Typically name of the service/tool generating the status, can be empty.")
   public String getGenre() {
     return genre;
@@ -56,10 +55,11 @@ public class GitStatusContext {
     return this;
   }
 
-   /**
+  /**
    * Name identifier of the status, cannot be null or empty.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Name identifier of the status, cannot be null or empty.")
   public String getName() {
     return name;
@@ -80,7 +80,7 @@ public class GitStatusContext {
     }
     GitStatusContext gitStatusContext = (GitStatusContext) o;
     return Objects.equals(this.genre, gitStatusContext.genre) &&
-        Objects.equals(this.name, gitStatusContext.name);
+            Objects.equals(this.name, gitStatusContext.name);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class GitStatusContext {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitStatusContext {\n");
-    
+
     sb.append("    genre: ").append(toIndentedString(genre)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");

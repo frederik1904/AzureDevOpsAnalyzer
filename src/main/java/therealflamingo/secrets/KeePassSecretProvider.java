@@ -12,13 +12,11 @@ import therealflamingo.secrets.exceptions.EntryDoesNotExistException;
 import therealflamingo.secrets.exceptions.MultipleEntriesExistException;
 import therealflamingo.secrets.models.SecretEntry;
 
+import java.io.Console;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import java.io.Console;
 import java.util.Arrays;
-import java.util.List;
 
 public class KeePassSecretProvider implements ISecretProvider {
     Database<SimpleDatabase, SimpleGroup, SimpleEntry, SimpleIcon> database;
@@ -48,7 +46,7 @@ public class KeePassSecretProvider implements ISecretProvider {
 
 
     @Override
-    public SecretEntry getSecretEntry(String entryName) throws MultipleEntriesExistException, EntryDoesNotExistException{
+    public SecretEntry getSecretEntry(String entryName) throws MultipleEntriesExistException, EntryDoesNotExistException {
         var entries = database.findEntries(entryName);
         if (entries == null || entries.isEmpty()) {
             throw new EntryDoesNotExistException(String.format("Entry [%s] does not exist in the KeePass kdbx file", entryName));

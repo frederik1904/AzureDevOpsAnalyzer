@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GraphSubjectBase;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -73,10 +69,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.")
   public ReferenceLinks getLinks() {
     return links;
@@ -91,10 +88,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.
+   *
    * @return descriptor
-  **/
+   **/
   @ApiModelProperty(value = "The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.")
   public String getDescriptor() {
     return descriptor;
@@ -109,10 +107,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.")
   public String getDisplayName() {
     return displayName;
@@ -127,10 +126,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * This url is the full route to the source resource of this graph subject.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "This url is the full route to the source resource of this graph subject.")
   public String getUrl() {
     return url;
@@ -145,10 +145,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be retrieved by querying the Graph user referenced in the \&quot;self\&quot; entry of the IdentityRef \&quot;_links\&quot; dictionary
+   *
    * @return directoryAlias
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be retrieved by querying the Graph user referenced in the \"self\" entry of the IdentityRef \"_links\" dictionary")
   public String getDirectoryAlias() {
     return directoryAlias;
@@ -163,10 +164,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Get id
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
@@ -181,10 +183,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Available in the \&quot;avatar\&quot; entry of the IdentityRef \&quot;_links\&quot; dictionary
+   *
    * @return imageUrl
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Available in the \"avatar\" entry of the IdentityRef \"_links\" dictionary")
   public String getImageUrl() {
     return imageUrl;
@@ -199,10 +202,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be retrieved by querying the Graph membership state referenced in the \&quot;membershipState\&quot; entry of the GraphUser \&quot;_links\&quot; dictionary
+   *
    * @return inactive
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be retrieved by querying the Graph membership state referenced in the \"membershipState\" entry of the GraphUser \"_links\" dictionary")
   public Boolean isInactive() {
     return inactive;
@@ -217,10 +221,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)
+   *
    * @return isAadIdentity
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)")
   public Boolean isIsAadIdentity() {
     return isAadIdentity;
@@ -235,10 +240,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)
+   *
    * @return isContainer
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)")
   public Boolean isIsContainer() {
     return isContainer;
@@ -253,10 +259,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Get isDeletedInOrigin
+   *
    * @return isDeletedInOrigin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDeletedInOrigin() {
     return isDeletedInOrigin;
@@ -271,10 +278,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - not in use in most preexisting implementations of ToIdentityRef
+   *
    * @return profileUrl
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - not in use in most preexisting implementations of ToIdentityRef")
   public String getProfileUrl() {
     return profileUrl;
@@ -289,10 +297,11 @@ public class IdentityRef extends GraphSubjectBase {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - use Domain+PrincipalName instead
+   *
    * @return uniqueName
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - use Domain+PrincipalName instead")
   public String getUniqueName() {
     return uniqueName;
@@ -313,19 +322,19 @@ public class IdentityRef extends GraphSubjectBase {
     }
     IdentityRef identityRef = (IdentityRef) o;
     return Objects.equals(this.links, identityRef.links) &&
-        Objects.equals(this.descriptor, identityRef.descriptor) &&
-        Objects.equals(this.displayName, identityRef.displayName) &&
-        Objects.equals(this.url, identityRef.url) &&
-        Objects.equals(this.directoryAlias, identityRef.directoryAlias) &&
-        Objects.equals(this.id, identityRef.id) &&
-        Objects.equals(this.imageUrl, identityRef.imageUrl) &&
-        Objects.equals(this.inactive, identityRef.inactive) &&
-        Objects.equals(this.isAadIdentity, identityRef.isAadIdentity) &&
-        Objects.equals(this.isContainer, identityRef.isContainer) &&
-        Objects.equals(this.isDeletedInOrigin, identityRef.isDeletedInOrigin) &&
-        Objects.equals(this.profileUrl, identityRef.profileUrl) &&
-        Objects.equals(this.uniqueName, identityRef.uniqueName) &&
-        super.equals(o);
+            Objects.equals(this.descriptor, identityRef.descriptor) &&
+            Objects.equals(this.displayName, identityRef.displayName) &&
+            Objects.equals(this.url, identityRef.url) &&
+            Objects.equals(this.directoryAlias, identityRef.directoryAlias) &&
+            Objects.equals(this.id, identityRef.id) &&
+            Objects.equals(this.imageUrl, identityRef.imageUrl) &&
+            Objects.equals(this.inactive, identityRef.inactive) &&
+            Objects.equals(this.isAadIdentity, identityRef.isAadIdentity) &&
+            Objects.equals(this.isContainer, identityRef.isContainer) &&
+            Objects.equals(this.isDeletedInOrigin, identityRef.isDeletedInOrigin) &&
+            Objects.equals(this.profileUrl, identityRef.profileUrl) &&
+            Objects.equals(this.uniqueName, identityRef.uniqueName) &&
+            super.equals(o);
   }
 
   @Override

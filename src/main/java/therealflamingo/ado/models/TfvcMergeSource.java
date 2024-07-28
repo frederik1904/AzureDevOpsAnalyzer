@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -44,10 +42,11 @@ public class TfvcMergeSource {
     return this;
   }
 
-   /**
+  /**
    * Indicates if this a rename source. If false, it is a merge source.
+   *
    * @return isRename
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if this a rename source. If false, it is a merge source.")
   public Boolean isIsRename() {
     return isRename;
@@ -62,10 +61,11 @@ public class TfvcMergeSource {
     return this;
   }
 
-   /**
+  /**
    * The server item of the merge source.
+   *
    * @return serverItem
-  **/
+   **/
   @ApiModelProperty(value = "The server item of the merge source.")
   public String getServerItem() {
     return serverItem;
@@ -80,10 +80,11 @@ public class TfvcMergeSource {
     return this;
   }
 
-   /**
+  /**
    * Start of the version range.
+   *
    * @return versionFrom
-  **/
+   **/
   @ApiModelProperty(value = "Start of the version range.")
   public Integer getVersionFrom() {
     return versionFrom;
@@ -98,10 +99,11 @@ public class TfvcMergeSource {
     return this;
   }
 
-   /**
+  /**
    * End of the version range.
+   *
    * @return versionTo
-  **/
+   **/
   @ApiModelProperty(value = "End of the version range.")
   public Integer getVersionTo() {
     return versionTo;
@@ -122,9 +124,9 @@ public class TfvcMergeSource {
     }
     TfvcMergeSource tfvcMergeSource = (TfvcMergeSource) o;
     return Objects.equals(this.isRename, tfvcMergeSource.isRename) &&
-        Objects.equals(this.serverItem, tfvcMergeSource.serverItem) &&
-        Objects.equals(this.versionFrom, tfvcMergeSource.versionFrom) &&
-        Objects.equals(this.versionTo, tfvcMergeSource.versionTo);
+            Objects.equals(this.serverItem, tfvcMergeSource.serverItem) &&
+            Objects.equals(this.versionFrom, tfvcMergeSource.versionFrom) &&
+            Objects.equals(this.versionTo, tfvcMergeSource.versionTo);
   }
 
   @Override
@@ -137,7 +139,7 @@ public class TfvcMergeSource {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcMergeSource {\n");
-    
+
     sb.append("    isRename: ").append(toIndentedString(isRename)).append("\n");
     sb.append("    serverItem: ").append(toIndentedString(serverItem)).append("\n");
     sb.append("    versionFrom: ").append(toIndentedString(versionFrom)).append("\n");

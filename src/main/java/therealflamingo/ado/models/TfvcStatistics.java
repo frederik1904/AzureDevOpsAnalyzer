@@ -13,103 +13,103 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class TfvcStatistics {
-  @JsonProperty("changesetId")
-  private Integer changesetId = null;
+    @JsonProperty("changesetId")
+    private Integer changesetId = null;
 
-  @JsonProperty("fileCountTotal")
-  private Long fileCountTotal = null;
+    @JsonProperty("fileCountTotal")
+    private Long fileCountTotal = null;
 
-  public TfvcStatistics changesetId(Integer changesetId) {
-    this.changesetId = changesetId;
-    return this;
-  }
-
-   /**
-   * Id of the last changeset the stats are based on.
-   * @return changesetId
-  **/
-  @ApiModelProperty(value = "Id of the last changeset the stats are based on.")
-  public Integer getChangesetId() {
-    return changesetId;
-  }
-
-  public void setChangesetId(Integer changesetId) {
-    this.changesetId = changesetId;
-  }
-
-  public TfvcStatistics fileCountTotal(Long fileCountTotal) {
-    this.fileCountTotal = fileCountTotal;
-    return this;
-  }
-
-   /**
-   * Count of files at the requested scope.
-   * @return fileCountTotal
-  **/
-  @ApiModelProperty(value = "Count of files at the requested scope.")
-  public Long getFileCountTotal() {
-    return fileCountTotal;
-  }
-
-  public void setFileCountTotal(Long fileCountTotal) {
-    this.fileCountTotal = fileCountTotal;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public TfvcStatistics changesetId(Integer changesetId) {
+        this.changesetId = changesetId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Id of the last changeset the stats are based on.
+     *
+     * @return changesetId
+     **/
+    @ApiModelProperty(value = "Id of the last changeset the stats are based on.")
+    public Integer getChangesetId() {
+        return changesetId;
     }
-    TfvcStatistics tfvcStatistics = (TfvcStatistics) o;
-    return Objects.equals(this.changesetId, tfvcStatistics.changesetId) &&
-        Objects.equals(this.fileCountTotal, tfvcStatistics.fileCountTotal);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(changesetId, fileCountTotal);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TfvcStatistics {\n");
-    
-    sb.append("    changesetId: ").append(toIndentedString(changesetId)).append("\n");
-    sb.append("    fileCountTotal: ").append(toIndentedString(fileCountTotal)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setChangesetId(Integer changesetId) {
+        this.changesetId = changesetId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public TfvcStatistics fileCountTotal(Long fileCountTotal) {
+        this.fileCountTotal = fileCountTotal;
+        return this;
+    }
+
+    /**
+     * Count of files at the requested scope.
+     *
+     * @return fileCountTotal
+     **/
+    @ApiModelProperty(value = "Count of files at the requested scope.")
+    public Long getFileCountTotal() {
+        return fileCountTotal;
+    }
+
+    public void setFileCountTotal(Long fileCountTotal) {
+        this.fileCountTotal = fileCountTotal;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TfvcStatistics tfvcStatistics = (TfvcStatistics) o;
+        return Objects.equals(this.changesetId, tfvcStatistics.changesetId) &&
+                Objects.equals(this.fileCountTotal, tfvcStatistics.fileCountTotal);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(changesetId, fileCountTotal);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TfvcStatistics {\n");
+
+        sb.append("    changesetId: ").append(toIndentedString(changesetId)).append("\n");
+        sb.append("    fileCountTotal: ").append(toIndentedString(fileCountTotal)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

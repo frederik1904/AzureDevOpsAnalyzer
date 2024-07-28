@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * The class to represent a collection of REST reference links.
@@ -30,74 +27,75 @@ import java.util.Map;
 @ApiModel(description = "The class to represent a collection of REST reference links.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class ReferenceLinks {
-  @JsonProperty("links")
-  private Map<String, Object> links = null;
+    @JsonProperty("links")
+    private Map<String, Object> links = null;
 
-  public ReferenceLinks links(Map<String, Object> links) {
-    this.links = links;
-    return this;
-  }
-
-  public ReferenceLinks putLinksItem(String key, Object linksItem) {
-    if (this.links == null) {
-      this.links = new HashMap<String, Object>();
+    public ReferenceLinks links(Map<String, Object> links) {
+        this.links = links;
+        return this;
     }
-    this.links.put(key, linksItem);
-    return this;
-  }
 
-   /**
-   * The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.
-   * @return links
-  **/
-  @ApiModelProperty(value = "The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.")
-  public Map<String, Object> getLinks() {
-    return links;
-  }
-
-  public void setLinks(Map<String, Object> links) {
-    this.links = links;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public ReferenceLinks putLinksItem(String key, Object linksItem) {
+        if (this.links == null) {
+            this.links = new HashMap<String, Object>();
+        }
+        this.links.put(key, linksItem);
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.")
+    public Map<String, Object> getLinks() {
+        return links;
     }
-    ReferenceLinks referenceLinks = (ReferenceLinks) o;
-    return Objects.equals(this.links, referenceLinks.links);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ReferenceLinks {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(Map<String, Object> links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ReferenceLinks referenceLinks = (ReferenceLinks) o;
+        return Objects.equals(this.links, referenceLinks.links);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ReferenceLinks {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

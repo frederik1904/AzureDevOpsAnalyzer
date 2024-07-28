@@ -13,18 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.IdentityRefWithVote;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
  * Identity information including a vote on a pull request.
@@ -97,10 +92,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be retrieved by querying the Graph user referenced in the \&quot;self\&quot; entry of the IdentityRef \&quot;_links\&quot; dictionary
+   *
    * @return directoryAlias
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be retrieved by querying the Graph user referenced in the \"self\" entry of the IdentityRef \"_links\" dictionary")
   public String getDirectoryAlias() {
     return directoryAlias;
@@ -115,10 +111,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Get id
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
@@ -133,10 +130,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Available in the \&quot;avatar\&quot; entry of the IdentityRef \&quot;_links\&quot; dictionary
+   *
    * @return imageUrl
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Available in the \"avatar\" entry of the IdentityRef \"_links\" dictionary")
   public String getImageUrl() {
     return imageUrl;
@@ -151,10 +149,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be retrieved by querying the Graph membership state referenced in the \&quot;membershipState\&quot; entry of the GraphUser \&quot;_links\&quot; dictionary
+   *
    * @return inactive
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be retrieved by querying the Graph membership state referenced in the \"membershipState\" entry of the GraphUser \"_links\" dictionary")
   public Boolean isInactive() {
     return inactive;
@@ -169,10 +168,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)
+   *
    * @return isAadIdentity
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)")
   public Boolean isIsAadIdentity() {
     return isAadIdentity;
@@ -187,10 +187,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)
+   *
    * @return isContainer
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)")
   public Boolean isIsContainer() {
     return isContainer;
@@ -205,10 +206,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Get isDeletedInOrigin
+   *
    * @return isDeletedInOrigin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDeletedInOrigin() {
     return isDeletedInOrigin;
@@ -223,10 +225,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - not in use in most preexisting implementations of ToIdentityRef
+   *
    * @return profileUrl
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - not in use in most preexisting implementations of ToIdentityRef")
   public String getProfileUrl() {
     return profileUrl;
@@ -241,10 +244,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Deprecated - use Domain+PrincipalName instead
+   *
    * @return uniqueName
-  **/
+   **/
   @ApiModelProperty(value = "Deprecated - use Domain+PrincipalName instead")
   public String getUniqueName() {
     return uniqueName;
@@ -259,10 +263,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.")
   public ReferenceLinks getLinks() {
     return links;
@@ -277,10 +282,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.
+   *
    * @return descriptor
-  **/
+   **/
   @ApiModelProperty(value = "The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.")
   public String getDescriptor() {
     return descriptor;
@@ -295,10 +301,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.")
   public String getDisplayName() {
     return displayName;
@@ -313,10 +320,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * This url is the full route to the source resource of this graph subject.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "This url is the full route to the source resource of this graph subject.")
   public String getUrl() {
     return url;
@@ -331,10 +339,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates if this reviewer has declined to review this pull request.
+   *
    * @return hasDeclined
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if this reviewer has declined to review this pull request.")
   public Boolean isHasDeclined() {
     return hasDeclined;
@@ -349,10 +358,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates if this reviewer is flagged for attention on this pull request.
+   *
    * @return isFlagged
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if this reviewer is flagged for attention on this pull request.")
   public Boolean isIsFlagged() {
     return isFlagged;
@@ -367,10 +377,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates if this approve vote should still be handled even though vote didn&#39;t change.
+   *
    * @return isReapprove
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if this approve vote should still be handled even though vote didn't change.")
   public Boolean isIsReapprove() {
     return isReapprove;
@@ -385,10 +396,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Indicates if this is a required reviewer for this pull request. &lt;br /&gt; Branches can have policies that require particular reviewers are required for pull requests.
+   *
    * @return isRequired
-  **/
+   **/
   @ApiModelProperty(value = "Indicates if this is a required reviewer for this pull request. <br /> Branches can have policies that require particular reviewers are required for pull requests.")
   public Boolean isIsRequired() {
     return isRequired;
@@ -403,10 +415,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve information about this identity
+   *
    * @return reviewerUrl
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve information about this identity")
   public String getReviewerUrl() {
     return reviewerUrl;
@@ -421,10 +434,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Vote on a pull request:&lt;br /&gt; 10 - approved 5 - approved with suggestions 0 - no vote -5 - waiting for author -10 - rejected
+   *
    * @return vote
-  **/
+   **/
   @ApiModelProperty(value = "Vote on a pull request:<br /> 10 - approved 5 - approved with suggestions 0 - no vote -5 - waiting for author -10 - rejected")
   public Integer getVote() {
     return vote;
@@ -447,10 +461,11 @@ public class IdentityRefWithVote extends IdentityRef {
     return this;
   }
 
-   /**
+  /**
    * Groups or teams that this reviewer contributed to. &lt;br /&gt; Groups and teams can be reviewers on pull requests but can not vote directly.  When a member of the group or team votes, that vote is rolled up into the group or team vote.  VotedFor is a list of such votes.
+   *
    * @return votedFor
-  **/
+   **/
   @ApiModelProperty(value = "Groups or teams that this reviewer contributed to. <br /> Groups and teams can be reviewers on pull requests but can not vote directly.  When a member of the group or team votes, that vote is rolled up into the group or team vote.  VotedFor is a list of such votes.")
   public List<IdentityRefWithVote> getVotedFor() {
     return votedFor;
@@ -471,26 +486,26 @@ public class IdentityRefWithVote extends IdentityRef {
     }
     IdentityRefWithVote identityRefWithVote = (IdentityRefWithVote) o;
     return Objects.equals(this.directoryAlias, identityRefWithVote.directoryAlias) &&
-        Objects.equals(this.id, identityRefWithVote.id) &&
-        Objects.equals(this.imageUrl, identityRefWithVote.imageUrl) &&
-        Objects.equals(this.inactive, identityRefWithVote.inactive) &&
-        Objects.equals(this.isAadIdentity, identityRefWithVote.isAadIdentity) &&
-        Objects.equals(this.isContainer, identityRefWithVote.isContainer) &&
-        Objects.equals(this.isDeletedInOrigin, identityRefWithVote.isDeletedInOrigin) &&
-        Objects.equals(this.profileUrl, identityRefWithVote.profileUrl) &&
-        Objects.equals(this.uniqueName, identityRefWithVote.uniqueName) &&
-        Objects.equals(this.links, identityRefWithVote.links) &&
-        Objects.equals(this.descriptor, identityRefWithVote.descriptor) &&
-        Objects.equals(this.displayName, identityRefWithVote.displayName) &&
-        Objects.equals(this.url, identityRefWithVote.url) &&
-        Objects.equals(this.hasDeclined, identityRefWithVote.hasDeclined) &&
-        Objects.equals(this.isFlagged, identityRefWithVote.isFlagged) &&
-        Objects.equals(this.isReapprove, identityRefWithVote.isReapprove) &&
-        Objects.equals(this.isRequired, identityRefWithVote.isRequired) &&
-        Objects.equals(this.reviewerUrl, identityRefWithVote.reviewerUrl) &&
-        Objects.equals(this.vote, identityRefWithVote.vote) &&
-        Objects.equals(this.votedFor, identityRefWithVote.votedFor) &&
-        super.equals(o);
+            Objects.equals(this.id, identityRefWithVote.id) &&
+            Objects.equals(this.imageUrl, identityRefWithVote.imageUrl) &&
+            Objects.equals(this.inactive, identityRefWithVote.inactive) &&
+            Objects.equals(this.isAadIdentity, identityRefWithVote.isAadIdentity) &&
+            Objects.equals(this.isContainer, identityRefWithVote.isContainer) &&
+            Objects.equals(this.isDeletedInOrigin, identityRefWithVote.isDeletedInOrigin) &&
+            Objects.equals(this.profileUrl, identityRefWithVote.profileUrl) &&
+            Objects.equals(this.uniqueName, identityRefWithVote.uniqueName) &&
+            Objects.equals(this.links, identityRefWithVote.links) &&
+            Objects.equals(this.descriptor, identityRefWithVote.descriptor) &&
+            Objects.equals(this.displayName, identityRefWithVote.displayName) &&
+            Objects.equals(this.url, identityRefWithVote.url) &&
+            Objects.equals(this.hasDeclined, identityRefWithVote.hasDeclined) &&
+            Objects.equals(this.isFlagged, identityRefWithVote.isFlagged) &&
+            Objects.equals(this.isReapprove, identityRefWithVote.isReapprove) &&
+            Objects.equals(this.isRequired, identityRefWithVote.isRequired) &&
+            Objects.equals(this.reviewerUrl, identityRefWithVote.reviewerUrl) &&
+            Objects.equals(this.vote, identityRefWithVote.vote) &&
+            Objects.equals(this.votedFor, identityRefWithVote.votedFor) &&
+            super.equals(o);
   }
 
   @Override

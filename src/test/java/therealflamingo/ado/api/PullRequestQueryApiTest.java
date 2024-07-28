@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPullRequestQuery;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.GitPullRequestQuery;
 
 /**
  * API tests for PullRequestQueryApi
@@ -31,14 +25,11 @@ public class PullRequestQueryApiTest {
 
     private final PullRequestQueryApi api = new PullRequestQueryApi();
 
-    
+
     /**
-     * 
-     *
      * This API is used to find what pull requests are related to a given commit.  It can be used to either find the pull request that created a particular merge commit or it can be used to find all pull requests that have ever merged a particular commit.  The input is a list of queries which each contain a list of commits. For each commit that you search against, you will get back a dictionary of commit -&gt; pull requests.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestQueryGetTest() throws Exception {
@@ -51,5 +42,5 @@ public class PullRequestQueryApiTest {
 
         // TODO: test validations
     }
-    
+
 }

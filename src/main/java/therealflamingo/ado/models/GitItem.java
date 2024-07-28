@@ -13,385 +13,387 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.FileContentMetadata;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.ItemModel;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitItem extends ItemModel {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("content")
-  private String content = null;
+    @JsonProperty("content")
+    private String content = null;
 
-  @JsonProperty("contentMetadata")
-  private FileContentMetadata contentMetadata = null;
+    @JsonProperty("contentMetadata")
+    private FileContentMetadata contentMetadata = null;
 
-  @JsonProperty("isFolder")
-  private Boolean isFolder = null;
+    @JsonProperty("isFolder")
+    private Boolean isFolder = null;
 
-  @JsonProperty("isSymLink")
-  private Boolean isSymLink = null;
+    @JsonProperty("isSymLink")
+    private Boolean isSymLink = null;
 
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  @JsonProperty("commitId")
-  private String commitId = null;
+    @JsonProperty("commitId")
+    private String commitId = null;
+    @JsonProperty("gitObjectType")
+    private GitObjectTypeEnum gitObjectType = null;
+    @JsonProperty("latestProcessedChange")
+    private GitCommitRef latestProcessedChange = null;
+    @JsonProperty("objectId")
+    private String objectId = null;
+    @JsonProperty("originalObjectId")
+    private String originalObjectId = null;
 
-  /**
-   * Type of object (Commit, Tree, Blob, Tag, ...)
-   */
-  public enum GitObjectTypeEnum {
-    BAD("bad"),
-    
-    COMMIT("commit"),
-    
-    TREE("tree"),
-    
-    BLOB("blob"),
-    
-    TAG("tag"),
-    
-    EXT2("ext2"),
-    
-    OFSDELTA("ofsDelta"),
-    
-    REFDELTA("refDelta");
-
-    private String value;
-
-    GitObjectTypeEnum(String value) {
-      this.value = value;
+    public GitItem links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
+    }
+
+    public GitItem content(String content) {
+        this.content = content;
+        return this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return content
+     **/
+    @ApiModelProperty(value = "")
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public GitItem contentMetadata(FileContentMetadata contentMetadata) {
+        this.contentMetadata = contentMetadata;
+        return this;
+    }
+
+    /**
+     * Get contentMetadata
+     *
+     * @return contentMetadata
+     **/
+    @ApiModelProperty(value = "")
+    public FileContentMetadata getContentMetadata() {
+        return contentMetadata;
+    }
+
+    public void setContentMetadata(FileContentMetadata contentMetadata) {
+        this.contentMetadata = contentMetadata;
+    }
+
+    public GitItem isFolder(Boolean isFolder) {
+        this.isFolder = isFolder;
+        return this;
+    }
+
+    /**
+     * Get isFolder
+     *
+     * @return isFolder
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isIsFolder() {
+        return isFolder;
+    }
+
+    public void setIsFolder(Boolean isFolder) {
+        this.isFolder = isFolder;
+    }
+
+    public GitItem isSymLink(Boolean isSymLink) {
+        this.isSymLink = isSymLink;
+        return this;
+    }
+
+    /**
+     * Get isSymLink
+     *
+     * @return isSymLink
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isIsSymLink() {
+        return isSymLink;
+    }
+
+    public void setIsSymLink(Boolean isSymLink) {
+        this.isSymLink = isSymLink;
+    }
+
+    public GitItem path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public GitItem url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public GitItem commitId(String commitId) {
+        this.commitId = commitId;
+        return this;
+    }
+
+    /**
+     * SHA1 of commit item was fetched at
+     *
+     * @return commitId
+     **/
+    @ApiModelProperty(value = "SHA1 of commit item was fetched at")
+    public String getCommitId() {
+        return commitId;
+    }
+
+    public void setCommitId(String commitId) {
+        this.commitId = commitId;
+    }
+
+    public GitItem gitObjectType(GitObjectTypeEnum gitObjectType) {
+        this.gitObjectType = gitObjectType;
+        return this;
+    }
+
+    /**
+     * Type of object (Commit, Tree, Blob, Tag, ...)
+     *
+     * @return gitObjectType
+     **/
+    @ApiModelProperty(value = "Type of object (Commit, Tree, Blob, Tag, ...)")
+    public GitObjectTypeEnum getGitObjectType() {
+        return gitObjectType;
+    }
+
+    public void setGitObjectType(GitObjectTypeEnum gitObjectType) {
+        this.gitObjectType = gitObjectType;
+    }
+
+    public GitItem latestProcessedChange(GitCommitRef latestProcessedChange) {
+        this.latestProcessedChange = latestProcessedChange;
+        return this;
+    }
+
+    /**
+     * Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached
+     *
+     * @return latestProcessedChange
+     **/
+    @ApiModelProperty(value = "Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached")
+    public GitCommitRef getLatestProcessedChange() {
+        return latestProcessedChange;
+    }
+
+    public void setLatestProcessedChange(GitCommitRef latestProcessedChange) {
+        this.latestProcessedChange = latestProcessedChange;
+    }
+
+    public GitItem objectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+
+    /**
+     * Git object id
+     *
+     * @return objectId
+     **/
+    @ApiModelProperty(value = "Git object id")
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
+
+    public GitItem originalObjectId(String originalObjectId) {
+        this.originalObjectId = originalObjectId;
+        return this;
+    }
+
+    /**
+     * Git object id
+     *
+     * @return originalObjectId
+     **/
+    @ApiModelProperty(value = "Git object id")
+    public String getOriginalObjectId() {
+        return originalObjectId;
+    }
+
+    public void setOriginalObjectId(String originalObjectId) {
+        this.originalObjectId = originalObjectId;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitItem gitItem = (GitItem) o;
+        return Objects.equals(this.links, gitItem.links) &&
+                Objects.equals(this.content, gitItem.content) &&
+                Objects.equals(this.contentMetadata, gitItem.contentMetadata) &&
+                Objects.equals(this.isFolder, gitItem.isFolder) &&
+                Objects.equals(this.isSymLink, gitItem.isSymLink) &&
+                Objects.equals(this.path, gitItem.path) &&
+                Objects.equals(this.url, gitItem.url) &&
+                Objects.equals(this.commitId, gitItem.commitId) &&
+                Objects.equals(this.gitObjectType, gitItem.gitObjectType) &&
+                Objects.equals(this.latestProcessedChange, gitItem.latestProcessedChange) &&
+                Objects.equals(this.objectId, gitItem.objectId) &&
+                Objects.equals(this.originalObjectId, gitItem.originalObjectId) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, content, contentMetadata, isFolder, isSymLink, path, url, commitId, gitObjectType, latestProcessedChange, objectId, originalObjectId, super.hashCode());
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitItem {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    content: ").append(toIndentedString(content)).append("\n");
+        sb.append("    contentMetadata: ").append(toIndentedString(contentMetadata)).append("\n");
+        sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
+        sb.append("    isSymLink: ").append(toIndentedString(isSymLink)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
+        sb.append("    gitObjectType: ").append(toIndentedString(gitObjectType)).append("\n");
+        sb.append("    latestProcessedChange: ").append(toIndentedString(latestProcessedChange)).append("\n");
+        sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
+        sb.append("    originalObjectId: ").append(toIndentedString(originalObjectId)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static GitObjectTypeEnum fromValue(String value) {
-      for (GitObjectTypeEnum b : GitObjectTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("gitObjectType")
-  private GitObjectTypeEnum gitObjectType = null;
+    /**
+     * Type of object (Commit, Tree, Blob, Tag, ...)
+     */
+    public enum GitObjectTypeEnum {
+        BAD("bad"),
 
-  @JsonProperty("latestProcessedChange")
-  private GitCommitRef latestProcessedChange = null;
+        COMMIT("commit"),
 
-  @JsonProperty("objectId")
-  private String objectId = null;
+        TREE("tree"),
 
-  @JsonProperty("originalObjectId")
-  private String originalObjectId = null;
+        BLOB("blob"),
 
-  public GitItem links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
+        TAG("tag"),
 
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
+        EXT2("ext2"),
 
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
+        OFSDELTA("ofsDelta"),
 
-  public GitItem content(String content) {
-    this.content = content;
-    return this;
-  }
+        REFDELTA("refDelta");
 
-   /**
-   * Get content
-   * @return content
-  **/
-  @ApiModelProperty(value = "")
-  public String getContent() {
-    return content;
-  }
+        private String value;
 
-  public void setContent(String content) {
-    this.content = content;
-  }
+        GitObjectTypeEnum(String value) {
+            this.value = value;
+        }
 
-  public GitItem contentMetadata(FileContentMetadata contentMetadata) {
-    this.contentMetadata = contentMetadata;
-    return this;
-  }
+        @JsonCreator
+        public static GitObjectTypeEnum fromValue(String value) {
+            for (GitObjectTypeEnum b : GitObjectTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-   /**
-   * Get contentMetadata
-   * @return contentMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public FileContentMetadata getContentMetadata() {
-    return contentMetadata;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public void setContentMetadata(FileContentMetadata contentMetadata) {
-    this.contentMetadata = contentMetadata;
-  }
-
-  public GitItem isFolder(Boolean isFolder) {
-    this.isFolder = isFolder;
-    return this;
-  }
-
-   /**
-   * Get isFolder
-   * @return isFolder
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsFolder() {
-    return isFolder;
-  }
-
-  public void setIsFolder(Boolean isFolder) {
-    this.isFolder = isFolder;
-  }
-
-  public GitItem isSymLink(Boolean isSymLink) {
-    this.isSymLink = isSymLink;
-    return this;
-  }
-
-   /**
-   * Get isSymLink
-   * @return isSymLink
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsSymLink() {
-    return isSymLink;
-  }
-
-  public void setIsSymLink(Boolean isSymLink) {
-    this.isSymLink = isSymLink;
-  }
-
-  public GitItem path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Get path
-   * @return path
-  **/
-  @ApiModelProperty(value = "")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-  public GitItem url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public GitItem commitId(String commitId) {
-    this.commitId = commitId;
-    return this;
-  }
-
-   /**
-   * SHA1 of commit item was fetched at
-   * @return commitId
-  **/
-  @ApiModelProperty(value = "SHA1 of commit item was fetched at")
-  public String getCommitId() {
-    return commitId;
-  }
-
-  public void setCommitId(String commitId) {
-    this.commitId = commitId;
-  }
-
-  public GitItem gitObjectType(GitObjectTypeEnum gitObjectType) {
-    this.gitObjectType = gitObjectType;
-    return this;
-  }
-
-   /**
-   * Type of object (Commit, Tree, Blob, Tag, ...)
-   * @return gitObjectType
-  **/
-  @ApiModelProperty(value = "Type of object (Commit, Tree, Blob, Tag, ...)")
-  public GitObjectTypeEnum getGitObjectType() {
-    return gitObjectType;
-  }
-
-  public void setGitObjectType(GitObjectTypeEnum gitObjectType) {
-    this.gitObjectType = gitObjectType;
-  }
-
-  public GitItem latestProcessedChange(GitCommitRef latestProcessedChange) {
-    this.latestProcessedChange = latestProcessedChange;
-    return this;
-  }
-
-   /**
-   * Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached
-   * @return latestProcessedChange
-  **/
-  @ApiModelProperty(value = "Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached")
-  public GitCommitRef getLatestProcessedChange() {
-    return latestProcessedChange;
-  }
-
-  public void setLatestProcessedChange(GitCommitRef latestProcessedChange) {
-    this.latestProcessedChange = latestProcessedChange;
-  }
-
-  public GitItem objectId(String objectId) {
-    this.objectId = objectId;
-    return this;
-  }
-
-   /**
-   * Git object id
-   * @return objectId
-  **/
-  @ApiModelProperty(value = "Git object id")
-  public String getObjectId() {
-    return objectId;
-  }
-
-  public void setObjectId(String objectId) {
-    this.objectId = objectId;
-  }
-
-  public GitItem originalObjectId(String originalObjectId) {
-    this.originalObjectId = originalObjectId;
-    return this;
-  }
-
-   /**
-   * Git object id
-   * @return originalObjectId
-  **/
-  @ApiModelProperty(value = "Git object id")
-  public String getOriginalObjectId() {
-    return originalObjectId;
-  }
-
-  public void setOriginalObjectId(String originalObjectId) {
-    this.originalObjectId = originalObjectId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitItem gitItem = (GitItem) o;
-    return Objects.equals(this.links, gitItem.links) &&
-        Objects.equals(this.content, gitItem.content) &&
-        Objects.equals(this.contentMetadata, gitItem.contentMetadata) &&
-        Objects.equals(this.isFolder, gitItem.isFolder) &&
-        Objects.equals(this.isSymLink, gitItem.isSymLink) &&
-        Objects.equals(this.path, gitItem.path) &&
-        Objects.equals(this.url, gitItem.url) &&
-        Objects.equals(this.commitId, gitItem.commitId) &&
-        Objects.equals(this.gitObjectType, gitItem.gitObjectType) &&
-        Objects.equals(this.latestProcessedChange, gitItem.latestProcessedChange) &&
-        Objects.equals(this.objectId, gitItem.objectId) &&
-        Objects.equals(this.originalObjectId, gitItem.originalObjectId) &&
-        super.equals(o);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, content, contentMetadata, isFolder, isSymLink, path, url, commitId, gitObjectType, latestProcessedChange, objectId, originalObjectId, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitItem {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    content: ").append(toIndentedString(content)).append("\n");
-    sb.append("    contentMetadata: ").append(toIndentedString(contentMetadata)).append("\n");
-    sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
-    sb.append("    isSymLink: ").append(toIndentedString(isSymLink)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    commitId: ").append(toIndentedString(commitId)).append("\n");
-    sb.append("    gitObjectType: ").append(toIndentedString(gitObjectType)).append("\n");
-    sb.append("    latestProcessedChange: ").append(toIndentedString(latestProcessedChange)).append("\n");
-    sb.append("    objectId: ").append(toIndentedString(objectId)).append("\n");
-    sb.append("    originalObjectId: ").append(toIndentedString(originalObjectId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -13,149 +13,151 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRepositoryStats {
-  @JsonProperty("activePullRequestsCount")
-  private Integer activePullRequestsCount = null;
+    @JsonProperty("activePullRequestsCount")
+    private Integer activePullRequestsCount = null;
 
-  @JsonProperty("branchesCount")
-  private Integer branchesCount = null;
+    @JsonProperty("branchesCount")
+    private Integer branchesCount = null;
 
-  @JsonProperty("commitsCount")
-  private Integer commitsCount = null;
+    @JsonProperty("commitsCount")
+    private Integer commitsCount = null;
 
-  @JsonProperty("repositoryId")
-  private String repositoryId = null;
+    @JsonProperty("repositoryId")
+    private String repositoryId = null;
 
-  public GitRepositoryStats activePullRequestsCount(Integer activePullRequestsCount) {
-    this.activePullRequestsCount = activePullRequestsCount;
-    return this;
-  }
-
-   /**
-   * Get activePullRequestsCount
-   * @return activePullRequestsCount
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getActivePullRequestsCount() {
-    return activePullRequestsCount;
-  }
-
-  public void setActivePullRequestsCount(Integer activePullRequestsCount) {
-    this.activePullRequestsCount = activePullRequestsCount;
-  }
-
-  public GitRepositoryStats branchesCount(Integer branchesCount) {
-    this.branchesCount = branchesCount;
-    return this;
-  }
-
-   /**
-   * Get branchesCount
-   * @return branchesCount
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getBranchesCount() {
-    return branchesCount;
-  }
-
-  public void setBranchesCount(Integer branchesCount) {
-    this.branchesCount = branchesCount;
-  }
-
-  public GitRepositoryStats commitsCount(Integer commitsCount) {
-    this.commitsCount = commitsCount;
-    return this;
-  }
-
-   /**
-   * Get commitsCount
-   * @return commitsCount
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getCommitsCount() {
-    return commitsCount;
-  }
-
-  public void setCommitsCount(Integer commitsCount) {
-    this.commitsCount = commitsCount;
-  }
-
-  public GitRepositoryStats repositoryId(String repositoryId) {
-    this.repositoryId = repositoryId;
-    return this;
-  }
-
-   /**
-   * Get repositoryId
-   * @return repositoryId
-  **/
-  @ApiModelProperty(value = "")
-  public String getRepositoryId() {
-    return repositoryId;
-  }
-
-  public void setRepositoryId(String repositoryId) {
-    this.repositoryId = repositoryId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitRepositoryStats activePullRequestsCount(Integer activePullRequestsCount) {
+        this.activePullRequestsCount = activePullRequestsCount;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get activePullRequestsCount
+     *
+     * @return activePullRequestsCount
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getActivePullRequestsCount() {
+        return activePullRequestsCount;
     }
-    GitRepositoryStats gitRepositoryStats = (GitRepositoryStats) o;
-    return Objects.equals(this.activePullRequestsCount, gitRepositoryStats.activePullRequestsCount) &&
-        Objects.equals(this.branchesCount, gitRepositoryStats.branchesCount) &&
-        Objects.equals(this.commitsCount, gitRepositoryStats.commitsCount) &&
-        Objects.equals(this.repositoryId, gitRepositoryStats.repositoryId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(activePullRequestsCount, branchesCount, commitsCount, repositoryId);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRepositoryStats {\n");
-    
-    sb.append("    activePullRequestsCount: ").append(toIndentedString(activePullRequestsCount)).append("\n");
-    sb.append("    branchesCount: ").append(toIndentedString(branchesCount)).append("\n");
-    sb.append("    commitsCount: ").append(toIndentedString(commitsCount)).append("\n");
-    sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setActivePullRequestsCount(Integer activePullRequestsCount) {
+        this.activePullRequestsCount = activePullRequestsCount;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitRepositoryStats branchesCount(Integer branchesCount) {
+        this.branchesCount = branchesCount;
+        return this;
+    }
+
+    /**
+     * Get branchesCount
+     *
+     * @return branchesCount
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getBranchesCount() {
+        return branchesCount;
+    }
+
+    public void setBranchesCount(Integer branchesCount) {
+        this.branchesCount = branchesCount;
+    }
+
+    public GitRepositoryStats commitsCount(Integer commitsCount) {
+        this.commitsCount = commitsCount;
+        return this;
+    }
+
+    /**
+     * Get commitsCount
+     *
+     * @return commitsCount
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getCommitsCount() {
+        return commitsCount;
+    }
+
+    public void setCommitsCount(Integer commitsCount) {
+        this.commitsCount = commitsCount;
+    }
+
+    public GitRepositoryStats repositoryId(String repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+
+    /**
+     * Get repositoryId
+     *
+     * @return repositoryId
+     **/
+    @ApiModelProperty(value = "")
+    public String getRepositoryId() {
+        return repositoryId;
+    }
+
+    public void setRepositoryId(String repositoryId) {
+        this.repositoryId = repositoryId;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRepositoryStats gitRepositoryStats = (GitRepositoryStats) o;
+        return Objects.equals(this.activePullRequestsCount, gitRepositoryStats.activePullRequestsCount) &&
+                Objects.equals(this.branchesCount, gitRepositoryStats.branchesCount) &&
+                Objects.equals(this.commitsCount, gitRepositoryStats.commitsCount) &&
+                Objects.equals(this.repositoryId, gitRepositoryStats.repositoryId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(activePullRequestsCount, branchesCount, commitsCount, repositoryId);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRepositoryStats {\n");
+
+        sb.append("    activePullRequestsCount: ").append(toIndentedString(activePullRequestsCount)).append("\n");
+        sb.append("    branchesCount: ").append(toIndentedString(branchesCount)).append("\n");
+        sb.append("    commitsCount: ").append(toIndentedString(commitsCount)).append("\n");
+        sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

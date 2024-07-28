@@ -13,15 +13,9 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitTreeRef;
-import org.junit.Test;
 import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.junit.Test;
+import therealflamingo.ado.models.GitTreeRef;
 
 /**
  * API tests for TreesApi
@@ -31,14 +25,11 @@ public class TreesApiTest {
 
     private final TreesApi api = new TreesApi();
 
-    
+
     /**
-     * 
-     *
      * The Tree endpoint returns the collection of objects underneath the specified tree. Trees are folders in a Git repository.  Repositories have both a name and an identifier. Identifiers are globally unique, but several projects may contain a repository of the same name. You don&#39;t need to include the project if you specify a repository by ID. However, if you specify a repository by name, you must also specify the project (by name or ID.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void treesGetTest() throws Exception {
@@ -55,5 +46,5 @@ public class TreesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

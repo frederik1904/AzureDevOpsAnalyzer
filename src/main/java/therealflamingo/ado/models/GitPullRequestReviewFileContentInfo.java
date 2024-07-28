@@ -13,127 +13,127 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitPullRequestReviewFileContentInfo {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
 
-  @JsonProperty("shA1Hash")
-  private String shA1Hash = null;
+    @JsonProperty("shA1Hash")
+    private String shA1Hash = null;
 
-  public GitPullRequestReviewFileContentInfo links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitPullRequestReviewFileContentInfo path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * The file change path.
-   * @return path
-  **/
-  @ApiModelProperty(value = "The file change path.")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-  public GitPullRequestReviewFileContentInfo shA1Hash(String shA1Hash) {
-    this.shA1Hash = shA1Hash;
-    return this;
-  }
-
-   /**
-   * Content hash of on-disk representation of file content. Its calculated by the client by using SHA1 hash function. Ensure that uploaded file has same encoding as in source control.
-   * @return shA1Hash
-  **/
-  @ApiModelProperty(value = "Content hash of on-disk representation of file content. Its calculated by the client by using SHA1 hash function. Ensure that uploaded file has same encoding as in source control.")
-  public String getShA1Hash() {
-    return shA1Hash;
-  }
-
-  public void setShA1Hash(String shA1Hash) {
-    this.shA1Hash = shA1Hash;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitPullRequestReviewFileContentInfo links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
     }
-    GitPullRequestReviewFileContentInfo gitPullRequestReviewFileContentInfo = (GitPullRequestReviewFileContentInfo) o;
-    return Objects.equals(this.links, gitPullRequestReviewFileContentInfo.links) &&
-        Objects.equals(this.path, gitPullRequestReviewFileContentInfo.path) &&
-        Objects.equals(this.shA1Hash, gitPullRequestReviewFileContentInfo.shA1Hash);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, path, shA1Hash);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitPullRequestReviewFileContentInfo {\n");
-    
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("    shA1Hash: ").append(toIndentedString(shA1Hash)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitPullRequestReviewFileContentInfo path(String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * The file change path.
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "The file change path.")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public GitPullRequestReviewFileContentInfo shA1Hash(String shA1Hash) {
+        this.shA1Hash = shA1Hash;
+        return this;
+    }
+
+    /**
+     * Content hash of on-disk representation of file content. Its calculated by the client by using SHA1 hash function. Ensure that uploaded file has same encoding as in source control.
+     *
+     * @return shA1Hash
+     **/
+    @ApiModelProperty(value = "Content hash of on-disk representation of file content. Its calculated by the client by using SHA1 hash function. Ensure that uploaded file has same encoding as in source control.")
+    public String getShA1Hash() {
+        return shA1Hash;
+    }
+
+    public void setShA1Hash(String shA1Hash) {
+        this.shA1Hash = shA1Hash;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitPullRequestReviewFileContentInfo gitPullRequestReviewFileContentInfo = (GitPullRequestReviewFileContentInfo) o;
+        return Objects.equals(this.links, gitPullRequestReviewFileContentInfo.links) &&
+                Objects.equals(this.path, gitPullRequestReviewFileContentInfo.path) &&
+                Objects.equals(this.shA1Hash, gitPullRequestReviewFileContentInfo.shA1Hash);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, path, shA1Hash);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitPullRequestReviewFileContentInfo {\n");
+
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    shA1Hash: ").append(toIndentedString(shA1Hash)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

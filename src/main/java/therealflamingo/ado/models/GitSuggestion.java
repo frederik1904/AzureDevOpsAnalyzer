@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * An object describing the git suggestion.  Git suggestions are currently limited to suggested pull requests.
@@ -49,10 +46,11 @@ public class GitSuggestion {
     return this;
   }
 
-   /**
+  /**
    * Specific properties describing the suggestion.
+   *
    * @return properties
-  **/
+   **/
   @ApiModelProperty(value = "Specific properties describing the suggestion.")
   public Map<String, Object> getProperties() {
     return properties;
@@ -67,10 +65,11 @@ public class GitSuggestion {
     return this;
   }
 
-   /**
+  /**
    * The type of suggestion (e.g. pull request).
+   *
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "The type of suggestion (e.g. pull request).")
   public String getType() {
     return type;
@@ -91,7 +90,7 @@ public class GitSuggestion {
     }
     GitSuggestion gitSuggestion = (GitSuggestion) o;
     return Objects.equals(this.properties, gitSuggestion.properties) &&
-        Objects.equals(this.type, gitSuggestion.type);
+            Objects.equals(this.type, gitSuggestion.type);
   }
 
   @Override
@@ -104,7 +103,7 @@ public class GitSuggestion {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitSuggestion {\n");
-    
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

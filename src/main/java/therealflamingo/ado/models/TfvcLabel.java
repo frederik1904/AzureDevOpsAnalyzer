@@ -13,20 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.TfvcItem;
-import therealflamingo.ado.models.TfvcLabelRef;
+import java.util.Objects;
 
 /**
  * Metadata for a label.
@@ -66,10 +60,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Collection of reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Collection of reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -84,10 +79,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label description.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "Label description.")
   public String getDescription() {
     return description;
@@ -102,10 +98,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label Id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Label Id.")
   public Integer getId() {
     return id;
@@ -120,10 +117,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label scope.
+   *
    * @return labelScope
-  **/
+   **/
   @ApiModelProperty(value = "Label scope.")
   public String getLabelScope() {
     return labelScope;
@@ -138,10 +136,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Last modified datetime for the label.
+   *
    * @return modifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "Last modified datetime for the label.")
   public OffsetDateTime getModifiedDate() {
     return modifiedDate;
@@ -156,10 +155,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label name.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Label name.")
   public String getName() {
     return name;
@@ -174,10 +174,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label owner.
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Label owner.")
   public IdentityRef getOwner() {
     return owner;
@@ -192,10 +193,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label Url.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Label Url.")
   public String getUrl() {
     return url;
@@ -218,10 +220,11 @@ public class TfvcLabel extends TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * List of items.
+   *
    * @return items
-  **/
+   **/
   @ApiModelProperty(value = "List of items.")
   public List<TfvcItem> getItems() {
     return items;
@@ -242,15 +245,15 @@ public class TfvcLabel extends TfvcLabelRef {
     }
     TfvcLabel tfvcLabel = (TfvcLabel) o;
     return Objects.equals(this.links, tfvcLabel.links) &&
-        Objects.equals(this.description, tfvcLabel.description) &&
-        Objects.equals(this.id, tfvcLabel.id) &&
-        Objects.equals(this.labelScope, tfvcLabel.labelScope) &&
-        Objects.equals(this.modifiedDate, tfvcLabel.modifiedDate) &&
-        Objects.equals(this.name, tfvcLabel.name) &&
-        Objects.equals(this.owner, tfvcLabel.owner) &&
-        Objects.equals(this.url, tfvcLabel.url) &&
-        Objects.equals(this.items, tfvcLabel.items) &&
-        super.equals(o);
+            Objects.equals(this.description, tfvcLabel.description) &&
+            Objects.equals(this.id, tfvcLabel.id) &&
+            Objects.equals(this.labelScope, tfvcLabel.labelScope) &&
+            Objects.equals(this.modifiedDate, tfvcLabel.modifiedDate) &&
+            Objects.equals(this.name, tfvcLabel.name) &&
+            Objects.equals(this.owner, tfvcLabel.owner) &&
+            Objects.equals(this.url, tfvcLabel.url) &&
+            Objects.equals(this.items, tfvcLabel.items) &&
+            super.equals(o);
   }
 
   @Override

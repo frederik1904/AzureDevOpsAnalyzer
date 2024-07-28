@@ -13,218 +13,223 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class FileContentMetadata {
-  @JsonProperty("contentType")
-  private String contentType = null;
+    @JsonProperty("contentType")
+    private String contentType = null;
 
-  @JsonProperty("encoding")
-  private Integer encoding = null;
+    @JsonProperty("encoding")
+    private Integer encoding = null;
 
-  @JsonProperty("extension")
-  private String extension = null;
+    @JsonProperty("extension")
+    private String extension = null;
 
-  @JsonProperty("fileName")
-  private String fileName = null;
+    @JsonProperty("fileName")
+    private String fileName = null;
 
-  @JsonProperty("isBinary")
-  private Boolean isBinary = null;
+    @JsonProperty("isBinary")
+    private Boolean isBinary = null;
 
-  @JsonProperty("isImage")
-  private Boolean isImage = null;
+    @JsonProperty("isImage")
+    private Boolean isImage = null;
 
-  @JsonProperty("vsLink")
-  private String vsLink = null;
+    @JsonProperty("vsLink")
+    private String vsLink = null;
 
-  public FileContentMetadata contentType(String contentType) {
-    this.contentType = contentType;
-    return this;
-  }
-
-   /**
-   * Get contentType
-   * @return contentType
-  **/
-  @ApiModelProperty(value = "")
-  public String getContentType() {
-    return contentType;
-  }
-
-  public void setContentType(String contentType) {
-    this.contentType = contentType;
-  }
-
-  public FileContentMetadata encoding(Integer encoding) {
-    this.encoding = encoding;
-    return this;
-  }
-
-   /**
-   * Get encoding
-   * @return encoding
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getEncoding() {
-    return encoding;
-  }
-
-  public void setEncoding(Integer encoding) {
-    this.encoding = encoding;
-  }
-
-  public FileContentMetadata extension(String extension) {
-    this.extension = extension;
-    return this;
-  }
-
-   /**
-   * Get extension
-   * @return extension
-  **/
-  @ApiModelProperty(value = "")
-  public String getExtension() {
-    return extension;
-  }
-
-  public void setExtension(String extension) {
-    this.extension = extension;
-  }
-
-  public FileContentMetadata fileName(String fileName) {
-    this.fileName = fileName;
-    return this;
-  }
-
-   /**
-   * Get fileName
-   * @return fileName
-  **/
-  @ApiModelProperty(value = "")
-  public String getFileName() {
-    return fileName;
-  }
-
-  public void setFileName(String fileName) {
-    this.fileName = fileName;
-  }
-
-  public FileContentMetadata isBinary(Boolean isBinary) {
-    this.isBinary = isBinary;
-    return this;
-  }
-
-   /**
-   * Get isBinary
-   * @return isBinary
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsBinary() {
-    return isBinary;
-  }
-
-  public void setIsBinary(Boolean isBinary) {
-    this.isBinary = isBinary;
-  }
-
-  public FileContentMetadata isImage(Boolean isImage) {
-    this.isImage = isImage;
-    return this;
-  }
-
-   /**
-   * Get isImage
-   * @return isImage
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsImage() {
-    return isImage;
-  }
-
-  public void setIsImage(Boolean isImage) {
-    this.isImage = isImage;
-  }
-
-  public FileContentMetadata vsLink(String vsLink) {
-    this.vsLink = vsLink;
-    return this;
-  }
-
-   /**
-   * Get vsLink
-   * @return vsLink
-  **/
-  @ApiModelProperty(value = "")
-  public String getVsLink() {
-    return vsLink;
-  }
-
-  public void setVsLink(String vsLink) {
-    this.vsLink = vsLink;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public FileContentMetadata contentType(String contentType) {
+        this.contentType = contentType;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get contentType
+     *
+     * @return contentType
+     **/
+    @ApiModelProperty(value = "")
+    public String getContentType() {
+        return contentType;
     }
-    FileContentMetadata fileContentMetadata = (FileContentMetadata) o;
-    return Objects.equals(this.contentType, fileContentMetadata.contentType) &&
-        Objects.equals(this.encoding, fileContentMetadata.encoding) &&
-        Objects.equals(this.extension, fileContentMetadata.extension) &&
-        Objects.equals(this.fileName, fileContentMetadata.fileName) &&
-        Objects.equals(this.isBinary, fileContentMetadata.isBinary) &&
-        Objects.equals(this.isImage, fileContentMetadata.isImage) &&
-        Objects.equals(this.vsLink, fileContentMetadata.vsLink);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(contentType, encoding, extension, fileName, isBinary, isImage, vsLink);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class FileContentMetadata {\n");
-    
-    sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
-    sb.append("    encoding: ").append(toIndentedString(encoding)).append("\n");
-    sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
-    sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
-    sb.append("    isBinary: ").append(toIndentedString(isBinary)).append("\n");
-    sb.append("    isImage: ").append(toIndentedString(isImage)).append("\n");
-    sb.append("    vsLink: ").append(toIndentedString(vsLink)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public FileContentMetadata encoding(Integer encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+
+    /**
+     * Get encoding
+     *
+     * @return encoding
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getEncoding() {
+        return encoding;
+    }
+
+    public void setEncoding(Integer encoding) {
+        this.encoding = encoding;
+    }
+
+    public FileContentMetadata extension(String extension) {
+        this.extension = extension;
+        return this;
+    }
+
+    /**
+     * Get extension
+     *
+     * @return extension
+     **/
+    @ApiModelProperty(value = "")
+    public String getExtension() {
+        return extension;
+    }
+
+    public void setExtension(String extension) {
+        this.extension = extension;
+    }
+
+    public FileContentMetadata fileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+
+    /**
+     * Get fileName
+     *
+     * @return fileName
+     **/
+    @ApiModelProperty(value = "")
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public FileContentMetadata isBinary(Boolean isBinary) {
+        this.isBinary = isBinary;
+        return this;
+    }
+
+    /**
+     * Get isBinary
+     *
+     * @return isBinary
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isIsBinary() {
+        return isBinary;
+    }
+
+    public void setIsBinary(Boolean isBinary) {
+        this.isBinary = isBinary;
+    }
+
+    public FileContentMetadata isImage(Boolean isImage) {
+        this.isImage = isImage;
+        return this;
+    }
+
+    /**
+     * Get isImage
+     *
+     * @return isImage
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isIsImage() {
+        return isImage;
+    }
+
+    public void setIsImage(Boolean isImage) {
+        this.isImage = isImage;
+    }
+
+    public FileContentMetadata vsLink(String vsLink) {
+        this.vsLink = vsLink;
+        return this;
+    }
+
+    /**
+     * Get vsLink
+     *
+     * @return vsLink
+     **/
+    @ApiModelProperty(value = "")
+    public String getVsLink() {
+        return vsLink;
+    }
+
+    public void setVsLink(String vsLink) {
+        this.vsLink = vsLink;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        FileContentMetadata fileContentMetadata = (FileContentMetadata) o;
+        return Objects.equals(this.contentType, fileContentMetadata.contentType) &&
+                Objects.equals(this.encoding, fileContentMetadata.encoding) &&
+                Objects.equals(this.extension, fileContentMetadata.extension) &&
+                Objects.equals(this.fileName, fileContentMetadata.fileName) &&
+                Objects.equals(this.isBinary, fileContentMetadata.isBinary) &&
+                Objects.equals(this.isImage, fileContentMetadata.isImage) &&
+                Objects.equals(this.vsLink, fileContentMetadata.vsLink);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(contentType, encoding, extension, fileName, isBinary, isImage, vsLink);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class FileContentMetadata {\n");
+
+        sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+        sb.append("    encoding: ").append(toIndentedString(encoding)).append("\n");
+        sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
+        sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
+        sb.append("    isBinary: ").append(toIndentedString(isBinary)).append("\n");
+        sb.append("    isImage: ").append(toIndentedString(isImage)).append("\n");
+        sb.append("    vsLink: ").append(toIndentedString(vsLink)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

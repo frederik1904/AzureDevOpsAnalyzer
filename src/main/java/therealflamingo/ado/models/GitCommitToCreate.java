@@ -13,138 +13,137 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitPathAction;
-import therealflamingo.ado.models.GitRef;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitCommitToCreate {
-  @JsonProperty("baseRef")
-  private GitRef baseRef = null;
+    @JsonProperty("baseRef")
+    private GitRef baseRef = null;
 
-  @JsonProperty("comment")
-  private String comment = null;
+    @JsonProperty("comment")
+    private String comment = null;
 
-  @JsonProperty("pathActions")
-  private List<GitPathAction> pathActions = null;
+    @JsonProperty("pathActions")
+    private List<GitPathAction> pathActions = null;
 
-  public GitCommitToCreate baseRef(GitRef baseRef) {
-    this.baseRef = baseRef;
-    return this;
-  }
-
-   /**
-   * Get baseRef
-   * @return baseRef
-  **/
-  @ApiModelProperty(value = "")
-  public GitRef getBaseRef() {
-    return baseRef;
-  }
-
-  public void setBaseRef(GitRef baseRef) {
-    this.baseRef = baseRef;
-  }
-
-  public GitCommitToCreate comment(String comment) {
-    this.comment = comment;
-    return this;
-  }
-
-   /**
-   * Get comment
-   * @return comment
-  **/
-  @ApiModelProperty(value = "")
-  public String getComment() {
-    return comment;
-  }
-
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-
-  public GitCommitToCreate pathActions(List<GitPathAction> pathActions) {
-    this.pathActions = pathActions;
-    return this;
-  }
-
-  public GitCommitToCreate addPathActionsItem(GitPathAction pathActionsItem) {
-    if (this.pathActions == null) {
-      this.pathActions = new ArrayList<GitPathAction>();
+    public GitCommitToCreate baseRef(GitRef baseRef) {
+        this.baseRef = baseRef;
+        return this;
     }
-    this.pathActions.add(pathActionsItem);
-    return this;
-  }
 
-   /**
-   * Get pathActions
-   * @return pathActions
-  **/
-  @ApiModelProperty(value = "")
-  public List<GitPathAction> getPathActions() {
-    return pathActions;
-  }
-
-  public void setPathActions(List<GitPathAction> pathActions) {
-    this.pathActions = pathActions;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Get baseRef
+     *
+     * @return baseRef
+     **/
+    @ApiModelProperty(value = "")
+    public GitRef getBaseRef() {
+        return baseRef;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setBaseRef(GitRef baseRef) {
+        this.baseRef = baseRef;
     }
-    GitCommitToCreate gitCommitToCreate = (GitCommitToCreate) o;
-    return Objects.equals(this.baseRef, gitCommitToCreate.baseRef) &&
-        Objects.equals(this.comment, gitCommitToCreate.comment) &&
-        Objects.equals(this.pathActions, gitCommitToCreate.pathActions);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(baseRef, comment, pathActions);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitCommitToCreate {\n");
-    
-    sb.append("    baseRef: ").append(toIndentedString(baseRef)).append("\n");
-    sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
-    sb.append("    pathActions: ").append(toIndentedString(pathActions)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitCommitToCreate comment(String comment) {
+        this.comment = comment;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    /**
+     * Get comment
+     *
+     * @return comment
+     **/
+    @ApiModelProperty(value = "")
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public GitCommitToCreate pathActions(List<GitPathAction> pathActions) {
+        this.pathActions = pathActions;
+        return this;
+    }
+
+    public GitCommitToCreate addPathActionsItem(GitPathAction pathActionsItem) {
+        if (this.pathActions == null) {
+            this.pathActions = new ArrayList<GitPathAction>();
+        }
+        this.pathActions.add(pathActionsItem);
+        return this;
+    }
+
+    /**
+     * Get pathActions
+     *
+     * @return pathActions
+     **/
+    @ApiModelProperty(value = "")
+    public List<GitPathAction> getPathActions() {
+        return pathActions;
+    }
+
+    public void setPathActions(List<GitPathAction> pathActions) {
+        this.pathActions = pathActions;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitCommitToCreate gitCommitToCreate = (GitCommitToCreate) o;
+        return Objects.equals(this.baseRef, gitCommitToCreate.baseRef) &&
+                Objects.equals(this.comment, gitCommitToCreate.comment) &&
+                Objects.equals(this.pathActions, gitCommitToCreate.pathActions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(baseRef, comment, pathActions);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitCommitToCreate {\n");
+
+        sb.append("    baseRef: ").append(toIndentedString(baseRef)).append("\n");
+        sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
+        sb.append("    pathActions: ").append(toIndentedString(pathActions)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

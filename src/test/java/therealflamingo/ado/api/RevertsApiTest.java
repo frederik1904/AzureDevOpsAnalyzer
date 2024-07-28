@@ -13,16 +13,10 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitAsyncRefOperationParameters;
 import therealflamingo.ado.models.GitRevert;
-import org.junit.Test;
-import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for RevertsApi
@@ -32,14 +26,11 @@ public class RevertsApiTest {
 
     private final RevertsApi api = new RevertsApi();
 
-    
+
     /**
-     * 
-     *
      * Starts the operation to create a new branch which reverts changes introduced by either a specific commit or commits that are associated to a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void revertsCreateTest() throws Exception {
@@ -52,14 +43,11 @@ public class RevertsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve information about a revert operation by revert Id.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void revertsGetRevertTest() throws Exception {
@@ -72,14 +60,11 @@ public class RevertsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve information about a revert operation for a specific branch.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void revertsGetRevertForRefNameTest() throws Exception {
@@ -92,5 +77,5 @@ public class RevertsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

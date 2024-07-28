@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitAsyncRefOperationSource;
-import therealflamingo.ado.models.GitRepository;
+
+import java.util.Objects;
 
 /**
  * Parameters that are provided in the request body when requesting to cherry pick or revert.
@@ -29,135 +25,139 @@ import therealflamingo.ado.models.GitRepository;
 @ApiModel(description = "Parameters that are provided in the request body when requesting to cherry pick or revert.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitAsyncRefOperationParameters {
-  @JsonProperty("generatedRefName")
-  private String generatedRefName = null;
+    @JsonProperty("generatedRefName")
+    private String generatedRefName = null;
 
-  @JsonProperty("ontoRefName")
-  private String ontoRefName = null;
+    @JsonProperty("ontoRefName")
+    private String ontoRefName = null;
 
-  @JsonProperty("repository")
-  private GitRepository repository = null;
+    @JsonProperty("repository")
+    private GitRepository repository = null;
 
-  @JsonProperty("source")
-  private GitAsyncRefOperationSource source = null;
+    @JsonProperty("source")
+    private GitAsyncRefOperationSource source = null;
 
-  public GitAsyncRefOperationParameters generatedRefName(String generatedRefName) {
-    this.generatedRefName = generatedRefName;
-    return this;
-  }
-
-   /**
-   * Proposed target branch name for the cherry pick or revert operation.
-   * @return generatedRefName
-  **/
-  @ApiModelProperty(value = "Proposed target branch name for the cherry pick or revert operation.")
-  public String getGeneratedRefName() {
-    return generatedRefName;
-  }
-
-  public void setGeneratedRefName(String generatedRefName) {
-    this.generatedRefName = generatedRefName;
-  }
-
-  public GitAsyncRefOperationParameters ontoRefName(String ontoRefName) {
-    this.ontoRefName = ontoRefName;
-    return this;
-  }
-
-   /**
-   * The target branch for the cherry pick or revert operation.
-   * @return ontoRefName
-  **/
-  @ApiModelProperty(value = "The target branch for the cherry pick or revert operation.")
-  public String getOntoRefName() {
-    return ontoRefName;
-  }
-
-  public void setOntoRefName(String ontoRefName) {
-    this.ontoRefName = ontoRefName;
-  }
-
-  public GitAsyncRefOperationParameters repository(GitRepository repository) {
-    this.repository = repository;
-    return this;
-  }
-
-   /**
-   * The git repository for the cherry pick or revert operation.
-   * @return repository
-  **/
-  @ApiModelProperty(value = "The git repository for the cherry pick or revert operation.")
-  public GitRepository getRepository() {
-    return repository;
-  }
-
-  public void setRepository(GitRepository repository) {
-    this.repository = repository;
-  }
-
-  public GitAsyncRefOperationParameters source(GitAsyncRefOperationSource source) {
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Details about the source of the cherry pick or revert operation (e.g. A pull request or a specific commit).
-   * @return source
-  **/
-  @ApiModelProperty(value = "Details about the source of the cherry pick or revert operation (e.g. A pull request or a specific commit).")
-  public GitAsyncRefOperationSource getSource() {
-    return source;
-  }
-
-  public void setSource(GitAsyncRefOperationSource source) {
-    this.source = source;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitAsyncRefOperationParameters generatedRefName(String generatedRefName) {
+        this.generatedRefName = generatedRefName;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Proposed target branch name for the cherry pick or revert operation.
+     *
+     * @return generatedRefName
+     **/
+    @ApiModelProperty(value = "Proposed target branch name for the cherry pick or revert operation.")
+    public String getGeneratedRefName() {
+        return generatedRefName;
     }
-    GitAsyncRefOperationParameters gitAsyncRefOperationParameters = (GitAsyncRefOperationParameters) o;
-    return Objects.equals(this.generatedRefName, gitAsyncRefOperationParameters.generatedRefName) &&
-        Objects.equals(this.ontoRefName, gitAsyncRefOperationParameters.ontoRefName) &&
-        Objects.equals(this.repository, gitAsyncRefOperationParameters.repository) &&
-        Objects.equals(this.source, gitAsyncRefOperationParameters.source);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(generatedRefName, ontoRefName, repository, source);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitAsyncRefOperationParameters {\n");
-    
-    sb.append("    generatedRefName: ").append(toIndentedString(generatedRefName)).append("\n");
-    sb.append("    ontoRefName: ").append(toIndentedString(ontoRefName)).append("\n");
-    sb.append("    repository: ").append(toIndentedString(repository)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setGeneratedRefName(String generatedRefName) {
+        this.generatedRefName = generatedRefName;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitAsyncRefOperationParameters ontoRefName(String ontoRefName) {
+        this.ontoRefName = ontoRefName;
+        return this;
+    }
+
+    /**
+     * The target branch for the cherry pick or revert operation.
+     *
+     * @return ontoRefName
+     **/
+    @ApiModelProperty(value = "The target branch for the cherry pick or revert operation.")
+    public String getOntoRefName() {
+        return ontoRefName;
+    }
+
+    public void setOntoRefName(String ontoRefName) {
+        this.ontoRefName = ontoRefName;
+    }
+
+    public GitAsyncRefOperationParameters repository(GitRepository repository) {
+        this.repository = repository;
+        return this;
+    }
+
+    /**
+     * The git repository for the cherry pick or revert operation.
+     *
+     * @return repository
+     **/
+    @ApiModelProperty(value = "The git repository for the cherry pick or revert operation.")
+    public GitRepository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(GitRepository repository) {
+        this.repository = repository;
+    }
+
+    public GitAsyncRefOperationParameters source(GitAsyncRefOperationSource source) {
+        this.source = source;
+        return this;
+    }
+
+    /**
+     * Details about the source of the cherry pick or revert operation (e.g. A pull request or a specific commit).
+     *
+     * @return source
+     **/
+    @ApiModelProperty(value = "Details about the source of the cherry pick or revert operation (e.g. A pull request or a specific commit).")
+    public GitAsyncRefOperationSource getSource() {
+        return source;
+    }
+
+    public void setSource(GitAsyncRefOperationSource source) {
+        this.source = source;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitAsyncRefOperationParameters gitAsyncRefOperationParameters = (GitAsyncRefOperationParameters) o;
+        return Objects.equals(this.generatedRefName, gitAsyncRefOperationParameters.generatedRefName) &&
+                Objects.equals(this.ontoRefName, gitAsyncRefOperationParameters.ontoRefName) &&
+                Objects.equals(this.repository, gitAsyncRefOperationParameters.repository) &&
+                Objects.equals(this.source, gitAsyncRefOperationParameters.source);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(generatedRefName, ontoRefName, repository, source);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitAsyncRefOperationParameters {\n");
+
+        sb.append("    generatedRefName: ").append(toIndentedString(generatedRefName)).append("\n");
+        sb.append("    ontoRefName: ").append(toIndentedString(ontoRefName)).append("\n");
+        sb.append("    repository: ").append(toIndentedString(repository)).append("\n");
+        sb.append("    source: ").append(toIndentedString(source)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

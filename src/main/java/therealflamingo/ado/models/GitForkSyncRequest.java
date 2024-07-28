@@ -13,19 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitForkOperationStatusDetail;
-import therealflamingo.ado.models.GlobalGitRepositoryKey;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.SourceToTargetRef;
+import java.util.Objects;
 
 /**
  * Request to sync data between two forks.
@@ -47,48 +43,6 @@ public class GitForkSyncRequest {
 
   @JsonProperty("sourceToTargetRefs")
   private List<SourceToTargetRef> sourceToTargetRefs = null;
-
-  /**
-   * Gets or Sets status
-   */
-  public enum StatusEnum {
-    QUEUED("queued"),
-    
-    INPROGRESS("inProgress"),
-    
-    COMPLETED("completed"),
-    
-    FAILED("failed"),
-    
-    ABANDONED("abandoned");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("status")
   private StatusEnum status = null;
 
@@ -97,10 +51,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * Collection of related links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Collection of related links")
   public ReferenceLinks getLinks() {
     return links;
@@ -115,10 +70,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * Get detailedStatus
+   *
    * @return detailedStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitForkOperationStatusDetail getDetailedStatus() {
     return detailedStatus;
@@ -133,10 +89,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * Unique identifier for the operation.
+   *
    * @return operationId
-  **/
+   **/
   @ApiModelProperty(value = "Unique identifier for the operation.")
   public Integer getOperationId() {
     return operationId;
@@ -151,10 +108,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * Fully-qualified identifier for the source repository.
+   *
    * @return source
-  **/
+   **/
   @ApiModelProperty(value = "Fully-qualified identifier for the source repository.")
   public GlobalGitRepositoryKey getSource() {
     return source;
@@ -177,10 +135,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * If supplied, the set of ref mappings to use when performing a \&quot;sync\&quot; or create. If missing, all refs will be synchronized.
+   *
    * @return sourceToTargetRefs
-  **/
+   **/
   @ApiModelProperty(value = "If supplied, the set of ref mappings to use when performing a \"sync\" or create. If missing, all refs will be synchronized.")
   public List<SourceToTargetRef> getSourceToTargetRefs() {
     return sourceToTargetRefs;
@@ -195,10 +154,11 @@ public class GitForkSyncRequest {
     return this;
   }
 
-   /**
+  /**
    * Get status
+   *
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public StatusEnum getStatus() {
     return status;
@@ -207,7 +167,6 @@ public class GitForkSyncRequest {
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -219,11 +178,11 @@ public class GitForkSyncRequest {
     }
     GitForkSyncRequest gitForkSyncRequest = (GitForkSyncRequest) o;
     return Objects.equals(this.links, gitForkSyncRequest.links) &&
-        Objects.equals(this.detailedStatus, gitForkSyncRequest.detailedStatus) &&
-        Objects.equals(this.operationId, gitForkSyncRequest.operationId) &&
-        Objects.equals(this.source, gitForkSyncRequest.source) &&
-        Objects.equals(this.sourceToTargetRefs, gitForkSyncRequest.sourceToTargetRefs) &&
-        Objects.equals(this.status, gitForkSyncRequest.status);
+            Objects.equals(this.detailedStatus, gitForkSyncRequest.detailedStatus) &&
+            Objects.equals(this.operationId, gitForkSyncRequest.operationId) &&
+            Objects.equals(this.source, gitForkSyncRequest.source) &&
+            Objects.equals(this.sourceToTargetRefs, gitForkSyncRequest.sourceToTargetRefs) &&
+            Objects.equals(this.status, gitForkSyncRequest.status);
   }
 
   @Override
@@ -231,12 +190,11 @@ public class GitForkSyncRequest {
     return Objects.hash(links, detailedStatus, operationId, source, sourceToTargetRefs, status);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitForkSyncRequest {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
     sb.append("    operationId: ").append(toIndentedString(operationId)).append("\n");
@@ -256,6 +214,47 @@ public class GitForkSyncRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Gets or Sets status
+   */
+  public enum StatusEnum {
+    QUEUED("queued"),
+
+    INPROGRESS("inProgress"),
+
+    COMPLETED("completed"),
+
+    FAILED("failed"),
+
+    ABANDONED("abandoned");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static StatusEnum fromValue(String value) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

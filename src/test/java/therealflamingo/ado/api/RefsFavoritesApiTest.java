@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitRefFavorite;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitRefFavorite;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for RefsFavoritesApi
@@ -31,14 +27,11 @@ public class RefsFavoritesApiTest {
 
     private final RefsFavoritesApi api = new RefsFavoritesApi();
 
-    
+
     /**
-     * 
-     *
      * Creates a ref favorite
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsFavoritesCreateTest() throws Exception {
@@ -50,14 +43,11 @@ public class RefsFavoritesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Deletes the refs favorite specified
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsFavoritesDeleteTest() throws Exception {
@@ -69,14 +59,11 @@ public class RefsFavoritesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Gets the refs favorite for a favorite Id.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsFavoritesGetTest() throws Exception {
@@ -88,14 +75,11 @@ public class RefsFavoritesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Gets the refs favorites for a repo and an identity.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void refsFavoritesListTest() throws Exception {
@@ -108,5 +92,5 @@ public class RefsFavoritesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

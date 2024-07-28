@@ -13,15 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
+
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Represents a shallow reference to a TeamProject.
@@ -29,353 +29,359 @@ import org.threeten.bp.OffsetDateTime;
 @ApiModel(description = "Represents a shallow reference to a TeamProject.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class TeamProjectReference {
-  @JsonProperty("abbreviation")
-  private String abbreviation = null;
+    @JsonProperty("abbreviation")
+    private String abbreviation = null;
 
-  @JsonProperty("defaultTeamImageUrl")
-  private String defaultTeamImageUrl = null;
+    @JsonProperty("defaultTeamImageUrl")
+    private String defaultTeamImageUrl = null;
 
-  @JsonProperty("description")
-  private String description = null;
+    @JsonProperty("description")
+    private String description = null;
 
-  @JsonProperty("id")
-  private UUID id = null;
+    @JsonProperty("id")
+    private UUID id = null;
 
-  @JsonProperty("lastUpdateTime")
-  private OffsetDateTime lastUpdateTime = null;
+    @JsonProperty("lastUpdateTime")
+    private OffsetDateTime lastUpdateTime = null;
 
-  @JsonProperty("name")
-  private String name = null;
+    @JsonProperty("name")
+    private String name = null;
 
-  @JsonProperty("revision")
-  private Long revision = null;
+    @JsonProperty("revision")
+    private Long revision = null;
+    @JsonProperty("state")
+    private StateEnum state = null;
+    @JsonProperty("url")
+    private String url = null;
+    @JsonProperty("visibility")
+    private VisibilityEnum visibility = null;
 
-  /**
-   * Project state.
-   */
-  public enum StateEnum {
-    DELETING("deleting"),
-    
-    NEW("new"),
-    
-    WELLFORMED("wellFormed"),
-    
-    CREATEPENDING("createPending"),
-    
-    ALL("all"),
-    
-    UNCHANGED("unchanged"),
-    
-    DELETED("deleted");
-
-    private String value;
-
-    StateEnum(String value) {
-      this.value = value;
+    public TeamProjectReference abbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Project abbreviation.
+     *
+     * @return abbreviation
+     **/
+    @ApiModelProperty(value = "Project abbreviation.")
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
+    }
+
+    public TeamProjectReference defaultTeamImageUrl(String defaultTeamImageUrl) {
+        this.defaultTeamImageUrl = defaultTeamImageUrl;
+        return this;
+    }
+
+    /**
+     * Url to default team identity image.
+     *
+     * @return defaultTeamImageUrl
+     **/
+    @ApiModelProperty(value = "Url to default team identity image.")
+    public String getDefaultTeamImageUrl() {
+        return defaultTeamImageUrl;
+    }
+
+    public void setDefaultTeamImageUrl(String defaultTeamImageUrl) {
+        this.defaultTeamImageUrl = defaultTeamImageUrl;
+    }
+
+    public TeamProjectReference description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * The project&#39;s description (if any).
+     *
+     * @return description
+     **/
+    @ApiModelProperty(value = "The project's description (if any).")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public TeamProjectReference id(UUID id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Project identifier.
+     *
+     * @return id
+     **/
+    @ApiModelProperty(value = "Project identifier.")
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public TeamProjectReference lastUpdateTime(OffsetDateTime lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+
+    /**
+     * Project last update time.
+     *
+     * @return lastUpdateTime
+     **/
+    @ApiModelProperty(value = "Project last update time.")
+    public OffsetDateTime getLastUpdateTime() {
+        return lastUpdateTime;
+    }
+
+    public void setLastUpdateTime(OffsetDateTime lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
+    public TeamProjectReference name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Project name.
+     *
+     * @return name
+     **/
+    @ApiModelProperty(value = "Project name.")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public TeamProjectReference revision(Long revision) {
+        this.revision = revision;
+        return this;
+    }
+
+    /**
+     * Project revision.
+     *
+     * @return revision
+     **/
+    @ApiModelProperty(value = "Project revision.")
+    public Long getRevision() {
+        return revision;
+    }
+
+    public void setRevision(Long revision) {
+        this.revision = revision;
+    }
+
+    public TeamProjectReference state(StateEnum state) {
+        this.state = state;
+        return this;
+    }
+
+    /**
+     * Project state.
+     *
+     * @return state
+     **/
+    @ApiModelProperty(value = "Project state.")
+    public StateEnum getState() {
+        return state;
+    }
+
+    public void setState(StateEnum state) {
+        this.state = state;
+    }
+
+    public TeamProjectReference url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Url to the full version of the object.
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "Url to the full version of the object.")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public TeamProjectReference visibility(VisibilityEnum visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+
+    /**
+     * Project visibility.
+     *
+     * @return visibility
+     **/
+    @ApiModelProperty(value = "Project visibility.")
+    public VisibilityEnum getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(VisibilityEnum visibility) {
+        this.visibility = visibility;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TeamProjectReference teamProjectReference = (TeamProjectReference) o;
+        return Objects.equals(this.abbreviation, teamProjectReference.abbreviation) &&
+                Objects.equals(this.defaultTeamImageUrl, teamProjectReference.defaultTeamImageUrl) &&
+                Objects.equals(this.description, teamProjectReference.description) &&
+                Objects.equals(this.id, teamProjectReference.id) &&
+                Objects.equals(this.lastUpdateTime, teamProjectReference.lastUpdateTime) &&
+                Objects.equals(this.name, teamProjectReference.name) &&
+                Objects.equals(this.revision, teamProjectReference.revision) &&
+                Objects.equals(this.state, teamProjectReference.state) &&
+                Objects.equals(this.url, teamProjectReference.url) &&
+                Objects.equals(this.visibility, teamProjectReference.visibility);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(abbreviation, defaultTeamImageUrl, description, id, lastUpdateTime, name, revision, state, url, visibility);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TeamProjectReference {\n");
+
+        sb.append("    abbreviation: ").append(toIndentedString(abbreviation)).append("\n");
+        sb.append("    defaultTeamImageUrl: ").append(toIndentedString(defaultTeamImageUrl)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    lastUpdateTime: ").append(toIndentedString(lastUpdateTime)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
+        sb.append("    state: ").append(toIndentedString(state)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    visibility: ").append(toIndentedString(visibility)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StateEnum fromValue(String value) {
-      for (StateEnum b : StateEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
-    }
-  }
-
-  @JsonProperty("state")
-  private StateEnum state = null;
-
-  @JsonProperty("url")
-  private String url = null;
-
-  /**
-   * Project visibility.
-   */
-  public enum VisibilityEnum {
-    PRIVATE("private"),
-    
-    PUBLIC("public");
-
-    private String value;
-
-    VisibilityEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+    /**
+     * Project state.
+     */
+    public enum StateEnum {
+        DELETING("deleting"),
 
-    @JsonCreator
-    public static VisibilityEnum fromValue(String value) {
-      for (VisibilityEnum b : VisibilityEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        NEW("new"),
+
+        WELLFORMED("wellFormed"),
+
+        CREATEPENDING("createPending"),
+
+        ALL("all"),
+
+        UNCHANGED("unchanged"),
+
+        DELETED("deleted");
+
+        private String value;
+
+        StateEnum(String value) {
+            this.value = value;
         }
-      }
-      return null;
+
+        @JsonCreator
+        public static StateEnum fromValue(String value) {
+            for (StateEnum b : StateEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  @JsonProperty("visibility")
-  private VisibilityEnum visibility = null;
+    /**
+     * Project visibility.
+     */
+    public enum VisibilityEnum {
+        PRIVATE("private"),
 
-  public TeamProjectReference abbreviation(String abbreviation) {
-    this.abbreviation = abbreviation;
-    return this;
-  }
+        PUBLIC("public");
 
-   /**
-   * Project abbreviation.
-   * @return abbreviation
-  **/
-  @ApiModelProperty(value = "Project abbreviation.")
-  public String getAbbreviation() {
-    return abbreviation;
-  }
+        private String value;
 
-  public void setAbbreviation(String abbreviation) {
-    this.abbreviation = abbreviation;
-  }
+        VisibilityEnum(String value) {
+            this.value = value;
+        }
 
-  public TeamProjectReference defaultTeamImageUrl(String defaultTeamImageUrl) {
-    this.defaultTeamImageUrl = defaultTeamImageUrl;
-    return this;
-  }
+        @JsonCreator
+        public static VisibilityEnum fromValue(String value) {
+            for (VisibilityEnum b : VisibilityEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
 
-   /**
-   * Url to default team identity image.
-   * @return defaultTeamImageUrl
-  **/
-  @ApiModelProperty(value = "Url to default team identity image.")
-  public String getDefaultTeamImageUrl() {
-    return defaultTeamImageUrl;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public void setDefaultTeamImageUrl(String defaultTeamImageUrl) {
-    this.defaultTeamImageUrl = defaultTeamImageUrl;
-  }
-
-  public TeamProjectReference description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * The project&#39;s description (if any).
-   * @return description
-  **/
-  @ApiModelProperty(value = "The project's description (if any).")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public TeamProjectReference id(UUID id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Project identifier.
-   * @return id
-  **/
-  @ApiModelProperty(value = "Project identifier.")
-  public UUID getId() {
-    return id;
-  }
-
-  public void setId(UUID id) {
-    this.id = id;
-  }
-
-  public TeamProjectReference lastUpdateTime(OffsetDateTime lastUpdateTime) {
-    this.lastUpdateTime = lastUpdateTime;
-    return this;
-  }
-
-   /**
-   * Project last update time.
-   * @return lastUpdateTime
-  **/
-  @ApiModelProperty(value = "Project last update time.")
-  public OffsetDateTime getLastUpdateTime() {
-    return lastUpdateTime;
-  }
-
-  public void setLastUpdateTime(OffsetDateTime lastUpdateTime) {
-    this.lastUpdateTime = lastUpdateTime;
-  }
-
-  public TeamProjectReference name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Project name.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Project name.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public TeamProjectReference revision(Long revision) {
-    this.revision = revision;
-    return this;
-  }
-
-   /**
-   * Project revision.
-   * @return revision
-  **/
-  @ApiModelProperty(value = "Project revision.")
-  public Long getRevision() {
-    return revision;
-  }
-
-  public void setRevision(Long revision) {
-    this.revision = revision;
-  }
-
-  public TeamProjectReference state(StateEnum state) {
-    this.state = state;
-    return this;
-  }
-
-   /**
-   * Project state.
-   * @return state
-  **/
-  @ApiModelProperty(value = "Project state.")
-  public StateEnum getState() {
-    return state;
-  }
-
-  public void setState(StateEnum state) {
-    this.state = state;
-  }
-
-  public TeamProjectReference url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Url to the full version of the object.
-   * @return url
-  **/
-  @ApiModelProperty(value = "Url to the full version of the object.")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public TeamProjectReference visibility(VisibilityEnum visibility) {
-    this.visibility = visibility;
-    return this;
-  }
-
-   /**
-   * Project visibility.
-   * @return visibility
-  **/
-  @ApiModelProperty(value = "Project visibility.")
-  public VisibilityEnum getVisibility() {
-    return visibility;
-  }
-
-  public void setVisibility(VisibilityEnum visibility) {
-    this.visibility = visibility;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    TeamProjectReference teamProjectReference = (TeamProjectReference) o;
-    return Objects.equals(this.abbreviation, teamProjectReference.abbreviation) &&
-        Objects.equals(this.defaultTeamImageUrl, teamProjectReference.defaultTeamImageUrl) &&
-        Objects.equals(this.description, teamProjectReference.description) &&
-        Objects.equals(this.id, teamProjectReference.id) &&
-        Objects.equals(this.lastUpdateTime, teamProjectReference.lastUpdateTime) &&
-        Objects.equals(this.name, teamProjectReference.name) &&
-        Objects.equals(this.revision, teamProjectReference.revision) &&
-        Objects.equals(this.state, teamProjectReference.state) &&
-        Objects.equals(this.url, teamProjectReference.url) &&
-        Objects.equals(this.visibility, teamProjectReference.visibility);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(abbreviation, defaultTeamImageUrl, description, id, lastUpdateTime, name, revision, state, url, visibility);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TeamProjectReference {\n");
-    
-    sb.append("    abbreviation: ").append(toIndentedString(abbreviation)).append("\n");
-    sb.append("    defaultTeamImageUrl: ").append(toIndentedString(defaultTeamImageUrl)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    lastUpdateTime: ").append(toIndentedString(lastUpdateTime)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    visibility: ").append(toIndentedString(visibility)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

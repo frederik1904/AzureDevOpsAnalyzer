@@ -13,250 +13,250 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitMergeOperationStatusDetail;
-import therealflamingo.ado.models.GitMergeParameters;
-import therealflamingo.ado.models.ReferenceLinks;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitMerge extends GitMergeParameters {
-  @JsonProperty("comment")
-  private String comment = null;
+    @JsonProperty("comment")
+    private String comment = null;
 
-  @JsonProperty("parents")
-  private List<String> parents = null;
+    @JsonProperty("parents")
+    private List<String> parents = null;
 
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("detailedStatus")
-  private GitMergeOperationStatusDetail detailedStatus = null;
+    @JsonProperty("detailedStatus")
+    private GitMergeOperationStatusDetail detailedStatus = null;
 
-  @JsonProperty("mergeOperationId")
-  private Integer mergeOperationId = null;
+    @JsonProperty("mergeOperationId")
+    private Integer mergeOperationId = null;
+    @JsonProperty("status")
+    private StatusEnum status = null;
 
-  /**
-   * Status of the merge operation.
-   */
-  public enum StatusEnum {
-    QUEUED("queued"),
-    
-    INPROGRESS("inProgress"),
-    
-    COMPLETED("completed"),
-    
-    FAILED("failed"),
-    
-    ABANDONED("abandoned");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
+    public GitMerge comment(String comment) {
+        this.comment = comment;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Comment or message of the commit.
+     *
+     * @return comment
+     **/
+    @ApiModelProperty(value = "Comment or message of the commit.")
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public GitMerge parents(List<String> parents) {
+        this.parents = parents;
+        return this;
+    }
+
+    public GitMerge addParentsItem(String parentsItem) {
+        if (this.parents == null) {
+            this.parents = new ArrayList<String>();
+        }
+        this.parents.add(parentsItem);
+        return this;
+    }
+
+    /**
+     * An enumeration of the parent commit IDs for the merge  commit.
+     *
+     * @return parents
+     **/
+    @ApiModelProperty(value = "An enumeration of the parent commit IDs for the merge  commit.")
+    public List<String> getParents() {
+        return parents;
+    }
+
+    public void setParents(List<String> parents) {
+        this.parents = parents;
+    }
+
+    public GitMerge links(ReferenceLinks links) {
+        this.links = links;
+        return this;
+    }
+
+    /**
+     * Reference links.
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "Reference links.")
+    public ReferenceLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
+    }
+
+    public GitMerge detailedStatus(GitMergeOperationStatusDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+        return this;
+    }
+
+    /**
+     * Detailed status of the merge operation.
+     *
+     * @return detailedStatus
+     **/
+    @ApiModelProperty(value = "Detailed status of the merge operation.")
+    public GitMergeOperationStatusDetail getDetailedStatus() {
+        return detailedStatus;
+    }
+
+    public void setDetailedStatus(GitMergeOperationStatusDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    public GitMerge mergeOperationId(Integer mergeOperationId) {
+        this.mergeOperationId = mergeOperationId;
+        return this;
+    }
+
+    /**
+     * Unique identifier for the merge operation.
+     *
+     * @return mergeOperationId
+     **/
+    @ApiModelProperty(value = "Unique identifier for the merge operation.")
+    public Integer getMergeOperationId() {
+        return mergeOperationId;
+    }
+
+    public void setMergeOperationId(Integer mergeOperationId) {
+        this.mergeOperationId = mergeOperationId;
+    }
+
+    public GitMerge status(StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Status of the merge operation.
+     *
+     * @return status
+     **/
+    @ApiModelProperty(value = "Status of the merge operation.")
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitMerge gitMerge = (GitMerge) o;
+        return Objects.equals(this.comment, gitMerge.comment) &&
+                Objects.equals(this.parents, gitMerge.parents) &&
+                Objects.equals(this.links, gitMerge.links) &&
+                Objects.equals(this.detailedStatus, gitMerge.detailedStatus) &&
+                Objects.equals(this.mergeOperationId, gitMerge.mergeOperationId) &&
+                Objects.equals(this.status, gitMerge.status) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(comment, parents, links, detailedStatus, mergeOperationId, status, super.hashCode());
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitMerge {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
+        sb.append("    parents: ").append(toIndentedString(parents)).append("\n");
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
+        sb.append("    mergeOperationId: ").append(toIndentedString(mergeOperationId)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  @JsonProperty("status")
-  private StatusEnum status = null;
+    /**
+     * Status of the merge operation.
+     */
+    public enum StatusEnum {
+        QUEUED("queued"),
 
-  public GitMerge comment(String comment) {
-    this.comment = comment;
-    return this;
-  }
+        INPROGRESS("inProgress"),
 
-   /**
-   * Comment or message of the commit.
-   * @return comment
-  **/
-  @ApiModelProperty(value = "Comment or message of the commit.")
-  public String getComment() {
-    return comment;
-  }
+        COMPLETED("completed"),
 
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
+        FAILED("failed"),
 
-  public GitMerge parents(List<String> parents) {
-    this.parents = parents;
-    return this;
-  }
+        ABANDONED("abandoned");
 
-  public GitMerge addParentsItem(String parentsItem) {
-    if (this.parents == null) {
-      this.parents = new ArrayList<String>();
+        private String value;
+
+        StatusEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static StatusEnum fromValue(String value) {
+            for (StatusEnum b : StatusEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.parents.add(parentsItem);
-    return this;
-  }
-
-   /**
-   * An enumeration of the parent commit IDs for the merge  commit.
-   * @return parents
-  **/
-  @ApiModelProperty(value = "An enumeration of the parent commit IDs for the merge  commit.")
-  public List<String> getParents() {
-    return parents;
-  }
-
-  public void setParents(List<String> parents) {
-    this.parents = parents;
-  }
-
-  public GitMerge links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Reference links.
-   * @return links
-  **/
-  @ApiModelProperty(value = "Reference links.")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitMerge detailedStatus(GitMergeOperationStatusDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-    return this;
-  }
-
-   /**
-   * Detailed status of the merge operation.
-   * @return detailedStatus
-  **/
-  @ApiModelProperty(value = "Detailed status of the merge operation.")
-  public GitMergeOperationStatusDetail getDetailedStatus() {
-    return detailedStatus;
-  }
-
-  public void setDetailedStatus(GitMergeOperationStatusDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-  }
-
-  public GitMerge mergeOperationId(Integer mergeOperationId) {
-    this.mergeOperationId = mergeOperationId;
-    return this;
-  }
-
-   /**
-   * Unique identifier for the merge operation.
-   * @return mergeOperationId
-  **/
-  @ApiModelProperty(value = "Unique identifier for the merge operation.")
-  public Integer getMergeOperationId() {
-    return mergeOperationId;
-  }
-
-  public void setMergeOperationId(Integer mergeOperationId) {
-    this.mergeOperationId = mergeOperationId;
-  }
-
-  public GitMerge status(StatusEnum status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Status of the merge operation.
-   * @return status
-  **/
-  @ApiModelProperty(value = "Status of the merge operation.")
-  public StatusEnum getStatus() {
-    return status;
-  }
-
-  public void setStatus(StatusEnum status) {
-    this.status = status;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GitMerge gitMerge = (GitMerge) o;
-    return Objects.equals(this.comment, gitMerge.comment) &&
-        Objects.equals(this.parents, gitMerge.parents) &&
-        Objects.equals(this.links, gitMerge.links) &&
-        Objects.equals(this.detailedStatus, gitMerge.detailedStatus) &&
-        Objects.equals(this.mergeOperationId, gitMerge.mergeOperationId) &&
-        Objects.equals(this.status, gitMerge.status) &&
-        super.equals(o);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(comment, parents, links, detailedStatus, mergeOperationId, status, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitMerge {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
-    sb.append("    parents: ").append(toIndentedString(parents)).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
-    sb.append("    mergeOperationId: ").append(toIndentedString(mergeOperationId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

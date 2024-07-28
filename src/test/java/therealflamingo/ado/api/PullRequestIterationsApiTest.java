@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPullRequestIteration;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitPullRequestIteration;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestIterationsApi
@@ -31,14 +27,11 @@ public class PullRequestIterationsApiTest {
 
     private final PullRequestIterationsApi api = new PullRequestIterationsApi();
 
-    
+
     /**
-     * 
-     *
      * Get the specified iteration for a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationsGetTest() throws Exception {
@@ -52,14 +45,11 @@ public class PullRequestIterationsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Get the list of iterations for the specified pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestIterationsListTest() throws Exception {
@@ -73,5 +63,5 @@ public class PullRequestIterationsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

@@ -13,16 +13,10 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.JsonPatchDocument;
 import therealflamingo.ado.models.PropertiesCollection;
-import org.junit.Test;
-import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestPropertiesApi
@@ -32,14 +26,11 @@ public class PullRequestPropertiesApiTest {
 
     private final PullRequestPropertiesApi api = new PullRequestPropertiesApi();
 
-    
+
     /**
-     * 
-     *
      * Get external properties of the pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestPropertiesListTest() throws Exception {
@@ -52,14 +43,11 @@ public class PullRequestPropertiesApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Create or update pull request external properties. The patch operation can be &#x60;add&#x60;, &#x60;replace&#x60; or &#x60;remove&#x60;. For &#x60;add&#x60; operation, the path can be empty. If the path is empty, the value must be a list of key value pairs. For &#x60;replace&#x60; operation, the path cannot be empty. If the path does not exist, the property will be added to the collection. For &#x60;remove&#x60; operation, the path cannot be empty. If the path does not exist, no action will be performed.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestPropertiesUpdateTest() throws Exception {
@@ -73,5 +61,5 @@ public class PullRequestPropertiesApiTest {
 
         // TODO: test validations
     }
-    
+
 }

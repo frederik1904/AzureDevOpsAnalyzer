@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Metadata for a Label.
@@ -59,10 +55,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Collection of reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Collection of reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -77,10 +74,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label description.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "Label description.")
   public String getDescription() {
     return description;
@@ -95,10 +93,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label Id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Label Id.")
   public Integer getId() {
     return id;
@@ -113,10 +112,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label scope.
+   *
    * @return labelScope
-  **/
+   **/
   @ApiModelProperty(value = "Label scope.")
   public String getLabelScope() {
     return labelScope;
@@ -131,10 +131,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Last modified datetime for the label.
+   *
    * @return modifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "Last modified datetime for the label.")
   public OffsetDateTime getModifiedDate() {
     return modifiedDate;
@@ -149,10 +150,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label name.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Label name.")
   public String getName() {
     return name;
@@ -167,10 +169,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label owner.
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Label owner.")
   public IdentityRef getOwner() {
     return owner;
@@ -185,10 +188,11 @@ public class TfvcLabelRef {
     return this;
   }
 
-   /**
+  /**
    * Label Url.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Label Url.")
   public String getUrl() {
     return url;
@@ -209,13 +213,13 @@ public class TfvcLabelRef {
     }
     TfvcLabelRef tfvcLabelRef = (TfvcLabelRef) o;
     return Objects.equals(this.links, tfvcLabelRef.links) &&
-        Objects.equals(this.description, tfvcLabelRef.description) &&
-        Objects.equals(this.id, tfvcLabelRef.id) &&
-        Objects.equals(this.labelScope, tfvcLabelRef.labelScope) &&
-        Objects.equals(this.modifiedDate, tfvcLabelRef.modifiedDate) &&
-        Objects.equals(this.name, tfvcLabelRef.name) &&
-        Objects.equals(this.owner, tfvcLabelRef.owner) &&
-        Objects.equals(this.url, tfvcLabelRef.url);
+            Objects.equals(this.description, tfvcLabelRef.description) &&
+            Objects.equals(this.id, tfvcLabelRef.id) &&
+            Objects.equals(this.labelScope, tfvcLabelRef.labelScope) &&
+            Objects.equals(this.modifiedDate, tfvcLabelRef.modifiedDate) &&
+            Objects.equals(this.name, tfvcLabelRef.name) &&
+            Objects.equals(this.owner, tfvcLabelRef.owner) &&
+            Objects.equals(this.url, tfvcLabelRef.url);
   }
 
   @Override
@@ -228,7 +232,7 @@ public class TfvcLabelRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcLabelRef {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

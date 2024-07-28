@@ -13,222 +13,224 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.Change;
-import therealflamingo.ado.models.GitTemplate;
-import therealflamingo.ado.models.ItemContent;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitChange extends Change {
-  @JsonProperty("item")
-  private String item = null;
+    @JsonProperty("item")
+    private String item = null;
 
-  @JsonProperty("newContent")
-  private ItemContent newContent = null;
+    @JsonProperty("newContent")
+    private ItemContent newContent = null;
 
-  @JsonProperty("sourceServerItem")
-  private String sourceServerItem = null;
+    @JsonProperty("sourceServerItem")
+    private String sourceServerItem = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  @JsonProperty("changeId")
-  private Integer changeId = null;
+    @JsonProperty("changeId")
+    private Integer changeId = null;
 
-  @JsonProperty("newContentTemplate")
-  private GitTemplate newContentTemplate = null;
+    @JsonProperty("newContentTemplate")
+    private GitTemplate newContentTemplate = null;
 
-  @JsonProperty("originalPath")
-  private String originalPath = null;
+    @JsonProperty("originalPath")
+    private String originalPath = null;
 
-  public GitChange item(String item) {
-    this.item = item;
-    return this;
-  }
-
-   /**
-   * Current version.
-   * @return item
-  **/
-  @ApiModelProperty(value = "Current version.")
-  public String getItem() {
-    return item;
-  }
-
-  public void setItem(String item) {
-    this.item = item;
-  }
-
-  public GitChange newContent(ItemContent newContent) {
-    this.newContent = newContent;
-    return this;
-  }
-
-   /**
-   * Content of the item after the change.
-   * @return newContent
-  **/
-  @ApiModelProperty(value = "Content of the item after the change.")
-  public ItemContent getNewContent() {
-    return newContent;
-  }
-
-  public void setNewContent(ItemContent newContent) {
-    this.newContent = newContent;
-  }
-
-  public GitChange sourceServerItem(String sourceServerItem) {
-    this.sourceServerItem = sourceServerItem;
-    return this;
-  }
-
-   /**
-   * Path of the item on the server.
-   * @return sourceServerItem
-  **/
-  @ApiModelProperty(value = "Path of the item on the server.")
-  public String getSourceServerItem() {
-    return sourceServerItem;
-  }
-
-  public void setSourceServerItem(String sourceServerItem) {
-    this.sourceServerItem = sourceServerItem;
-  }
-
-  public GitChange url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * URL to retrieve the item.
-   * @return url
-  **/
-  @ApiModelProperty(value = "URL to retrieve the item.")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public GitChange changeId(Integer changeId) {
-    this.changeId = changeId;
-    return this;
-  }
-
-   /**
-   * ID of the change within the group of changes.
-   * @return changeId
-  **/
-  @ApiModelProperty(value = "ID of the change within the group of changes.")
-  public Integer getChangeId() {
-    return changeId;
-  }
-
-  public void setChangeId(Integer changeId) {
-    this.changeId = changeId;
-  }
-
-  public GitChange newContentTemplate(GitTemplate newContentTemplate) {
-    this.newContentTemplate = newContentTemplate;
-    return this;
-  }
-
-   /**
-   * New Content template to be used when pushing new changes.
-   * @return newContentTemplate
-  **/
-  @ApiModelProperty(value = "New Content template to be used when pushing new changes.")
-  public GitTemplate getNewContentTemplate() {
-    return newContentTemplate;
-  }
-
-  public void setNewContentTemplate(GitTemplate newContentTemplate) {
-    this.newContentTemplate = newContentTemplate;
-  }
-
-  public GitChange originalPath(String originalPath) {
-    this.originalPath = originalPath;
-    return this;
-  }
-
-   /**
-   * Original path of item if different from current path.
-   * @return originalPath
-  **/
-  @ApiModelProperty(value = "Original path of item if different from current path.")
-  public String getOriginalPath() {
-    return originalPath;
-  }
-
-  public void setOriginalPath(String originalPath) {
-    this.originalPath = originalPath;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitChange item(String item) {
+        this.item = item;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Current version.
+     *
+     * @return item
+     **/
+    @ApiModelProperty(value = "Current version.")
+    public String getItem() {
+        return item;
     }
-    GitChange gitChange = (GitChange) o;
-    return Objects.equals(this.item, gitChange.item) &&
-        Objects.equals(this.newContent, gitChange.newContent) &&
-        Objects.equals(this.sourceServerItem, gitChange.sourceServerItem) &&
-        Objects.equals(this.url, gitChange.url) &&
-        Objects.equals(this.changeId, gitChange.changeId) &&
-        Objects.equals(this.newContentTemplate, gitChange.newContentTemplate) &&
-        Objects.equals(this.originalPath, gitChange.originalPath) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(item, newContent, sourceServerItem, url, changeId, newContentTemplate, originalPath, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitChange {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    item: ").append(toIndentedString(item)).append("\n");
-    sb.append("    newContent: ").append(toIndentedString(newContent)).append("\n");
-    sb.append("    sourceServerItem: ").append(toIndentedString(sourceServerItem)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    changeId: ").append(toIndentedString(changeId)).append("\n");
-    sb.append("    newContentTemplate: ").append(toIndentedString(newContentTemplate)).append("\n");
-    sb.append("    originalPath: ").append(toIndentedString(originalPath)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setItem(String item) {
+        this.item = item;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitChange newContent(ItemContent newContent) {
+        this.newContent = newContent;
+        return this;
+    }
+
+    /**
+     * Content of the item after the change.
+     *
+     * @return newContent
+     **/
+    @ApiModelProperty(value = "Content of the item after the change.")
+    public ItemContent getNewContent() {
+        return newContent;
+    }
+
+    public void setNewContent(ItemContent newContent) {
+        this.newContent = newContent;
+    }
+
+    public GitChange sourceServerItem(String sourceServerItem) {
+        this.sourceServerItem = sourceServerItem;
+        return this;
+    }
+
+    /**
+     * Path of the item on the server.
+     *
+     * @return sourceServerItem
+     **/
+    @ApiModelProperty(value = "Path of the item on the server.")
+    public String getSourceServerItem() {
+        return sourceServerItem;
+    }
+
+    public void setSourceServerItem(String sourceServerItem) {
+        this.sourceServerItem = sourceServerItem;
+    }
+
+    public GitChange url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * URL to retrieve the item.
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "URL to retrieve the item.")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public GitChange changeId(Integer changeId) {
+        this.changeId = changeId;
+        return this;
+    }
+
+    /**
+     * ID of the change within the group of changes.
+     *
+     * @return changeId
+     **/
+    @ApiModelProperty(value = "ID of the change within the group of changes.")
+    public Integer getChangeId() {
+        return changeId;
+    }
+
+    public void setChangeId(Integer changeId) {
+        this.changeId = changeId;
+    }
+
+    public GitChange newContentTemplate(GitTemplate newContentTemplate) {
+        this.newContentTemplate = newContentTemplate;
+        return this;
+    }
+
+    /**
+     * New Content template to be used when pushing new changes.
+     *
+     * @return newContentTemplate
+     **/
+    @ApiModelProperty(value = "New Content template to be used when pushing new changes.")
+    public GitTemplate getNewContentTemplate() {
+        return newContentTemplate;
+    }
+
+    public void setNewContentTemplate(GitTemplate newContentTemplate) {
+        this.newContentTemplate = newContentTemplate;
+    }
+
+    public GitChange originalPath(String originalPath) {
+        this.originalPath = originalPath;
+        return this;
+    }
+
+    /**
+     * Original path of item if different from current path.
+     *
+     * @return originalPath
+     **/
+    @ApiModelProperty(value = "Original path of item if different from current path.")
+    public String getOriginalPath() {
+        return originalPath;
+    }
+
+    public void setOriginalPath(String originalPath) {
+        this.originalPath = originalPath;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitChange gitChange = (GitChange) o;
+        return Objects.equals(this.item, gitChange.item) &&
+                Objects.equals(this.newContent, gitChange.newContent) &&
+                Objects.equals(this.sourceServerItem, gitChange.sourceServerItem) &&
+                Objects.equals(this.url, gitChange.url) &&
+                Objects.equals(this.changeId, gitChange.changeId) &&
+                Objects.equals(this.newContentTemplate, gitChange.newContentTemplate) &&
+                Objects.equals(this.originalPath, gitChange.originalPath) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(item, newContent, sourceServerItem, url, changeId, newContentTemplate, originalPath, super.hashCode());
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitChange {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    item: ").append(toIndentedString(item)).append("\n");
+        sb.append("    newContent: ").append(toIndentedString(newContent)).append("\n");
+        sb.append("    sourceServerItem: ").append(toIndentedString(sourceServerItem)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    changeId: ").append(toIndentedString(changeId)).append("\n");
+        sb.append("    newContentTemplate: ").append(toIndentedString(newContentTemplate)).append("\n");
+        sb.append("    originalPath: ").append(toIndentedString(originalPath)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

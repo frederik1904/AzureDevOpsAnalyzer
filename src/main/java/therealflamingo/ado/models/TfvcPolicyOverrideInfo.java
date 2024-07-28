@@ -13,16 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.TfvcPolicyFailureInfo;
+import java.util.Objects;
 
 /**
  * Information on the policy override.
@@ -30,97 +27,99 @@ import therealflamingo.ado.models.TfvcPolicyFailureInfo;
 @ApiModel(description = "Information on the policy override.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class TfvcPolicyOverrideInfo {
-  @JsonProperty("comment")
-  private String comment = null;
+    @JsonProperty("comment")
+    private String comment = null;
 
-  @JsonProperty("policyFailures")
-  private List<TfvcPolicyFailureInfo> policyFailures = null;
+    @JsonProperty("policyFailures")
+    private List<TfvcPolicyFailureInfo> policyFailures = null;
 
-  public TfvcPolicyOverrideInfo comment(String comment) {
-    this.comment = comment;
-    return this;
-  }
-
-   /**
-   * Overidden policy comment.
-   * @return comment
-  **/
-  @ApiModelProperty(value = "Overidden policy comment.")
-  public String getComment() {
-    return comment;
-  }
-
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-
-  public TfvcPolicyOverrideInfo policyFailures(List<TfvcPolicyFailureInfo> policyFailures) {
-    this.policyFailures = policyFailures;
-    return this;
-  }
-
-  public TfvcPolicyOverrideInfo addPolicyFailuresItem(TfvcPolicyFailureInfo policyFailuresItem) {
-    if (this.policyFailures == null) {
-      this.policyFailures = new ArrayList<TfvcPolicyFailureInfo>();
+    public TfvcPolicyOverrideInfo comment(String comment) {
+        this.comment = comment;
+        return this;
     }
-    this.policyFailures.add(policyFailuresItem);
-    return this;
-  }
 
-   /**
-   * Information on the failed policy that was overridden.
-   * @return policyFailures
-  **/
-  @ApiModelProperty(value = "Information on the failed policy that was overridden.")
-  public List<TfvcPolicyFailureInfo> getPolicyFailures() {
-    return policyFailures;
-  }
-
-  public void setPolicyFailures(List<TfvcPolicyFailureInfo> policyFailures) {
-    this.policyFailures = policyFailures;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Overidden policy comment.
+     *
+     * @return comment
+     **/
+    @ApiModelProperty(value = "Overidden policy comment.")
+    public String getComment() {
+        return comment;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
-    TfvcPolicyOverrideInfo tfvcPolicyOverrideInfo = (TfvcPolicyOverrideInfo) o;
-    return Objects.equals(this.comment, tfvcPolicyOverrideInfo.comment) &&
-        Objects.equals(this.policyFailures, tfvcPolicyOverrideInfo.policyFailures);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(comment, policyFailures);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TfvcPolicyOverrideInfo {\n");
-    
-    sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
-    sb.append("    policyFailures: ").append(toIndentedString(policyFailures)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public TfvcPolicyOverrideInfo policyFailures(List<TfvcPolicyFailureInfo> policyFailures) {
+        this.policyFailures = policyFailures;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public TfvcPolicyOverrideInfo addPolicyFailuresItem(TfvcPolicyFailureInfo policyFailuresItem) {
+        if (this.policyFailures == null) {
+            this.policyFailures = new ArrayList<TfvcPolicyFailureInfo>();
+        }
+        this.policyFailures.add(policyFailuresItem);
+        return this;
+    }
+
+    /**
+     * Information on the failed policy that was overridden.
+     *
+     * @return policyFailures
+     **/
+    @ApiModelProperty(value = "Information on the failed policy that was overridden.")
+    public List<TfvcPolicyFailureInfo> getPolicyFailures() {
+        return policyFailures;
+    }
+
+    public void setPolicyFailures(List<TfvcPolicyFailureInfo> policyFailures) {
+        this.policyFailures = policyFailures;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TfvcPolicyOverrideInfo tfvcPolicyOverrideInfo = (TfvcPolicyOverrideInfo) o;
+        return Objects.equals(this.comment, tfvcPolicyOverrideInfo.comment) &&
+                Objects.equals(this.policyFailures, tfvcPolicyOverrideInfo.policyFailures);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(comment, policyFailures);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TfvcPolicyOverrideInfo {\n");
+
+        sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
+        sb.append("    policyFailures: ").append(toIndentedString(policyFailures)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

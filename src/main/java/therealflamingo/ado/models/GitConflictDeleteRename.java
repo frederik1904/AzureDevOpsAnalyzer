@@ -13,21 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitCommitRef;
-import therealflamingo.ado.models.GitConflict;
-import therealflamingo.ado.models.GitMergeOriginRef;
-import therealflamingo.ado.models.GitResolutionPickOneAction;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Data object for RenameDelete conflict
@@ -35,366 +26,380 @@ import therealflamingo.ado.models.ReferenceLinks;
 @ApiModel(description = "Data object for RenameDelete conflict")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitConflictDeleteRename extends GitConflict {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("conflictId")
-  private Integer conflictId = null;
+    @JsonProperty("conflictId")
+    private Integer conflictId = null;
 
-  @JsonProperty("conflictPath")
-  private String conflictPath = null;
+    @JsonProperty("conflictPath")
+    private String conflictPath = null;
 
-  @JsonProperty("mergeBaseCommit")
-  private GitCommitRef mergeBaseCommit = null;
+    @JsonProperty("mergeBaseCommit")
+    private GitCommitRef mergeBaseCommit = null;
 
-  @JsonProperty("mergeOrigin")
-  private GitMergeOriginRef mergeOrigin = null;
+    @JsonProperty("mergeOrigin")
+    private GitMergeOriginRef mergeOrigin = null;
 
-  @JsonProperty("mergeSourceCommit")
-  private GitCommitRef mergeSourceCommit = null;
+    @JsonProperty("mergeSourceCommit")
+    private GitCommitRef mergeSourceCommit = null;
 
-  @JsonProperty("mergeTargetCommit")
-  private GitCommitRef mergeTargetCommit = null;
+    @JsonProperty("mergeTargetCommit")
+    private GitCommitRef mergeTargetCommit = null;
 
-  @JsonProperty("resolvedBy")
-  private IdentityRef resolvedBy = null;
+    @JsonProperty("resolvedBy")
+    private IdentityRef resolvedBy = null;
 
-  @JsonProperty("resolvedDate")
-  private OffsetDateTime resolvedDate = null;
+    @JsonProperty("resolvedDate")
+    private OffsetDateTime resolvedDate = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  @JsonProperty("baseBlob")
-  private GitBlobRef baseBlob = null;
+    @JsonProperty("baseBlob")
+    private GitBlobRef baseBlob = null;
 
-  @JsonProperty("resolution")
-  private GitResolutionPickOneAction resolution = null;
+    @JsonProperty("resolution")
+    private GitResolutionPickOneAction resolution = null;
 
-  @JsonProperty("targetBlob")
-  private GitBlobRef targetBlob = null;
+    @JsonProperty("targetBlob")
+    private GitBlobRef targetBlob = null;
 
-  @JsonProperty("targetNewPath")
-  private String targetNewPath = null;
+    @JsonProperty("targetNewPath")
+    private String targetNewPath = null;
 
-  public GitConflictDeleteRename links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitConflictDeleteRename conflictId(Integer conflictId) {
-    this.conflictId = conflictId;
-    return this;
-  }
-
-   /**
-   * Get conflictId
-   * @return conflictId
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getConflictId() {
-    return conflictId;
-  }
-
-  public void setConflictId(Integer conflictId) {
-    this.conflictId = conflictId;
-  }
-
-  public GitConflictDeleteRename conflictPath(String conflictPath) {
-    this.conflictPath = conflictPath;
-    return this;
-  }
-
-   /**
-   * Get conflictPath
-   * @return conflictPath
-  **/
-  @ApiModelProperty(value = "")
-  public String getConflictPath() {
-    return conflictPath;
-  }
-
-  public void setConflictPath(String conflictPath) {
-    this.conflictPath = conflictPath;
-  }
-
-  public GitConflictDeleteRename mergeBaseCommit(GitCommitRef mergeBaseCommit) {
-    this.mergeBaseCommit = mergeBaseCommit;
-    return this;
-  }
-
-   /**
-   * Get mergeBaseCommit
-   * @return mergeBaseCommit
-  **/
-  @ApiModelProperty(value = "")
-  public GitCommitRef getMergeBaseCommit() {
-    return mergeBaseCommit;
-  }
-
-  public void setMergeBaseCommit(GitCommitRef mergeBaseCommit) {
-    this.mergeBaseCommit = mergeBaseCommit;
-  }
-
-  public GitConflictDeleteRename mergeOrigin(GitMergeOriginRef mergeOrigin) {
-    this.mergeOrigin = mergeOrigin;
-    return this;
-  }
-
-   /**
-   * Get mergeOrigin
-   * @return mergeOrigin
-  **/
-  @ApiModelProperty(value = "")
-  public GitMergeOriginRef getMergeOrigin() {
-    return mergeOrigin;
-  }
-
-  public void setMergeOrigin(GitMergeOriginRef mergeOrigin) {
-    this.mergeOrigin = mergeOrigin;
-  }
-
-  public GitConflictDeleteRename mergeSourceCommit(GitCommitRef mergeSourceCommit) {
-    this.mergeSourceCommit = mergeSourceCommit;
-    return this;
-  }
-
-   /**
-   * Get mergeSourceCommit
-   * @return mergeSourceCommit
-  **/
-  @ApiModelProperty(value = "")
-  public GitCommitRef getMergeSourceCommit() {
-    return mergeSourceCommit;
-  }
-
-  public void setMergeSourceCommit(GitCommitRef mergeSourceCommit) {
-    this.mergeSourceCommit = mergeSourceCommit;
-  }
-
-  public GitConflictDeleteRename mergeTargetCommit(GitCommitRef mergeTargetCommit) {
-    this.mergeTargetCommit = mergeTargetCommit;
-    return this;
-  }
-
-   /**
-   * Get mergeTargetCommit
-   * @return mergeTargetCommit
-  **/
-  @ApiModelProperty(value = "")
-  public GitCommitRef getMergeTargetCommit() {
-    return mergeTargetCommit;
-  }
-
-  public void setMergeTargetCommit(GitCommitRef mergeTargetCommit) {
-    this.mergeTargetCommit = mergeTargetCommit;
-  }
-
-  public GitConflictDeleteRename resolvedBy(IdentityRef resolvedBy) {
-    this.resolvedBy = resolvedBy;
-    return this;
-  }
-
-   /**
-   * Get resolvedBy
-   * @return resolvedBy
-  **/
-  @ApiModelProperty(value = "")
-  public IdentityRef getResolvedBy() {
-    return resolvedBy;
-  }
-
-  public void setResolvedBy(IdentityRef resolvedBy) {
-    this.resolvedBy = resolvedBy;
-  }
-
-  public GitConflictDeleteRename resolvedDate(OffsetDateTime resolvedDate) {
-    this.resolvedDate = resolvedDate;
-    return this;
-  }
-
-   /**
-   * Get resolvedDate
-   * @return resolvedDate
-  **/
-  @ApiModelProperty(value = "")
-  public OffsetDateTime getResolvedDate() {
-    return resolvedDate;
-  }
-
-  public void setResolvedDate(OffsetDateTime resolvedDate) {
-    this.resolvedDate = resolvedDate;
-  }
-
-  public GitConflictDeleteRename url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public GitConflictDeleteRename baseBlob(GitBlobRef baseBlob) {
-    this.baseBlob = baseBlob;
-    return this;
-  }
-
-   /**
-   * Get baseBlob
-   * @return baseBlob
-  **/
-  @ApiModelProperty(value = "")
-  public GitBlobRef getBaseBlob() {
-    return baseBlob;
-  }
-
-  public void setBaseBlob(GitBlobRef baseBlob) {
-    this.baseBlob = baseBlob;
-  }
-
-  public GitConflictDeleteRename resolution(GitResolutionPickOneAction resolution) {
-    this.resolution = resolution;
-    return this;
-  }
-
-   /**
-   * Get resolution
-   * @return resolution
-  **/
-  @ApiModelProperty(value = "")
-  public GitResolutionPickOneAction getResolution() {
-    return resolution;
-  }
-
-  public void setResolution(GitResolutionPickOneAction resolution) {
-    this.resolution = resolution;
-  }
-
-  public GitConflictDeleteRename targetBlob(GitBlobRef targetBlob) {
-    this.targetBlob = targetBlob;
-    return this;
-  }
-
-   /**
-   * Get targetBlob
-   * @return targetBlob
-  **/
-  @ApiModelProperty(value = "")
-  public GitBlobRef getTargetBlob() {
-    return targetBlob;
-  }
-
-  public void setTargetBlob(GitBlobRef targetBlob) {
-    this.targetBlob = targetBlob;
-  }
-
-  public GitConflictDeleteRename targetNewPath(String targetNewPath) {
-    this.targetNewPath = targetNewPath;
-    return this;
-  }
-
-   /**
-   * Get targetNewPath
-   * @return targetNewPath
-  **/
-  @ApiModelProperty(value = "")
-  public String getTargetNewPath() {
-    return targetNewPath;
-  }
-
-  public void setTargetNewPath(String targetNewPath) {
-    this.targetNewPath = targetNewPath;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitConflictDeleteRename links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
     }
-    GitConflictDeleteRename gitConflictDeleteRename = (GitConflictDeleteRename) o;
-    return Objects.equals(this.links, gitConflictDeleteRename.links) &&
-        Objects.equals(this.conflictId, gitConflictDeleteRename.conflictId) &&
-        Objects.equals(this.conflictPath, gitConflictDeleteRename.conflictPath) &&
-        Objects.equals(this.mergeBaseCommit, gitConflictDeleteRename.mergeBaseCommit) &&
-        Objects.equals(this.mergeOrigin, gitConflictDeleteRename.mergeOrigin) &&
-        Objects.equals(this.mergeSourceCommit, gitConflictDeleteRename.mergeSourceCommit) &&
-        Objects.equals(this.mergeTargetCommit, gitConflictDeleteRename.mergeTargetCommit) &&
-        Objects.equals(this.resolvedBy, gitConflictDeleteRename.resolvedBy) &&
-        Objects.equals(this.resolvedDate, gitConflictDeleteRename.resolvedDate) &&
-        Objects.equals(this.url, gitConflictDeleteRename.url) &&
-        Objects.equals(this.baseBlob, gitConflictDeleteRename.baseBlob) &&
-        Objects.equals(this.resolution, gitConflictDeleteRename.resolution) &&
-        Objects.equals(this.targetBlob, gitConflictDeleteRename.targetBlob) &&
-        Objects.equals(this.targetNewPath, gitConflictDeleteRename.targetNewPath) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, conflictId, conflictPath, mergeBaseCommit, mergeOrigin, mergeSourceCommit, mergeTargetCommit, resolvedBy, resolvedDate, url, baseBlob, resolution, targetBlob, targetNewPath, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitConflictDeleteRename {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    conflictId: ").append(toIndentedString(conflictId)).append("\n");
-    sb.append("    conflictPath: ").append(toIndentedString(conflictPath)).append("\n");
-    sb.append("    mergeBaseCommit: ").append(toIndentedString(mergeBaseCommit)).append("\n");
-    sb.append("    mergeOrigin: ").append(toIndentedString(mergeOrigin)).append("\n");
-    sb.append("    mergeSourceCommit: ").append(toIndentedString(mergeSourceCommit)).append("\n");
-    sb.append("    mergeTargetCommit: ").append(toIndentedString(mergeTargetCommit)).append("\n");
-    sb.append("    resolvedBy: ").append(toIndentedString(resolvedBy)).append("\n");
-    sb.append("    resolvedDate: ").append(toIndentedString(resolvedDate)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    baseBlob: ").append(toIndentedString(baseBlob)).append("\n");
-    sb.append("    resolution: ").append(toIndentedString(resolution)).append("\n");
-    sb.append("    targetBlob: ").append(toIndentedString(targetBlob)).append("\n");
-    sb.append("    targetNewPath: ").append(toIndentedString(targetNewPath)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitConflictDeleteRename conflictId(Integer conflictId) {
+        this.conflictId = conflictId;
+        return this;
+    }
+
+    /**
+     * Get conflictId
+     *
+     * @return conflictId
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getConflictId() {
+        return conflictId;
+    }
+
+    public void setConflictId(Integer conflictId) {
+        this.conflictId = conflictId;
+    }
+
+    public GitConflictDeleteRename conflictPath(String conflictPath) {
+        this.conflictPath = conflictPath;
+        return this;
+    }
+
+    /**
+     * Get conflictPath
+     *
+     * @return conflictPath
+     **/
+    @ApiModelProperty(value = "")
+    public String getConflictPath() {
+        return conflictPath;
+    }
+
+    public void setConflictPath(String conflictPath) {
+        this.conflictPath = conflictPath;
+    }
+
+    public GitConflictDeleteRename mergeBaseCommit(GitCommitRef mergeBaseCommit) {
+        this.mergeBaseCommit = mergeBaseCommit;
+        return this;
+    }
+
+    /**
+     * Get mergeBaseCommit
+     *
+     * @return mergeBaseCommit
+     **/
+    @ApiModelProperty(value = "")
+    public GitCommitRef getMergeBaseCommit() {
+        return mergeBaseCommit;
+    }
+
+    public void setMergeBaseCommit(GitCommitRef mergeBaseCommit) {
+        this.mergeBaseCommit = mergeBaseCommit;
+    }
+
+    public GitConflictDeleteRename mergeOrigin(GitMergeOriginRef mergeOrigin) {
+        this.mergeOrigin = mergeOrigin;
+        return this;
+    }
+
+    /**
+     * Get mergeOrigin
+     *
+     * @return mergeOrigin
+     **/
+    @ApiModelProperty(value = "")
+    public GitMergeOriginRef getMergeOrigin() {
+        return mergeOrigin;
+    }
+
+    public void setMergeOrigin(GitMergeOriginRef mergeOrigin) {
+        this.mergeOrigin = mergeOrigin;
+    }
+
+    public GitConflictDeleteRename mergeSourceCommit(GitCommitRef mergeSourceCommit) {
+        this.mergeSourceCommit = mergeSourceCommit;
+        return this;
+    }
+
+    /**
+     * Get mergeSourceCommit
+     *
+     * @return mergeSourceCommit
+     **/
+    @ApiModelProperty(value = "")
+    public GitCommitRef getMergeSourceCommit() {
+        return mergeSourceCommit;
+    }
+
+    public void setMergeSourceCommit(GitCommitRef mergeSourceCommit) {
+        this.mergeSourceCommit = mergeSourceCommit;
+    }
+
+    public GitConflictDeleteRename mergeTargetCommit(GitCommitRef mergeTargetCommit) {
+        this.mergeTargetCommit = mergeTargetCommit;
+        return this;
+    }
+
+    /**
+     * Get mergeTargetCommit
+     *
+     * @return mergeTargetCommit
+     **/
+    @ApiModelProperty(value = "")
+    public GitCommitRef getMergeTargetCommit() {
+        return mergeTargetCommit;
+    }
+
+    public void setMergeTargetCommit(GitCommitRef mergeTargetCommit) {
+        this.mergeTargetCommit = mergeTargetCommit;
+    }
+
+    public GitConflictDeleteRename resolvedBy(IdentityRef resolvedBy) {
+        this.resolvedBy = resolvedBy;
+        return this;
+    }
+
+    /**
+     * Get resolvedBy
+     *
+     * @return resolvedBy
+     **/
+    @ApiModelProperty(value = "")
+    public IdentityRef getResolvedBy() {
+        return resolvedBy;
+    }
+
+    public void setResolvedBy(IdentityRef resolvedBy) {
+        this.resolvedBy = resolvedBy;
+    }
+
+    public GitConflictDeleteRename resolvedDate(OffsetDateTime resolvedDate) {
+        this.resolvedDate = resolvedDate;
+        return this;
+    }
+
+    /**
+     * Get resolvedDate
+     *
+     * @return resolvedDate
+     **/
+    @ApiModelProperty(value = "")
+    public OffsetDateTime getResolvedDate() {
+        return resolvedDate;
+    }
+
+    public void setResolvedDate(OffsetDateTime resolvedDate) {
+        this.resolvedDate = resolvedDate;
+    }
+
+    public GitConflictDeleteRename url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public GitConflictDeleteRename baseBlob(GitBlobRef baseBlob) {
+        this.baseBlob = baseBlob;
+        return this;
+    }
+
+    /**
+     * Get baseBlob
+     *
+     * @return baseBlob
+     **/
+    @ApiModelProperty(value = "")
+    public GitBlobRef getBaseBlob() {
+        return baseBlob;
+    }
+
+    public void setBaseBlob(GitBlobRef baseBlob) {
+        this.baseBlob = baseBlob;
+    }
+
+    public GitConflictDeleteRename resolution(GitResolutionPickOneAction resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+
+    /**
+     * Get resolution
+     *
+     * @return resolution
+     **/
+    @ApiModelProperty(value = "")
+    public GitResolutionPickOneAction getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(GitResolutionPickOneAction resolution) {
+        this.resolution = resolution;
+    }
+
+    public GitConflictDeleteRename targetBlob(GitBlobRef targetBlob) {
+        this.targetBlob = targetBlob;
+        return this;
+    }
+
+    /**
+     * Get targetBlob
+     *
+     * @return targetBlob
+     **/
+    @ApiModelProperty(value = "")
+    public GitBlobRef getTargetBlob() {
+        return targetBlob;
+    }
+
+    public void setTargetBlob(GitBlobRef targetBlob) {
+        this.targetBlob = targetBlob;
+    }
+
+    public GitConflictDeleteRename targetNewPath(String targetNewPath) {
+        this.targetNewPath = targetNewPath;
+        return this;
+    }
+
+    /**
+     * Get targetNewPath
+     *
+     * @return targetNewPath
+     **/
+    @ApiModelProperty(value = "")
+    public String getTargetNewPath() {
+        return targetNewPath;
+    }
+
+    public void setTargetNewPath(String targetNewPath) {
+        this.targetNewPath = targetNewPath;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitConflictDeleteRename gitConflictDeleteRename = (GitConflictDeleteRename) o;
+        return Objects.equals(this.links, gitConflictDeleteRename.links) &&
+                Objects.equals(this.conflictId, gitConflictDeleteRename.conflictId) &&
+                Objects.equals(this.conflictPath, gitConflictDeleteRename.conflictPath) &&
+                Objects.equals(this.mergeBaseCommit, gitConflictDeleteRename.mergeBaseCommit) &&
+                Objects.equals(this.mergeOrigin, gitConflictDeleteRename.mergeOrigin) &&
+                Objects.equals(this.mergeSourceCommit, gitConflictDeleteRename.mergeSourceCommit) &&
+                Objects.equals(this.mergeTargetCommit, gitConflictDeleteRename.mergeTargetCommit) &&
+                Objects.equals(this.resolvedBy, gitConflictDeleteRename.resolvedBy) &&
+                Objects.equals(this.resolvedDate, gitConflictDeleteRename.resolvedDate) &&
+                Objects.equals(this.url, gitConflictDeleteRename.url) &&
+                Objects.equals(this.baseBlob, gitConflictDeleteRename.baseBlob) &&
+                Objects.equals(this.resolution, gitConflictDeleteRename.resolution) &&
+                Objects.equals(this.targetBlob, gitConflictDeleteRename.targetBlob) &&
+                Objects.equals(this.targetNewPath, gitConflictDeleteRename.targetNewPath) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, conflictId, conflictPath, mergeBaseCommit, mergeOrigin, mergeSourceCommit, mergeTargetCommit, resolvedBy, resolvedDate, url, baseBlob, resolution, targetBlob, targetNewPath, super.hashCode());
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitConflictDeleteRename {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    conflictId: ").append(toIndentedString(conflictId)).append("\n");
+        sb.append("    conflictPath: ").append(toIndentedString(conflictPath)).append("\n");
+        sb.append("    mergeBaseCommit: ").append(toIndentedString(mergeBaseCommit)).append("\n");
+        sb.append("    mergeOrigin: ").append(toIndentedString(mergeOrigin)).append("\n");
+        sb.append("    mergeSourceCommit: ").append(toIndentedString(mergeSourceCommit)).append("\n");
+        sb.append("    mergeTargetCommit: ").append(toIndentedString(mergeTargetCommit)).append("\n");
+        sb.append("    resolvedBy: ").append(toIndentedString(resolvedBy)).append("\n");
+        sb.append("    resolvedDate: ").append(toIndentedString(resolvedDate)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    baseBlob: ").append(toIndentedString(baseBlob)).append("\n");
+        sb.append("    resolution: ").append(toIndentedString(resolution)).append("\n");
+        sb.append("    targetBlob: ").append(toIndentedString(targetBlob)).append("\n");
+        sb.append("    targetNewPath: ").append(toIndentedString(targetNewPath)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

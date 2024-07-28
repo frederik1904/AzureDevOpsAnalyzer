@@ -13,16 +13,10 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.GitAsyncRefOperationParameters;
 import therealflamingo.ado.models.GitCherryPick;
-import org.junit.Test;
-import org.junit.Ignore;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for CherryPicksApi
@@ -32,14 +26,11 @@ public class CherryPicksApiTest {
 
     private final CherryPicksApi api = new CherryPicksApi();
 
-    
+
     /**
-     * 
-     *
      * Cherry pick a specific commit or commits that are associated to a pull request into a new branch.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void cherryPicksCreateTest() throws Exception {
@@ -52,14 +43,11 @@ public class CherryPicksApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve information about a cherry pick operation by cherry pick Id.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void cherryPicksGetCherryPickTest() throws Exception {
@@ -72,14 +60,11 @@ public class CherryPicksApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve information about a cherry pick operation for a specific branch. This operation is expensive due to the underlying object structure, so this API only looks at the 1000 most recent cherry pick operations.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void cherryPicksGetCherryPickForRefNameTest() throws Exception {
@@ -92,5 +77,5 @@ public class CherryPicksApiTest {
 
         // TODO: test validations
     }
-    
+
 }

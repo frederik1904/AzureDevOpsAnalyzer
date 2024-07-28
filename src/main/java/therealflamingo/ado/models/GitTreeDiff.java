@@ -13,19 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitTreeDiffEntry;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -47,10 +44,11 @@ public class GitTreeDiff {
     return this;
   }
 
-   /**
+  /**
    * ObjectId of the base tree of this diff.
+   *
    * @return baseTreeId
-  **/
+   **/
   @ApiModelProperty(value = "ObjectId of the base tree of this diff.")
   public String getBaseTreeId() {
     return baseTreeId;
@@ -73,10 +71,11 @@ public class GitTreeDiff {
     return this;
   }
 
-   /**
+  /**
    * List of tree entries that differ between the base and target tree.  Renames and object type changes are returned as a delete for the old object and add for the new object.  If a continuation token is returned in the response header, some tree entries are yet to be processed and may yield more diff entries. If the continuation token is not returned all the diff entries have been included in this response.
+   *
    * @return diffEntries
-  **/
+   **/
   @ApiModelProperty(value = "List of tree entries that differ between the base and target tree.  Renames and object type changes are returned as a delete for the old object and add for the new object.  If a continuation token is returned in the response header, some tree entries are yet to be processed and may yield more diff entries. If the continuation token is not returned all the diff entries have been included in this response.")
   public List<GitTreeDiffEntry> getDiffEntries() {
     return diffEntries;
@@ -91,10 +90,11 @@ public class GitTreeDiff {
     return this;
   }
 
-   /**
+  /**
    * ObjectId of the target tree of this diff.
+   *
    * @return targetTreeId
-  **/
+   **/
   @ApiModelProperty(value = "ObjectId of the target tree of this diff.")
   public String getTargetTreeId() {
     return targetTreeId;
@@ -109,10 +109,11 @@ public class GitTreeDiff {
     return this;
   }
 
-   /**
+  /**
    * REST Url to this resource.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "REST Url to this resource.")
   public String getUrl() {
     return url;
@@ -133,9 +134,9 @@ public class GitTreeDiff {
     }
     GitTreeDiff gitTreeDiff = (GitTreeDiff) o;
     return Objects.equals(this.baseTreeId, gitTreeDiff.baseTreeId) &&
-        Objects.equals(this.diffEntries, gitTreeDiff.diffEntries) &&
-        Objects.equals(this.targetTreeId, gitTreeDiff.targetTreeId) &&
-        Objects.equals(this.url, gitTreeDiff.url);
+            Objects.equals(this.diffEntries, gitTreeDiff.diffEntries) &&
+            Objects.equals(this.targetTreeId, gitTreeDiff.targetTreeId) &&
+            Objects.equals(this.url, gitTreeDiff.url);
   }
 
   @Override
@@ -148,7 +149,7 @@ public class GitTreeDiff {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitTreeDiff {\n");
-    
+
     sb.append("    baseTreeId: ").append(toIndentedString(baseTreeId)).append("\n");
     sb.append("    diffEntries: ").append(toIndentedString(diffEntries)).append("\n");
     sb.append("    targetTreeId: ").append(toIndentedString(targetTreeId)).append("\n");

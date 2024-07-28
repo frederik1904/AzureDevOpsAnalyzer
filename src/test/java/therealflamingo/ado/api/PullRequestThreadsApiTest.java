@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitPullRequestCommentThread;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitPullRequestCommentThread;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestThreadsApi
@@ -31,14 +27,11 @@ public class PullRequestThreadsApiTest {
 
     private final PullRequestThreadsApi api = new PullRequestThreadsApi();
 
-    
+
     /**
-     * 
-     *
      * Create a thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadsCreateTest() throws Exception {
@@ -52,14 +45,11 @@ public class PullRequestThreadsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadsGetTest() throws Exception {
@@ -75,14 +65,11 @@ public class PullRequestThreadsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve all threads in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadsListTest() throws Exception {
@@ -97,14 +84,11 @@ public class PullRequestThreadsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Update a thread in a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestThreadsUpdateTest() throws Exception {
@@ -119,5 +103,5 @@ public class PullRequestThreadsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

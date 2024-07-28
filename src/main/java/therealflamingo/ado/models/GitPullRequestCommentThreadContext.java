@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.CommentIterationContext;
-import therealflamingo.ado.models.CommentTrackingCriteria;
+
+import java.util.Objects;
 
 /**
  * Comment thread context contains details about what diffs were being viewed at the time of thread creation and whether or not the thread has been tracked from that original diff.
@@ -43,10 +39,11 @@ public class GitPullRequestCommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * Used to track a comment across iterations. This value can be found by looking at the iteration&#39;s changes list. Must be set for pull requests with iteration support. Otherwise, it&#39;s not required for &#39;legacy&#39; pull requests.
+   *
    * @return changeTrackingId
-  **/
+   **/
   @ApiModelProperty(value = "Used to track a comment across iterations. This value can be found by looking at the iteration's changes list. Must be set for pull requests with iteration support. Otherwise, it's not required for 'legacy' pull requests.")
   public Integer getChangeTrackingId() {
     return changeTrackingId;
@@ -61,10 +58,11 @@ public class GitPullRequestCommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * The iteration context being viewed when the thread was created.
+   *
    * @return iterationContext
-  **/
+   **/
   @ApiModelProperty(value = "The iteration context being viewed when the thread was created.")
   public CommentIterationContext getIterationContext() {
     return iterationContext;
@@ -79,10 +77,11 @@ public class GitPullRequestCommentThreadContext {
     return this;
   }
 
-   /**
+  /**
    * The criteria used to track this thread. If this property is filled out when the thread is returned, then the thread has been tracked from its original location using the given criteria.
+   *
    * @return trackingCriteria
-  **/
+   **/
   @ApiModelProperty(value = "The criteria used to track this thread. If this property is filled out when the thread is returned, then the thread has been tracked from its original location using the given criteria.")
   public CommentTrackingCriteria getTrackingCriteria() {
     return trackingCriteria;
@@ -103,8 +102,8 @@ public class GitPullRequestCommentThreadContext {
     }
     GitPullRequestCommentThreadContext gitPullRequestCommentThreadContext = (GitPullRequestCommentThreadContext) o;
     return Objects.equals(this.changeTrackingId, gitPullRequestCommentThreadContext.changeTrackingId) &&
-        Objects.equals(this.iterationContext, gitPullRequestCommentThreadContext.iterationContext) &&
-        Objects.equals(this.trackingCriteria, gitPullRequestCommentThreadContext.trackingCriteria);
+            Objects.equals(this.iterationContext, gitPullRequestCommentThreadContext.iterationContext) &&
+            Objects.equals(this.trackingCriteria, gitPullRequestCommentThreadContext.trackingCriteria);
   }
 
   @Override
@@ -117,7 +116,7 @@ public class GitPullRequestCommentThreadContext {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPullRequestCommentThreadContext {\n");
-    
+
     sb.append("    changeTrackingId: ").append(toIndentedString(changeTrackingId)).append("\n");
     sb.append("    iterationContext: ").append(toIndentedString(iterationContext)).append("\n");
     sb.append("    trackingCriteria: ").append(toIndentedString(trackingCriteria)).append("\n");

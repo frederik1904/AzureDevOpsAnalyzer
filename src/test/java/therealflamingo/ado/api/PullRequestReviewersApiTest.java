@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.api;
 
+import org.junit.Ignore;
+import org.junit.Test;
 import therealflamingo.ado.models.IdentityRef;
 import therealflamingo.ado.models.IdentityRefWithVote;
-import org.junit.Test;
-import org.junit.Ignore;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for PullRequestReviewersApi
@@ -32,14 +28,11 @@ public class PullRequestReviewersApiTest {
 
     private final PullRequestReviewersApi api = new PullRequestReviewersApi();
 
-    
+
     /**
-     * 
-     *
      * Add a reviewer to a pull request or cast a vote.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersCreatePullRequestReviewerTest() throws Exception {
@@ -54,14 +47,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Add reviewers to a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersCreatePullRequestReviewersTest() throws Exception {
@@ -75,14 +65,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Add an unmaterialized identity to the reviewers of a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersCreateUnmaterializedPullRequestReviewerTest() throws Exception {
@@ -96,14 +83,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Remove a reviewer from a pull request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersDeleteTest() throws Exception {
@@ -117,14 +101,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve information about a particular reviewer on a pull request
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersGetTest() throws Exception {
@@ -138,14 +119,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve the reviewers for a pull request
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersListTest() throws Exception {
@@ -158,14 +136,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Edit a reviewer entry. These fields are patchable: isFlagged, hasDeclined
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersUpdatePullRequestReviewerTest() throws Exception {
@@ -180,14 +155,11 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Reset the votes of multiple reviewers on a pull request.  NOTE: This endpoint only supports updating votes, but does not support updating required reviewers (use policy) or display names.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void pullRequestReviewersUpdatePullRequestReviewersTest() throws Exception {
@@ -201,5 +173,5 @@ public class PullRequestReviewersApiTest {
 
         // TODO: test validations
     }
-    
+
 }

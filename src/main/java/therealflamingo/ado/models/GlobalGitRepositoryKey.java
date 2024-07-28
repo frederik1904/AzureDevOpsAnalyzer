@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -42,10 +40,11 @@ public class GlobalGitRepositoryKey {
     return this;
   }
 
-   /**
+  /**
    * Team Project Collection ID of the collection for the repository.
+   *
    * @return collectionId
-  **/
+   **/
   @ApiModelProperty(value = "Team Project Collection ID of the collection for the repository.")
   public UUID getCollectionId() {
     return collectionId;
@@ -60,10 +59,11 @@ public class GlobalGitRepositoryKey {
     return this;
   }
 
-   /**
+  /**
    * Team Project ID of the project for the repository.
+   *
    * @return projectId
-  **/
+   **/
   @ApiModelProperty(value = "Team Project ID of the project for the repository.")
   public UUID getProjectId() {
     return projectId;
@@ -78,10 +78,11 @@ public class GlobalGitRepositoryKey {
     return this;
   }
 
-   /**
+  /**
    * ID of the repository.
+   *
    * @return repositoryId
-  **/
+   **/
   @ApiModelProperty(value = "ID of the repository.")
   public UUID getRepositoryId() {
     return repositoryId;
@@ -102,8 +103,8 @@ public class GlobalGitRepositoryKey {
     }
     GlobalGitRepositoryKey globalGitRepositoryKey = (GlobalGitRepositoryKey) o;
     return Objects.equals(this.collectionId, globalGitRepositoryKey.collectionId) &&
-        Objects.equals(this.projectId, globalGitRepositoryKey.projectId) &&
-        Objects.equals(this.repositoryId, globalGitRepositoryKey.repositoryId);
+            Objects.equals(this.projectId, globalGitRepositoryKey.projectId) &&
+            Objects.equals(this.repositoryId, globalGitRepositoryKey.repositoryId);
   }
 
   @Override
@@ -116,7 +117,7 @@ public class GlobalGitRepositoryKey {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GlobalGitRepositoryKey {\n");
-    
+
     sb.append("    collectionId: ").append(toIndentedString(collectionId)).append("\n");
     sb.append("    projectId: ").append(toIndentedString(projectId)).append("\n");
     sb.append("    repositoryId: ").append(toIndentedString(repositoryId)).append("\n");

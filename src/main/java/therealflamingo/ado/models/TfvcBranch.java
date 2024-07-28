@@ -13,22 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.threeten.bp.OffsetDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.TfvcBranch;
-import therealflamingo.ado.models.TfvcBranchMapping;
-import therealflamingo.ado.models.TfvcBranchRef;
-import therealflamingo.ado.models.TfvcShallowBranchRef;
+import java.util.Objects;
 
 /**
  * Class representing a branch object.
@@ -74,10 +66,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * A collection of REST reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "A collection of REST reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -92,10 +85,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Creation date of the branch.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "Creation date of the branch.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -110,10 +104,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Branch description.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "Branch description.")
   public String getDescription() {
     return description;
@@ -128,10 +123,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Is the branch deleted?
+   *
    * @return isDeleted
-  **/
+   **/
   @ApiModelProperty(value = "Is the branch deleted?")
   public Boolean isIsDeleted() {
     return isDeleted;
@@ -146,10 +142,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user")
   public IdentityRef getOwner() {
     return owner;
@@ -164,10 +161,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve the item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve the item.")
   public String getUrl() {
     return url;
@@ -182,10 +180,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Path for the branch.
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "Path for the branch.")
   public String getPath() {
     return path;
@@ -208,10 +207,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * List of children for the branch.
+   *
    * @return children
-  **/
+   **/
   @ApiModelProperty(value = "List of children for the branch.")
   public List<TfvcBranch> getChildren() {
     return children;
@@ -234,10 +234,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * List of branch mappings.
+   *
    * @return mappings
-  **/
+   **/
   @ApiModelProperty(value = "List of branch mappings.")
   public List<TfvcBranchMapping> getMappings() {
     return mappings;
@@ -252,10 +253,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * Path of the branch&#39;s parent.
+   *
    * @return parent
-  **/
+   **/
   @ApiModelProperty(value = "Path of the branch's parent.")
   public TfvcShallowBranchRef getParent() {
     return parent;
@@ -278,10 +280,11 @@ public class TfvcBranch extends TfvcBranchRef {
     return this;
   }
 
-   /**
+  /**
    * List of paths of the related branches.
+   *
    * @return relatedBranches
-  **/
+   **/
   @ApiModelProperty(value = "List of paths of the related branches.")
   public List<TfvcShallowBranchRef> getRelatedBranches() {
     return relatedBranches;
@@ -302,17 +305,17 @@ public class TfvcBranch extends TfvcBranchRef {
     }
     TfvcBranch tfvcBranch = (TfvcBranch) o;
     return Objects.equals(this.links, tfvcBranch.links) &&
-        Objects.equals(this.createdDate, tfvcBranch.createdDate) &&
-        Objects.equals(this.description, tfvcBranch.description) &&
-        Objects.equals(this.isDeleted, tfvcBranch.isDeleted) &&
-        Objects.equals(this.owner, tfvcBranch.owner) &&
-        Objects.equals(this.url, tfvcBranch.url) &&
-        Objects.equals(this.path, tfvcBranch.path) &&
-        Objects.equals(this.children, tfvcBranch.children) &&
-        Objects.equals(this.mappings, tfvcBranch.mappings) &&
-        Objects.equals(this.parent, tfvcBranch.parent) &&
-        Objects.equals(this.relatedBranches, tfvcBranch.relatedBranches) &&
-        super.equals(o);
+            Objects.equals(this.createdDate, tfvcBranch.createdDate) &&
+            Objects.equals(this.description, tfvcBranch.description) &&
+            Objects.equals(this.isDeleted, tfvcBranch.isDeleted) &&
+            Objects.equals(this.owner, tfvcBranch.owner) &&
+            Objects.equals(this.url, tfvcBranch.url) &&
+            Objects.equals(this.path, tfvcBranch.path) &&
+            Objects.equals(this.children, tfvcBranch.children) &&
+            Objects.equals(this.mappings, tfvcBranch.mappings) &&
+            Objects.equals(this.parent, tfvcBranch.parent) &&
+            Objects.equals(this.relatedBranches, tfvcBranch.relatedBranches) &&
+            super.equals(o);
   }
 
   @Override

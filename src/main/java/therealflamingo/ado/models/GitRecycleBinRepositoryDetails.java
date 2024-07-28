@@ -13,80 +13,79 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRecycleBinRepositoryDetails {
-  @JsonProperty("deleted")
-  private Boolean deleted = null;
+    @JsonProperty("deleted")
+    private Boolean deleted = null;
 
-  public GitRecycleBinRepositoryDetails deleted(Boolean deleted) {
-    this.deleted = deleted;
-    return this;
-  }
-
-   /**
-   * Setting to false will undo earlier deletion and restore the repository.
-   * @return deleted
-  **/
-  @ApiModelProperty(value = "Setting to false will undo earlier deletion and restore the repository.")
-  public Boolean isDeleted() {
-    return deleted;
-  }
-
-  public void setDeleted(Boolean deleted) {
-    this.deleted = deleted;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitRecycleBinRepositoryDetails deleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Setting to false will undo earlier deletion and restore the repository.
+     *
+     * @return deleted
+     **/
+    @ApiModelProperty(value = "Setting to false will undo earlier deletion and restore the repository.")
+    public Boolean isDeleted() {
+        return deleted;
     }
-    GitRecycleBinRepositoryDetails gitRecycleBinRepositoryDetails = (GitRecycleBinRepositoryDetails) o;
-    return Objects.equals(this.deleted, gitRecycleBinRepositoryDetails.deleted);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(deleted);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRecycleBinRepositoryDetails {\n");
-    
-    sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRecycleBinRepositoryDetails gitRecycleBinRepositoryDetails = (GitRecycleBinRepositoryDetails) o;
+        return Objects.equals(this.deleted, gitRecycleBinRepositoryDetails.deleted);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(deleted);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRecycleBinRepositoryDetails {\n");
+
+        sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

@@ -13,20 +13,17 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import therealflamingo.ado.models.GitItem;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -47,10 +44,11 @@ public class GitPathToItemsCollection {
     return this;
   }
 
-   /**
+  /**
    * Get items
+   *
    * @return items
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Map<String, List<GitItem>> getItems() {
     return items;
@@ -83,7 +81,7 @@ public class GitPathToItemsCollection {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitPathToItemsCollection {\n");
-    
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();

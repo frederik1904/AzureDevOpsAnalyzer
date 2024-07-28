@@ -13,177 +13,176 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitAsyncRefOperation;
-import therealflamingo.ado.models.GitAsyncRefOperationDetail;
-import therealflamingo.ado.models.GitAsyncRefOperationParameters;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitRevert extends GitAsyncRefOperation {
-  @JsonProperty("_links")
-  private ReferenceLinks links = null;
+    @JsonProperty("_links")
+    private ReferenceLinks links = null;
 
-  @JsonProperty("detailedStatus")
-  private GitAsyncRefOperationDetail detailedStatus = null;
+    @JsonProperty("detailedStatus")
+    private GitAsyncRefOperationDetail detailedStatus = null;
 
-  @JsonProperty("parameters")
-  private GitAsyncRefOperationParameters parameters = null;
+    @JsonProperty("parameters")
+    private GitAsyncRefOperationParameters parameters = null;
 
-  @JsonProperty("url")
-  private String url = null;
+    @JsonProperty("url")
+    private String url = null;
 
-  @JsonProperty("revertId")
-  private Integer revertId = null;
+    @JsonProperty("revertId")
+    private Integer revertId = null;
 
-  public GitRevert links(ReferenceLinks links) {
-    this.links = links;
-    return this;
-  }
-
-   /**
-   * Get links
-   * @return links
-  **/
-  @ApiModelProperty(value = "")
-  public ReferenceLinks getLinks() {
-    return links;
-  }
-
-  public void setLinks(ReferenceLinks links) {
-    this.links = links;
-  }
-
-  public GitRevert detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-    return this;
-  }
-
-   /**
-   * Get detailedStatus
-   * @return detailedStatus
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationDetail getDetailedStatus() {
-    return detailedStatus;
-  }
-
-  public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
-    this.detailedStatus = detailedStatus;
-  }
-
-  public GitRevert parameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-    return this;
-  }
-
-   /**
-   * Get parameters
-   * @return parameters
-  **/
-  @ApiModelProperty(value = "")
-  public GitAsyncRefOperationParameters getParameters() {
-    return parameters;
-  }
-
-  public void setParameters(GitAsyncRefOperationParameters parameters) {
-    this.parameters = parameters;
-  }
-
-  public GitRevert url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * A URL that can be used to make further requests for status about the operation
-   * @return url
-  **/
-  @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public GitRevert revertId(Integer revertId) {
-    this.revertId = revertId;
-    return this;
-  }
-
-   /**
-   * Get revertId
-   * @return revertId
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getRevertId() {
-    return revertId;
-  }
-
-  public void setRevertId(Integer revertId) {
-    this.revertId = revertId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public GitRevert links(ReferenceLinks links) {
+        this.links = links;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get links
+     *
+     * @return links
+     **/
+    @ApiModelProperty(value = "")
+    public ReferenceLinks getLinks() {
+        return links;
     }
-    GitRevert gitRevert = (GitRevert) o;
-    return Objects.equals(this.links, gitRevert.links) &&
-        Objects.equals(this.detailedStatus, gitRevert.detailedStatus) &&
-        Objects.equals(this.parameters, gitRevert.parameters) &&
-        Objects.equals(this.url, gitRevert.url) &&
-        Objects.equals(this.revertId, gitRevert.revertId) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(links, detailedStatus, parameters, url, revertId, super.hashCode());
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitRevert {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
-    sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    revertId: ").append(toIndentedString(revertId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setLinks(ReferenceLinks links) {
+        this.links = links;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitRevert detailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+        return this;
+    }
+
+    /**
+     * Get detailedStatus
+     *
+     * @return detailedStatus
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationDetail getDetailedStatus() {
+        return detailedStatus;
+    }
+
+    public void setDetailedStatus(GitAsyncRefOperationDetail detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    public GitRevert parameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+
+    /**
+     * Get parameters
+     *
+     * @return parameters
+     **/
+    @ApiModelProperty(value = "")
+    public GitAsyncRefOperationParameters getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(GitAsyncRefOperationParameters parameters) {
+        this.parameters = parameters;
+    }
+
+    public GitRevert url(String url) {
+        this.url = url;
+        return this;
+    }
+
+    /**
+     * A URL that can be used to make further requests for status about the operation
+     *
+     * @return url
+     **/
+    @ApiModelProperty(value = "A URL that can be used to make further requests for status about the operation")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public GitRevert revertId(Integer revertId) {
+        this.revertId = revertId;
+        return this;
+    }
+
+    /**
+     * Get revertId
+     *
+     * @return revertId
+     **/
+    @ApiModelProperty(value = "")
+    public Integer getRevertId() {
+        return revertId;
+    }
+
+    public void setRevertId(Integer revertId) {
+        this.revertId = revertId;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitRevert gitRevert = (GitRevert) o;
+        return Objects.equals(this.links, gitRevert.links) &&
+                Objects.equals(this.detailedStatus, gitRevert.detailedStatus) &&
+                Objects.equals(this.parameters, gitRevert.parameters) &&
+                Objects.equals(this.url, gitRevert.url) &&
+                Objects.equals(this.revertId, gitRevert.revertId) &&
+                super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(links, detailedStatus, parameters, url, revertId, super.hashCode());
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitRevert {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    links: ").append(toIndentedString(links)).append("\n");
+        sb.append("    detailedStatus: ").append(toIndentedString(detailedStatus)).append("\n");
+        sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
+        sb.append("    url: ").append(toIndentedString(url)).append("\n");
+        sb.append("    revertId: ").append(toIndentedString(revertId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

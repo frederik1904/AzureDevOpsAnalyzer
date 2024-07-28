@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -38,10 +36,11 @@ public class ResourceRef {
     return this;
   }
 
-   /**
+  /**
    * Get id
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
@@ -56,10 +55,11 @@ public class ResourceRef {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -80,7 +80,7 @@ public class ResourceRef {
     }
     ResourceRef resourceRef = (ResourceRef) o;
     return Objects.equals(this.id, resourceRef.id) &&
-        Objects.equals(this.url, resourceRef.url);
+            Objects.equals(this.url, resourceRef.url);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class ResourceRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceRef {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");

@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitImportRequest;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitImportRequest;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for ImportRequestsApi
@@ -31,14 +27,11 @@ public class ImportRequestsApiTest {
 
     private final ImportRequestsApi api = new ImportRequestsApi();
 
-    
+
     /**
-     * 
-     *
      * Create an import request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void importRequestsCreateTest() throws Exception {
@@ -51,14 +44,11 @@ public class ImportRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve a particular import request.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void importRequestsGetTest() throws Exception {
@@ -71,14 +61,11 @@ public class ImportRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retrieve import requests for a repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void importRequestsQueryTest() throws Exception {
@@ -91,14 +78,11 @@ public class ImportRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
      * Retry or abandon a failed import request.  There can only be one active import request associated with a repository. Marking a failed import request abandoned makes it inactive.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void importRequestsUpdateTest() throws Exception {
@@ -112,5 +96,5 @@ public class ImportRequestsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.GitImportGitSource;
-import therealflamingo.ado.models.GitImportTfvcSource;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -46,10 +42,11 @@ public class ImportRepositoryValidation {
     return this;
   }
 
-   /**
+  /**
    * Get gitSource
+   *
    * @return gitSource
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitImportGitSource getGitSource() {
     return gitSource;
@@ -64,10 +61,11 @@ public class ImportRepositoryValidation {
     return this;
   }
 
-   /**
+  /**
    * Get password
+   *
    * @return password
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
@@ -82,10 +80,11 @@ public class ImportRepositoryValidation {
     return this;
   }
 
-   /**
+  /**
    * Get tfvcSource
+   *
    * @return tfvcSource
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitImportTfvcSource getTfvcSource() {
     return tfvcSource;
@@ -100,10 +99,11 @@ public class ImportRepositoryValidation {
     return this;
   }
 
-   /**
+  /**
    * Get username
+   *
    * @return username
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUsername() {
     return username;
@@ -124,9 +124,9 @@ public class ImportRepositoryValidation {
     }
     ImportRepositoryValidation importRepositoryValidation = (ImportRepositoryValidation) o;
     return Objects.equals(this.gitSource, importRepositoryValidation.gitSource) &&
-        Objects.equals(this.password, importRepositoryValidation.password) &&
-        Objects.equals(this.tfvcSource, importRepositoryValidation.tfvcSource) &&
-        Objects.equals(this.username, importRepositoryValidation.username);
+            Objects.equals(this.password, importRepositoryValidation.password) &&
+            Objects.equals(this.tfvcSource, importRepositoryValidation.tfvcSource) &&
+            Objects.equals(this.username, importRepositoryValidation.username);
   }
 
   @Override
@@ -139,7 +139,7 @@ public class ImportRepositoryValidation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImportRepositoryValidation {\n");
-    
+
     sb.append("    gitSource: ").append(toIndentedString(gitSource)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    tfvcSource: ").append(toIndentedString(tfvcSource)).append("\n");

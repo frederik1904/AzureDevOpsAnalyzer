@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -53,10 +51,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Whether to include policyOverride and notes Only applies when requesting a single deep shelveset
+   *
    * @return includeDetails
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include policyOverride and notes Only applies when requesting a single deep shelveset")
   public Boolean isIncludeDetails() {
     return includeDetails;
@@ -71,10 +70,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Whether to include the _links field on the shallow references. Does not apply when requesting a single deep shelveset object. Links will always be included in the deep shelveset.
+   *
    * @return includeLinks
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include the _links field on the shallow references. Does not apply when requesting a single deep shelveset object. Links will always be included in the deep shelveset.")
   public Boolean isIncludeLinks() {
     return includeLinks;
@@ -89,10 +89,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Whether to include workItems
+   *
    * @return includeWorkItems
-  **/
+   **/
   @ApiModelProperty(value = "Whether to include workItems")
   public Boolean isIncludeWorkItems() {
     return includeWorkItems;
@@ -107,10 +108,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Max number of changes to include
+   *
    * @return maxChangeCount
-  **/
+   **/
   @ApiModelProperty(value = "Max number of changes to include")
   public Integer getMaxChangeCount() {
     return maxChangeCount;
@@ -125,10 +127,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Max length of comment
+   *
    * @return maxCommentLength
-  **/
+   **/
   @ApiModelProperty(value = "Max length of comment")
   public Integer getMaxCommentLength() {
     return maxCommentLength;
@@ -143,10 +146,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Shelveset name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset name")
   public String getName() {
     return name;
@@ -161,10 +165,11 @@ public class TfvcShelvesetRequestData {
     return this;
   }
 
-   /**
+  /**
    * Owner&#39;s ID. Could be a name or a guid.
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Owner's ID. Could be a name or a guid.")
   public String getOwner() {
     return owner;
@@ -185,12 +190,12 @@ public class TfvcShelvesetRequestData {
     }
     TfvcShelvesetRequestData tfvcShelvesetRequestData = (TfvcShelvesetRequestData) o;
     return Objects.equals(this.includeDetails, tfvcShelvesetRequestData.includeDetails) &&
-        Objects.equals(this.includeLinks, tfvcShelvesetRequestData.includeLinks) &&
-        Objects.equals(this.includeWorkItems, tfvcShelvesetRequestData.includeWorkItems) &&
-        Objects.equals(this.maxChangeCount, tfvcShelvesetRequestData.maxChangeCount) &&
-        Objects.equals(this.maxCommentLength, tfvcShelvesetRequestData.maxCommentLength) &&
-        Objects.equals(this.name, tfvcShelvesetRequestData.name) &&
-        Objects.equals(this.owner, tfvcShelvesetRequestData.owner);
+            Objects.equals(this.includeLinks, tfvcShelvesetRequestData.includeLinks) &&
+            Objects.equals(this.includeWorkItems, tfvcShelvesetRequestData.includeWorkItems) &&
+            Objects.equals(this.maxChangeCount, tfvcShelvesetRequestData.maxChangeCount) &&
+            Objects.equals(this.maxCommentLength, tfvcShelvesetRequestData.maxCommentLength) &&
+            Objects.equals(this.name, tfvcShelvesetRequestData.name) &&
+            Objects.equals(this.owner, tfvcShelvesetRequestData.owner);
   }
 
   @Override
@@ -203,7 +208,7 @@ public class TfvcShelvesetRequestData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcShelvesetRequestData {\n");
-    
+
     sb.append("    includeDetails: ").append(toIndentedString(includeDetails)).append("\n");
     sb.append("    includeLinks: ").append(toIndentedString(includeLinks)).append("\n");
     sb.append("    includeWorkItems: ").append(toIndentedString(includeWorkItems)).append("\n");

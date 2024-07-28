@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Metadata for a changeset.
@@ -59,10 +55,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * A collection of REST reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "A collection of REST reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -77,10 +74,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user.")
   public IdentityRef getAuthor() {
     return author;
@@ -95,10 +93,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Changeset Id.
+   *
    * @return changesetId
-  **/
+   **/
   @ApiModelProperty(value = "Changeset Id.")
   public Integer getChangesetId() {
     return changesetId;
@@ -113,10 +112,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Alias or display name of user.
+   *
    * @return checkedInBy
-  **/
+   **/
   @ApiModelProperty(value = "Alias or display name of user.")
   public IdentityRef getCheckedInBy() {
     return checkedInBy;
@@ -131,10 +131,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Comment for the changeset.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Comment for the changeset.")
   public String getComment() {
     return comment;
@@ -149,10 +150,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Was the Comment result truncated?
+   *
    * @return commentTruncated
-  **/
+   **/
   @ApiModelProperty(value = "Was the Comment result truncated?")
   public Boolean isCommentTruncated() {
     return commentTruncated;
@@ -167,10 +169,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * Creation date of the changeset.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "Creation date of the changeset.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -185,10 +188,11 @@ public class TfvcChangesetRef {
     return this;
   }
 
-   /**
+  /**
    * URL to retrieve the item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "URL to retrieve the item.")
   public String getUrl() {
     return url;
@@ -209,13 +213,13 @@ public class TfvcChangesetRef {
     }
     TfvcChangesetRef tfvcChangesetRef = (TfvcChangesetRef) o;
     return Objects.equals(this.links, tfvcChangesetRef.links) &&
-        Objects.equals(this.author, tfvcChangesetRef.author) &&
-        Objects.equals(this.changesetId, tfvcChangesetRef.changesetId) &&
-        Objects.equals(this.checkedInBy, tfvcChangesetRef.checkedInBy) &&
-        Objects.equals(this.comment, tfvcChangesetRef.comment) &&
-        Objects.equals(this.commentTruncated, tfvcChangesetRef.commentTruncated) &&
-        Objects.equals(this.createdDate, tfvcChangesetRef.createdDate) &&
-        Objects.equals(this.url, tfvcChangesetRef.url);
+            Objects.equals(this.author, tfvcChangesetRef.author) &&
+            Objects.equals(this.changesetId, tfvcChangesetRef.changesetId) &&
+            Objects.equals(this.checkedInBy, tfvcChangesetRef.checkedInBy) &&
+            Objects.equals(this.comment, tfvcChangesetRef.comment) &&
+            Objects.equals(this.commentTruncated, tfvcChangesetRef.commentTruncated) &&
+            Objects.equals(this.createdDate, tfvcChangesetRef.createdDate) &&
+            Objects.equals(this.url, tfvcChangesetRef.url);
   }
 
   @Override
@@ -228,7 +232,7 @@ public class TfvcChangesetRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcChangesetRef {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    changesetId: ").append(toIndentedString(changesetId)).append("\n");

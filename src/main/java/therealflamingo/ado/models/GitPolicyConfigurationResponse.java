@@ -13,114 +13,113 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.PolicyConfiguration;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitPolicyConfigurationResponse {
-  @JsonProperty("continuationToken")
-  private String continuationToken = null;
+    @JsonProperty("continuationToken")
+    private String continuationToken = null;
 
-  @JsonProperty("policyConfigurations")
-  private List<PolicyConfiguration> policyConfigurations = null;
+    @JsonProperty("policyConfigurations")
+    private List<PolicyConfiguration> policyConfigurations = null;
 
-  public GitPolicyConfigurationResponse continuationToken(String continuationToken) {
-    this.continuationToken = continuationToken;
-    return this;
-  }
-
-   /**
-   * The HTTP client methods find the continuation token header in the response and populate this field.
-   * @return continuationToken
-  **/
-  @ApiModelProperty(value = "The HTTP client methods find the continuation token header in the response and populate this field.")
-  public String getContinuationToken() {
-    return continuationToken;
-  }
-
-  public void setContinuationToken(String continuationToken) {
-    this.continuationToken = continuationToken;
-  }
-
-  public GitPolicyConfigurationResponse policyConfigurations(List<PolicyConfiguration> policyConfigurations) {
-    this.policyConfigurations = policyConfigurations;
-    return this;
-  }
-
-  public GitPolicyConfigurationResponse addPolicyConfigurationsItem(PolicyConfiguration policyConfigurationsItem) {
-    if (this.policyConfigurations == null) {
-      this.policyConfigurations = new ArrayList<PolicyConfiguration>();
+    public GitPolicyConfigurationResponse continuationToken(String continuationToken) {
+        this.continuationToken = continuationToken;
+        return this;
     }
-    this.policyConfigurations.add(policyConfigurationsItem);
-    return this;
-  }
 
-   /**
-   * Get policyConfigurations
-   * @return policyConfigurations
-  **/
-  @ApiModelProperty(value = "")
-  public List<PolicyConfiguration> getPolicyConfigurations() {
-    return policyConfigurations;
-  }
-
-  public void setPolicyConfigurations(List<PolicyConfiguration> policyConfigurations) {
-    this.policyConfigurations = policyConfigurations;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * The HTTP client methods find the continuation token header in the response and populate this field.
+     *
+     * @return continuationToken
+     **/
+    @ApiModelProperty(value = "The HTTP client methods find the continuation token header in the response and populate this field.")
+    public String getContinuationToken() {
+        return continuationToken;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public void setContinuationToken(String continuationToken) {
+        this.continuationToken = continuationToken;
     }
-    GitPolicyConfigurationResponse gitPolicyConfigurationResponse = (GitPolicyConfigurationResponse) o;
-    return Objects.equals(this.continuationToken, gitPolicyConfigurationResponse.continuationToken) &&
-        Objects.equals(this.policyConfigurations, gitPolicyConfigurationResponse.policyConfigurations);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(continuationToken, policyConfigurations);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GitPolicyConfigurationResponse {\n");
-    
-    sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
-    sb.append("    policyConfigurations: ").append(toIndentedString(policyConfigurations)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public GitPolicyConfigurationResponse policyConfigurations(List<PolicyConfiguration> policyConfigurations) {
+        this.policyConfigurations = policyConfigurations;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public GitPolicyConfigurationResponse addPolicyConfigurationsItem(PolicyConfiguration policyConfigurationsItem) {
+        if (this.policyConfigurations == null) {
+            this.policyConfigurations = new ArrayList<PolicyConfiguration>();
+        }
+        this.policyConfigurations.add(policyConfigurationsItem);
+        return this;
+    }
+
+    /**
+     * Get policyConfigurations
+     *
+     * @return policyConfigurations
+     **/
+    @ApiModelProperty(value = "")
+    public List<PolicyConfiguration> getPolicyConfigurations() {
+        return policyConfigurations;
+    }
+
+    public void setPolicyConfigurations(List<PolicyConfiguration> policyConfigurations) {
+        this.policyConfigurations = policyConfigurations;
+    }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GitPolicyConfigurationResponse gitPolicyConfigurationResponse = (GitPolicyConfigurationResponse) o;
+        return Objects.equals(this.continuationToken, gitPolicyConfigurationResponse.continuationToken) &&
+                Objects.equals(this.policyConfigurations, gitPolicyConfigurationResponse.policyConfigurations);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(continuationToken, policyConfigurations);
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GitPolicyConfigurationResponse {\n");
+
+        sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
+        sb.append("    policyConfigurations: ").append(toIndentedString(policyConfigurations)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

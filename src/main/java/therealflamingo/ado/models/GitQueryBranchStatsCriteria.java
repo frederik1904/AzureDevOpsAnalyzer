@@ -13,19 +13,16 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitVersionDescriptor;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -41,10 +38,11 @@ public class GitQueryBranchStatsCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get baseCommit
+   *
    * @return baseCommit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitVersionDescriptor getBaseCommit() {
     return baseCommit;
@@ -67,10 +65,11 @@ public class GitQueryBranchStatsCriteria {
     return this;
   }
 
-   /**
+  /**
    * Get targetCommits
+   *
    * @return targetCommits
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<GitVersionDescriptor> getTargetCommits() {
     return targetCommits;
@@ -91,7 +90,7 @@ public class GitQueryBranchStatsCriteria {
     }
     GitQueryBranchStatsCriteria gitQueryBranchStatsCriteria = (GitQueryBranchStatsCriteria) o;
     return Objects.equals(this.baseCommit, gitQueryBranchStatsCriteria.baseCommit) &&
-        Objects.equals(this.targetCommits, gitQueryBranchStatsCriteria.targetCommits);
+            Objects.equals(this.targetCommits, gitQueryBranchStatsCriteria.targetCommits);
   }
 
   @Override
@@ -104,7 +103,7 @@ public class GitQueryBranchStatsCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitQueryBranchStatsCriteria {\n");
-    
+
     sb.append("    baseCommit: ").append(toIndentedString(baseCommit)).append("\n");
     sb.append("    targetCommits: ").append(toIndentedString(targetCommits)).append("\n");
     sb.append("}");

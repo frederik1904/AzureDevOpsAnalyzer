@@ -13,19 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.GitStatus;
-import therealflamingo.ado.models.GitStatusContext;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.PropertiesCollection;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * This class contains the metadata of a service/extension posting pull request status. Status can be associated with a pull request or an iteration.
@@ -68,10 +61,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Reference links.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Reference links.")
   public ReferenceLinks getLinks() {
     return links;
@@ -86,10 +80,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Context of the status.
+   *
    * @return context
-  **/
+   **/
   @ApiModelProperty(value = "Context of the status.")
   public GitStatusContext getContext() {
     return context;
@@ -104,10 +99,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Identity that created the status.
+   *
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "Identity that created the status.")
   public IdentityRef getCreatedBy() {
     return createdBy;
@@ -122,10 +118,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Creation date and time of the status.
+   *
    * @return creationDate
-  **/
+   **/
   @ApiModelProperty(value = "Creation date and time of the status.")
   public OffsetDateTime getCreationDate() {
     return creationDate;
@@ -140,10 +137,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Status description. Typically describes current state of the status.
+   *
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "Status description. Typically describes current state of the status.")
   public String getDescription() {
     return description;
@@ -158,10 +156,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Status identifier.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Status identifier.")
   public Integer getId() {
     return id;
@@ -176,10 +175,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * URL with status details.
+   *
    * @return targetUrl
-  **/
+   **/
   @ApiModelProperty(value = "URL with status details.")
   public String getTargetUrl() {
     return targetUrl;
@@ -194,10 +194,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Last update date and time of the status.
+   *
    * @return updatedDate
-  **/
+   **/
   @ApiModelProperty(value = "Last update date and time of the status.")
   public OffsetDateTime getUpdatedDate() {
     return updatedDate;
@@ -212,10 +213,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * ID of the iteration to associate status with. Minimum value is 1.
+   *
    * @return iterationId
-  **/
+   **/
   @ApiModelProperty(value = "ID of the iteration to associate status with. Minimum value is 1.")
   public Integer getIterationId() {
     return iterationId;
@@ -230,10 +232,11 @@ public class GitPullRequestStatus extends GitStatus {
     return this;
   }
 
-   /**
+  /**
    * Custom properties of the status.
+   *
    * @return properties
-  **/
+   **/
   @ApiModelProperty(value = "Custom properties of the status.")
   public PropertiesCollection getProperties() {
     return properties;
@@ -254,16 +257,16 @@ public class GitPullRequestStatus extends GitStatus {
     }
     GitPullRequestStatus gitPullRequestStatus = (GitPullRequestStatus) o;
     return Objects.equals(this.links, gitPullRequestStatus.links) &&
-        Objects.equals(this.context, gitPullRequestStatus.context) &&
-        Objects.equals(this.createdBy, gitPullRequestStatus.createdBy) &&
-        Objects.equals(this.creationDate, gitPullRequestStatus.creationDate) &&
-        Objects.equals(this.description, gitPullRequestStatus.description) &&
-        Objects.equals(this.id, gitPullRequestStatus.id) &&
-        Objects.equals(this.targetUrl, gitPullRequestStatus.targetUrl) &&
-        Objects.equals(this.updatedDate, gitPullRequestStatus.updatedDate) &&
-        Objects.equals(this.iterationId, gitPullRequestStatus.iterationId) &&
-        Objects.equals(this.properties, gitPullRequestStatus.properties) &&
-        super.equals(o);
+            Objects.equals(this.context, gitPullRequestStatus.context) &&
+            Objects.equals(this.createdBy, gitPullRequestStatus.createdBy) &&
+            Objects.equals(this.creationDate, gitPullRequestStatus.creationDate) &&
+            Objects.equals(this.description, gitPullRequestStatus.description) &&
+            Objects.equals(this.id, gitPullRequestStatus.id) &&
+            Objects.equals(this.targetUrl, gitPullRequestStatus.targetUrl) &&
+            Objects.equals(this.updatedDate, gitPullRequestStatus.updatedDate) &&
+            Objects.equals(this.iterationId, gitPullRequestStatus.iterationId) &&
+            Objects.equals(this.properties, gitPullRequestStatus.properties) &&
+            super.equals(o);
   }
 
   @Override

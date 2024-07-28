@@ -13,75 +13,28 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
-import therealflamingo.ado.models.GitBlobRef;
-import therealflamingo.ado.models.GitResolution;
-import therealflamingo.ado.models.IdentityRef;
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitResolutionMergeContent extends GitResolution {
   @JsonProperty("author")
   private IdentityRef author = null;
-
-  /**
-   * Gets or Sets mergeType
-   */
-  public enum MergeTypeEnum {
-    UNDECIDED("undecided"),
-    
-    TAKESOURCECONTENT("takeSourceContent"),
-    
-    TAKETARGETCONTENT("takeTargetContent"),
-    
-    AUTOMERGED("autoMerged"),
-    
-    USERMERGED("userMerged");
-
-    private String value;
-
-    MergeTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static MergeTypeEnum fromValue(String value) {
-      for (MergeTypeEnum b : MergeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("mergeType")
   private MergeTypeEnum mergeType = null;
-
   @JsonProperty("userMergedBlob")
   private GitBlobRef userMergedBlob = null;
-
   @JsonProperty("userMergedContent")
   private List<byte[]> userMergedContent = null;
 
@@ -90,10 +43,11 @@ public class GitResolutionMergeContent extends GitResolution {
     return this;
   }
 
-   /**
+  /**
    * User who created the resolution.
+   *
    * @return author
-  **/
+   **/
   @ApiModelProperty(value = "User who created the resolution.")
   public IdentityRef getAuthor() {
     return author;
@@ -108,10 +62,11 @@ public class GitResolutionMergeContent extends GitResolution {
     return this;
   }
 
-   /**
+  /**
    * Get mergeType
+   *
    * @return mergeType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public MergeTypeEnum getMergeType() {
     return mergeType;
@@ -126,10 +81,11 @@ public class GitResolutionMergeContent extends GitResolution {
     return this;
   }
 
-   /**
+  /**
    * Get userMergedBlob
+   *
    * @return userMergedBlob
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitBlobRef getUserMergedBlob() {
     return userMergedBlob;
@@ -152,10 +108,11 @@ public class GitResolutionMergeContent extends GitResolution {
     return this;
   }
 
-   /**
+  /**
    * Get userMergedContent
+   *
    * @return userMergedContent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<byte[]> getUserMergedContent() {
     return userMergedContent;
@@ -164,7 +121,6 @@ public class GitResolutionMergeContent extends GitResolution {
   public void setUserMergedContent(List<byte[]> userMergedContent) {
     this.userMergedContent = userMergedContent;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -176,17 +132,16 @@ public class GitResolutionMergeContent extends GitResolution {
     }
     GitResolutionMergeContent gitResolutionMergeContent = (GitResolutionMergeContent) o;
     return Objects.equals(this.author, gitResolutionMergeContent.author) &&
-        Objects.equals(this.mergeType, gitResolutionMergeContent.mergeType) &&
-        Objects.equals(this.userMergedBlob, gitResolutionMergeContent.userMergedBlob) &&
-        Objects.equals(this.userMergedContent, gitResolutionMergeContent.userMergedContent) &&
-        super.equals(o);
+            Objects.equals(this.mergeType, gitResolutionMergeContent.mergeType) &&
+            Objects.equals(this.userMergedBlob, gitResolutionMergeContent.userMergedBlob) &&
+            Objects.equals(this.userMergedContent, gitResolutionMergeContent.userMergedContent) &&
+            super.equals(o);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(author, mergeType, userMergedBlob, userMergedContent, super.hashCode());
   }
-
 
   @Override
   public String toString() {
@@ -210,6 +165,47 @@ public class GitResolutionMergeContent extends GitResolution {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Gets or Sets mergeType
+   */
+  public enum MergeTypeEnum {
+    UNDECIDED("undecided"),
+
+    TAKESOURCECONTENT("takeSourceContent"),
+
+    TAKETARGETCONTENT("takeTargetContent"),
+
+    AUTOMERGED("autoMerged"),
+
+    USERMERGED("userMerged");
+
+    private String value;
+
+    MergeTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static MergeTypeEnum fromValue(String value) {
+      for (MergeTypeEnum b : MergeTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

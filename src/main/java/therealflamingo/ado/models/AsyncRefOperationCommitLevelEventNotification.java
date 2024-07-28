@@ -13,17 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.AsyncGitOperationNotification;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -39,10 +36,11 @@ public class AsyncRefOperationCommitLevelEventNotification extends AsyncGitOpera
     return this;
   }
 
-   /**
+  /**
    * Get operationId
+   *
    * @return operationId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOperationId() {
     return operationId;
@@ -57,10 +55,11 @@ public class AsyncRefOperationCommitLevelEventNotification extends AsyncGitOpera
     return this;
   }
 
-   /**
+  /**
    * Get commitId
+   *
    * @return commitId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommitId() {
     return commitId;
@@ -81,8 +80,8 @@ public class AsyncRefOperationCommitLevelEventNotification extends AsyncGitOpera
     }
     AsyncRefOperationCommitLevelEventNotification asyncRefOperationCommitLevelEventNotification = (AsyncRefOperationCommitLevelEventNotification) o;
     return Objects.equals(this.operationId, asyncRefOperationCommitLevelEventNotification.operationId) &&
-        Objects.equals(this.commitId, asyncRefOperationCommitLevelEventNotification.commitId) &&
-        super.equals(o);
+            Objects.equals(this.commitId, asyncRefOperationCommitLevelEventNotification.commitId) &&
+            super.equals(o);
   }
 
   @Override

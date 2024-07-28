@@ -13,22 +13,17 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
-import therealflamingo.ado.models.GitRepositoryRef;
-import therealflamingo.ado.models.ReferenceLinks;
-import therealflamingo.ado.models.TeamProjectReference;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -83,10 +78,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -101,10 +97,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get defaultBranch
+   *
    * @return defaultBranch
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDefaultBranch() {
     return defaultBranch;
@@ -119,10 +116,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get id
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UUID getId() {
     return id;
@@ -137,10 +135,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * True if the repository is disabled. False otherwise.
+   *
    * @return isDisabled
-  **/
+   **/
   @ApiModelProperty(value = "True if the repository is disabled. False otherwise.")
   public Boolean isIsDisabled() {
     return isDisabled;
@@ -155,10 +154,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * True if the repository was created as a fork.
+   *
    * @return isFork
-  **/
+   **/
   @ApiModelProperty(value = "True if the repository was created as a fork.")
   public Boolean isIsFork() {
     return isFork;
@@ -173,10 +173,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * True if the repository is in maintenance. False otherwise.
+   *
    * @return isInMaintenance
-  **/
+   **/
   @ApiModelProperty(value = "True if the repository is in maintenance. False otherwise.")
   public Boolean isIsInMaintenance() {
     return isInMaintenance;
@@ -191,10 +192,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get name
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -209,10 +211,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get parentRepository
+   *
    * @return parentRepository
-  **/
+   **/
   @ApiModelProperty(value = "")
   public GitRepositoryRef getParentRepository() {
     return parentRepository;
@@ -227,10 +230,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get project
+   *
    * @return project
-  **/
+   **/
   @ApiModelProperty(value = "")
   public TeamProjectReference getProject() {
     return project;
@@ -245,10 +249,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get remoteUrl
+   *
    * @return remoteUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRemoteUrl() {
     return remoteUrl;
@@ -263,10 +268,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Compressed size (bytes) of the repository.
+   *
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "Compressed size (bytes) of the repository.")
   public Long getSize() {
     return size;
@@ -281,10 +287,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get sshUrl
+   *
    * @return sshUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSshUrl() {
     return sshUrl;
@@ -299,10 +306,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -325,10 +333,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get validRemoteUrls
+   *
    * @return validRemoteUrls
-  **/
+   **/
   @ApiModelProperty(value = "")
   public List<String> getValidRemoteUrls() {
     return validRemoteUrls;
@@ -343,10 +352,11 @@ public class GitRepository {
     return this;
   }
 
-   /**
+  /**
    * Get webUrl
+   *
    * @return webUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWebUrl() {
     return webUrl;
@@ -367,20 +377,20 @@ public class GitRepository {
     }
     GitRepository gitRepository = (GitRepository) o;
     return Objects.equals(this.links, gitRepository.links) &&
-        Objects.equals(this.defaultBranch, gitRepository.defaultBranch) &&
-        Objects.equals(this.id, gitRepository.id) &&
-        Objects.equals(this.isDisabled, gitRepository.isDisabled) &&
-        Objects.equals(this.isFork, gitRepository.isFork) &&
-        Objects.equals(this.isInMaintenance, gitRepository.isInMaintenance) &&
-        Objects.equals(this.name, gitRepository.name) &&
-        Objects.equals(this.parentRepository, gitRepository.parentRepository) &&
-        Objects.equals(this.project, gitRepository.project) &&
-        Objects.equals(this.remoteUrl, gitRepository.remoteUrl) &&
-        Objects.equals(this.size, gitRepository.size) &&
-        Objects.equals(this.sshUrl, gitRepository.sshUrl) &&
-        Objects.equals(this.url, gitRepository.url) &&
-        Objects.equals(this.validRemoteUrls, gitRepository.validRemoteUrls) &&
-        Objects.equals(this.webUrl, gitRepository.webUrl);
+            Objects.equals(this.defaultBranch, gitRepository.defaultBranch) &&
+            Objects.equals(this.id, gitRepository.id) &&
+            Objects.equals(this.isDisabled, gitRepository.isDisabled) &&
+            Objects.equals(this.isFork, gitRepository.isFork) &&
+            Objects.equals(this.isInMaintenance, gitRepository.isInMaintenance) &&
+            Objects.equals(this.name, gitRepository.name) &&
+            Objects.equals(this.parentRepository, gitRepository.parentRepository) &&
+            Objects.equals(this.project, gitRepository.project) &&
+            Objects.equals(this.remoteUrl, gitRepository.remoteUrl) &&
+            Objects.equals(this.size, gitRepository.size) &&
+            Objects.equals(this.sshUrl, gitRepository.sshUrl) &&
+            Objects.equals(this.url, gitRepository.url) &&
+            Objects.equals(this.validRemoteUrls, gitRepository.validRemoteUrls) &&
+            Objects.equals(this.webUrl, gitRepository.webUrl);
   }
 
   @Override
@@ -393,7 +403,7 @@ public class GitRepository {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitRepository {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    defaultBranch: ").append(toIndentedString(defaultBranch)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

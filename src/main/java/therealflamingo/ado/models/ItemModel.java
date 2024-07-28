@@ -13,18 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.FileContentMetadata;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -55,10 +51,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get links
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferenceLinks getLinks() {
     return links;
@@ -73,10 +70,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get content
+   *
    * @return content
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContent() {
     return content;
@@ -91,10 +89,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get contentMetadata
+   *
    * @return contentMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public FileContentMetadata getContentMetadata() {
     return contentMetadata;
@@ -109,10 +108,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get isFolder
+   *
    * @return isFolder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsFolder() {
     return isFolder;
@@ -127,10 +127,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get isSymLink
+   *
    * @return isSymLink
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsSymLink() {
     return isSymLink;
@@ -145,10 +146,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get path
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPath() {
     return path;
@@ -163,10 +165,11 @@ public class ItemModel {
     return this;
   }
 
-   /**
+  /**
    * Get url
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
@@ -187,12 +190,12 @@ public class ItemModel {
     }
     ItemModel itemModel = (ItemModel) o;
     return Objects.equals(this.links, itemModel.links) &&
-        Objects.equals(this.content, itemModel.content) &&
-        Objects.equals(this.contentMetadata, itemModel.contentMetadata) &&
-        Objects.equals(this.isFolder, itemModel.isFolder) &&
-        Objects.equals(this.isSymLink, itemModel.isSymLink) &&
-        Objects.equals(this.path, itemModel.path) &&
-        Objects.equals(this.url, itemModel.url);
+            Objects.equals(this.content, itemModel.content) &&
+            Objects.equals(this.contentMetadata, itemModel.contentMetadata) &&
+            Objects.equals(this.isFolder, itemModel.isFolder) &&
+            Objects.equals(this.isSymLink, itemModel.isSymLink) &&
+            Objects.equals(this.path, itemModel.path) &&
+            Objects.equals(this.url, itemModel.url);
   }
 
   @Override
@@ -205,7 +208,7 @@ public class ItemModel {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ItemModel {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    contentMetadata: ").append(toIndentedString(contentMetadata)).append("\n");

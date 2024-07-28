@@ -13,14 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import therealflamingo.ado.models.CommentPosition;
+
+import java.util.Objects;
 
 /**
  * Comment tracking criteria is used to identify which iteration context the thread has been tracked to (if any) along with some detail about the original position and filename.
@@ -54,10 +51,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * The iteration of the file on the left side of the diff that the thread will be tracked to. Threads were tracked if this is greater than 0.
+   *
    * @return firstComparingIteration
-  **/
+   **/
   @ApiModelProperty(value = "The iteration of the file on the left side of the diff that the thread will be tracked to. Threads were tracked if this is greater than 0.")
   public Integer getFirstComparingIteration() {
     return firstComparingIteration;
@@ -72,10 +70,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * Original filepath the thread was created on before tracking. This will be different than the current thread filepath if the file in question was renamed in a later iteration.
+   *
    * @return origFilePath
-  **/
+   **/
   @ApiModelProperty(value = "Original filepath the thread was created on before tracking. This will be different than the current thread filepath if the file in question was renamed in a later iteration.")
   public String getOrigFilePath() {
     return origFilePath;
@@ -90,10 +89,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * Original position of last character of the thread&#39;s span in left file.
+   *
    * @return origLeftFileEnd
-  **/
+   **/
   @ApiModelProperty(value = "Original position of last character of the thread's span in left file.")
   public CommentPosition getOrigLeftFileEnd() {
     return origLeftFileEnd;
@@ -108,10 +108,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * Original position of first character of the thread&#39;s span in left file.
+   *
    * @return origLeftFileStart
-  **/
+   **/
   @ApiModelProperty(value = "Original position of first character of the thread's span in left file.")
   public CommentPosition getOrigLeftFileStart() {
     return origLeftFileStart;
@@ -126,10 +127,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * Original position of last character of the thread&#39;s span in right file.
+   *
    * @return origRightFileEnd
-  **/
+   **/
   @ApiModelProperty(value = "Original position of last character of the thread's span in right file.")
   public CommentPosition getOrigRightFileEnd() {
     return origRightFileEnd;
@@ -144,10 +146,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * Original position of first character of the thread&#39;s span in right file.
+   *
    * @return origRightFileStart
-  **/
+   **/
   @ApiModelProperty(value = "Original position of first character of the thread's span in right file.")
   public CommentPosition getOrigRightFileStart() {
     return origRightFileStart;
@@ -162,10 +165,11 @@ public class CommentTrackingCriteria {
     return this;
   }
 
-   /**
+  /**
    * The iteration of the file on the right side of the diff that the thread will be tracked to. Threads were tracked if this is greater than 0.
+   *
    * @return secondComparingIteration
-  **/
+   **/
   @ApiModelProperty(value = "The iteration of the file on the right side of the diff that the thread will be tracked to. Threads were tracked if this is greater than 0.")
   public Integer getSecondComparingIteration() {
     return secondComparingIteration;
@@ -186,12 +190,12 @@ public class CommentTrackingCriteria {
     }
     CommentTrackingCriteria commentTrackingCriteria = (CommentTrackingCriteria) o;
     return Objects.equals(this.firstComparingIteration, commentTrackingCriteria.firstComparingIteration) &&
-        Objects.equals(this.origFilePath, commentTrackingCriteria.origFilePath) &&
-        Objects.equals(this.origLeftFileEnd, commentTrackingCriteria.origLeftFileEnd) &&
-        Objects.equals(this.origLeftFileStart, commentTrackingCriteria.origLeftFileStart) &&
-        Objects.equals(this.origRightFileEnd, commentTrackingCriteria.origRightFileEnd) &&
-        Objects.equals(this.origRightFileStart, commentTrackingCriteria.origRightFileStart) &&
-        Objects.equals(this.secondComparingIteration, commentTrackingCriteria.secondComparingIteration);
+            Objects.equals(this.origFilePath, commentTrackingCriteria.origFilePath) &&
+            Objects.equals(this.origLeftFileEnd, commentTrackingCriteria.origLeftFileEnd) &&
+            Objects.equals(this.origLeftFileStart, commentTrackingCriteria.origLeftFileStart) &&
+            Objects.equals(this.origRightFileEnd, commentTrackingCriteria.origRightFileEnd) &&
+            Objects.equals(this.origRightFileStart, commentTrackingCriteria.origRightFileStart) &&
+            Objects.equals(this.secondComparingIteration, commentTrackingCriteria.secondComparingIteration);
   }
 
   @Override
@@ -204,7 +208,7 @@ public class CommentTrackingCriteria {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentTrackingCriteria {\n");
-    
+
     sb.append("    firstComparingIteration: ").append(toIndentedString(firstComparingIteration)).append("\n");
     sb.append("    origFilePath: ").append(toIndentedString(origFilePath)).append("\n");
     sb.append("    origLeftFileEnd: ").append(toIndentedString(origLeftFileEnd)).append("\n");

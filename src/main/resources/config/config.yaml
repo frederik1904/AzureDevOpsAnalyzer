@@ -1,7 +1,7 @@
 keePass:
     path: "/home/frederik/Documents/test.kdbx"
     password: "1234" #leave blank and the software will ask you on run
-    
+
 azureDevOps:
     keePassEntry: "TFS_TOKEN"
     organization: "frederik1904"

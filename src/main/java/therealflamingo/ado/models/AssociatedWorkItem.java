@@ -13,16 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -53,10 +51,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Get assignedTo
+   *
    * @return assignedTo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAssignedTo() {
     return assignedTo;
@@ -71,10 +70,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Id of associated the work item.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Id of associated the work item.")
   public Integer getId() {
     return id;
@@ -89,10 +89,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Get state
+   *
    * @return state
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getState() {
     return state;
@@ -107,10 +108,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Get title
+   *
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
@@ -125,10 +127,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * REST Url of the work item.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "REST Url of the work item.")
   public String getUrl() {
     return url;
@@ -143,10 +146,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Get webUrl
+   *
    * @return webUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWebUrl() {
     return webUrl;
@@ -161,10 +165,11 @@ public class AssociatedWorkItem {
     return this;
   }
 
-   /**
+  /**
    * Get workItemType
+   *
    * @return workItemType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkItemType() {
     return workItemType;
@@ -185,12 +190,12 @@ public class AssociatedWorkItem {
     }
     AssociatedWorkItem associatedWorkItem = (AssociatedWorkItem) o;
     return Objects.equals(this.assignedTo, associatedWorkItem.assignedTo) &&
-        Objects.equals(this.id, associatedWorkItem.id) &&
-        Objects.equals(this.state, associatedWorkItem.state) &&
-        Objects.equals(this.title, associatedWorkItem.title) &&
-        Objects.equals(this.url, associatedWorkItem.url) &&
-        Objects.equals(this.webUrl, associatedWorkItem.webUrl) &&
-        Objects.equals(this.workItemType, associatedWorkItem.workItemType);
+            Objects.equals(this.id, associatedWorkItem.id) &&
+            Objects.equals(this.state, associatedWorkItem.state) &&
+            Objects.equals(this.title, associatedWorkItem.title) &&
+            Objects.equals(this.url, associatedWorkItem.url) &&
+            Objects.equals(this.webUrl, associatedWorkItem.webUrl) &&
+            Objects.equals(this.workItemType, associatedWorkItem.workItemType);
   }
 
   @Override
@@ -203,7 +208,7 @@ public class AssociatedWorkItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AssociatedWorkItem {\n");
-    
+
     sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");

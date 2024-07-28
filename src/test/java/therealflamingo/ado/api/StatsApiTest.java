@@ -13,15 +13,11 @@
 
 package therealflamingo.ado.api;
 
-import therealflamingo.ado.models.GitBranchStats;
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
+import therealflamingo.ado.models.GitBranchStats;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for StatsApi
@@ -31,14 +27,11 @@ public class StatsApiTest {
 
     private final StatsApi api = new StatsApi();
 
-    
+
     /**
-     * 
-     *
      * Retrieve statistics about all branches within a repository.
      *
-     * @throws Exception
-     *          if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void statsListTest() throws Exception {
@@ -53,5 +46,5 @@ public class StatsApiTest {
 
         // TODO: test validations
     }
-    
+
 }

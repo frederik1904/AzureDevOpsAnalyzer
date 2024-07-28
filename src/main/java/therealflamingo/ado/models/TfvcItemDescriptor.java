@@ -13,13 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Item path and Version descriptor properties
@@ -27,281 +27,281 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Item path and Version descriptor properties")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class TfvcItemDescriptor {
-  @JsonProperty("path")
-  private String path = null;
+    @JsonProperty("path")
+    private String path = null;
+    @JsonProperty("recursionLevel")
+    private RecursionLevelEnum recursionLevel = null;
+    @JsonProperty("version")
+    private String version = null;
+    @JsonProperty("versionOption")
+    private VersionOptionEnum versionOption = null;
+    @JsonProperty("versionType")
+    private VersionTypeEnum versionType = null;
 
-  /**
-   * Defaults to OneLevel.
-   */
-  public enum RecursionLevelEnum {
-    NONE("none"),
-    
-    ONELEVEL("oneLevel"),
-    
-    ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
-    
-    FULL("full");
-
-    private String value;
-
-    RecursionLevelEnum(String value) {
-      this.value = value;
+    public TfvcItemDescriptor path(String path) {
+        this.path = path;
+        return this;
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    /**
+     * Item path.
+     *
+     * @return path
+     **/
+    @ApiModelProperty(value = "Item path.")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public TfvcItemDescriptor recursionLevel(RecursionLevelEnum recursionLevel) {
+        this.recursionLevel = recursionLevel;
+        return this;
+    }
+
+    /**
+     * Defaults to OneLevel.
+     *
+     * @return recursionLevel
+     **/
+    @ApiModelProperty(value = "Defaults to OneLevel.")
+    public RecursionLevelEnum getRecursionLevel() {
+        return recursionLevel;
+    }
+
+    public void setRecursionLevel(RecursionLevelEnum recursionLevel) {
+        this.recursionLevel = recursionLevel;
+    }
+
+    public TfvcItemDescriptor version(String version) {
+        this.version = version;
+        return this;
+    }
+
+    /**
+     * Specify the desired version, can be null or empty string only if VersionType is latest or tip.
+     *
+     * @return version
+     **/
+    @ApiModelProperty(value = "Specify the desired version, can be null or empty string only if VersionType is latest or tip.")
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public TfvcItemDescriptor versionOption(VersionOptionEnum versionOption) {
+        this.versionOption = versionOption;
+        return this;
+    }
+
+    /**
+     * Defaults to None.
+     *
+     * @return versionOption
+     **/
+    @ApiModelProperty(value = "Defaults to None.")
+    public VersionOptionEnum getVersionOption() {
+        return versionOption;
+    }
+
+    public void setVersionOption(VersionOptionEnum versionOption) {
+        this.versionOption = versionOption;
+    }
+
+    public TfvcItemDescriptor versionType(VersionTypeEnum versionType) {
+        this.versionType = versionType;
+        return this;
+    }
+
+    /**
+     * Defaults to Latest.
+     *
+     * @return versionType
+     **/
+    @ApiModelProperty(value = "Defaults to Latest.")
+    public VersionTypeEnum getVersionType() {
+        return versionType;
+    }
+
+    public void setVersionType(VersionTypeEnum versionType) {
+        this.versionType = versionType;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TfvcItemDescriptor tfvcItemDescriptor = (TfvcItemDescriptor) o;
+        return Objects.equals(this.path, tfvcItemDescriptor.path) &&
+                Objects.equals(this.recursionLevel, tfvcItemDescriptor.recursionLevel) &&
+                Objects.equals(this.version, tfvcItemDescriptor.version) &&
+                Objects.equals(this.versionOption, tfvcItemDescriptor.versionOption) &&
+                Objects.equals(this.versionType, tfvcItemDescriptor.versionType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(path, recursionLevel, version, versionOption, versionType);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TfvcItemDescriptor {\n");
+
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    recursionLevel: ").append(toIndentedString(recursionLevel)).append("\n");
+        sb.append("    version: ").append(toIndentedString(version)).append("\n");
+        sb.append("    versionOption: ").append(toIndentedString(versionOption)).append("\n");
+        sb.append("    versionType: ").append(toIndentedString(versionType)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static RecursionLevelEnum fromValue(String value) {
-      for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      return null;
-    }
-  }
-
-  @JsonProperty("recursionLevel")
-  private RecursionLevelEnum recursionLevel = null;
-
-  @JsonProperty("version")
-  private String version = null;
-
-  /**
-   * Defaults to None.
-   */
-  public enum VersionOptionEnum {
-    NONE("none"),
-    
-    PREVIOUS("previous"),
-    
-    USERENAME("useRename");
-
-    private String value;
-
-    VersionOptionEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
+    /**
+     * Defaults to OneLevel.
+     */
+    public enum RecursionLevelEnum {
+        NONE("none"),
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+        ONELEVEL("oneLevel"),
 
-    @JsonCreator
-    public static VersionOptionEnum fromValue(String value) {
-      for (VersionOptionEnum b : VersionOptionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
+
+        FULL("full");
+
+        private String value;
+
+        RecursionLevelEnum(String value) {
+            this.value = value;
         }
-      }
-      return null;
-    }
-  }
 
-  @JsonProperty("versionOption")
-  private VersionOptionEnum versionOption = null;
-
-  /**
-   * Defaults to Latest.
-   */
-  public enum VersionTypeEnum {
-    NONE("none"),
-    
-    CHANGESET("changeset"),
-    
-    SHELVESET("shelveset"),
-    
-    CHANGE("change"),
-    
-    DATE("date"),
-    
-    LATEST("latest"),
-    
-    TIP("tip"),
-    
-    MERGESOURCE("mergeSource");
-
-    private String value;
-
-    VersionTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static VersionTypeEnum fromValue(String value) {
-      for (VersionTypeEnum b : VersionTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        @JsonCreator
+        public static RecursionLevelEnum fromValue(String value) {
+            for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
         }
-      }
-      return null;
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
-
-  @JsonProperty("versionType")
-  private VersionTypeEnum versionType = null;
-
-  public TfvcItemDescriptor path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Item path.
-   * @return path
-  **/
-  @ApiModelProperty(value = "Item path.")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-  public TfvcItemDescriptor recursionLevel(RecursionLevelEnum recursionLevel) {
-    this.recursionLevel = recursionLevel;
-    return this;
-  }
-
-   /**
-   * Defaults to OneLevel.
-   * @return recursionLevel
-  **/
-  @ApiModelProperty(value = "Defaults to OneLevel.")
-  public RecursionLevelEnum getRecursionLevel() {
-    return recursionLevel;
-  }
-
-  public void setRecursionLevel(RecursionLevelEnum recursionLevel) {
-    this.recursionLevel = recursionLevel;
-  }
-
-  public TfvcItemDescriptor version(String version) {
-    this.version = version;
-    return this;
-  }
-
-   /**
-   * Specify the desired version, can be null or empty string only if VersionType is latest or tip.
-   * @return version
-  **/
-  @ApiModelProperty(value = "Specify the desired version, can be null or empty string only if VersionType is latest or tip.")
-  public String getVersion() {
-    return version;
-  }
-
-  public void setVersion(String version) {
-    this.version = version;
-  }
-
-  public TfvcItemDescriptor versionOption(VersionOptionEnum versionOption) {
-    this.versionOption = versionOption;
-    return this;
-  }
-
-   /**
-   * Defaults to None.
-   * @return versionOption
-  **/
-  @ApiModelProperty(value = "Defaults to None.")
-  public VersionOptionEnum getVersionOption() {
-    return versionOption;
-  }
-
-  public void setVersionOption(VersionOptionEnum versionOption) {
-    this.versionOption = versionOption;
-  }
-
-  public TfvcItemDescriptor versionType(VersionTypeEnum versionType) {
-    this.versionType = versionType;
-    return this;
-  }
-
-   /**
-   * Defaults to Latest.
-   * @return versionType
-  **/
-  @ApiModelProperty(value = "Defaults to Latest.")
-  public VersionTypeEnum getVersionType() {
-    return versionType;
-  }
-
-  public void setVersionType(VersionTypeEnum versionType) {
-    this.versionType = versionType;
-  }
 
 
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Defaults to None.
+     */
+    public enum VersionOptionEnum {
+        NONE("none"),
+
+        PREVIOUS("previous"),
+
+        USERENAME("useRename");
+
+        private String value;
+
+        VersionOptionEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static VersionOptionEnum fromValue(String value) {
+            for (VersionOptionEnum b : VersionOptionEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Defaults to Latest.
+     */
+    public enum VersionTypeEnum {
+        NONE("none"),
+
+        CHANGESET("changeset"),
+
+        SHELVESET("shelveset"),
+
+        CHANGE("change"),
+
+        DATE("date"),
+
+        LATEST("latest"),
+
+        TIP("tip"),
+
+        MERGESOURCE("mergeSource");
+
+        private String value;
+
+        VersionTypeEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static VersionTypeEnum fromValue(String value) {
+            for (VersionTypeEnum b : VersionTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    TfvcItemDescriptor tfvcItemDescriptor = (TfvcItemDescriptor) o;
-    return Objects.equals(this.path, tfvcItemDescriptor.path) &&
-        Objects.equals(this.recursionLevel, tfvcItemDescriptor.recursionLevel) &&
-        Objects.equals(this.version, tfvcItemDescriptor.version) &&
-        Objects.equals(this.versionOption, tfvcItemDescriptor.versionOption) &&
-        Objects.equals(this.versionType, tfvcItemDescriptor.versionType);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(path, recursionLevel, version, versionOption, versionType);
-  }
-
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TfvcItemDescriptor {\n");
-    
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("    recursionLevel: ").append(toIndentedString(recursionLevel)).append("\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    versionOption: ").append(toIndentedString(versionOption)).append("\n");
-    sb.append("    versionType: ").append(toIndentedString(versionType)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -13,15 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
-import therealflamingo.ado.models.RealTimePullRequestEvent;
 
 /**
  * Real time event (SignalR) for a discussions update on a pull request
@@ -40,10 +37,11 @@ public class DiscussionsUpdatedEvent extends RealTimePullRequestEvent {
     return this;
   }
 
-   /**
+  /**
    * The id of this event. Can be used to track send/receive state between client and server.
+   *
    * @return eventId
-  **/
+   **/
   @ApiModelProperty(value = "The id of this event. Can be used to track send/receive state between client and server.")
   public UUID getEventId() {
     return eventId;
@@ -58,10 +56,11 @@ public class DiscussionsUpdatedEvent extends RealTimePullRequestEvent {
     return this;
   }
 
-   /**
+  /**
    * The id of the pull request this event was generated for.
+   *
    * @return pullRequestId
-  **/
+   **/
   @ApiModelProperty(value = "The id of the pull request this event was generated for.")
   public Integer getPullRequestId() {
     return pullRequestId;
@@ -82,8 +81,8 @@ public class DiscussionsUpdatedEvent extends RealTimePullRequestEvent {
     }
     DiscussionsUpdatedEvent discussionsUpdatedEvent = (DiscussionsUpdatedEvent) o;
     return Objects.equals(this.eventId, discussionsUpdatedEvent.eventId) &&
-        Objects.equals(this.pullRequestId, discussionsUpdatedEvent.pullRequestId) &&
-        super.equals(o);
+            Objects.equals(this.pullRequestId, discussionsUpdatedEvent.pullRequestId) &&
+            super.equals(o);
   }
 
   @Override

@@ -13,145 +13,28 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Objects;
+
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class GitItemDescriptor {
   @JsonProperty("path")
   private String path = null;
-
-  /**
-   * Specifies whether to include children (OneLevel), all descendants (Full), or None
-   */
-  public enum RecursionLevelEnum {
-    NONE("none"),
-    
-    ONELEVEL("oneLevel"),
-    
-    ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
-    
-    FULL("full");
-
-    private String value;
-
-    RecursionLevelEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static RecursionLevelEnum fromValue(String value) {
-      for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("recursionLevel")
   private RecursionLevelEnum recursionLevel = null;
-
   @JsonProperty("version")
   private String version = null;
-
-  /**
-   * Version modifiers (e.g. previous)
-   */
-  public enum VersionOptionsEnum {
-    NONE("none"),
-    
-    PREVIOUSCHANGE("previousChange"),
-    
-    FIRSTPARENT("firstParent");
-
-    private String value;
-
-    VersionOptionsEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static VersionOptionsEnum fromValue(String value) {
-      for (VersionOptionsEnum b : VersionOptionsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("versionOptions")
   private VersionOptionsEnum versionOptions = null;
-
-  /**
-   * How to interpret version (branch,tag,commit)
-   */
-  public enum VersionTypeEnum {
-    BRANCH("branch"),
-    
-    TAG("tag"),
-    
-    COMMIT("commit");
-
-    private String value;
-
-    VersionTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static VersionTypeEnum fromValue(String value) {
-      for (VersionTypeEnum b : VersionTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("versionType")
   private VersionTypeEnum versionType = null;
 
@@ -160,10 +43,11 @@ public class GitItemDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Path to item
+   *
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "Path to item")
   public String getPath() {
     return path;
@@ -178,10 +62,11 @@ public class GitItemDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Specifies whether to include children (OneLevel), all descendants (Full), or None
+   *
    * @return recursionLevel
-  **/
+   **/
   @ApiModelProperty(value = "Specifies whether to include children (OneLevel), all descendants (Full), or None")
   public RecursionLevelEnum getRecursionLevel() {
     return recursionLevel;
@@ -196,10 +81,11 @@ public class GitItemDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version string (interpretation based on VersionType defined in subclass
+   *
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "Version string (interpretation based on VersionType defined in subclass")
   public String getVersion() {
     return version;
@@ -214,10 +100,11 @@ public class GitItemDescriptor {
     return this;
   }
 
-   /**
+  /**
    * Version modifiers (e.g. previous)
+   *
    * @return versionOptions
-  **/
+   **/
   @ApiModelProperty(value = "Version modifiers (e.g. previous)")
   public VersionOptionsEnum getVersionOptions() {
     return versionOptions;
@@ -232,10 +119,11 @@ public class GitItemDescriptor {
     return this;
   }
 
-   /**
+  /**
    * How to interpret version (branch,tag,commit)
+   *
    * @return versionType
-  **/
+   **/
   @ApiModelProperty(value = "How to interpret version (branch,tag,commit)")
   public VersionTypeEnum getVersionType() {
     return versionType;
@@ -244,7 +132,6 @@ public class GitItemDescriptor {
   public void setVersionType(VersionTypeEnum versionType) {
     this.versionType = versionType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -256,10 +143,10 @@ public class GitItemDescriptor {
     }
     GitItemDescriptor gitItemDescriptor = (GitItemDescriptor) o;
     return Objects.equals(this.path, gitItemDescriptor.path) &&
-        Objects.equals(this.recursionLevel, gitItemDescriptor.recursionLevel) &&
-        Objects.equals(this.version, gitItemDescriptor.version) &&
-        Objects.equals(this.versionOptions, gitItemDescriptor.versionOptions) &&
-        Objects.equals(this.versionType, gitItemDescriptor.versionType);
+            Objects.equals(this.recursionLevel, gitItemDescriptor.recursionLevel) &&
+            Objects.equals(this.version, gitItemDescriptor.version) &&
+            Objects.equals(this.versionOptions, gitItemDescriptor.versionOptions) &&
+            Objects.equals(this.versionType, gitItemDescriptor.versionType);
   }
 
   @Override
@@ -267,12 +154,11 @@ public class GitItemDescriptor {
     return Objects.hash(path, recursionLevel, version, versionOptions, versionType);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitItemDescriptor {\n");
-    
+
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    recursionLevel: ").append(toIndentedString(recursionLevel)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
@@ -291,6 +177,120 @@ public class GitItemDescriptor {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Specifies whether to include children (OneLevel), all descendants (Full), or None
+   */
+  public enum RecursionLevelEnum {
+    NONE("none"),
+
+    ONELEVEL("oneLevel"),
+
+    ONELEVELPLUSNESTEDEMPTYFOLDERS("oneLevelPlusNestedEmptyFolders"),
+
+    FULL("full");
+
+    private String value;
+
+    RecursionLevelEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static RecursionLevelEnum fromValue(String value) {
+      for (RecursionLevelEnum b : RecursionLevelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+
+  /**
+   * Version modifiers (e.g. previous)
+   */
+  public enum VersionOptionsEnum {
+    NONE("none"),
+
+    PREVIOUSCHANGE("previousChange"),
+
+    FIRSTPARENT("firstParent");
+
+    private String value;
+
+    VersionOptionsEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static VersionOptionsEnum fromValue(String value) {
+      for (VersionOptionsEnum b : VersionOptionsEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  /**
+   * How to interpret version (branch,tag,commit)
+   */
+  public enum VersionTypeEnum {
+    BRANCH("branch"),
+
+    TAG("tag"),
+
+    COMMIT("commit");
+
+    private String value;
+
+    VersionTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static VersionTypeEnum fromValue(String value) {
+      for (VersionTypeEnum b : VersionTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

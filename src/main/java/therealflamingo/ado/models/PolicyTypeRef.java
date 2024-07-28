@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -42,10 +40,11 @@ public class PolicyTypeRef {
     return this;
   }
 
-   /**
+  /**
    * Display name of the policy type.
+   *
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "Display name of the policy type.")
   public String getDisplayName() {
     return displayName;
@@ -60,10 +59,11 @@ public class PolicyTypeRef {
     return this;
   }
 
-   /**
+  /**
    * The policy type ID.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The policy type ID.")
   public UUID getId() {
     return id;
@@ -78,10 +78,11 @@ public class PolicyTypeRef {
     return this;
   }
 
-   /**
+  /**
    * The URL where the policy type can be retrieved.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The URL where the policy type can be retrieved.")
   public String getUrl() {
     return url;
@@ -102,8 +103,8 @@ public class PolicyTypeRef {
     }
     PolicyTypeRef policyTypeRef = (PolicyTypeRef) o;
     return Objects.equals(this.displayName, policyTypeRef.displayName) &&
-        Objects.equals(this.id, policyTypeRef.id) &&
-        Objects.equals(this.url, policyTypeRef.url);
+            Objects.equals(this.id, policyTypeRef.id) &&
+            Objects.equals(this.url, policyTypeRef.url);
   }
 
   @Override
@@ -116,7 +117,7 @@ public class PolicyTypeRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PolicyTypeRef {\n");
-    
+
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");

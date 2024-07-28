@@ -13,13 +13,13 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * The class to represent the line diff block
@@ -27,57 +27,14 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "The class to represent the line diff block")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
 public class LineDiffBlock {
-  /**
-   * Type of change that was made to the block.
-   */
-  public enum ChangeTypeEnum {
-    NONE("none"),
-    
-    ADD("add"),
-    
-    DELETE("delete"),
-    
-    EDIT("edit");
-
-    private String value;
-
-    ChangeTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ChangeTypeEnum fromValue(String value) {
-      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("changeType")
   private ChangeTypeEnum changeType = null;
-
   @JsonProperty("modifiedLineNumberStart")
   private Integer modifiedLineNumberStart = null;
-
   @JsonProperty("modifiedLinesCount")
   private Integer modifiedLinesCount = null;
-
   @JsonProperty("originalLineNumberStart")
   private Integer originalLineNumberStart = null;
-
   @JsonProperty("originalLinesCount")
   private Integer originalLinesCount = null;
 
@@ -86,10 +43,11 @@ public class LineDiffBlock {
     return this;
   }
 
-   /**
+  /**
    * Type of change that was made to the block.
+   *
    * @return changeType
-  **/
+   **/
   @ApiModelProperty(value = "Type of change that was made to the block.")
   public ChangeTypeEnum getChangeType() {
     return changeType;
@@ -104,10 +62,11 @@ public class LineDiffBlock {
     return this;
   }
 
-   /**
+  /**
    * Line number where this block starts in modified file.
+   *
    * @return modifiedLineNumberStart
-  **/
+   **/
   @ApiModelProperty(value = "Line number where this block starts in modified file.")
   public Integer getModifiedLineNumberStart() {
     return modifiedLineNumberStart;
@@ -122,10 +81,11 @@ public class LineDiffBlock {
     return this;
   }
 
-   /**
+  /**
    * Count of lines in this block in modified file.
+   *
    * @return modifiedLinesCount
-  **/
+   **/
   @ApiModelProperty(value = "Count of lines in this block in modified file.")
   public Integer getModifiedLinesCount() {
     return modifiedLinesCount;
@@ -140,10 +100,11 @@ public class LineDiffBlock {
     return this;
   }
 
-   /**
+  /**
    * Line number where this block starts in original file.
+   *
    * @return originalLineNumberStart
-  **/
+   **/
   @ApiModelProperty(value = "Line number where this block starts in original file.")
   public Integer getOriginalLineNumberStart() {
     return originalLineNumberStart;
@@ -158,10 +119,11 @@ public class LineDiffBlock {
     return this;
   }
 
-   /**
+  /**
    * Count of lines in this block in original file.
+   *
    * @return originalLinesCount
-  **/
+   **/
   @ApiModelProperty(value = "Count of lines in this block in original file.")
   public Integer getOriginalLinesCount() {
     return originalLinesCount;
@@ -170,7 +132,6 @@ public class LineDiffBlock {
   public void setOriginalLinesCount(Integer originalLinesCount) {
     this.originalLinesCount = originalLinesCount;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -182,10 +143,10 @@ public class LineDiffBlock {
     }
     LineDiffBlock lineDiffBlock = (LineDiffBlock) o;
     return Objects.equals(this.changeType, lineDiffBlock.changeType) &&
-        Objects.equals(this.modifiedLineNumberStart, lineDiffBlock.modifiedLineNumberStart) &&
-        Objects.equals(this.modifiedLinesCount, lineDiffBlock.modifiedLinesCount) &&
-        Objects.equals(this.originalLineNumberStart, lineDiffBlock.originalLineNumberStart) &&
-        Objects.equals(this.originalLinesCount, lineDiffBlock.originalLinesCount);
+            Objects.equals(this.modifiedLineNumberStart, lineDiffBlock.modifiedLineNumberStart) &&
+            Objects.equals(this.modifiedLinesCount, lineDiffBlock.modifiedLinesCount) &&
+            Objects.equals(this.originalLineNumberStart, lineDiffBlock.originalLineNumberStart) &&
+            Objects.equals(this.originalLinesCount, lineDiffBlock.originalLinesCount);
   }
 
   @Override
@@ -193,12 +154,11 @@ public class LineDiffBlock {
     return Objects.hash(changeType, modifiedLineNumberStart, modifiedLinesCount, originalLineNumberStart, originalLinesCount);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LineDiffBlock {\n");
-    
+
     sb.append("    changeType: ").append(toIndentedString(changeType)).append("\n");
     sb.append("    modifiedLineNumberStart: ").append(toIndentedString(modifiedLineNumberStart)).append("\n");
     sb.append("    modifiedLinesCount: ").append(toIndentedString(modifiedLinesCount)).append("\n");
@@ -217,6 +177,45 @@ public class LineDiffBlock {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * Type of change that was made to the block.
+   */
+  public enum ChangeTypeEnum {
+    NONE("none"),
+
+    ADD("add"),
+
+    DELETE("delete"),
+
+    EDIT("edit");
+
+    private String value;
+
+    ChangeTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static ChangeTypeEnum fromValue(String value) {
+      for (ChangeTypeEnum b : ChangeTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

@@ -13,17 +13,15 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 import java.util.UUID;
 
 /**
- * 
+ *
  */
 @ApiModel(description = "")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-28T21:17:42.501+02:00")
@@ -45,10 +43,11 @@ public class AdvSecEnablementUpdate {
     return this;
   }
 
-   /**
+  /**
    * New Dependabot status.
+   *
    * @return newDependabotStatus
-  **/
+   **/
   @ApiModelProperty(value = "New Dependabot status.")
   public Boolean isNewDependabotStatus() {
     return newDependabotStatus;
@@ -63,10 +62,11 @@ public class AdvSecEnablementUpdate {
     return this;
   }
 
-   /**
+  /**
    * New status
+   *
    * @return newStatus
-  **/
+   **/
   @ApiModelProperty(value = "New status")
   public Boolean isNewStatus() {
     return newStatus;
@@ -81,10 +81,11 @@ public class AdvSecEnablementUpdate {
     return this;
   }
 
-   /**
+  /**
    * ProjectId
+   *
    * @return projectId
-  **/
+   **/
   @ApiModelProperty(value = "ProjectId")
   public UUID getProjectId() {
     return projectId;
@@ -99,10 +100,11 @@ public class AdvSecEnablementUpdate {
     return this;
   }
 
-   /**
+  /**
    * RepositoryId Actual RepositoryId to Modify or Magic Repository Id \&quot;FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF\&quot; for ALL Repositories for that project
+   *
    * @return repositoryId
-  **/
+   **/
   @ApiModelProperty(value = "RepositoryId Actual RepositoryId to Modify or Magic Repository Id \"FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF\" for ALL Repositories for that project")
   public UUID getRepositoryId() {
     return repositoryId;
@@ -123,9 +125,9 @@ public class AdvSecEnablementUpdate {
     }
     AdvSecEnablementUpdate advSecEnablementUpdate = (AdvSecEnablementUpdate) o;
     return Objects.equals(this.newDependabotStatus, advSecEnablementUpdate.newDependabotStatus) &&
-        Objects.equals(this.newStatus, advSecEnablementUpdate.newStatus) &&
-        Objects.equals(this.projectId, advSecEnablementUpdate.projectId) &&
-        Objects.equals(this.repositoryId, advSecEnablementUpdate.repositoryId);
+            Objects.equals(this.newStatus, advSecEnablementUpdate.newStatus) &&
+            Objects.equals(this.projectId, advSecEnablementUpdate.projectId) &&
+            Objects.equals(this.repositoryId, advSecEnablementUpdate.repositoryId);
   }
 
   @Override
@@ -138,7 +140,7 @@ public class AdvSecEnablementUpdate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdvSecEnablementUpdate {\n");
-    
+
     sb.append("    newDependabotStatus: ").append(toIndentedString(newDependabotStatus)).append("\n");
     sb.append("    newStatus: ").append(toIndentedString(newStatus)).append("\n");
     sb.append("    projectId: ").append(toIndentedString(projectId)).append("\n");

@@ -13,23 +13,14 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.Comment;
-import therealflamingo.ado.models.CommentThreadContext;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.PropertiesCollection;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.*;
 
 /**
  * Represents a comment thread of a pull request. A thread contains meta data about the file it was left on along with one or more comments (an initial comment and the subsequent replies).
@@ -60,55 +51,8 @@ public class CommentThread {
 
   @JsonProperty("publishedDate")
   private OffsetDateTime publishedDate = null;
-
-  /**
-   * The status of the comment thread.
-   */
-  public enum StatusEnum {
-    UNKNOWN("unknown"),
-    
-    ACTIVE("active"),
-    
-    FIXED("fixed"),
-    
-    WONTFIX("wontFix"),
-    
-    CLOSED("closed"),
-    
-    BYDESIGN("byDesign"),
-    
-    PENDING("pending");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("status")
   private StatusEnum status = null;
-
   @JsonProperty("threadContext")
   private CommentThreadContext threadContext = null;
 
@@ -117,10 +61,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Links to other related objects.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "Links to other related objects.")
   public ReferenceLinks getLinks() {
     return links;
@@ -143,10 +88,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * A list of the comments.
+   *
    * @return comments
-  **/
+   **/
   @ApiModelProperty(value = "A list of the comments.")
   public List<Comment> getComments() {
     return comments;
@@ -161,10 +107,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The comment thread id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "The comment thread id.")
   public Integer getId() {
     return id;
@@ -187,10 +134,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Set of identities related to this thread
+   *
    * @return identities
-  **/
+   **/
   @ApiModelProperty(value = "Set of identities related to this thread")
   public Map<String, IdentityRef> getIdentities() {
     return identities;
@@ -205,10 +153,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Specify if the thread is deleted which happens when all comments are deleted.
+   *
    * @return isDeleted
-  **/
+   **/
   @ApiModelProperty(value = "Specify if the thread is deleted which happens when all comments are deleted.")
   public Boolean isIsDeleted() {
     return isDeleted;
@@ -223,10 +172,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The time this thread was last updated.
+   *
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "The time this thread was last updated.")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
@@ -241,10 +191,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Optional properties associated with the thread as a collection of key-value pairs.
+   *
    * @return properties
-  **/
+   **/
   @ApiModelProperty(value = "Optional properties associated with the thread as a collection of key-value pairs.")
   public PropertiesCollection getProperties() {
     return properties;
@@ -259,10 +210,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The time this thread was published.
+   *
    * @return publishedDate
-  **/
+   **/
   @ApiModelProperty(value = "The time this thread was published.")
   public OffsetDateTime getPublishedDate() {
     return publishedDate;
@@ -277,10 +229,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * The status of the comment thread.
+   *
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "The status of the comment thread.")
   public StatusEnum getStatus() {
     return status;
@@ -295,10 +248,11 @@ public class CommentThread {
     return this;
   }
 
-   /**
+  /**
    * Specify thread context such as position in left/right file.
+   *
    * @return threadContext
-  **/
+   **/
   @ApiModelProperty(value = "Specify thread context such as position in left/right file.")
   public CommentThreadContext getThreadContext() {
     return threadContext;
@@ -307,7 +261,6 @@ public class CommentThread {
   public void setThreadContext(CommentThreadContext threadContext) {
     this.threadContext = threadContext;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -319,15 +272,15 @@ public class CommentThread {
     }
     CommentThread commentThread = (CommentThread) o;
     return Objects.equals(this.links, commentThread.links) &&
-        Objects.equals(this.comments, commentThread.comments) &&
-        Objects.equals(this.id, commentThread.id) &&
-        Objects.equals(this.identities, commentThread.identities) &&
-        Objects.equals(this.isDeleted, commentThread.isDeleted) &&
-        Objects.equals(this.lastUpdatedDate, commentThread.lastUpdatedDate) &&
-        Objects.equals(this.properties, commentThread.properties) &&
-        Objects.equals(this.publishedDate, commentThread.publishedDate) &&
-        Objects.equals(this.status, commentThread.status) &&
-        Objects.equals(this.threadContext, commentThread.threadContext);
+            Objects.equals(this.comments, commentThread.comments) &&
+            Objects.equals(this.id, commentThread.id) &&
+            Objects.equals(this.identities, commentThread.identities) &&
+            Objects.equals(this.isDeleted, commentThread.isDeleted) &&
+            Objects.equals(this.lastUpdatedDate, commentThread.lastUpdatedDate) &&
+            Objects.equals(this.properties, commentThread.properties) &&
+            Objects.equals(this.publishedDate, commentThread.publishedDate) &&
+            Objects.equals(this.status, commentThread.status) &&
+            Objects.equals(this.threadContext, commentThread.threadContext);
   }
 
   @Override
@@ -335,12 +288,11 @@ public class CommentThread {
     return Objects.hash(links, comments, id, identities, isDeleted, lastUpdatedDate, properties, publishedDate, status, threadContext);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentThread {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -364,6 +316,51 @@ public class CommentThread {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  /**
+   * The status of the comment thread.
+   */
+  public enum StatusEnum {
+    UNKNOWN("unknown"),
+
+    ACTIVE("active"),
+
+    FIXED("fixed"),
+
+    WONTFIX("wontFix"),
+
+    CLOSED("closed"),
+
+    BYDESIGN("byDesign"),
+
+    PENDING("pending");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonCreator
+    public static StatusEnum fromValue(String value) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
   }
 
 }

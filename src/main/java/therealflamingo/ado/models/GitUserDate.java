@@ -13,14 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
+
+import java.util.Objects;
 
 /**
  * User info and date for Git operations.
@@ -45,10 +43,11 @@ public class GitUserDate {
     return this;
   }
 
-   /**
+  /**
    * Date of the Git operation.
+   *
    * @return date
-  **/
+   **/
   @ApiModelProperty(value = "Date of the Git operation.")
   public OffsetDateTime getDate() {
     return date;
@@ -63,10 +62,11 @@ public class GitUserDate {
     return this;
   }
 
-   /**
+  /**
    * Email address of the user performing the Git operation.
+   *
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "Email address of the user performing the Git operation.")
   public String getEmail() {
     return email;
@@ -81,10 +81,11 @@ public class GitUserDate {
     return this;
   }
 
-   /**
+  /**
    * Url for the user&#39;s avatar.
+   *
    * @return imageUrl
-  **/
+   **/
   @ApiModelProperty(value = "Url for the user's avatar.")
   public String getImageUrl() {
     return imageUrl;
@@ -99,10 +100,11 @@ public class GitUserDate {
     return this;
   }
 
-   /**
+  /**
    * Name of the user performing the Git operation.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Name of the user performing the Git operation.")
   public String getName() {
     return name;
@@ -123,9 +125,9 @@ public class GitUserDate {
     }
     GitUserDate gitUserDate = (GitUserDate) o;
     return Objects.equals(this.date, gitUserDate.date) &&
-        Objects.equals(this.email, gitUserDate.email) &&
-        Objects.equals(this.imageUrl, gitUserDate.imageUrl) &&
-        Objects.equals(this.name, gitUserDate.name);
+            Objects.equals(this.email, gitUserDate.email) &&
+            Objects.equals(this.imageUrl, gitUserDate.imageUrl) &&
+            Objects.equals(this.name, gitUserDate.name);
   }
 
   @Override
@@ -138,7 +140,7 @@ public class GitUserDate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitUserDate {\n");
-    
+
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");

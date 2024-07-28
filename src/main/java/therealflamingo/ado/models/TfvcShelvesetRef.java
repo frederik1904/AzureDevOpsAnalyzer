@@ -13,16 +13,12 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
-import therealflamingo.ado.models.IdentityRef;
-import therealflamingo.ado.models.ReferenceLinks;
+
+import java.util.Objects;
 
 /**
  * Metadata for a shallow shelveset.
@@ -59,10 +55,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * List of reference links for the shelveset.
+   *
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "List of reference links for the shelveset.")
   public ReferenceLinks getLinks() {
     return links;
@@ -77,10 +74,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset comment.
+   *
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset comment.")
   public String getComment() {
     return comment;
@@ -95,10 +93,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset comment truncated as applicable.
+   *
    * @return commentTruncated
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset comment truncated as applicable.")
   public Boolean isCommentTruncated() {
     return commentTruncated;
@@ -113,10 +112,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset create date.
+   *
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset create date.")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -131,10 +131,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Id.
+   *
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Id.")
   public String getId() {
     return id;
@@ -149,10 +150,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset name.
+   *
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset name.")
   public String getName() {
     return name;
@@ -167,10 +169,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Owner.
+   *
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Owner.")
   public IdentityRef getOwner() {
     return owner;
@@ -185,10 +188,11 @@ public class TfvcShelvesetRef {
     return this;
   }
 
-   /**
+  /**
    * Shelveset Url.
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Shelveset Url.")
   public String getUrl() {
     return url;
@@ -209,13 +213,13 @@ public class TfvcShelvesetRef {
     }
     TfvcShelvesetRef tfvcShelvesetRef = (TfvcShelvesetRef) o;
     return Objects.equals(this.links, tfvcShelvesetRef.links) &&
-        Objects.equals(this.comment, tfvcShelvesetRef.comment) &&
-        Objects.equals(this.commentTruncated, tfvcShelvesetRef.commentTruncated) &&
-        Objects.equals(this.createdDate, tfvcShelvesetRef.createdDate) &&
-        Objects.equals(this.id, tfvcShelvesetRef.id) &&
-        Objects.equals(this.name, tfvcShelvesetRef.name) &&
-        Objects.equals(this.owner, tfvcShelvesetRef.owner) &&
-        Objects.equals(this.url, tfvcShelvesetRef.url);
+            Objects.equals(this.comment, tfvcShelvesetRef.comment) &&
+            Objects.equals(this.commentTruncated, tfvcShelvesetRef.commentTruncated) &&
+            Objects.equals(this.createdDate, tfvcShelvesetRef.createdDate) &&
+            Objects.equals(this.id, tfvcShelvesetRef.id) &&
+            Objects.equals(this.name, tfvcShelvesetRef.name) &&
+            Objects.equals(this.owner, tfvcShelvesetRef.owner) &&
+            Objects.equals(this.url, tfvcShelvesetRef.url);
   }
 
   @Override
@@ -228,7 +232,7 @@ public class TfvcShelvesetRef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TfvcShelvesetRef {\n");
-    
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    commentTruncated: ").append(toIndentedString(commentTruncated)).append("\n");

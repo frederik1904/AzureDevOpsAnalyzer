@@ -13,13 +13,11 @@
 
 package therealflamingo.ado.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * Parameter for creating a git import request when source is Git version control
@@ -38,10 +36,11 @@ public class GitImportGitSource {
     return this;
   }
 
-   /**
+  /**
    * Tells if this is a sync request or not
+   *
    * @return overwrite
-  **/
+   **/
   @ApiModelProperty(value = "Tells if this is a sync request or not")
   public Boolean isOverwrite() {
     return overwrite;
@@ -56,10 +55,11 @@ public class GitImportGitSource {
     return this;
   }
 
-   /**
+  /**
    * Url for the source repo
+   *
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "Url for the source repo")
   public String getUrl() {
     return url;
@@ -80,7 +80,7 @@ public class GitImportGitSource {
     }
     GitImportGitSource gitImportGitSource = (GitImportGitSource) o;
     return Objects.equals(this.overwrite, gitImportGitSource.overwrite) &&
-        Objects.equals(this.url, gitImportGitSource.url);
+            Objects.equals(this.url, gitImportGitSource.url);
   }
 
   @Override
@@ -93,7 +93,7 @@ public class GitImportGitSource {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GitImportGitSource {\n");
-    
+
     sb.append("    overwrite: ").append(toIndentedString(overwrite)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");

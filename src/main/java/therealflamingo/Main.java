@@ -2,14 +2,11 @@ package therealflamingo;
 
 import therealflamingo.ado.api.PullRequestsApi;
 import therealflamingo.ado.invoker.ApiClient;
-import therealflamingo.ado.invoker.auth.HttpBasicAuth;
 import therealflamingo.config.IConfigLoader;
 import therealflamingo.config.YamlConfigLoader;
 import therealflamingo.config.models.Config;
 import therealflamingo.secrets.ISecretProvider;
 import therealflamingo.secrets.KeePassSecretProvider;
-
-import java.io.IOException;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
